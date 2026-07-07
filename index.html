@@ -745,7 +745,7 @@ footer {
   .container { padding: 0 12px; }
   header { padding: 8px 0 6px; border-bottom: none; }
   .brand { font-size: 15px; }
-  .content { justify-content: flex-start; padding-top: 4px; }
+  .content { justify-content: flex-start; padding-top: 4px; flex: 0 0 auto; }
   .hero { padding: 0 0 6px; }
   .hero h1 { font-size: 24px; }
   .hero .sub { font-size: 10px; }
@@ -777,11 +777,13 @@ footer {
   .article-mobile-hide { display: none !important; }
   .footer-center { display: none; }
   footer {
+    flex: 1;
     flex-wrap: nowrap;
     gap: 10px;
     padding: 12px 0;
     border-top: none;
     margin-top: auto;
+    min-height: 0;
   }
   .footer-left, .footer-right {
     flex: 1 1 50%;
