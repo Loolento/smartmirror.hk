@@ -1243,22 +1243,20 @@ function closeModal() {
 function showQRModal(platform) {
   const body = document.getElementById('modalBody');
   if (platform === 'whatsapp') {
-    const qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/85294304292';
     body.innerHTML = `
       <div class="qr-modal-content">
         <h2>WhatsApp</h2>
         <div class="qr-platform">Scan QR to chat</div>
-        <img src="${qrUrl}" alt="WhatsApp QR" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><rect fill=%22%23fff%22 width=%22200%22 height=%22200%22/><text x=%22100%22 y=%22105%22 text-anchor=%22middle%22 font-size=%2214%22 fill=%22%23999%22>QR loading...</text></svg>'">
+        <img src="qr-whatsapp.png" alt="WhatsApp QR" style="background:#fff;padding:8px;border-radius:12px;">
         <div class="qr-hint">Scan with phone camera</div>
         <div class="qr-number">+852 9430 4292</div>
       </div>`;
   } else if (platform === 'wechat') {
-    const qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Joeklee';
     body.innerHTML = `
       <div class="qr-modal-content">
         <h2>WeChat</h2>
         <div class="qr-platform">Scan QR to add</div>
-        <img src="${qrUrl}" alt="WeChat QR" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><rect fill=%22%23fff%22 width=%22200%22 height=%22200%22/><text x=%22100%22 y=%22105%22 text-anchor=%22middle%22 font-size=%2214%22 fill=%22%23999%22>QR loading...</text></svg>'">
+        <img src="qr-wechat.png" alt="WeChat QR" style="background:#fff;padding:8px;border-radius:12px;">
         <div class="qr-hint">Scan with WeChat</div>
         <div class="qr-number">WeChat ID: Joeklee</div>
       </div>`;
@@ -1293,4 +1291,3 @@ function openWeChat() {
 
 </body>
 </html>
-<!-- v3 QR -->
