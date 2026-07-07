@@ -738,6 +738,7 @@ footer {
   }
   .role-btn { padding: 18px 0; font-size: 15px; }
   .video-row { flex-direction: column; gap: 14px; padding-bottom: 20px; }
+  .video-row .video-wrapper:last-child { display: none; }
   .video-label-row { display: none; }
   .article-row { flex-direction: column; gap: 10px; }
   .journal-header h2 { font-size: 20px; }
@@ -1285,22 +1286,38 @@ function showQRModal(platform) {
 // Contact
 // ====================
 function openWhatsApp() {
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  if (isMobile) {
-    window.location.href = 'whatsapp://send?phone=85294304292';
-  } else {
+  // Try direct scheme first, fallback to web
+  var start = Date.now();
+  var fallbackTimer = setTimeout(function() {
+    if (Date.now() - start < 2500) return;
     window.open('https://wa.me/85294304292', '_blank');
-  }
+  }, 2000);
+  window.location.href = 'https://wa.me/85294304292';
+  // Clear timer if navigation succeeds
+  setTimeout(function() { clearTimeout(fallbackTimer); }, 100);
 }
 
 function openWeChat() {
-  const wechatId = 'Joeklee';
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(wechatId).then(() => {
-      alert('WeChat ID: ' + wechatId + '\n已複製到剪貼板');
-    });
+  var wechatId = 'Joeklee';
+  // Try WeChat deeplink on mobile
+  var isMob = /Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if (isMob) {
+    window.location.href = 'weixin://';
+    setTimeout(function() {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(wechatId).then(function() {
+          alert('WeChat ID: ' + wechatId + ' — 已複製');
+        });
+      }
+    }, 500);
   } else {
-    alert('WeChat ID: ' + wechatId);
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(wechatId).then(function() {
+        alert('WeChat ID: ' + wechatId + ' — 已複製到剪貼板');
+      });
+    } else {
+      alert('WeChat ID: ' + wechatId);
+    }
   }
 }
 </script>
