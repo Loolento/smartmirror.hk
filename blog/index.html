@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="basic">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal — Oolaa</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#1A1A18;font-family:Inter,'Noto Sans TC',sans-serif;color:#8A8070;min-height:100vh;display:flex;justify-content:center}
+  .container{max-width:800px;width:100%;padding:40px 20px}
+  h1{font-family:Inter,sans-serif;font-size:32px;font-weight:300;color:#B8A882;margin-bottom:8px}
+  .sub{font-size:13px;color:#6A6558;margin-bottom:32px}
+  .back{font-size:13px;color:#8A8070;text-decoration:none;display:inline-block;margin-bottom:24px}
+  .back:hover{color:#B8A882}
+  .article-list{display:flex;flex-direction:column;gap:12px}
+  .article-card{background:#22221C;border:1px solid #2E2E24;border-radius:8px;padding:16px 18px;text-decoration:none;color:inherit;transition:all .2s}
+  .article-card:hover{background:#2A2A24;border-color:#3A3A34}
+  .article-date{font-size:11px;font-weight:500;color:#6A6558;text-transform:uppercase;letter-spacing:.08em;font-family:Inter,sans-serif}
+  .article-title{font-size:17px;font-weight:400;color:#B8A882;margin-top:6px}
+  .article-desc{font-size:14px;color:#8A8070;margin-top:4px;line-height:1.5}
+  @media (max-width: 600px) {
+    .container{padding:24px 16px}
+    h1{font-size:24px}
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="../" class="back">← Oolaa</a>
+  <h1>Journal</h1>
+  <p class="sub">or Our Latest News</p>
+  <div class="article-list">
+    <a href="no-login-just-cast.html" class="article-card">
+      <div class="article-date">Jun 2026</div>
+      <div class="article-title">No Login. Just Cast.</div>
+      <div class="article-desc">The world's first zero-login smart mirror TV — phone authenticates, mirror plays.</div>
+    </a>
+    <a href="oolaa-vs-old-way.html" class="article-card">
+      <div class="article-date">Jun 2026</div>
+      <div class="article-title">Oolaa Way Vs Old Way Mirror TV</div>
+      <div class="article-desc">Hotel mirror TV comparison: set-top box frustration vs Oolaa's cast-only solution.</div>
+    </a>
+    <a href="waldorf-astoria-bangkok.html" class="article-card">
+      <div class="article-date">Mar 2026</div>
+      <div class="article-title">Oolaa at Waldorf Astoria Bangkok</div>
+      <div class="article-desc">5-star hotel deployment — smart mirrors meet luxury hospitality in Thailand.</div>
+    </a>
+  </div>
+</div>
+</body>
+</html>
