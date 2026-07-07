@@ -745,8 +745,8 @@ footer {
   .container { padding: 0 12px; }
   header { padding: 8px 0 6px; border-bottom: none; }
   .brand { font-size: 15px; }
-  .content { justify-content: flex-start; padding-top: 4px; flex: 0 0 auto; }
-  .hero { padding: 0 0 6px; }
+  .content { justify-content: flex-start; padding-top: 4px; flex: 1; }
+  .hero { padding: 0 0 6px; flex-shrink: 0; }
   .hero h1 { font-size: 24px; }
   .hero .sub { font-size: 10px; }
   .role-row {
@@ -754,21 +754,22 @@ footer {
     grid-template-columns: 1fr 1fr;
     gap: 6px 8px;
     padding-bottom: 8px;
+    flex-shrink: 0;
   }
   .role-btn { padding: 12px 0; font-size: 13px; border-radius: 7px; }
-  .video-row { flex-direction: column; gap: 0; padding-bottom: 8px; }
+  .video-row { flex-direction: column; gap: 0; padding-bottom: 8px; flex-shrink: 0; }
   .video-row .video-wrapper:last-child { display: none; }
   .video-card { aspect-ratio: 16/9; max-height: 210px; border-radius: 7px; }
   .video-label-row { display: none; }
-  .journal-section { padding-bottom: 6px; }
+  .journal-section { padding-bottom: 6px; flex: 1; display: flex; flex-direction: column; justify-content: center; }
   .journal-header { flex-direction: row; margin-bottom: 6px; }
   .journal-header h2 { font-size: 16px; }
   .journal-sub { font-size: 10px; }
   .journal-left { gap: 6px; }
   .journal-contact { display: flex; gap: 4px; }
   .journal-contact .talk-text { font-size: 10px; }
-  .social-circle { width: 34px; height: 34px; }
-  .social-circle svg { width: 17px; height: 17px; }
+  .social-circle { width: 40px; height: 40px; }
+  .social-circle svg { width: 20px; height: 20px; }
   .article-row { flex-direction: column; gap: 5px; }
   .article-card { padding: 8px 10px; }
   .article-date { font-size: 9px; }
@@ -782,7 +783,6 @@ footer {
     gap: 10px;
     padding: 12px 0;
     border-top: none;
-    margin-top: auto;
     min-height: 0;
   }
   .footer-left, .footer-right {
