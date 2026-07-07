@@ -155,7 +155,6 @@ body {
 .container {
   width: 100%;
   max-width: 1340px;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 0 48px;
@@ -165,7 +164,6 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 0;
 }
 
@@ -174,14 +172,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 0 16px;
+  padding: 14px 0 8px;
   border-bottom: 1px solid var(--divider);
   flex-shrink: 0;
 }
 
 .brand {
   font-family: 'Inter', sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   color: var(--brand);
   letter-spacing: 0.04em;
@@ -236,12 +234,12 @@ header {
 /* ===== HERO ===== */
 .hero {
   text-align: center;
-  padding: 0 0 36px;
+  padding: 0 0 16px;
 }
 
 .hero h1 {
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
-  font-size: 48px; font-weight: 300; color: var(--gold); line-height: 1.10;
+  font-size: 40px; font-weight: 300; color: var(--gold); line-height: 1.10;
   letter-spacing: -0.01em;
 }
 
@@ -262,8 +260,8 @@ header {
 /* ===== ROLE BUTTONS ===== */
 .role-row {
   display: flex;
-  gap: 20px;
-  padding-bottom: 36px;
+  gap: 14px;
+  padding-bottom: 16px;
 }
 
 .role-btn {
@@ -276,9 +274,9 @@ header {
     var(--rb-g5) 100%);
   border: 1px solid var(--rb-border);
   border-radius: 10px;
-  padding: 28px 0;
+  padding: 20px 0;
   text-align: center;
-  font-size: 20px; font-weight: 400;
+  font-size: 18px; font-weight: 400;
   font-family: 'Inter', sans-serif;
   color: var(--rb-text);
   cursor: pointer;
@@ -328,8 +326,8 @@ header {
 /* ===== VIDEO ROW ===== */
 .video-row {
   display: flex;
-  gap: 20px;
-  padding-bottom: 32px;
+  gap: 14px;
+  padding-bottom: 16px;
 }
 
 .video-card {
@@ -338,7 +336,7 @@ header {
   border: 1px solid var(--video-border);
   border-radius: 10px;
   position: relative;
-  aspect-ratio: 16/7;
+  aspect-ratio: 16/9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -383,14 +381,14 @@ header {
 
 /* ===== JOURNAL SECTION ===== */
 .journal-section {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .journal-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .journal-left { display: flex; align-items: baseline; gap: 10px; }
@@ -416,7 +414,7 @@ header {
 
 .article-row {
   display: flex;
-  gap: 20px;
+  gap: 14px;
 }
 
 .article-card {
@@ -424,7 +422,7 @@ header {
   background: var(--article-bg);
   border: 1px solid var(--article-border);
   border-radius: 8px;
-  padding: 14px 16px;
+  padding: 10px 14px;
   cursor: pointer;
   transition: background 0.2s, border-color 0.2s;
 }
@@ -481,7 +479,7 @@ footer {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  padding: 32px 0 32px;
+  padding: 16px 0 16px;
 }
 
 .footer-left {
@@ -735,57 +733,61 @@ footer {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1100px) {
   .container { padding: 0 24px; }
-  .hero h1 { font-size: 38px; }
-  .role-btn { font-size: 17px; padding: 22px 0; }
-  .role-row { gap: 12px; padding-bottom: 28px; }
+  .hero h1 { font-size: 34px; }
+  .role-btn { font-size: 16px; padding: 16px 0; }
+  .role-row { gap: 10px; padding-bottom: 12px; }
 }
 
 @media (max-width: 860px) {
-  .container { padding: 0 14px; }
-  header { padding: 10px 0 8px; border-bottom: none; }
-  .brand { font-size: 16px; }
-  .content { justify-content: flex-start; padding-top: 8px; }
-  .hero { padding: 0 0 10px; }
-  .hero h1 { font-size: 28px; }
-  .hero .sub { font-size: 11px; }
+  .container { padding: 0 12px; }
+  header { padding: 8px 0 6px; border-bottom: none; }
+  .brand { font-size: 15px; }
+  .content { justify-content: flex-start; padding-top: 4px; }
+  .hero { padding: 0 0 6px; }
+  .hero h1 { font-size: 24px; }
+  .hero .sub { font-size: 10px; }
   .role-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8px 12px;
-    padding-bottom: 12px;
+    gap: 6px 8px;
+    padding-bottom: 8px;
   }
-  .role-btn { padding: 14px 0; font-size: 14px; border-radius: 8px; }
-  .video-row { flex-direction: column; gap: 0; padding-bottom: 12px; }
+  .role-btn { padding: 12px 0; font-size: 13px; border-radius: 7px; }
+  .video-row { flex-direction: column; gap: 0; padding-bottom: 8px; }
   .video-row .video-wrapper:last-child { display: none; }
-  .video-card { aspect-ratio: 16/9; border-radius: 8px; }
+  .video-card { aspect-ratio: 16/9; border-radius: 7px; }
   .video-label-row { display: none; }
-  .journal-section { padding-bottom: 10px; }
-  .journal-header { flex-direction: row; margin-bottom: 8px; }
-  .journal-header h2 { font-size: 18px; }
-  .journal-sub { font-size: 11px; }
-  .journal-contact { display: flex; }
-  .article-row { flex-direction: column; gap: 6px; }
-  .article-card { padding: 10px 12px; }
-  .article-date { font-size: 10px; }
-  .article-title { font-size: 13px; margin-top: 3px; }
-  .article-desc { font-size: 11px; margin-top: 2px; }
+  .journal-section { padding-bottom: 6px; }
+  .journal-header { flex-direction: row; margin-bottom: 6px; }
+  .journal-header h2 { font-size: 16px; }
+  .journal-sub { font-size: 10px; }
+  .journal-left { gap: 6px; }
+  .journal-contact { display: flex; gap: 4px; }
+  .journal-contact .talk-text { font-size: 10px; }
+  .social-circle { width: 34px; height: 34px; }
+  .social-circle svg { width: 17px; height: 17px; }
+  .article-row { flex-direction: column; gap: 5px; }
+  .article-card { padding: 8px 10px; }
+  .article-date { font-size: 9px; }
+  .article-title { font-size: 12px; margin-top: 2px; }
+  .article-desc { font-size: 10px; margin-top: 1px; }
   .footer-center { display: none; }
   footer {
     flex-wrap: nowrap;
-    gap: 10px;
-    padding: 12px 0;
+    gap: 8px;
+    padding: 8px 0;
     border-top: none;
   }
   .footer-left, .footer-right {
     flex: 1 1 50%;
     background: var(--article-bg);
     border: 1px solid var(--article-border);
-    border-radius: 8px;
-    padding: 14px 12px;
+    border-radius: 7px;
+    padding: 10px;
     cursor: pointer;
   }
-  .footer-left h3, .footer-right h3 { font-size: 16px; font-weight: 300; }
-  .footer-left .plus, .footer-right .plus { font-size: 11px; margin-top: 3px; }
+  .footer-left h3, .footer-right h3 { font-size: 14px; font-weight: 300; }
+  .footer-left .plus, .footer-right .plus { font-size: 10px; margin-top: 2px; }
   .footer-right { text-align: left; }
   .footer-right h3, .footer-right .plus { text-align: left; }
   .sparkle { display: none; }
@@ -793,13 +795,16 @@ footer {
 }
 
 @media (max-width: 420px) {
-  .container { padding: 0 12px; }
-  .brand { font-size: 16px; }
-  .hero h1 { font-size: 26px; }
-  .journal-header h2 { font-size: 18px; }
-  .footer-left h3, .footer-right h3 { font-size: 16px; font-weight: 300; }
-  .role-btn { font-size: 14px; }
+  .container { padding: 0 10px; }
+  .brand { font-size: 14px; }
+  .hero h1 { font-size: 22px; }
+  .journal-header h2 { font-size: 15px; }
+  .footer-left h3, .footer-right h3 { font-size: 13px; font-weight: 300; }
+  .role-btn { font-size: 12px; }
 }
+
+/* Hide video label row on all screen sizes — labels inline */
+.video-label-row { display: none; }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
 </head>
