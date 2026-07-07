@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="basic">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oolaa — Smart Mirror Solution</title>
+<meta name="description" content="Oolaa by Viewdex — Premium smart mirror solutions for hotels and developers. Factory direct, 30,000+ installations. Hong Kong.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://smartmirror.hk/">
+<meta property="og:title" content="Oolaa — Smart Mirror Solution">
+<meta property="og:description" content="Pain? Gone! — Smart mirror for project teams, designers, buyers & consultants.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Viewdex Limited","alternateName":"Oolaa","url":"https://smartmirror.hk","description":"Hong Kong professional smart mirror and display solutions provider","telephone":"+852-9430-4292"}
+</script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ===== PALETTE: Basic (Warm Gold/Bronze) ===== */
+[data-palette="basic"] {
+  --canvas:       #1A1A18;
+  --card-bg:      #22221E;
+  --gold:         #B8A882;
+  --sub:          #8A8070;
+  --muted:        #6A6558;
+  --divider:      #2A2A22;
+  --article-bg:   #22221C;
+  --article-border:#2E2E24;
+  --video-bg:     #121210;
+  --video-border: #282820;
+  --sparkle:      #C5A040;
+  --brand:        #B8A882;
+  --inactive-lang:#5A5850;
+  --inactive-lang-border:#3A3A30;
+
+  --rb-g1: #6a5948; --rb-g2: #4e4236; --rb-g3: #37312b; --rb-g4: #262422; --rb-g5: #141514;
+  --rb-border: rgba(180, 140, 95, 0.40);
+  --rb-text: #CEB898;
+  --rb-bevel: rgba(240, 210, 160, 0.28);
+  --rb-lip: rgba(0, 0, 0, 0.72);
+  --rb-inner: rgba(0, 0, 0, 0.40);
+  --rb-drop1: rgba(0, 0, 0, 0.78);
+  --rb-drop2: rgba(0, 0, 0, 0.50);
+  --rb-gloss1: rgba(255,245,225,0.22);
+  --rb-gloss2: rgba(255,240,210,0.10);
+  --rb-gloss3: rgba(255,255,255,0.03);
+
+  --rb-hg1: #7b6853; --rb-hg2: #5c4d3e; --rb-hg3: #423b32; --rb-hg4: #302d28; --rb-hg5: #1c1c1a;
+  --rb-hbevel: rgba(248, 220, 168, 0.34);
+  --rb-hlip: rgba(0, 0, 0, 0.78);
+  --rb-hinner: rgba(0, 0, 0, 0.48);
+  --rb-hdrop1: rgba(0, 0, 0, 0.82);
+  --rb-hdrop2: rgba(0, 0, 0, 0.58);
+  --rb-hgloss1: rgba(255,250,235,0.28);
+  --rb-hgloss2: rgba(255,245,220,0.14);
+  --rb-hgloss3: rgba(255,255,255,0.05);
+
+  --en-g1: #e2c48a; --en-g2: #c0965a; --en-g3: #8f6840; --en-g4: #5b4028;
+  --en-text: #2B1E10;
+  --en-border: rgba(110, 75, 38, 0.60);
+  --en-bevel: rgba(255, 235, 185, 0.55);
+  --en-lip: rgba(45, 25, 10, 0.65);
+  --en-bottom: rgba(70, 35, 10, 0.35);
+  --en-gloss1: rgba(255,255,248,0.70);
+  --en-gloss2: rgba(255,250,230,0.35);
+  --en-gloss3: rgba(255,245,220,0.08);
+
+  --sc-g1: #5EA85E; --sc-g2: #3E8A3E; --sc-g3: #2A6A2A; --sc-g4: #1A4E1A;
+  --sc-shadow1: rgba(0, 0, 0, 0.50);
+  --sc-shadow2: rgba(0, 0, 0, 0.40);
+  --sc-bevel: rgba(255, 255, 255, 0.16);
+  --sc-inner: rgba(0, 0, 0, 0.35);
+  --sc-dot1: rgba(255,255,255,0.55);
+  --sc-dot2: rgba(255,255,255,0.25);
+  --sc-hshadow1: rgba(0, 0, 0, 0.58);
+  --sc-hshadow2: rgba(0, 0, 0, 0.48);
+  --sc-hbevel: rgba(255, 255, 255, 0.20);
+  --sc-hinner: rgba(0, 0, 0, 0.40);
+}
+
+/* ===== PALETTE: Alt 1 (Monochrome Steel) ===== */
+[data-palette="alt1"] {
+  --canvas:       #181A1D;
+  --card-bg:      #1C1E22;
+  --gold:         #D8DAE0;
+  --sub:          #8A8C93;
+  --muted:        #6E7078;
+  --divider:      #2A2C31;
+  --article-bg:   #1E2025;
+  --article-border:#2C2E34;
+  --video-bg:     #0E0F12;
+  --video-border: #24262B;
+  --sparkle:      #B0B3BA;
+  --brand:        #D8DAE0;
+  --inactive-lang:#5A5C63;
+  --inactive-lang-border:#363840;
+
+  --rb-g1: #C0C3CA; --rb-g2: #9A9DA5; --rb-g3: #72757D; --rb-g4: #565960; --rb-g5: #3E4148;
+  --rb-border: rgba(160, 164, 172, 0.35);
+  --rb-text: #1A1C20;
+  --rb-bevel: rgba(255, 255, 255, 0.48);
+  --rb-lip: rgba(0, 0, 0, 0.60);
+  --rb-inner: rgba(0, 0, 0, 0.28);
+  --rb-drop1: rgba(0, 0, 0, 0.65);
+  --rb-drop2: rgba(0, 0, 0, 0.40);
+  --rb-gloss1: rgba(255,255,255,0.65);
+  --rb-gloss2: rgba(255,255,255,0.32);
+  --rb-gloss3: rgba(255,255,255,0.08);
+
+  --rb-hg1: #CFD2D9; --rb-hg2: #A8ACB4; --rb-hg3: #7E828C; --rb-hg4: #60646D; --rb-hg5: #484C55;
+  --rb-hbevel: rgba(255, 255, 255, 0.55);
+  --rb-hlip: rgba(0, 0, 0, 0.68);
+  --rb-hinner: rgba(0, 0, 0, 0.35);
+  --rb-hdrop1: rgba(0, 0, 0, 0.70);
+  --rb-hdrop2: rgba(0, 0, 0, 0.48);
+  --rb-hgloss1: rgba(255,255,255,0.72);
+  --rb-hgloss2: rgba(255,255,255,0.40);
+  --rb-hgloss3: rgba(255,255,255,0.12);
+
+  --en-g1: #D0D3D9; --en-g2: #A8ACB4; --en-g3: #7A7E87; --en-g4: #565A63;
+  --en-text: #121418;
+  --en-border: rgba(140, 144, 152, 0.50);
+  --en-bevel: rgba(255, 255, 255, 0.55);
+  --en-lip: rgba(20, 20, 25, 0.65);
+  --en-bottom: rgba(50, 50, 60, 0.35);
+  --en-gloss1: rgba(255,255,255,0.78);
+  --en-gloss2: rgba(255,255,255,0.42);
+  --en-gloss3: rgba(255,255,255,0.10);
+
+  --sc-g1: #5A6E5A; --sc-g2: #3E553E; --sc-g3: #2A3E2A; --sc-g4: #1A2C1A;
+  --sc-shadow1: rgba(0, 0, 0, 0.55);
+  --sc-shadow2: rgba(0, 0, 0, 0.45);
+  --sc-bevel: rgba(255, 255, 255, 0.18);
+  --sc-inner: rgba(0, 0, 0, 0.38);
+  --sc-dot1: rgba(255,255,255,0.60);
+  --sc-dot2: rgba(255,255,255,0.30);
+  --sc-hshadow1: rgba(0, 0, 0, 0.62);
+  --sc-hshadow2: rgba(0, 0, 0, 0.52);
+  --sc-hbevel: rgba(255, 255, 255, 0.24);
+  --sc-hinner: rgba(0, 0, 0, 0.44);
+}
+
+/* ===== GLOBAL ===== */
+html { height: 100%; }
+body {
+  background: var(--canvas);
+  font-family: 'Inter', 'Noto Sans TC', -apple-system, sans-serif;
+  color: var(--sub);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1340px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 48px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0 16px;
+  border-bottom: 1px solid var(--divider);
+  flex-shrink: 0;
+}
+
+.brand {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--brand);
+  letter-spacing: 0.04em;
+}
+
+.lang-switcher { display: flex; gap: 6px; }
+
+.lang-btn {
+  width: 42px; height: 34px;
+  border-radius: 7px;
+  border: 1px solid var(--inactive-lang-border);
+  font-size: 14px; font-weight: 500;
+  font-family: 'Noto Sans TC', 'Inter', sans-serif;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  transition: all 0.12s;
+}
+
+.lang-btn.active {
+  background: linear-gradient(to bottom, var(--en-g1) 0%, var(--en-g2) 35%, var(--en-g3) 68%, var(--en-g4) 100%);
+  color: var(--en-text);
+  border-color: var(--en-border);
+  box-shadow:
+    inset 0 1px 0 var(--en-bevel),
+    inset 0 -1px 0 var(--en-lip),
+    inset 0 -7px 10px var(--en-bottom),
+    0 2px 3px rgba(0, 0, 0, 0.75),
+    0 6px 10px rgba(0, 0, 0, 0.40);
+}
+
+.lang-btn.active::after {
+  content: ''; position: absolute;
+  top: 1px; left: 2px; right: 55%; height: 42%;
+  background: linear-gradient(135deg,
+    var(--en-gloss1) 0%,
+    var(--en-gloss2) 20%,
+    var(--en-gloss3) 50%,
+    transparent 75%);
+  border-radius: 5px 0 3px 0;
+  pointer-events: none;
+}
+
+.lang-btn:not(.active) {
+  background: transparent; color: var(--inactive-lang); border-color: var(--inactive-lang-border);
+}
+
+.lang-btn:not(.active):hover {
+  color: var(--sub); border-color: var(--muted);
+}
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 0 0 36px;
+}
+
+.hero h1 {
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+  font-size: 48px; font-weight: 300; color: var(--gold); line-height: 1.10;
+  letter-spacing: -0.01em;
+}
+
+.hero h1 .punct {
+  font-size: 50%;
+  font-weight: 700;
+  opacity: 0.65;
+  vertical-align: super;
+}
+
+.hero .sub {
+  display: block;
+  font-size: 14px; color: var(--sub); margin-top: 6px;
+  font-family: 'Noto Sans TC', 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+/* ===== ROLE BUTTONS ===== */
+.role-row {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 36px;
+}
+
+.role-btn {
+  flex: 1;
+  background: linear-gradient(to bottom,
+    var(--rb-g1) 0%,
+    var(--rb-g2) 25%,
+    var(--rb-g3) 52%,
+    var(--rb-g4) 74%,
+    var(--rb-g5) 100%);
+  border: 1px solid var(--rb-border);
+  border-radius: 10px;
+  padding: 28px 0;
+  text-align: center;
+  font-size: 20px; font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  color: var(--rb-text);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    inset 0 1px 0 var(--rb-bevel),
+    inset 0 -1px 0 var(--rb-lip),
+    inset 0 -9px 14px var(--rb-inner),
+    0 2px 3px var(--rb-drop1),
+    0 7px 10px var(--rb-drop2);
+  transition: all 0.12s;
+  letter-spacing: 0.02em;
+}
+
+.role-btn::after {
+  content: ''; position: absolute;
+  top: 3px; left: 6px; right: 40%; height: 38%;
+  background: linear-gradient(135deg,
+    var(--rb-gloss1) 0%,
+    var(--rb-gloss2) 25%,
+    var(--rb-gloss3) 50%,
+    transparent 70%);
+  border-radius: 6px 0 0 0;
+  pointer-events: none;
+}
+
+.role-btn:hover {
+  background: linear-gradient(to bottom,
+    var(--rb-hg1) 0%, var(--rb-hg2) 25%, var(--rb-hg3) 52%, var(--rb-hg4) 74%, var(--rb-hg5) 100%);
+  box-shadow:
+    inset 0 1px 0 var(--rb-hbevel),
+    inset 0 -1px 0 var(--rb-hlip),
+    inset 0 -9px 14px var(--rb-hinner),
+    0 3px 4px var(--rb-hdrop1),
+    0 9px 14px var(--rb-hdrop2);
+}
+
+.role-btn:hover::after {
+  background: linear-gradient(135deg,
+    var(--rb-hgloss1) 0%,
+    var(--rb-hgloss2) 25%,
+    var(--rb-hgloss3) 50%,
+    transparent 70%);
+}
+
+/* ===== VIDEO ROW ===== */
+.video-row {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 32px;
+}
+
+.video-card {
+  flex: 1;
+  background: var(--video-bg);
+  border: 1px solid var(--video-border);
+  border-radius: 10px;
+  position: relative;
+  aspect-ratio: 16/7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.video-card::before {
+  content: ''; position: absolute;
+  inset: 3px; border: 1px solid rgba(255,255,255,0.015);
+  border-radius: 7px; pointer-events: none;
+}
+
+.video-play-btn {
+  width: 54px; height: 54px; border-radius: 50%;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s; z-index: 1;
+}
+
+.video-play-btn:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.10);
+}
+
+.video-play-btn svg { width: 20px; height: 20px; margin-left: 2px; }
+
+.video-label-row {
+  display: flex;
+  gap: 20px;
+  margin-top: -28px;
+  padding-bottom: 0;
+}
+
+.video-label-item {
+  flex: 1;
+  font-size: 13px; color: var(--sub);
+  font-family: 'Noto Sans TC', 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+/* ===== JOURNAL SECTION ===== */
+.journal-section {
+  padding-bottom: 20px;
+}
+
+.journal-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.journal-header h2 {
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+  font-size: 22px; font-weight: 300; color: var(--gold); line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.journal-sub { font-size: 13px; color: var(--sub); font-weight: 400; }
+
+.article-row {
+  display: flex;
+  gap: 20px;
+}
+
+.article-card {
+  flex: 1;
+  background: var(--article-bg);
+  border: 1px solid var(--article-border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.article-card:hover {
+  background: var(--card-bg);
+  border-color: var(--divider);
+}
+
+.article-date {
+  font-size: 11px; font-weight: 500; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.08em;
+  font-family: 'Inter', sans-serif;
+}
+
+.article-title {
+  font-size: 15px; font-weight: 400; color: var(--gold);
+  margin-top: 5px; line-height: 1.3;
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+}
+
+.article-desc {
+  font-size: 13px; font-weight: 400; color: var(--sub);
+  margin-top: 4px; line-height: 1.5;
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+}
+
+/* ===== GUEST EXPERIENCE overlay controls ===== */
+.video-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.video-wrapper .video-card { width: 100%; }
+
+.video-overlay-controls {
+  position: absolute;
+  bottom: 10px; left: 50%; transform: translateX(-50%);
+  display: flex; gap: 12px;
+  z-index: 2;
+}
+
+.play-ctrl, .pause-ctrl {
+  background: none; border: none; cursor: pointer;
+  padding: 4px; opacity: 0.25; transition: opacity 0.2s;
+}
+
+.play-ctrl:hover, .pause-ctrl:hover { opacity: 0.50; }
+.play-ctrl svg, .pause-ctrl svg { width: 18px; height: 18px; }
+
+/* ===== FOOTER ===== */
+footer {
+  border-top: 1px solid var(--divider);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 32px 0 32px;
+}
+
+.footer-left {
+  flex: 1;
+  cursor: pointer;
+}
+
+.footer-left h3, .footer-right h3 {
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+  font-size: 22px; font-weight: 300; color: var(--gold); line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.footer-left .plus, .footer-right .plus {
+  font-size: 13px; color: var(--sub); margin-top: 5px; display: block;
+  font-weight: 400;
+}
+
+.footer-center {
+  flex: 1;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+
+.footer-center .talk-text { font-size: 12px; color: var(--sub); }
+.footer-center .social-btns { display: flex; flex-direction: row; gap: 8px; }
+
+.footer-right {
+  flex: 1;
+  position: relative;
+  text-align: right;
+  cursor: pointer;
+}
+
+.footer-right h3, .footer-right .plus { text-align: right; }
+
+.social-circle {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: radial-gradient(circle at 36% 30%,
+    var(--sc-g1) 0%,
+    var(--sc-g2) 35%,
+    var(--sc-g3) 65%,
+    var(--sc-g4) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.28);
+  box-shadow:
+    0 5px 16px var(--sc-shadow1),
+    0 2px 5px var(--sc-shadow2),
+    inset 0 1px 0 var(--sc-bevel),
+    inset 0 -3px 5px var(--sc-inner);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all 0.12s;
+  position: relative;
+}
+
+.social-circle::after {
+  content: ''; position: absolute;
+  top: 8px; left: 10px;
+  width: 8px; height: 6px;
+  background: radial-gradient(ellipse,
+    var(--sc-dot1) 0%,
+    var(--sc-dot2) 30%,
+    transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.social-circle:hover {
+  box-shadow:
+    0 6px 20px var(--sc-hshadow1),
+    0 3px 8px var(--sc-hshadow2),
+    inset 0 1px 0 var(--sc-hbevel),
+    inset 0 -3px 5px var(--sc-hinner);
+}
+
+.social-circle svg { width: 20px; height: 20px; }
+
+.sparkle {
+  position: absolute;
+  bottom: -2px;
+  right: -6px;
+  color: var(--sparkle);
+  font-size: 20px;
+  animation: pulse 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.25; transform: scale(1); }
+  50% { opacity: 0.60; transform: scale(1.25); }
+}
+
+/* ===== MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal.show { display: flex; }
+
+.modal-content {
+  background: var(--card-bg);
+  border: 1px solid var(--divider);
+  border-radius: 16px;
+  max-width: 520px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 36px 28px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px; right: 14px;
+  background: none; border: none;
+  color: var(--muted);
+  font-size: 28px;
+  cursor: pointer;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+
+.modal-close:hover {
+  background: var(--article-bg);
+  color: var(--sub);
+}
+
+.modal-role-content h2 {
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+  font-size: 24px; font-weight: 300; color: var(--gold);
+  margin-bottom: 24px;
+}
+
+.modal-role-content h3 {
+  font-size: 12px; font-weight: 500;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 20px; margin-bottom: 10px;
+  font-family: 'Inter', sans-serif;
+}
+
+.modal-role-content ul {
+  list-style: none;
+}
+
+.modal-role-content li {
+  padding: 10px 0;
+  font-size: 15px; font-weight: 400;
+  line-height: 1.5;
+  color: var(--sub);
+  border-bottom: 1px solid var(--divider);
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+}
+
+.modal-role-content li:last-child { border-bottom: none; }
+.modal-role-content .pain-points li { padding-left: 18px; position: relative; }
+.modal-role-content .pain-points li::before { content: "•"; position: absolute; left: 0; color: var(--gold); }
+.modal-role-content .solutions li { padding-left: 22px; position: relative; }
+.modal-role-content .solutions li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); }
+
+.modal-page-content h2 {
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+  font-size: 24px; font-weight: 300; color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.modal-page-content p {
+  font-size: 15px; font-weight: 400; line-height: 1.6;
+  color: var(--sub); margin-bottom: 14px;
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+}
+
+.modal-page-content ul { list-style: none; }
+.modal-page-content li {
+  padding: 10px 0;
+  font-size: 15px; font-weight: 400;
+  color: var(--sub);
+  border-bottom: 1px solid var(--divider);
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+}
+.modal-page-content li::before { content: "•"; color: var(--gold); margin-right: 10px; }
+
+.modal-download-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 24px;
+  background: linear-gradient(to bottom, var(--rb-g1) 0%, var(--rb-g3) 100%);
+  color: var(--rb-text);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s;
+  border: 1px solid var(--rb-border);
+}
+
+.modal-download-btn:hover {
+  background: linear-gradient(to bottom, var(--rb-hg1) 0%, var(--rb-hg3) 100%);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+  .container { padding: 0 24px; }
+  .hero h1 { font-size: 38px; }
+  .role-btn { font-size: 17px; padding: 22px 0; }
+  .role-row { gap: 12px; padding-bottom: 28px; }
+}
+
+@media (max-width: 860px) {
+  .container { padding: 0 16px; }
+  header { padding: 14px 0 12px; }
+  .brand { font-size: 18px; }
+  .content { justify-content: flex-start; padding-top: 20px; }
+  .hero { padding: 0 0 24px; }
+  .hero h1 { font-size: 32px; }
+  .hero .sub { font-size: 12px; }
+  .role-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 14px;
+    padding-bottom: 24px;
+  }
+  .role-btn { padding: 18px 0; font-size: 15px; }
+  .video-row { flex-direction: column; gap: 14px; padding-bottom: 20px; }
+  .video-label-row { display: none; }
+  .article-row { flex-direction: column; gap: 10px; }
+  .journal-header h2 { font-size: 20px; }
+  footer { flex-wrap: wrap; gap: 16px; padding: 20px 0; }
+  .footer-left, .footer-center, .footer-right { flex: 0 0 auto; width: auto; }
+  .footer-left h3, .footer-right h3 { font-size: 18px; font-weight: 300; }
+  .footer-right { text-align: left; }
+  .footer-right h3, .footer-right .plus { text-align: left; }
+  .sparkle { display: none; }
+  .modal-content { max-width: 100%; margin: 0 12px; padding: 28px 20px; }
+}
+
+@media (max-width: 420px) {
+  .container { padding: 0 12px; }
+  .brand { font-size: 16px; }
+  .hero h1 { font-size: 26px; }
+  .journal-header h2 { font-size: 18px; }
+  .footer-left h3, .footer-right h3 { font-size: 16px; font-weight: 300; }
+  .role-btn { font-size: 14px; }
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+<header>
+  <span class="brand">Oola</span>
+  <div class="lang-switcher">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="zh">简</button>
+    <button class="lang-btn" data-lang="zh-HK">粵</button>
+  </div>
+</header>
+
+<div class="content">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Pain<span class="punct">?</span> Gone<span class="punct">!</span></h1>
+    <span class="sub" data-i18n="ifYouAre">— you —</span>
+  </section>
+
+  <!-- ROLE BUTTONS -->
+  <div class="role-row">
+    <button class="role-btn" onclick="showRoleModal('project')"><span data-i18n="projectTeam">Project Team</span></button>
+    <button class="role-btn" onclick="showRoleModal('purchasing')"><span data-i18n="purchasingTeam">Buying Team</span></button>
+    <button class="role-btn" onclick="showRoleModal('design')"><span data-i18n="designTeam">Design Team</span></button>
+    <button class="role-btn" onclick="showRoleModal('consultant')"><span data-i18n="consultant">Consultant</span></button>
+  </div>
+
+  <!-- VIDEO ROW -->
+  <div class="video-row">
+    <div class="video-wrapper">
+      <div class="video-card">
+        <div class="video-play-btn">
+          <svg viewBox="0 0 24 24" fill="#A8A090"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="video-wrapper">
+      <div class="video-card">
+        <div class="video-play-btn">
+          <svg viewBox="0 0 24 24" fill="#A8A090"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+        <div class="video-overlay-controls">
+          <button class="play-ctrl"><svg viewBox="0 0 24 24" fill="var(--sub)"><polygon points="5,3 19,12 5,21"/></svg></button>
+          <button class="pause-ctrl"><svg viewBox="0 0 24 24" fill="var(--sub)"><rect x="5" y="3" width="5" height="18"/><rect x="14" y="3" width="5" height="18"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="video-label-row">
+    <div class="video-label-item" data-i18n="smartMirrorDemo">Smart Mirror Demo</div>
+    <div class="video-label-item" data-i18n="guestExperience">Guest Experience</div>
+  </div>
+
+  <!-- JOURNAL -->
+  <section class="journal-section">
+    <div class="journal-header">
+      <h2 data-i18n="journal">Journal</h2>
+      <span class="journal-sub" data-i18n="latestNews">or Our Latest News</span>
+    </div>
+    <div class="article-row">
+      <a href="blog/no-login-just-cast.html" class="article-card" style="text-decoration:none;">
+        <div class="article-date">Jun 2026</div>
+        <div class="article-title">No Login. Just Cast.</div>
+        <div class="article-desc">The world's first zero-login smart mirror TV — phone authenticates, mirror plays.</div>
+      </a>
+      <a href="blog/oolaa-vs-old-way.html" class="article-card" style="text-decoration:none;">
+        <div class="article-date">Jun 2026</div>
+        <div class="article-title">Oolaa Way Vs Old Way Mirror TV</div>
+        <div class="article-desc">Hotel mirror TV comparison: set-top box frustration vs Oolaa's cast-only solution.</div>
+      </a>
+      <a href="blog/waldorf-astoria-bangkok.html" class="article-card" style="text-decoration:none;">
+        <div class="article-date">Mar 2026</div>
+        <div class="article-title">Oolaa at Waldorf Astoria Bangkok</div>
+        <div class="article-desc">5-star hotel deployment — smart mirrors meet luxury hospitality in Thailand.</div>
+      </a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="footer-left" onclick="showPageModal('about')">
+    <h3 data-i18n="proven">Proven</h3>
+    <span class="plus" data-i18n="jobReference">+ our projects</span>
+  </div>
+  <div class="footer-center">
+    <span class="talk-text" data-i18n="talkToUs">Talk to us</span>
+    <div class="social-btns">
+      <div class="social-circle" onclick="openWhatsApp()" title="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="#ffffff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </div>
+      <div class="social-circle" onclick="openWeChat()" title="WeChat: Joeklee">
+        <svg viewBox="0 0 24 24" fill="#ffffff"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 00.167-.054l1.903-1.114a.864.864 0 01.717-.098 10.16 10.16 0 002.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178A1.17 1.17 0 014.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178 1.17 1.17 0 01-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 01.598.082l1.584.926a.272.272 0 00.14.045c.133 0 .241-.108.241-.245 0-.06-.024-.12-.04-.178l-.325-1.233a.492.492 0 01.178-.554C23.028 18.48 24 16.82 24 14.98c0-3.21-2.931-5.952-7.062-6.122zM15.41 12.28c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.97-.982z"/></svg>
+      </div>
+    </div>
+  </div>
+  <div class="footer-right" onclick="showPageModal('product')">
+    <h3 data-i18n="products">Products</h3>
+    <span class="plus" data-i18n="factSheets">+ fact sheets</span>
+    <span class="sparkle">✦</span>
+  </div>
+</footer>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="mainModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+// ====================
+// i18n Data
+// ====================
+const i18n = {
+  en: {
+    ifYouAre: "— you —",
+    projectTeam: "Project Team",
+    designTeam: "Design Team",
+    purchasingTeam: "Buying Team",
+    consultant: "Consultant",
+    journal: "Journal",
+    latestNews: "or Our Latest News",
+    proven: "Proven",
+    products: "Products",
+    jobReference: "+ our projects",
+    factSheets: "+ fact sheets",
+    talkToUs: "Talk to us",
+    smartMirrorDemo: "Smart Mirror Demo",
+    guestExperience: "Guest Experience",
+    painPoints: "Pain Points:",
+    howWeHelp: "How We Help:",
+    projectPain: [
+      "Too conservative → Chairman says 'You have no innovation?'",
+      "Too aggressive → You're the one who takes the blame"
+    ],
+    projectSolutions: [
+      "30,000+ installations, know what can be done and what's too risky",
+      "We dare to innovate, designed many add-on products you can't imagine",
+      "Early customers had unclear requirements, we learned to solve problems together"
+    ],
+    designPain: [
+      "Not beautiful enough → Need weird ideas",
+      "Can't land → Looks good but how to maintain?",
+      "How to justify → PM questions why use Smart Mirror"
+    ],
+    designSolutions: [
+      "We're not just a smart mirror factory, we also customize molds for designers",
+      "Extensive Case Studies, not afraid of client questions",
+      "Maintenance plans pre-prepared for you",
+      "Strong Fit Out background, we know what questions to ask designers"
+    ],
+    purchasingPain: [
+      "Bought too expensive → Boss scolds you",
+      "Bought too cheap → Quality problems, or bought unsuitable products"
+    ],
+    purchasingSolutions: [
+      "Factory direct, no need to worry about after-sales service",
+      "Clear quotation, what's included and what's not",
+      "Years of Job References, we don't give up easily"
+    ],
+    consultantPain: [
+      "Not familiar with Smart Mirror → Afraid of recommending wrong",
+      "Client asks questions → Don't know how to answer",
+      "Going rogue → Affects your professional image"
+    ],
+    consultantSolutions: [
+      "We're not a trader, we're a real factory, we know specs inside out",
+      "Our factory has its own Software Team, can solve many problems you can't imagine",
+      "Even in Hong Kong, we have AR/VR team"
+    ],
+    aboutTitle: "About Us",
+    aboutIntro: "<strong>Viewdex Limited</strong> is Hong Kong's professional smart mirror and display solutions provider.",
+    aboutIntro2: "Specializing in high-quality smart mirror solutions for real estate developers and 5-star hotels.",
+    companyBackground: "Company Background",
+    background: [
+      "Our own factory in Shenzhen, quality under our control",
+      "30,000+ installations completed",
+      "Experience in Hong Kong, Macau hotels and luxury residential projects",
+      "Own Software Team + AR/VR team"
+    ],
+    downloadJobRef: "Download Job Reference ↓",
+    productTitle: "Products",
+    productIntro: "Our product range covers multiple categories:",
+    productRange: [
+      "Oolaa Smart Mirror",
+      "Oola Axis",
+      "Oolaa Mirror TV",
+      "Oola Ai-Play Mirror",
+      "Oolaa Outdoor TV",
+      "Oolaa Bathroom TV",
+      "Oolaa Kitchen TV",
+      "Oola Kiosk",
+      "Oola Ai-Soulmate",
+      "Oola Smart Bath Panel",
+      "Oola Smart Kitchen TV",
+      "Oolaa Smart Kitchen Linear"
+    ],
+    downloadFactSheet: "Download Fact Sheet ↓"
+  },
+  zh: {
+    ifYouAre: "— 如果您是 —",
+    projectTeam: "项目团队",
+    designTeam: "设计团队",
+    purchasingTeam: "采购团队",
+    consultant: "顾问",
+    journal: "期刊",
+    latestNews: "或最新消息",
+    proven: "项目经验",
+    products: "产品",
+    jobReference: "+ 项目参考",
+    factSheets: "+ 产品说明",
+    talkToUs: "联系我们",
+    smartMirrorDemo: "智能镜演示",
+    guestExperience: "客户体验",
+    painPoints: "痛点：",
+    howWeHelp: "我们如何帮助您：",
+    projectPain: [
+      "太保守 → 主席说'你没有创新？'",
+      "太冒进 → 出事你背锅"
+    ],
+    projectSolutions: [
+      "30,000+安装经验，知道什么可以做、什么太冒险",
+      "我们大胆创新，设计了很多你想象不到的附加产品",
+      "早年客户要求不清晰，所以我们不断与客户共同解决问题"
+    ],
+    designPain: [
+      "不够漂亮 → 需要很多奇怪的想法",
+      "不接地气 → 看起来很美，维修怎么办？",
+      "如何交代 → 项目经理质疑为什么用Smart Mirror"
+    ],
+    designSolutions: [
+      "我们不只是智能镜厂，我们还愿意为设计师定制模具",
+      "大量案例研究，不怕客户问",
+      "维修方案预先帮您想好",
+      "有深厚的装修背景，已经思考好怎么样问设计师问题"
+    ],
+    purchasingPain: [
+      "买贵了 → 被老板骂",
+      "买便宜了 → 质量问题，或者买了不合适的产品"
+    ],
+    purchasingSolutions: [
+      "工厂直销，不用担心售后服务",
+      "清楚报价单，什么包、什么不包",
+      "多年Job Reference，不会轻易放弃"
+    ],
+    consultantPain: [
+      "对Smart Mirror不熟悉 → 怕推荐错",
+      "客户问起来 → 不知道怎么回答",
+      "乱来 → 影响你的专业形象"
+    ],
+    consultantSolutions: [
+      "我们不是贸易商，是真正的厂家，我们对规格非常清楚",
+      "我们自己的厂有软件团队，可以解决很多你想不到的问题",
+      "就算在香港，我们也有AR/VR团队"
+    ],
+    aboutTitle: "关于我们",
+    aboutIntro: "<strong>Viewdex Limited</strong> 是香港专业智能镜及智能显示屏供应商。",
+    aboutIntro2: "专为房地产开发商及五星酒店提供高质量的智能镜解决方案。",
+    companyBackground: "公司背景",
+    background: [
+      "深圳自家工厂，品质自己控制",
+      "已安装超过30,000套",
+      "香港、澳门酒店及豪宅项目经验",
+      "自家Software Team + AR/VR团队"
+    ],
+    downloadJobRef: "下载项目参考 ↓",
+    productTitle: "产品",
+    productIntro: "我们的产品涵盖多个范畴：",
+    productRange: [
+      "Oolaa Smart Mirror",
+      "Oola Axis",
+      "Oolaa Mirror TV",
+      "Oola Ai-Play Mirror",
+      "Oolaa Outdoor TV",
+      "Oolaa Bathroom TV",
+      "Oolaa Kitchen TV",
+      "Oola Kiosk",
+      "Oola Ai-Soulmate",
+      "Oola Smart Bath Panel",
+      "Oola Smart Kitchen TV",
+      "Oolaa Smart Kitchen Linear"
+    ],
+    downloadFactSheet: "下载产品规格 ↓"
+  },
+  "zh-HK": {
+    ifYouAre: "— 如果你係 —",
+    projectTeam: "項目團隊",
+    designTeam: "設計團隊",
+    purchasingTeam: "採購團隊",
+    consultant: "顧問",
+    journal: "期刊",
+    latestNews: "或最新資訊",
+    proven: "項目經驗",
+    products: "產品",
+    jobReference: "+ job reference",
+    factSheets: "+ 產品規格",
+    talkToUs: "聯絡我哋",
+    smartMirrorDemo: "智能鏡演示",
+    guestExperience: "客戶體驗",
+    painPoints: "痛點：",
+    howWeHelp: "我哋點幫你：",
+    projectPain: [
+      "太保守 → 被主席話「你冇創新？」",
+      "太進取 → 出事孭晒個鑊"
+    ],
+    projectSolutions: [
+      "30000套經驗，知道乜嘢可做到、乜嘢太冒險",
+      "我哋大膽創新，設計咗好多你想像唔到嘅附加產品",
+      "早年客戶要求不清晰，所以不斷要同客戶共同解決問題"
+    ],
+    designPain: [
+      "唔夠靚 → 要好多奇怪嘅想法",
+      "落唔到地 → 得個靚字，維修點算？",
+      "點收口 → PM質疑你點解要用 Smart Mirror"
+    ],
+    designSolutions: [
+      "我哋唔單只係智能鏡廠，我哋也願意為設計師特製模具",
+      "大量 Case Studies，唔怕客人問",
+      "維修方案預先幫你想好",
+      "有浓厚嘅 Fit Out 背景，已經思考好點樣去問設計師問題"
+    ],
+    purchasingPain: [
+      "買貴咗 → 被老闆鬧",
+      "買平咗 → 質素出事，又或者買咗唔適合嘅產品"
+    ],
+    purchasingSolutions: [
+      "工廠直營，唔使擔心售後服務",
+      "清楚報價單，乜嘢包、乜嘢唔包",
+      "累積咗咁多年嘅 Job Reference，唔會輕易放棄"
+    ],
+    consultantPain: [
+      "對 Smart Mirror 唔熟悉 → 驚推薦錯",
+      "客人問起 → 唔知點答",
+      "亂嚟 → 影響你專業形象"
+    ],
+    consultantSolutions: [
+      "我哋唔係 trading，而真係一個廠家，我哋對於規格係非常清楚",
+      "我哋自己廠有 Software Team，可以解決好多你想像唔到嘅問題",
+      "就算香港，我哋都有 AR/VR 團隊"
+    ],
+    aboutTitle: "關於我哋",
+    aboutIntro: "<strong>Viewdex Limited</strong> 係香港專業智能鏡及智能顯示屏供應商。",
+    aboutIntro2: "專為地產發展商及五星酒店提供高質量嘅智能鏡解決方案。",
+    companyBackground: "公司背景",
+    background: [
+      "深圳自家工廠，品質自己控制",
+      "已安裝超過30,000套",
+      "香港、澳門酒店及豪宅項目經驗",
+      "自家 Software Team + AR/VR團隊"
+    ],
+    downloadJobRef: "下載 Job Reference ↓",
+    productTitle: "產品",
+    productIntro: "我哋嘅產品涵蓋多個範疇：",
+    productRange: [
+      "Oolaa Smart Mirror",
+      "Oola Axis",
+      "Oolaa Mirror TV",
+      "Oola Ai-Play Mirror",
+      "Oolaa Outdoor TV",
+      "Oolaa Bathroom TV",
+      "Oolaa Kitchen TV",
+      "Oola Kiosk",
+      "Oola Ai-Soulmate",
+      "Oola Smart Bath Panel",
+      "Oola Smart Kitchen TV",
+      "Oolaa Smart Kitchen Linear"
+    ],
+    downloadFactSheet: "下載產品規格 ↓"
+  }
+};
+
+let currentLang = 'en';
+
+// ====================
+// Language
+// ====================
+document.addEventListener('DOMContentLoaded', function() {
+  const langBtns = document.querySelectorAll('.lang-btn');
+  langBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const lang = this.getAttribute('data-lang');
+      setLanguage(lang);
+      langBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+  setLanguage('en');
+});
+
+function setLanguage(lang) {
+  currentLang = lang;
+  const data = i18n[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (data[key] !== undefined) {
+      el.textContent = data[key];
+    }
+  });
+}
+
+// ====================
+// Role Modal
+// ====================
+function showRoleModal(role) {
+  const data = i18n[currentLang];
+  const body = document.getElementById('modalBody');
+  let pain, solutions, title;
+
+  switch(role) {
+    case 'project':
+      title = `${data.ifYouAre} ${data.projectTeam}`;
+      pain = data.projectPain; solutions = data.projectSolutions; break;
+    case 'design':
+      title = `${data.ifYouAre} ${data.designTeam}`;
+      pain = data.designPain; solutions = data.designSolutions; break;
+    case 'purchasing':
+      title = `${data.ifYouAre} ${data.purchasingTeam}`;
+      pain = data.purchasingPain; solutions = data.purchasingSolutions; break;
+    case 'consultant':
+      title = `${data.ifYouAre} ${data.consultant}`;
+      pain = data.consultantPain; solutions = data.consultantSolutions; break;
+  }
+
+  body.innerHTML = `
+    <div class="modal-role-content">
+      <h2>${title}</h2>
+      <h3>${data.painPoints}</h3>
+      <ul class="pain-points">${pain.map(p => `<li>${p}</li>`).join('')}</ul>
+      <h3>${data.howWeHelp}</h3>
+      <ul class="solutions">${solutions.map(s => `<li>${s}</li>`).join('')}</ul>
+    </div>`;
+
+  document.getElementById('mainModal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+// ====================
+// Page Modal (About / Products)
+// ====================
+function showPageModal(page) {
+  const data = i18n[currentLang];
+  const body = document.getElementById('modalBody');
+  let html = '';
+
+  if (page === 'about') {
+    html = `<div class="modal-page-content">
+      <h2>${data.aboutTitle}</h2>
+      <p>${data.aboutIntro}</p><p>${data.aboutIntro2}</p>
+      <h3 style="font-size:12px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin:24px 0 12px;font-family:Inter,sans-serif">${data.companyBackground}</h3>
+      <ul>${data.background.map(i => `<li>${i}</li>`).join('')}</ul>
+      <a href="https://www.dropbox.com/scl/fi/yjat7fs5b5cjq76zj3lra/Job-reference-of-Oolaa-JSA-200426.pdf?rlkey=gzqff6j8nakmxkh1xuln9gx6x&dl=0" target="_blank" class="modal-download-btn">${data.downloadJobRef}</a>
+    </div>`;
+  } else if (page === 'product') {
+    html = `<div class="modal-page-content">
+      <h2>${data.productTitle}</h2><p>${data.productIntro}</p>
+      <ul>${data.productRange.map(i => `<li>${i}</li>`).join('')}</ul>
+      <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="modal-download-btn">${data.downloadFactSheet}</a>
+    </div>`;
+  }
+
+  body.innerHTML = html;
+  document.getElementById('mainModal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('mainModal').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+// ====================
+// Contact
+// ====================
+function openWhatsApp() {
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  if (isMobile) {
+    window.location.href = 'whatsapp://send?phone=85294304292';
+  } else {
+    window.open('https://wa.me/85294304292', '_blank');
+  }
+}
+
+function openWeChat() {
+  const wechatId = 'Joeklee';
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(wechatId).then(() => {
+      alert('WeChat ID: ' + wechatId + '\n已複製到剪貼板');
+    });
+  } else {
+    alert('WeChat ID: ' + wechatId);
+  }
+}
+</script>
+
+</body>
+</html>
