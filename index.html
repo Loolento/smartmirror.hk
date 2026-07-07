@@ -337,6 +337,7 @@ header {
   border-radius: 10px;
   position: relative;
   aspect-ratio: 16/9;
+  max-height: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -755,7 +756,7 @@ footer {
   .role-btn { padding: 12px 0; font-size: 13px; border-radius: 7px; }
   .video-row { flex-direction: column; gap: 0; padding-bottom: 8px; }
   .video-row .video-wrapper:last-child { display: none; }
-  .video-card { aspect-ratio: 16/9; border-radius: 7px; }
+  .video-card { aspect-ratio: 16/9; max-height: 210px; border-radius: 7px; }
   .video-label-row { display: none; }
   .journal-section { padding-bottom: 6px; }
   .journal-header { flex-direction: row; margin-bottom: 6px; }
@@ -803,8 +804,6 @@ footer {
   .role-btn { font-size: 12px; }
 }
 
-/* Hide video label row on all screen sizes — labels inline */
-.video-label-row { display: none; }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
 </head>
