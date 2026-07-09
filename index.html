@@ -844,7 +844,7 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 8px;
-    flex: 1;
+    flex: 0 0 auto;
     min-height: 0;
     padding: 0;
   }
@@ -855,7 +855,8 @@ footer {
     gap: 6px;
   }
   .bottom-card {
-    flex: 1;
+    flex: 0 0 auto;
+    min-height: 48px;
     background: var(--article-bg);
     border: 1px solid var(--article-border);
     border-radius: 10px;
@@ -890,6 +891,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     gap: 12px;
+    padding-bottom: 16px;
   }
   .bottom-contact .talk-text { font-size: 15px; color: var(--sub); }
   .bottom-contact .social-btns { flex-direction: column !important; gap: 12px; }
@@ -906,7 +908,7 @@ footer {
 }
 
 @media (max-width: 860px) {
-  .container { padding: 0 12px 60px; gap: 6px; }
+  .container { padding: 0 12px; gap: 6px; }
   header { padding: 20px 0 6px; border-bottom: none; }
   .brand { font-size: 15px; }
   .brand-tagline { font-size: 10px; }
