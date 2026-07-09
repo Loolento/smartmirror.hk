@@ -838,7 +838,8 @@ footer {
   .video-row .video-wrapper:last-child { display: none; }
   .video-card { aspect-ratio: 16/9; max-height: 210px; border-radius: 7px; }
   .video-label-row { display: none; }
-  .journal-section { flex: 1; background: var(--article-bg); border: 1px solid var(--article-border); border-radius: 10px; padding: 24px 18px; display: flex; flex-direction: column; justify-content: center; cursor: pointer; }
+  .journal-section { flex: 1; background: linear-gradient(to bottom, var(--rb-g1) 0%, var(--rb-g2) 25%, var(--rb-g3) 52%, var(--rb-g4) 74%, var(--rb-g5) 100%); border: 1px solid var(--rb-border); border-radius: 10px; padding: 24px 18px; display: flex; flex-direction: column; justify-content: center; cursor: pointer; position: relative; overflow: hidden; box-shadow: inset 0 1px 0 var(--rb-bevel), inset 0 -1px 0 var(--rb-lip), inset 0 -9px 14px var(--rb-inner), 0 2px 3px var(--rb-drop1), 0 7px 10px var(--rb-drop2); transition: all 0.12s; color: var(--rb-text); }
+  .journal-section::after { content: ''; position: absolute; top: 3px; left: 6px; right: 40%; height: 38%; background: linear-gradient(135deg, var(--rb-gloss1) 0%, var(--rb-gloss2) 25%, var(--rb-gloss3) 50%, transparent 70%); border-radius: 6px 0 0 0; pointer-events: none; }
   .journal-header { flex-direction: row; margin-bottom: 6px; align-items: center; gap: 6px; }
   .journal-header h2 { font-size: 16px; }
   .journal-sub { font-size: 10px; }
@@ -865,14 +866,40 @@ footer {
   }
   .footer-left, .footer-right {
     flex: 1 1 50%;
-    background: var(--article-bg);
-    border: 1px solid var(--article-border);
+    background: linear-gradient(to bottom,
+      var(--rb-g1) 0%,
+      var(--rb-g2) 25%,
+      var(--rb-g3) 52%,
+      var(--rb-g4) 74%,
+      var(--rb-g5) 100%);
+    border: 1px solid var(--rb-border);
     border-radius: 10px;
     padding: 24px 18px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+      inset 0 1px 0 var(--rb-bevel),
+      inset 0 -1px 0 var(--rb-lip),
+      inset 0 -9px 14px var(--rb-inner),
+      0 2px 3px var(--rb-drop1),
+      0 7px 10px var(--rb-drop2);
+    transition: all 0.12s;
+    color: var(--rb-text);
+  }
+  .footer-left::after, .footer-right::after {
+    content: ''; position: absolute;
+    top: 3px; left: 6px; right: 40%; height: 38%;
+    background: linear-gradient(135deg,
+      var(--rb-gloss1) 0%,
+      var(--rb-gloss2) 25%,
+      var(--rb-gloss3) 50%,
+      transparent 70%);
+    border-radius: 6px 0 0 0;
+    pointer-events: none;
   }
   .footer-left h3, .footer-right h3 { font-size: 20px; font-weight: 300; }
   .footer-left .plus, .footer-right .plus { font-size: 13px; margin-top: 6px; }
