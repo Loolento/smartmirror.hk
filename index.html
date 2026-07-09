@@ -11,7 +11,75 @@
 <meta property="og:description" content="Pain? Gone! — Smart mirror for project teams, designers, buyers & consultants.">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Viewdex Limited","alternateName":"Oolaa","url":"https://smartmirror.hk","description":"Hong Kong professional smart mirror and display solutions provider","telephone":"+852-9430-4292"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://smartmirror.hk/#org",
+      "name": "Viewdex Limited",
+      "alternateName": "Oolaa",
+      "url": "https://smartmirror.hk",
+      "description": "Hong Kong professional smart mirror and display solutions provider",
+      "telephone": "+852-9430-4292",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "telephone": "+852-9430-4292",
+        "availableLanguage": ["English", "Chinese", "Cantonese"]
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://smartmirror.hk/#business",
+      "parentOrganization": {"@id": "https://smartmirror.hk/#org"},
+      "name": "Viewdex Limited",
+      "description": "Factory-direct smart mirror manufacturer — Shenzhen factory, Hong Kong office",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hong Kong"
+      },
+      "telephone": "+852-9430-4292"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://smartmirror.hk/#smartmirror",
+      "name": "Oolaa Smart Mirror",
+      "description": "Professional smart mirror solution for hotels, developers, and commercial projects. Factory direct from Hong Kong.",
+      "brand": {"@id": "https://smartmirror.hk/#org"},
+      "manufacturer": {"@id": "https://smartmirror.hk/#org"}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many installations has Oolaa completed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Over 30,000 installations across Hong Kong, Macau hotels and luxury residential projects."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Oolaa a factory or trading company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Viewdex Limited operates its own factory in Shenzhen with in-house Software Team and AR/VR team. Not a trading company."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Oolaa customize mirror sizes and designs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Oolaa customizes molds for designers and supports OEM projects with custom sizes and specifications."
+          }
+        }
+      ]
+    }
+  ]
+}
 </script>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -1401,5 +1469,40 @@ function openWeChat() {
 }
 </script>
 
+<!-- NOSCRIPT: Static fallback for AI crawlers (Google, ChatGPT, Perplexity) — zero visual impact for users -->
+<noscript>
+  <div style="padding:40px;max-width:800px;margin:0 auto;font-family:Inter,sans-serif;color:#8A8070;background:#1A1A18;line-height:1.6">
+    <h1 style="color:#B8A882;font-size:28px;font-weight:300">Oolaa — Smart Mirror for Hotels &amp; Developers</h1>
+    <p>Hong Kong Factory Direct. 30,000+ installations completed.</p>
+
+    <h2 style="color:#B8A882;font-size:20px;margin-top:30px">Who We Serve</h2>
+    <h3 style="color:#6A6558;font-size:14px">Project Team</h3>
+    <p>Pain: Too conservative → no innovation. Too aggressive → you take blame.</p>
+    <p>Solution: 30,000+ installations, know what can be done. Custom add-on products. Co-solve with clients.</p>
+    <h3 style="color:#6A6558;font-size:14px">Design Team</h3>
+    <p>Pain: Not beautiful enough. Can't land. How to justify Smart Mirror to PM.</p>
+    <p>Solution: Custom mold fabrication. Extensive case studies. Maintenance plans pre-prepared. Strong Fit Out background.</p>
+    <h3 style="color:#6A6558;font-size:14px">Buying Team</h3>
+    <p>Pain: Bought too expensive → boss scolds. Too cheap → quality problems.</p>
+    <p>Solution: Factory direct. Clear quotation. Years of job references, we don't give up easily.</p>
+    <h3 style="color:#6A6558;font-size:14px">Consultant</h3>
+    <p>Pain: Not familiar with Smart Mirror → afraid of wrong recommendation. Client questions → don't know how to answer.</p>
+    <p>Solution: Real factory with in-house Software Team + AR/VR team. We know specs inside out.</p>
+
+    <h2 style="color:#B8A882;font-size:20px;margin-top:30px">Products</h2>
+    <ul>
+      <li>Oolaa Smart Mirror</li><li>Oola Axis</li><li>Oolaa Mirror TV</li>
+      <li>Oola Ai-Play Mirror</li><li>Oolaa Outdoor TV</li><li>Oolaa Bathroom TV</li>
+      <li>Oolaa Kitchen TV</li><li>Oola Kiosk</li><li>Oola Ai-Soulmate</li>
+      <li>Oola Smart Bath Panel</li><li>Oola Smart Kitchen TV</li><li>Oolaa Smart Kitchen Linear</li>
+    </ul>
+
+    <h2 style="color:#B8A882;font-size:20px;margin-top:30px">About Viewdex Limited</h2>
+    <p>Hong Kong's professional smart mirror and display solutions provider. Own factory in Shenzhen — quality under our control. In-house Software Team + AR/VR team. Experience in Hong Kong, Macau hotels and luxury residential projects.</p>
+
+    <h2 style="color:#B8A882;font-size:20px;margin-top:30px">Contact</h2>
+    <p>WhatsApp: +852 9430 4292 | WeChat: Joeklee</p>
+  </div>
+</noscript>
 </body>
 </html>
