@@ -229,13 +229,13 @@ body {
   padding: 0 48px;
 }
 
-/* ===== DESKTOP: 3-Column Grid Layout (Option B) ===== */
+/* ===== DESKTOP: 2-Column Grid Layout (Option B) ===== */
 .content {
   flex: 1;
   display: grid;
-  grid-template-columns: 250px minmax(180px, 0.6fr) 1fr;
+  grid-template-columns: 280px 1fr;
   grid-template-rows: auto 1fr;
-  gap: 20px;
+  gap: 24px;
   align-items: start;
   padding-top: 8px;
 }
@@ -334,7 +334,7 @@ header {
 
 .hero h1 {
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
-  font-size: 38px; font-weight: 300; color: var(--gold); line-height: 1.10;
+  font-size: 46px; font-weight: 300; color: var(--gold); line-height: 1.05;
   letter-spacing: -0.01em;
 }
 
@@ -379,9 +379,9 @@ header {
     var(--rb-g5) 100%);
   border: 1px solid var(--rb-border);
   border-radius: 10px;
-  padding: 16px 0;
+  padding: 20px 0;
   text-align: center;
-  font-size: 16px; font-weight: 400;
+  font-size: 18px; font-weight: 400;
   font-family: 'Inter', sans-serif;
   color: var(--rb-text);
   cursor: pointer;
@@ -439,6 +439,7 @@ header {
   gap: 0;
   justify-self: center;
   width: 100%;
+  max-width: 420px;
 }
 
 .video-row .video-wrapper:nth-child(2) { display: none; }
@@ -917,10 +918,11 @@ footer {
 /* ===== RESPONSIVE: Medium screens ===== */
 @media (max-width: 1100px) {
   .container { padding: 0 24px; }
-  .content { grid-template-columns: 220px minmax(150px, 0.5fr) 1fr; gap: 16px; }
-  .hero h1 { font-size: 32px; }
-  .role-btn { font-size: 15px; padding: 14px 0; }
+  .content { grid-template-columns: 240px 1fr; gap: 20px; }
+  .hero h1 { font-size: 36px; }
+  .role-btn { font-size: 16px; padding: 16px 0; }
   .video-card { max-height: 440px; }
+  .video-row { max-width: 360px; }
 }
 
 /* ===== RESPONSIVE: Mobile (≤860px) — Restore current layout ===== */
@@ -1041,47 +1043,9 @@ footer {
       </div>
     </div>
   </div>
-  <div class="video-label-row">
-    <div class="video-label-item" data-i18n="smartMirrorDemo">Smart Mirror Demo</div>
-  </div>
 
-  <!-- RIGHT COLUMN: Blog -->
-  <section class="journal-section">
-    <div class="journal-header">
-      <div class="journal-left" onclick="location.href='blog/'" style="cursor:pointer">
-        <h2 data-i18n="journal">Blog</h2>
-        <span class="journal-sub" data-i18n="latestNews">or Our Latest News</span>
-      </div>
-      <div class="journal-contact">
-        <span class="talk-text" data-i18n="talkToUs">Talk to us</span>
-        <div class="social-btns social-vertical">
-          <div class="social-circle" onclick="handleContact('whatsapp')" title="WhatsApp">
-            <svg viewBox="0 0 24 24" fill="#ffffff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </div>
-          <div class="social-circle" onclick="handleContact('wechat')" title="WeChat: Joeklee">
-            <svg viewBox="0 0 24 24" fill="#ffffff"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 00.167-.054l1.903-1.114a.864.864 0 01.717-.098 10.16 10.16 0 002.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178A1.17 1.17 0 014.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178 1.17 1.17 0 01-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 01.598.082l1.584.926a.272.272 0 00.14.045c.133 0 .241-.108.241-.245 0-.06-.024-.12-.04-.178l-.325-1.233a.492.492 0 01.178-.554C23.028 18.48 24 16.82 24 14.98c0-3.21-2.931-5.952-7.062-6.122zM15.41 12.28c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.97-.982z"/></svg>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="article-row">
-      <a href="blog/no-login-just-cast.html" class="article-card article-mobile-hide" style="text-decoration:none;">
-        <div class="article-date">Jun 2026</div>
-        <div class="article-title">No Login. Just Cast.</div>
-        <div class="article-desc">The world's first zero-login smart mirror TV — phone authenticates, mirror plays.</div>
-      </a>
-      <a href="blog/oolaa-vs-old-way.html" class="article-card article-mobile-hide" style="text-decoration:none;">
-        <div class="article-date">Jun 2026</div>
-        <div class="article-title">Oolaa Way Vs Old Way Mirror TV</div>
-        <div class="article-desc">Hotel mirror TV comparison: set-top box frustration vs Oolaa's cast-only solution.</div>
-      </a>
-      <a href="blog/waldorf-astoria-bangkok.html" class="article-card article-mobile-hide" style="text-decoration:none;">
-        <div class="article-date">Mar 2026</div>
-        <div class="article-title">Oolaa at Waldorf Astoria Bangkok</div>
-        <div class="article-desc">5-star hotel deployment — smart mirrors meet luxury hospitality in Thailand.</div>
-      </a>
-    </div>
-  </section>
+
+
 
 </div>
 
