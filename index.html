@@ -377,6 +377,8 @@ header {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  display: block;
   box-shadow:
     inset 0 1px 0 var(--rb-bevel),
     inset 0 -1px 0 var(--rb-lip),
@@ -958,10 +960,10 @@ footer {
 
   <!-- ROLE BUTTONS -->
   <div class="role-row">
-    <button class="role-btn" onclick="showRoleModal('project')"><span data-i18n="projectTeam">Project Team</span></button>
-    <button class="role-btn" onclick="showRoleModal('purchasing')"><span data-i18n="purchasingTeam">Buying Team</span></button>
-    <button class="role-btn" onclick="showRoleModal('design')"><span data-i18n="designTeam">Design Team</span></button>
-    <button class="role-btn" onclick="showRoleModal('consultant')"><span data-i18n="consultant">Consultant</span></button>
+    <a href="project-team.html" class="role-btn"><span data-i18n="projectTeam">Project Team</span></a>
+    <a href="buying-team.html" class="role-btn"><span data-i18n="purchasingTeam">Buying Team</span></a>
+    <a href="design-team.html" class="role-btn"><span data-i18n="designTeam">Design Team</span></a>
+    <a href="consultant.html" class="role-btn"><span data-i18n="consultant">Consultant</span></a>
   </div>
 
   <!-- VIDEO ROW -->
