@@ -8,7 +8,7 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://smartmirror.hk/">
 <meta property="og:title" content="Oolaa — Smart Mirror Solution">
-<meta property="og:description" content="Pain? Gone! — Smart mirror for project teams, designers, buyers & consultants.">
+<meta property="og:description" content="Empathetic Question — asked by... Smart mirror for project teams, designers, buyers & consultants.">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
 {
@@ -818,7 +818,7 @@ footer {
 }
 
 @media (max-width: 860px) {
-  .container { padding: 0 12px; gap: 10px; }
+  .container { padding: 0 12px; gap: 6px; }
   header { padding: 8px 0 6px; border-bottom: none; }
   .brand { font-size: 15px; }
   .content { flex: 7; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 4px; min-height: 0; }
@@ -838,7 +838,7 @@ footer {
   .video-row .video-wrapper:last-child { display: none; }
   .video-card { aspect-ratio: 16/9; max-height: 210px; border-radius: 7px; }
   .video-label-row { display: none; }
-  .journal-section { flex-shrink: 0; display: flex; flex-direction: row; align-items: flex-start; gap: 10px; background: transparent; border: none; border-radius: 0; box-shadow: none; padding: 0 0 8px; color: var(--sub); }
+  .journal-section { flex-shrink: 0; display: flex; flex-direction: row; align-items: flex-start; gap: 10px; background: transparent; border: none; border-radius: 0; box-shadow: none; padding: 0; color: var(--sub); }
   .journal-section::after { display: none; }
   .journal-header { display: contents; }
   .journal-left { flex: 1 1 60%; background: var(--article-bg); border: 1px solid var(--article-border); border-radius: 10px; padding: 14px 12px; display: flex; flex-direction: column; justify-content: center; cursor: pointer; position: relative; overflow: hidden; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), inset 0 -1px 0 rgba(0,0,0,0.5), 0 2px 3px rgba(0,0,0,0.6), 0 6px 10px rgba(0,0,0,0.35); transition: all 0.12s; }
@@ -929,8 +929,8 @@ footer {
 
   <!-- HERO -->
   <section class="hero">
-    <h1>Pain<span class="punct">?</span> Gone<span class="punct">!</span></h1>
-    <span class="sub" data-i18n="ifYouAre">— you —</span>
+    <h1>Empathetic Question</h1>
+    <span class="sub">asked by project team / design team / purchasing team / consultant</span>
   </section>
 
   <!-- ROLE BUTTONS -->
@@ -971,7 +971,7 @@ footer {
   <section class="journal-section">
     <div class="journal-header">
       <div class="journal-left" onclick="location.href='blog/'" style="cursor:pointer">
-        <h2 data-i18n="journal">Journal</h2>
+        <h2 data-i18n="journal">Blog</h2>
         <span class="journal-sub" data-i18n="latestNews">or Our Latest News</span>
       </div>
       <div class="journal-contact">
@@ -1009,8 +1009,8 @@ footer {
 
 <footer>
   <div class="footer-left" onclick="showPageModal('about')">
-    <h3 data-i18n="proven">Proven</h3>
-    <span class="plus" data-i18n="jobReference">+ our projects</span>
+    <h3 data-i18n="proven">Delivered</h3>
+    <span class="plus" data-i18n="jobReference">+ job reference</span>
   </div>
   <div class="footer-center">
     <span class="talk-text" data-i18n="talkToUs">Talk to us</span>
@@ -1047,16 +1047,16 @@ footer {
 const i18n = {
   en: {
     heroDesc: "Smart Mirror for Hotels & Developers — Hong Kong Factory Direct",
-    ifYouAre: "— you —",
+    ifYouAre: "asked by...",
     projectTeam: "Project Team",
     designTeam: "Design Team",
     purchasingTeam: "Buying Team",
     consultant: "Consultant",
     journal: "Journal",
     latestNews: "or Our Latest News",
-    proven: "Proven",
+    proven: "Delivered",
     products: "Products",
-    jobReference: "+ our projects",
+    jobReference: "+ job reference",
     factSheets: "+ fact sheets",
     talkToUs: "Talk to us",
     smartMirrorDemo: "Smart Mirror Demo",
