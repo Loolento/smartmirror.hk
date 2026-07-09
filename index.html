@@ -86,14 +86,14 @@
 
 /* ===== PALETTE: Basic (Warm Gold/Bronze) ===== */
 [data-palette="basic"] {
-  --canvas:       #1A1A18;
-  --card-bg:      #22221E;
-  --gold:         #B8A882;
-  --sub:          #8A8070;
-  --muted:        #6A6558;
-  --divider:      #2A2A22;
-  --article-bg:   #22221C;
-  --article-border:#2E2E24;
+  --canvas:       #3E3E38;
+  --card-bg:      #484840;
+  --gold:         #D4C89E;
+  --sub:          #A69E90;
+  --muted:        #8A8478;
+  --divider:      #525248;
+  --article-bg:   #484840;
+  --article-border:#525248;
   --video-bg:     #121210;
   --video-border: #282820;
   --sparkle:      #C5A040;
@@ -821,7 +821,7 @@ footer {
   .container { padding: 0 12px; }
   header { padding: 8px 0 6px; border-bottom: none; }
   .brand { font-size: 15px; }
-  .content { justify-content: flex-start; padding-top: 4px; flex: 1; }
+  .content { justify-content: flex-start; padding-top: 4px; height: 50%; flex: 0 0 auto; }
   .hero { padding: 0 0 6px; flex-shrink: 0; }
   .hero h1 { font-size: 24px; }
   .hero .sub { font-size: 10px; }
@@ -838,8 +838,8 @@ footer {
   .video-row .video-wrapper:last-child { display: none; }
   .video-card { aspect-ratio: 16/9; max-height: 210px; border-radius: 7px; }
   .video-label-row { display: none; }
-  .journal-section { padding-bottom: 6px; flex: 1; display: flex; flex-direction: column; justify-content: center; }
-  .journal-header { flex-direction: row; margin-bottom: 6px; }
+  .journal-section { padding-bottom: 6px; flex: 1; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--divider); }
+  .journal-header { flex-direction: row; margin-bottom: 6px; align-items: center; gap: 6px; }
   .journal-header h2 { font-size: 16px; }
   .journal-sub { font-size: 10px; }
   .journal-left { gap: 6px; }
@@ -855,7 +855,8 @@ footer {
   .article-mobile-hide { display: none !important; }
   .footer-center { display: none; }
   footer {
-    flex: 1;
+    height: 50%;
+    flex: 0 0 auto;
     flex-wrap: nowrap;
     gap: 10px;
     padding: 12px 0;
@@ -912,7 +913,6 @@ footer {
   <!-- HERO -->
   <section class="hero">
     <h1>Pain<span class="punct">?</span> Gone<span class="punct">!</span></h1>
-    <p class="hero-desc" data-i18n="heroDesc">Smart Mirror for Hotels &amp; Developers — Hong Kong Factory Direct</p>
     <span class="sub" data-i18n="ifYouAre">— you —</span>
   </section>
 
