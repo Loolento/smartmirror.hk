@@ -1005,7 +1005,7 @@ footer {
 <header>
   <div class="brand-info">
     <span class="brand">Oolaa</span>
-    <span class="brand-tagline"><span class="i-bold">i</span>nteractive Mirror Systems</span>
+    <span class="brand-tagline" data-i18n="brandTagline"><span class="i-bold">i</span>nteractive Mirror Systems</span>
   </div>
   <div class="lang-switcher">
     <button class="lang-btn active" data-lang="en">EN</button>
@@ -1019,7 +1019,7 @@ footer {
   <!-- LEFT COLUMN: Hero + Role Buttons -->
   <section class="hero">
     <h1>Pain?<span class="punct">!</span> Gone!<span class="punct">!</span></h1>
-    <span class="sub">— you —</span>
+    <span class="sub" data-i18n="heroSub">— you —</span>
   </section>
 
   <div class="role-row">
@@ -1117,6 +1117,8 @@ footer {
 // ====================
 const i18n = {
   en: {
+    heroSub: "— you —",
+    brandTagline: "<span class=\"i-bold\">i</span>nteractive Mirror Systems",
     heroDesc: "Smart Mirror for Hotels & Developers — Hong Kong Factory Direct",
     ifYouAre: "asked by...",
     projectTeam: "Project Team",
@@ -1203,17 +1205,19 @@ const i18n = {
     downloadFactSheet: "Download Fact Sheet ↓"
   },
   zh: {
-    ifYouAre: "— 如果您是 —",
-    projectTeam: "项目团队",
+    heroSub: "如果您是...",
+    brandTagline: "互动镜面系统",
+    ifYouAre: "如果您是...",
+    projectTeam: "工程专案管理",
     designTeam: "设计团队",
     purchasingTeam: "采购团队",
     consultant: "顾问",
-    journal: "期刊",
-    latestNews: "或最新消息",
-    proven: "项目经验",
+    journal: "博客",
+    latestNews: "浏览最新消息",
+    proven: "关于我们",
     products: "产品",
-    jobReference: "+ 项目参考 (download)",
-    factSheets: "+ 产品说明 (download)",
+    jobReference: "+ 项目实例（下载）",
+    factSheets: "+ 产品资料（下载）",
     talkToUs: "联系我们",
     smartMirrorDemo: "智能镜演示",
     guestExperience: "客户体验",
@@ -1288,18 +1292,20 @@ const i18n = {
     downloadFactSheet: "下载产品规格 ↓"
   },
   "zh-HK": {
-    ifYouAre: "— 如果你係 —",
-    projectTeam: "項目團隊",
+    heroSub: "如果你係...",
+    brandTagline: "互動鏡面系統",
+    ifYouAre: "如果你係...",
+    projectTeam: "工程專案管理",
     designTeam: "設計團隊",
     purchasingTeam: "採購團隊",
     consultant: "顧問",
-    journal: "期刊",
-    latestNews: "或最新資訊",
-    proven: "項目經驗",
+    journal: "網誌",
+    latestNews: "睇最新消息",
+    proven: "關於我哋",
     products: "產品",
-    jobReference: "+ job reference (download)",
-    factSheets: "+ 產品規格 (download)",
-    talkToUs: "聯絡我哋",
+    jobReference: "+ 項目實例（下載）",
+    factSheets: "+ 產品規格表（下載）",
+    talkToUs: "搵我哋",
     smartMirrorDemo: "智能鏡演示",
     guestExperience: "客戶體驗",
     painPoints: "痛點：",
@@ -1398,7 +1404,11 @@ function setLanguage(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (data[key] !== undefined) {
-      el.textContent = data[key];
+      if (el.children.length > 0) {
+        el.innerHTML = data[key];
+      } else {
+        el.textContent = data[key];
+      }
     }
   });
 }
