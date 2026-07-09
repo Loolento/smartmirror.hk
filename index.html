@@ -584,7 +584,12 @@ footer {
 .footer-left {
   flex: 1;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
+
+.footer-left:hover h3 { color: var(--sparkle); }
 
 .footer-left h3, .footer-right h3 {
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
@@ -1033,10 +1038,10 @@ footer {
 </div>
 
 <footer>
-  <div class="footer-left" onclick="showPageModal('about')">
+  <a href="about.html" class="footer-left">
     <h3 data-i18n="proven">About Us</h3>
     <span class="plus" data-i18n="jobReference">+ job reference</span>
-  </div>
+  </a>
   <div class="footer-center">
     <span class="talk-text" data-i18n="talkToUs">Talk to us</span>
     <div class="social-btns">
@@ -1048,11 +1053,11 @@ footer {
       </div>
     </div>
   </div>
-  <div class="footer-right" onclick="showPageModal('product')">
+  <a href="products.html" class="footer-right">
     <h3 data-i18n="products">Products</h3>
     <span class="plus" data-i18n="factSheets">+ fact sheets</span>
     <span class="sparkle">✦</span>
-  </div>
+  </a>
 </footer>
 
 </div>

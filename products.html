@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oolaa — Products</title>
+<meta name="description" content="Oolaa product range: Smart Mirror, Axis, Mirror TV, Ai-Play Mirror, Outdoor TV, Bathroom TV, Kitchen TV, Kiosk, Ai-Soulmate, Smart Bath Panel.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+<style>*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --canvas:#3E3E38;--gold:#D4C89E;--sub:#A69E90;--muted:#8A8478;
+  --divider:#5E5E50;--brand:#B8A882;--card-bg:#484840;--card-border:#525248;
+  --rb-g1:#6a5948;--rb-g2:#4e4236;--rb-g3:#37312b;--rb-g4:#262422;--rb-g5:#141514;
+  --rb-border:rgba(180,140,95,0.40);--rb-text:#CEB898;
+  --rb-bevel:rgba(240,210,160,0.28);--rb-lip:rgba(0,0,0,0.72);--rb-inner:rgba(0,0,0,0.40);
+  --rb-drop1:rgba(0,0,0,0.78);--rb-drop2:rgba(0,0,0,0.50);
+  --rb-gloss1:rgba(255,245,225,0.22);--rb-gloss2:rgba(255,240,210,0.10);--rb-gloss3:rgba(255,255,255,0.03);
+}
+body{background:var(--canvas);font-family:'Inter','Noto Sans TC',sans-serif;color:var(--sub);min-height:100dvh;display:flex;justify-content:center}
+.page{width:100%;max-width:700px;padding:24px 24px 40px}
+a{color:var(--gold);text-decoration:none}
+h1{font-size:28px;font-weight:300;color:var(--gold);margin:0 0 6px}
+h2{font-size:15px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin:28px 0 10px}
+.sub{font-size:13px;color:var(--sub)}
+p{font-size:15px;line-height:1.6;margin-bottom:8px}
+
+.back{display:inline-block;font-size:13px;color:var(--muted);margin-bottom:24px}
+.back:hover{color:var(--gold)}
+
+.card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:10px;padding:18px 16px;margin-bottom:14px}
+.card ul{list-style:none;padding:0}
+.card li{font-size:14px;color:var(--sub);padding:5px 0 5px 14px;position:relative;line-height:1.5}
+.card li::before{content:'—';position:absolute;left:0;color:var(--muted)}
+
+.dl{display:inline-block;margin-top:12px;background:linear-gradient(to bottom,var(--rb-g1),var(--rb-g2) 25%,var(--rb-g3) 52%,var(--rb-g4) 74%,var(--rb-g5));border:1px solid var(--rb-border);border-radius:10px;padding:10px 22px;font-size:13px;color:var(--rb-text);cursor:pointer;box-shadow:inset 0 1px 0 var(--rb-bevel),inset 0 -1px 0 var(--rb-lip),inset 0 -9px 14px var(--rb-inner),0 2px 3px var(--rb-drop1),0 7px 10px var(--rb-drop2);text-decoration:none}
+.dl:hover{color:var(--rb-text)}
+
+@media(max-width:500px){
+  .page{padding:16px 14px 32px}
+  h1{font-size:24px}
+  .card li{font-size:13px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <a href="/" class="back">← Oolaa</a>
+  <h1>Products</h1>
+  <p class="sub">+ fact sheets</p>
+
+  <h2>Product Range</h2>
+  <div class="card">
+    <ul>
+      <li>Oolaa Smart Mirror</li>
+      <li>Oola Axis</li>
+      <li>Oolaa Mirror TV</li>
+      <li>Oola Ai-Play Mirror</li>
+      <li>Oolaa Outdoor TV</li>
+      <li>Oolaa Bathroom TV</li>
+      <li>Oolaa Kitchen TV</li>
+      <li>Oola Kiosk</li>
+      <li>Oola Ai-Soulmate</li>
+      <li>Oola Smart Bath Panel</li>
+      <li>Oola Smart Kitchen TV</li>
+      <li>Oolaa Smart Kitchen Linear</li>
+    </ul>
+  </div>
+
+  <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="dl">Download Fact Sheet ↓</a>
+</div>
+</body>
+</html>
