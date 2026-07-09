@@ -240,10 +240,16 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 14px 0 8px;
   border-bottom: 1px solid var(--divider);
   flex-shrink: 0;
+}
+
+.brand-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .brand {
@@ -252,6 +258,14 @@ header {
   font-weight: 500;
   color: var(--brand);
   letter-spacing: 0.04em;
+}
+
+.brand-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--sub);
+  letter-spacing: 0.02em;
 }
 
 .lang-switcher { display: flex; gap: 6px; }
@@ -821,6 +835,7 @@ footer {
   .container { padding: 0 12px; gap: 6px; }
   header { padding: 20px 0 6px; border-bottom: none; }
   .brand { font-size: 15px; }
+  .brand-tagline { font-size: 10px; }
   .content { flex: 7; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 4px; min-height: 0; }
   .hero { padding: 0 0 6px; flex-shrink: 0; }
   .hero h1 { font-size: 24px; }
@@ -917,7 +932,10 @@ footer {
 <div class="container">
 
 <header>
-  <span class="brand">Oola</span>
+  <div class="brand-info">
+    <span class="brand">Oolaa</span>
+    <span class="brand-tagline">interactive Mirror Systems</span>
+  </div>
   <div class="lang-switcher">
     <button class="lang-btn active" data-lang="en">EN</button>
     <button class="lang-btn" data-lang="zh">简</button>
