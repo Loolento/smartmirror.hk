@@ -8,7 +8,7 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://smartmirror.hk/">
 <meta property="og:title" content="Oolaa — Smart Mirror Solution">
-<meta property="og:description" content="Pain? Gone! — you — Smart mirror for project teams, designers, buyers &amp; consultants.">
+<meta property="og:description" content="Empathetic Questions, asked by. — Smart mirror for project teams, designers, buyers &amp; consultants.">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
 {
@@ -246,8 +246,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 14px 0 8px;
-  border-bottom: 1px solid var(--divider);
+  padding: 14px 0 12px;
+  border-bottom: 2px solid var(--divider);
   flex-shrink: 0;
   grid-column: 1 / -1;
 }
@@ -260,7 +260,7 @@ header {
 
 .brand {
   font-family: 'Inter', sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   color: var(--brand);
   letter-spacing: 0.04em;
@@ -268,7 +268,7 @@ header {
 
 .brand-tagline {
   font-family: 'Inter', sans-serif;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 300;
   color: var(--sub);
   letter-spacing: 0.02em;
@@ -282,10 +282,10 @@ header {
 .lang-switcher { display: flex; gap: 6px; }
 
 .lang-btn {
-  width: 42px; height: 34px;
+  width: 48px; height: 40px;
   border-radius: 7px;
   border: 1px solid var(--inactive-lang-border);
-  font-size: 14px; font-weight: 500;
+  font-size: 16px; font-weight: 500;
   font-family: 'Noto Sans TC', 'Inter', sans-serif;
   cursor: pointer;
   display: flex; align-items: center; justify-content: center;
@@ -335,8 +335,9 @@ header {
 
 .hero h1 {
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
-  font-size: 46px; font-weight: 300; color: var(--gold); line-height: 1.05;
+  font-size: 48px; font-weight: 300; color: var(--gold); line-height: 1.05;
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .hero h1 .punct {
@@ -380,9 +381,9 @@ header {
     var(--rb-g5) 100%);
   border: 1px solid var(--rb-border);
   border-radius: 10px;
-  padding: 20px 0;
+  padding: 28px 0;
   text-align: center;
-  font-size: 18px; font-weight: 400;
+  font-size: 22px; font-weight: 400;
   font-family: 'Inter', sans-serif;
   color: var(--rb-text);
   cursor: pointer;
@@ -444,6 +445,24 @@ header {
 }
 
 .video-row .video-wrapper:nth-child(2) { display: none; }
+
+/* Landscape dual-video row (hidden by default, for future toggle) */
+.video-landscape-row {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  width: 100%;
+}
+
+.video-landscape-row .video-wrapper {
+  flex: 1;
+  min-width: 0;
+}
+
+.landscape-card {
+  aspect-ratio: 16/9 !important;
+  max-height: 260px !important;
+}
 
 .video-card {
   width: 100%;
@@ -525,14 +544,40 @@ header {
 }
 
 .journal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  background: var(--article-bg);
+  border: 1px solid var(--article-border);
+  border-radius: 10px;
+  padding: 14px 16px;
   margin-bottom: 10px;
+  cursor: pointer;
+  position: relative;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.04),
+    inset 0 -1px 0 rgba(0,0,0,0.5),
+    0 2px 3px rgba(0,0,0,0.6),
+    0 6px 10px rgba(0,0,0,0.35);
+  transition: all 0.12s;
 }
 
-.journal-left { display: flex; align-items: baseline; gap: 10px; cursor: pointer; }
-.journal-left:hover h2 { color: var(--sparkle); }
+.journal-header::after {
+  content: ''; position: absolute;
+  top: 3px; left: 6px; right: 40%; height: 38%;
+  background: linear-gradient(135deg,
+    rgba(255,255,255,0.06) 0%,
+    rgba(255,255,255,0.02) 25%,
+    transparent 50%);
+  border-radius: 6px 0 0 0;
+  pointer-events: none;
+}
+
+.journal-header:hover {
+  background: var(--card-bg);
+  border-color: var(--divider);
+}
+
+.journal-header:hover h2 { color: var(--sparkle); }
+
+.journal-left { display: flex; align-items: baseline; gap: 10px; }
 
 .journal-left h2 {
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
@@ -561,15 +606,17 @@ header {
 .article-card {
   background: var(--article-bg);
   border: 1px solid var(--article-border);
-  border-radius: 8px;
+  border-left: 2px solid var(--sparkle);
+  border-radius: 0 8px 8px 0;
   padding: 10px 14px;
   cursor: pointer;
   transition: background 0.2s, border-color 0.2s;
 }
 
 .article-card:hover {
-  background: var(--card-bg);
+  background: #4D4A3E;
   border-color: var(--divider);
+  border-left-color: var(--gold);
 }
 
 .article-date {
@@ -592,12 +639,11 @@ header {
 
 /* ===== FOOTER ===== */
 footer {
-  border-top: 1px solid var(--divider);
   flex-shrink: 0;
   display: flex;
   align-items: stretch;
   gap: 16px;
-  padding: 0 0 20px;
+  padding: 12px 0 20px;
 }
 
 .footer-left {
@@ -982,12 +1028,15 @@ footer {
 @media (max-width: 1100px) {
   .container { padding: 0 24px; }
   .content { grid-template-columns: 220px 1fr 240px; gap: 16px; }
-  .hero h1 { font-size: 36px; }
-  .role-btn { font-size: 16px; padding: 16px 0; }
+  .brand { font-size: 20px; }
+  .brand-tagline { font-size: 11px; }
+  .hero h1 { font-size: 32px; }
+  .role-btn { font-size: 18px; padding: 22px 0; }
   .video-card { max-height: 440px; }
   .video-row { max-width: 360px; }
   .journal-section { padding-bottom: 6px; }
   .journal-left h2 { font-size: 18px; }
+  .journal-sub { font-size: 11px; }
   .article-title { font-size: 13px; }
   .article-desc { font-size: 11px; }
 }
@@ -996,8 +1045,9 @@ footer {
 @media (max-width: 860px) {
   .container { padding: 0 12px; gap: 6px; }
   header { padding: 20px 0 6px; border-bottom: none; grid-column: auto; }
-  .brand { font-size: 17px; }
-  .brand-tagline { font-size: 11px; }
+  .brand { font-size: 18px; }
+  .brand-tagline { font-size: 12px; }
+  .lang-btn { width: 42px; height: 34px; font-size: 14px; }
 
   /* Reset content to flex column */
   .content {
@@ -1086,8 +1136,8 @@ footer {
 
   <!-- LEFT COLUMN: Hero + Role Buttons -->
   <section class="hero">
-    <h1 data-i18n="heroTitle">Empathetic Question</h1>
-    <span class="sub" data-i18n="heroSub">— you —</span>
+    <h1 data-i18n="heroTitle">Empathetic Questions</h1>
+    <span class="sub" data-i18n="heroSub">asked by.</span>
   </section>
 
   <div class="role-row">
@@ -1097,9 +1147,9 @@ footer {
     <a href="consultant.html" class="role-btn"><span data-i18n="consultant">Consultant</span></a>
   </div>
 
-  <!-- CENTER COLUMN: Single Portrait Video -->
+  <!-- CENTER COLUMN: Video (portrait 9:16 default; landscape slots hidden for future) -->
   <div class="video-row">
-    <div class="video-wrapper">
+    <div class="video-wrapper video-portrait-slot">
       <div class="video-card">
         <div class="video-play-btn">
           <svg viewBox="0 0 24 24" fill="#A8A090"><polygon points="5,3 19,12 5,21"/></svg>
@@ -1107,6 +1157,23 @@ footer {
         <div class="video-overlay-controls">
           <button class="play-ctrl"><svg viewBox="0 0 24 24" fill="var(--sub)"><polygon points="5,3 19,12 5,21"/></svg></button>
           <button class="pause-ctrl"><svg viewBox="0 0 24 24" fill="var(--sub)"><rect x="5" y="3" width="5" height="18"/><rect x="14" y="3" width="5" height="18"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <!-- Dual 16:9 landscape slots (hidden, for future toggle) -->
+    <div class="video-landscape-row" style="display:none;">
+      <div class="video-wrapper">
+        <div class="video-card landscape-card">
+          <div class="video-play-btn">
+            <svg viewBox="0 0 24 24" fill="#A8A090"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="video-wrapper">
+        <div class="video-card landscape-card">
+          <div class="video-play-btn">
+            <svg viewBox="0 0 24 24" fill="#A8A090"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
         </div>
       </div>
     </div>
@@ -1209,8 +1276,8 @@ footer {
 // ====================
 const i18n = {
   en: {
-    heroTitle: "Empathetic Question",
-    heroSub: "— you —",
+    heroTitle: "Empathetic Questions",
+    heroSub: "asked by.",
     brandTagline: "<span class=\"i-bold\">i</span>nteractive Mirror Systems",
     heroDesc: "Smart Mirror for Hotels & Developers — Hong Kong Factory Direct",
     ifYouAre: "asked by...",
