@@ -381,9 +381,9 @@ header {
     var(--rb-g5) 100%);
   border: 1px solid var(--rb-border);
   border-radius: 10px;
-  padding: 28px 0;
+  padding: 32px 0;
   text-align: center;
-  font-size: 22px; font-weight: 400;
+  font-size: 24px; font-weight: 400;
   font-family: 'Inter', sans-serif;
   color: var(--rb-text);
   cursor: pointer;
@@ -548,10 +548,14 @@ header {
   background: var(--article-bg);
   border: 1px solid var(--article-border);
   border-radius: 10px;
-  padding: 14px 16px;
+  padding: 18px 16px;
   margin-bottom: 10px;
   cursor: pointer;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 72px;
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,0.04),
     inset 0 -1px 0 rgba(0,0,0,0.5),
@@ -578,15 +582,15 @@ header {
 
 .journal-header:hover h2 { color: var(--sparkle); }
 
-.journal-left { display: flex; align-items: baseline; gap: 10px; }
+.journal-left { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
 
 .journal-left h2 {
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
-  font-size: 22px; font-weight: 300; color: var(--gold); line-height: 1.15;
+  font-size: 24px; font-weight: 300; color: var(--gold); line-height: 1.15;
   letter-spacing: 0;
 }
 
-.journal-sub { font-size: 13px; color: var(--sub); font-weight: 400; }
+.journal-sub { font-size: 14px; color: var(--sub); font-weight: 400; }
 
 /* Journal contact (right side — hidden on desktop, shown on mobile) */
 .journal-contact {
@@ -608,8 +612,8 @@ header {
   background: var(--article-bg);
   border: 1px solid var(--article-border);
   border-left: 2px solid var(--sparkle);
-  border-radius: 0 8px 8px 0;
-  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+  padding: 8px 12px;
   cursor: pointer;
   transition: background 0.2s, border-color 0.2s;
 }
@@ -621,20 +625,20 @@ header {
 }
 
 .article-date {
-  font-size: 11px; font-weight: 500; color: var(--muted);
+  font-size: 10px; font-weight: 500; color: var(--muted);
   text-transform: uppercase; letter-spacing: 0.08em;
   font-family: 'Inter', sans-serif;
 }
 
 .article-title {
-  font-size: 15px; font-weight: 400; color: var(--gold);
-  margin-top: 5px; line-height: 1.3;
+  font-size: 13px; font-weight: 400; color: var(--gold);
+  margin-top: 3px; line-height: 1.3;
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
 }
 
 .article-desc {
-  font-size: 13px; font-weight: 400; color: var(--sub);
-  margin-top: 4px; line-height: 1.5;
+  font-size: 11px; font-weight: 400; color: var(--sub);
+  margin-top: 3px; line-height: 1.4;
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
 }
 
@@ -650,7 +654,7 @@ header {
 }
 
 .left-contact-label {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--sub);
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
   font-weight: 400;
@@ -658,17 +662,17 @@ header {
 
 .left-contact .social-btns {
   flex-direction: row;
-  gap: 12px;
+  gap: 14px;
 }
 
 .left-contact .social-circle {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
 }
 
 .left-contact .social-circle svg {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
 }
 
 /* Journal extra cards — About Us / Products below articles */
@@ -683,8 +687,12 @@ header {
   background: var(--article-bg);
   border: 1px solid var(--article-border);
   border-radius: 10px;
-  padding: 14px 16px;
+  padding: 18px 16px;
+  min-height: 72px;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   overflow: hidden;
   box-shadow:
@@ -713,11 +721,11 @@ header {
 
 .journal-extra-card h3 {
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
-  font-size: 20px; font-weight: 300; color: var(--gold); line-height: 1.15;
+  font-size: 24px; font-weight: 300; color: var(--gold); line-height: 1.15;
 }
 
 .journal-extra-sub {
-  font-size: 13px; color: var(--sub); margin-top: 4px; display: block;
+  font-size: 14px; color: var(--sub); margin-top: 4px; display: block;
   font-weight: 400;
 }
 footer {
