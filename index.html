@@ -552,10 +552,10 @@ header {
   margin-bottom: 10px;
   cursor: pointer;
   position: relative;
+  min-height: 72px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 72px;
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,0.04),
     inset 0 -1px 0 rgba(0,0,0,0.5),
@@ -582,14 +582,13 @@ header {
 
 .journal-header:hover h2 { color: var(--sparkle); }
 
-.journal-left { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
-
-.journal-left h2 {
+.journal-header h2 {
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
   font-size: 24px; font-weight: 300; color: var(--gold); line-height: 1.15;
   letter-spacing: 0;
 }
 
+.journal-header .journal-sub,
 .journal-sub { font-size: 14px; color: var(--sub); font-weight: 400; }
 
 /* Journal contact (right side — hidden on desktop, shown on mobile) */
@@ -1125,7 +1124,7 @@ footer {
   .video-card { max-height: 440px; }
   .video-row { max-width: 360px; }
   .journal-section { padding-bottom: 6px; }
-  .journal-left h2 { font-size: 18px; }
+  .journal-header h2 { font-size: 18px; }
   .journal-sub { font-size: 11px; }
   .article-title { font-size: 13px; }
   .article-desc { font-size: 11px; }
@@ -1285,11 +1284,9 @@ footer {
 
   <!-- RIGHT COLUMN: Blog -->
   <section class="journal-section">
-    <div class="journal-header">
-      <div class="journal-left" onclick="location.href='blog/'" style="cursor:pointer">
+    <div class="journal-header" onclick="location.href='blog/'" style="cursor:pointer">
         <h2 data-i18n="journal">Blog</h2>
         <span class="journal-sub" data-i18n="latestNews">or Our Latest News</span>
-      </div>
     </div>
     <div class="article-row">
       <a href="blog/no-login-just-cast.html" class="article-card article-mobile-hide" style="text-decoration:none;">
