@@ -233,7 +233,7 @@ body {
 .content {
   flex: 0 0 auto;
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 250px 1fr 300px;
   grid-template-rows: auto auto;
   gap: 20px;
   align-items: start;
@@ -981,11 +981,15 @@ footer {
 /* ===== RESPONSIVE: Medium screens ===== */
 @media (max-width: 1100px) {
   .container { padding: 0 24px; }
-  .content { grid-template-columns: 240px 1fr; gap: 20px; }
+  .content { grid-template-columns: 220px 1fr 240px; gap: 16px; }
   .hero h1 { font-size: 36px; }
   .role-btn { font-size: 16px; padding: 16px 0; }
   .video-card { max-height: 440px; }
   .video-row { max-width: 360px; }
+  .journal-section { padding-bottom: 6px; }
+  .journal-left h2 { font-size: 18px; }
+  .article-title { font-size: 13px; }
+  .article-desc { font-size: 11px; }
 }
 
 /* ===== RESPONSIVE: Mobile (≤860px) — Restore current layout ===== */
@@ -1108,8 +1112,32 @@ footer {
     </div>
   </div>
 
-
-
+  <!-- RIGHT COLUMN: Blog -->
+  <section class="journal-section">
+    <div class="journal-header">
+      <div class="journal-left" onclick="location.href='blog/'" style="cursor:pointer">
+        <h2 data-i18n="journal">Blog</h2>
+        <span class="journal-sub" data-i18n="latestNews">or Our Latest News</span>
+      </div>
+    </div>
+    <div class="article-row">
+      <a href="blog/no-login-just-cast.html" class="article-card article-mobile-hide" style="text-decoration:none;">
+        <div class="article-date">Jun 2026</div>
+        <div class="article-title">No Login. Just Cast.</div>
+        <div class="article-desc">The world's first zero-login smart mirror TV — phone authenticates, mirror plays.</div>
+      </a>
+      <a href="blog/oolaa-vs-old-way.html" class="article-card article-mobile-hide" style="text-decoration:none;">
+        <div class="article-date">Jun 2026</div>
+        <div class="article-title">Oolaa Way Vs Old Way Mirror TV</div>
+        <div class="article-desc">Hotel mirror TV comparison: set-top box frustration vs Oolaa's cast-only solution.</div>
+      </a>
+      <a href="blog/waldorf-astoria-bangkok.html" class="article-card article-mobile-hide" style="text-decoration:none;">
+        <div class="article-date">Mar 2026</div>
+        <div class="article-title">Oolaa at Waldorf Astoria Bangkok</div>
+        <div class="article-desc">5-star hotel deployment — smart mirrors meet luxury hospitality in Thailand.</div>
+      </a>
+    </div>
+  </section>
 
 </div>
 
