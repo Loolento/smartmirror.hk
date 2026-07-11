@@ -1781,27 +1781,53 @@ function showPageModal(page) {
     if (currentLang === 'zh-HK') {
       html = `<div class="modal-page-content about-canto">
         <div class="about-canto-hero">🪞 廠賣昨。我哋造。</div>
+        <div class="about-canto-sub">香港智能鏡生產商。深圳廠房。自家軟件團隊。</div>
         <div class="about-canto-sub">我哋與別不同嘅地方。</div>
         <div class="about-canto-section">🏭 我哋有廠。但我哋唔止係廠。</div>
         <div class="about-canto-section">點樣解決你嘅痛點。</div>
         <div class="about-canto-motto">🎯 複雜嘅嘢簡單做；重複嘅嘢用心做。</div>
         <ul class="about-canto-list">
-          <li>📦 超過 20 年經驗，旗下 Oolaa 同 JSA，為港澳發展商交付逾 31,000 件嵌入式 AV 產品（數字可查證 — 見備註¹），每個單位有保養，最長 39 個月</li>
-          <li>🛡 自己開發底板、有 source code。表面唔關你事，遇到棘手問題就係你嘅護身符</li>
-          <li>🔧 國內廠工程師加香港軟件團隊直接支援 — 地盤出事你就明</li>
-          <li>🎨 AR/VR 團隊全港班底，全部後生仔，創意實戰型。仲有其他香港創意 IT 同 AI 項目</li>
-          <li>⚡️ 香港工程由我哋持牌電工團隊安裝，可簽 WR1</li>
-          <li>🌏 海外案例遍及日本、曼谷、緬甸 — 部署同售後保養我哋識搞</li>
-          <li>🏗 生產線歡迎預約參觀</li>
+          <li>📦 超過 20 年經驗，香港智能鏡供應商 Oolaa 同 JSA，為港澳發展商交付逾 31,000 件嵌入式 AV 產品（數字可查證 — 見備註¹），每個單位有保養，最長 39 個月</li>
+          <li>🛡 自家研發底板、持有 source code。表面唔關你事，遇到棘手問題就係你嘅護身符</li>
+          <li>🔧 深圳廠房工程師加香港軟件開發團隊直接支援 — 地盤出事你就明</li>
+          <li>🎨 香港 AR/VR 開發團隊全港班底，全部後生仔，創意實戰型。仲有其他香港創意 IT 同 AI 項目</li>
+          <li>⚡️ 香港工程由我哋持牌電工團隊安裝，可簽 WR1 證書</li>
+          <li>🌏 海外案例遍及日本、曼谷、緬甸 — 海外部署同售後保養方案我哋識搞</li>
+          <li>🏗 深圳生產線歡迎預約參觀</li>
         </ul>
         <a href="javascript:void(0)" onclick="closeModal();showRoleModal('project')" class="about-canto-cta">🔍 痛點逐個拆 →</a>
-        <div class="about-canto-section">承諾：</div>
+        <div class="about-canto-section">香港及海外項目承諾：</div>
         <div class="about-canto-tagline">🏗 廠賣現貨。我哋造未來。</div>
         <div class="about-canto-cta-row">
           <a href="https://www.dropbox.com/scl/fi/yjat7fs5b5cjq76zj3lra/Job-reference-of-Oolaa-JSA-200426.pdf?rlkey=gzqff6j8nakmxkh1xuln9gx6x&dl=0" target="_blank" class="modal-download-btn">📥 下載工程案例 ↓</a>
           <a href="javascript:void(0)" onclick="closeModal();handleContact('whatsapp')" class="modal-download-btn">💬 WhatsApp →</a>
         </div>
-        <div class="about-canto-footnote">¹ 根據《一手住宅物業銷售條例》（第621章）附表1第2部第22條，售樓書須列明裝置同設備。業界普遍列出品牌及型號。即係每一個我哋列出嘅工程項目，你都可以喺相關樓盤嘅官方網站或售樓書查證。</div>
+        <div class="about-canto-footnote">¹ 根據香港《一手住宅物業銷售條例》（第621章）附表1第2部第22條，售樓書須列明裝置同設備。業界普遍列出品牌及型號。即係每一個我哋列出嘅工程項目，你都可以喺相關樓盤嘅官方網站或售樓書查證。</div>
+      </div>`;
+    } else if (currentLang === 'en') {
+      html = `<div class="modal-page-content about-canto">
+        <div class="about-canto-hero">🪞 They sell parts. We make art.</div>
+        <div class="about-canto-sub">The difference you can't unsee.</div>
+        <div class="about-canto-section">🏭 Yes, we own a factory. No, we're not "factory people."</div>
+        <div class="about-canto-section">Hong Kong smart mirror manufacturer. Factory-direct. In-house software engineering.</div>
+        <div class="about-canto-motto">🎯 Hard things, simple. Boring things, obsessed.</div>
+        <ul class="about-canto-list">
+          <li>📦 20+ years. 31,000+ embedded AV installations across Hong Kong and Macau developers. Oolaa + JSA. Every unit warrantied — up to 39 months. Verifiable numbers.¹</li>
+          <li>🛡 Custom circuit boards. Proprietary source code. Reads like a spec sheet. Feels like insurance when things go wrong on site.</li>
+          <li>🔧 Shenzhen factory engineers + Hong Kong software team. When the job site gets complicated, someone who actually built the product picks up the phone.</li>
+          <li>🎨 In-house AR/VR team. All Hong Kong. All young. All creative to a fault. Side projects in AI and creative IT. Because one R&D pipeline isn't enough.</li>
+          <li>⚡️ Licensed Hong Kong electricians on staff. WR1 sign-off authority. Not outsourced. Not "we'll find someone." Our team. Our cert.</li>
+          <li>🌏 Japan. Bangkok. Myanmar. Overseas deployments with after-sales pre-planned. We don't dump product across borders. We design the maintenance strategy before the container ships.</li>
+          <li>🏗 Factory tours welcome. Shenzhen. We'll make coffee.</li>
+        </ul>
+        <a href="javascript:void(0)" onclick="closeModal();showRoleModal('project')" class="about-canto-cta">🔍 Your pain points, dissected →</a>
+        <div class="about-canto-section">The pledge.</div>
+        <div class="about-canto-tagline">🏗 They sell what's built. We build.</div>
+        <div class="about-canto-cta-row">
+          <a href="https://www.dropbox.com/scl/fi/yjat7fs5b5cjq76zj3lra/Job-reference-of-Oolaa-JSA-200426.pdf?rlkey=gzqff6j8nakmxkh1xuln9gx6x&dl=0" target="_blank" class="modal-download-btn">📥 Job Reference — 31,000+ installations ↓</a>
+          <a href="javascript:void(0)" onclick="closeModal();handleContact('whatsapp')" class="modal-download-btn">💬 WhatsApp →</a>
+        </div>
+        <div class="about-canto-footnote">¹ Under Hong Kong's Residential Properties (First-hand Sales) Ordinance (Cap. 621), Schedule 1, Part 2, Section 22 — sales brochures must list fittings and finishes by brand and model. Translation: every project we claim is independently verifiable in the developer's official sales brochure.</div>
       </div>`;
     } else {
       html = `<div class="modal-page-content">
