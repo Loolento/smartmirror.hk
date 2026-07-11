@@ -1475,6 +1475,33 @@ footer {
       <div class="about-canto-footnote">¹ 根據香港《一手住宅物業銷售條例》（第621章）附表1第2部第22條，售樓書須列明裝置同設備。業界普遍列出品牌及型號。即係每一個我哋列出嘅工程項目，你都可以喺相關樓盤嘅官方網站或售樓書查證。</div>
     </div>
   </div>
+  <div id="about-pre-zh">
+    <div class="modal-page-content about-canto">
+      <div class="about-canto-hero">🪞 厂卖货。我们造。</div>
+      <div class="about-canto-sub">香港智能镜生产商。深圳厂房。自家软件团队。</div>
+      <div class="about-canto-sub"><strong>我们与众不同的地方：</strong></div>
+      <div class="about-canto-section">🏭 我们有工厂。但我们不止是工厂。</div>
+      <div class="about-canto-section"><strong>如何解决你的痛点：</strong></div>
+      <div class="about-canto-motto">🎯 复杂的事简单做；重复的事用心做。</div>
+      <ul class="about-canto-list">
+        <li>📦 超过 20 年经验，香港智能镜供应商 Oolaa 与 JSA，为港澳开发商交付逾 31,000 件嵌入式 AV 产品（数字可查证 — 见备注¹），每套设备均有保养，最长 39 个月</li>
+        <li>🛡 自主研发电路板、持有 source code。表面与你无关，遇上棘手问题就是你的护身符</li>
+        <li>🔧 深圳厂房工程师加香港软件开发团队直接支援 — 现场出状况你就懂</li>
+        <li>🎨 香港 AR/VR 开发团队全本地班底，全是年轻人，创意实战型。另有香港创意 IT 与 AI 项目</li>
+        <li>⚡️ 香港工程由我们持牌电工团队安装，可签发 WR1 证书</li>
+        <li>🌏 海外案例遍及日本、曼谷、缅甸 — 海外部署与售后保养方案我们都能处理</li>
+        <li>🏗 深圳生产线欢迎预约参观</li>
+      </ul>
+      <a href="javascript:void(0)" class="about-canto-cta">🔍 痛点逐个拆 →</a>
+      <div class="about-canto-section">香港及海外项目承诺：</div>
+      <div class="about-canto-tagline">🏗 工厂卖现货。我们造未来。</div>
+      <div class="about-canto-cta-row">
+        <a href="https://www.dropbox.com/scl/fi/yjat7fs5b5cjq76zj3lra/Job-reference-of-Oolaa-JSA-200426.pdf?rlkey=gzqff6j8nakmxkh1xuln9gx6x&dl=0" target="_blank" class="modal-download-btn">📥 下载工程案例 ↓</a>
+        <a href="javascript:void(0)" class="modal-download-btn">💬 WhatsApp →</a>
+      </div>
+      <div class="about-canto-footnote">¹ 根据香港《一手住宅物业销售条例》（第621章）附表1第2部第22条，售楼书须列明装置与设备。业界普遍列出品牌及型号。换句话说，我们列出的每一个工程项目，你都可以在相关楼盘的官方网站或售楼书中查证。</div>
+    </div>
+  </div>
 </div>
 
 <!-- MODAL -->
@@ -1836,7 +1863,7 @@ function showPageModal(page) {
 
   if (page === 'about') {
     // Clone from pre-rendered SEO-friendly HTML (crawlers read this even without JS)
-    var preId = (currentLang === 'zh-HK') ? 'about-pre-zh-HK' : 'about-pre-en';
+    var preId = (currentLang === 'zh-HK') ? 'about-pre-zh-HK' : (currentLang === 'zh') ? 'about-pre-zh' : 'about-pre-en';
     var pre = document.getElementById(preId);
     if (pre) {
       body.innerHTML = pre.innerHTML;
