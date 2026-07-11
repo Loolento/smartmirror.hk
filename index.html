@@ -1015,6 +1015,72 @@ footer {
   background: linear-gradient(to bottom, var(--rb-hg1) 0%, var(--rb-hg3) 100%);
 }
 
+/* ===== ABOUT CANTO (zh-HK) ===== */
+.about-canto { text-align: left; }
+.about-canto-hero {
+  font-size: 32px; font-weight: 300; color: var(--gold);
+  line-height: 1.2; margin-bottom: 6px;
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+}
+.about-canto-sub {
+  font-size: 18px; font-weight: 300; color: var(--sub);
+  margin-bottom: 24px;
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+}
+.about-canto-section {
+  font-size: 16px; font-weight: 400; color: var(--gold);
+  margin-top: 20px; margin-bottom: 8px;
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+}
+.about-canto-motto {
+  font-size: 17px; font-weight: 400; color: var(--sparkle);
+  margin: 12px 0 16px;
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+}
+.about-canto-list {
+  list-style: none; margin: 0; padding: 0;
+}
+.about-canto-list li {
+  padding: 10px 0;
+  font-size: 14px; font-weight: 400; line-height: 1.6;
+  color: var(--sub);
+  border-bottom: 1px solid var(--divider);
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+}
+.about-canto-list li:last-child { border-bottom: none; }
+.about-canto-cta {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 20px;
+  background: linear-gradient(to bottom, var(--rb-g1) 0%, var(--rb-g3) 100%);
+  color: var(--rb-text);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500; font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid var(--rb-border);
+  transition: all 0.2s;
+}
+.about-canto-cta:hover {
+  background: linear-gradient(to bottom, var(--rb-hg1) 0%, var(--rb-hg3) 100%);
+}
+.about-canto-tagline {
+  font-size: 22px; font-weight: 300; color: var(--gold);
+  margin: 8px 0 18px;
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+}
+.about-canto-cta-row {
+  display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;
+}
+.about-canto-cta-row .modal-download-btn { margin-top: 0; }
+.about-canto-footnote {
+  font-size: 11px; font-weight: 400; color: var(--muted);
+  line-height: 1.5; margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--divider);
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+}
+
 /* ===== QR MODAL ===== */
 .qr-modal-content {
   text-align: center;
@@ -1229,8 +1295,8 @@ footer {
 
   <!-- LEFT COLUMN: Hero + Role Buttons -->
   <section class="hero">
-    <h1 data-i18n="heroTitle">Empathetic Question</h1>
-    <span class="sub" data-i18n="heroSub">asked by...</span>
+    <h1 data-i18n="heroTitle">Empathetic Questions</h1>
+    <span class="sub" data-i18n="heroSub">asked by.</span>
   </section>
 
   <div class="role-row">
@@ -1368,8 +1434,8 @@ footer {
 // ====================
 const i18n = {
   en: {
-    heroTitle: "Empathetic Question",
-    heroSub: "asked by...",
+    heroTitle: "Empathetic Questions",
+    heroSub: "asked by.",
     brandTagline: "<span class=\"i-bold\">i</span>nteractive Mirror Systems",
     heroDesc: "Smart Mirror for Hotels & Developers — Hong Kong Factory Direct",
     ifYouAre: "asked by...",
@@ -1712,13 +1778,40 @@ function showPageModal(page) {
   let html = '';
 
   if (page === 'about') {
-    html = `<div class="modal-page-content">
+    if (currentLang === 'zh-HK') {
+      html = `<div class="modal-page-content about-canto">
+        <div class="about-canto-hero">🪞 廠賣昨。我哋造。</div>
+        <div class="about-canto-sub">我哋與別不同嘅地方。</div>
+        <div class="about-canto-section">🏭 我哋有廠。但我哋唔止係廠。</div>
+        <div class="about-canto-section">點樣解決你嘅痛點。</div>
+        <div class="about-canto-motto">🎯 複雜嘅嘢簡單做；重複嘅嘢用心做。</div>
+        <ul class="about-canto-list">
+          <li>📦 超過 20 年經驗，旗下 Oolaa 同 JSA，為港澳發展商交付逾 31,000 件嵌入式 AV 產品（數字可查證 — 見備註¹），每個單位有保養，最長 39 個月</li>
+          <li>🛡 自己開發底板、有 source code。表面唔關你事，遇到棘手問題就係你嘅護身符</li>
+          <li>🔧 國內廠工程師加香港軟件團隊直接支援 — 地盤出事你就明</li>
+          <li>🎨 AR/VR 團隊全港班底，全部後生仔，創意實戰型。仲有其他香港創意 IT 同 AI 項目</li>
+          <li>⚡️ 香港工程由我哋持牌電工團隊安裝，可簽 WR1</li>
+          <li>🌏 海外案例遍及日本、曼谷、緬甸 — 部署同售後保養我哋識搞</li>
+          <li>🏗 生產線歡迎預約參觀</li>
+        </ul>
+        <a href="javascript:void(0)" onclick="closeModal();showRoleModal('project')" class="about-canto-cta">🔍 痛點逐個拆 →</a>
+        <div class="about-canto-section">承諾：</div>
+        <div class="about-canto-tagline">🏗 廠賣現貨。我哋造未來。</div>
+        <div class="about-canto-cta-row">
+          <a href="https://www.dropbox.com/scl/fi/yjat7fs5b5cjq76zj3lra/Job-reference-of-Oolaa-JSA-200426.pdf?rlkey=gzqff6j8nakmxkh1xuln9gx6x&dl=0" target="_blank" class="modal-download-btn">📥 下載工程案例 ↓</a>
+          <a href="javascript:void(0)" onclick="closeModal();handleContact('whatsapp')" class="modal-download-btn">💬 WhatsApp →</a>
+        </div>
+        <div class="about-canto-footnote">¹ 根據《一手住宅物業銷售條例》（第621章）附表1第2部第22條，售樓書須列明裝置同設備。業界普遍列出品牌及型號。即係每一個我哋列出嘅工程項目，你都可以喺相關樓盤嘅官方網站或售樓書查證。</div>
+      </div>`;
+    } else {
+      html = `<div class="modal-page-content">
       <h2>${data.aboutTitle}</h2>
       <p>${data.aboutIntro}</p><p>${data.aboutIntro2}</p>
       <h3 style="font-size:12px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin:24px 0 12px;font-family:Inter,sans-serif">${data.companyBackground}</h3>
       <ul>${data.background.map(i => `<li>${i}</li>`).join('')}</ul>
       <a href="https://www.dropbox.com/scl/fi/yjat7fs5b5cjq76zj3lra/Job-reference-of-Oolaa-JSA-200426.pdf?rlkey=gzqff6j8nakmxkh1xuln9gx6x&dl=0" target="_blank" class="modal-download-btn">${data.downloadJobRef}</a>
     </div>`;
+    }
   } else if (page === 'product') {
     html = `<div class="modal-page-content">
       <h2>${data.productTitle}</h2><p>${data.productIntro}</p>
