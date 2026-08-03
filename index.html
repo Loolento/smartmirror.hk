@@ -444,8 +444,6 @@ header {
   max-width: 420px;
 }
 
-/* Desktop: show all video wrappers */
-
 /* Landscape dual-video row (hidden by default, for future toggle) */
 .video-landscape-row {
   display: flex;
@@ -1250,8 +1248,7 @@ footer {
     justify-self: auto;
     width: 100%;
   }
-  /* Show first video only on mobile */
-  .video-row .video-wrapper:nth-child(n+2) { display: none; }
+  /* Mobile: single video */
   .video-card { aspect-ratio: 16/9; max-height: 350px; border-radius: 7px; width: 100%; }
   .video-label-row { display: none; }
 
@@ -1321,24 +1318,40 @@ footer {
     </div>
   </div>
 
-  <!-- CENTER COLUMN: Video -->
+  <!-- CENTER COLUMN: Video (auto-advancing playlist) -->
   <div class="video-row">
     <div class="video-wrapper video-portrait-slot">
-      <div class="video-card">
-        <iframe src="https://www.youtube-nocookie.com/embed/-ps7M5PLJIo?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:inherit" title="Oolaa Smart Mirror"></iframe>
-      </div>
-    </div>
-    <div class="video-wrapper video-portrait-slot">
-      <div class="video-card">
-        <iframe src="https://www.youtube-nocookie.com/embed/qqPPEKQvooY?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:inherit" title="Oolaa Smart Mirror Short"></iframe>
-      </div>
-    </div>
-    <div class="video-wrapper video-portrait-slot">
-      <div class="video-card">
-        <iframe src="https://www.youtube-nocookie.com/embed/g1Ej2Wzxkwg?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:inherit" title="Oolaa Smart Mirror 3"></iframe>
-      </div>
+      <div class="video-card" id="yt-player"></div>
     </div>
   </div>
+
+<script>
+// YouTube auto-advancing playlist
+var tag = document.createElement('script');
+tag.src = 'https://www.youtube.com/iframe_api';
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var playlist = ['-ps7M5PLJIo','qqPPEKQvooY','g1Ej2Wzxkwg'];
+var current = 0;
+var player;
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('yt-player', {
+    videoId: playlist[0],
+    playerVars: { rel: 0, modestbranding: 1 },
+    events: { onStateChange: onPlayerStateChange }
+  });
+}
+
+function onPlayerStateChange(event) {
+  if (event.data === YT.PlayerState.ENDED) {
+    current++;
+    if (current >= playlist.length) current = 0;
+    player.loadVideoById(playlist[current]);
+  }
+}
+</script>
 
   <!-- RIGHT COLUMN: Blog -->
   <section class="journal-section">
