@@ -444,7 +444,7 @@ header {
   max-width: 420px;
 }
 
-.video-row .video-wrapper:nth-child(2) { display: none; }
+/* Desktop: show all video wrappers */
 
 /* Landscape dual-video row (hidden by default, for future toggle) */
 .video-landscape-row {
@@ -1250,7 +1250,8 @@ footer {
     justify-self: auto;
     width: 100%;
   }
-  .video-row .video-wrapper:nth-child(2) { display: none; }
+  /* Show first video only on mobile */
+  .video-row .video-wrapper:nth-child(n+2) { display: none; }
   .video-card { aspect-ratio: 16/9; max-height: 350px; border-radius: 7px; width: 100%; }
   .video-label-row { display: none; }
 
