@@ -8,7 +8,7 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://smartmirror.hk/">
 <meta property="og:title" content="Oolaa — Smart Mirror Solution">
-<meta property="og:description" content="Empathetic Questions, asked by. — Smart mirror for project teams, designers, buyers &amp; consultants.">
+<meta property="og:description" content="Pain Points, solved. — Smart mirror for project teams, designers, buyers &amp; consultants.">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
 {
@@ -971,6 +971,7 @@ footer {
 .modal-role-content .pain-points li::before { content: "•"; position: absolute; left: 0; color: var(--gold); }
 .modal-role-content .solutions li { padding-left: 22px; position: relative; }
 .modal-role-content .solutions li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); }
+.pain-image { width: 100%; max-width: 400px; border-radius: 8px; margin-bottom: 16px; display: block; }
 
 .modal-page-content h2 {
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
@@ -1560,44 +1561,64 @@ const i18n = {
     guestExperience: "Guest Experience",
     painPoints: "Pain Points:",
     howWeHelp: "How We Help:",
+    projectPainImage: "pain-project.jpg",
     projectPain: [
-      "Too conservative → Chairman says 'You have no innovation?'",
-      "Too aggressive → You're the one who takes the blame"
+      "😤 Mr. & Mrs Project Manager, We've been there.",
+      "🔥 Market's hot — the chairman wants something fresh. Wants wow.",
+      "💣 The second something goes wrong, subs and suppliers all point fingers. \"Wasn't my scope.\""
     ],
     projectSolutions: [
+      "\"Simplicity is the ultimate sophistication.\" — Leonardo da Vinci",
       "30,000+ installations, know what can be done and what's too risky",
       "We dare to innovate, designed many add-on products you can't imagine",
       "Early customers had unclear requirements, we learned to solve problems together"
     ],
+    projectProductsTitle: "🤝 Shoulder to shoulder with PMs. Here's what we've delivered for Hong Kong developers:",
+    projectProducts: [
+      "SHK · Cullinan Harbour — Custom smart bathroom switch",
+      "HSITP · HK Gov — Play Mirror, built in-house by our Hong Kong team",
+      "Kowloon Development · Manor on the Hill — Hong Kong's first KaraMirror fitness mirror (OEM)",
+      "Henderson · The Knightsbridge — Oolaa bathroom UI smart mirror",
+      "SHK · St. Barths — Oolaa × B&W Bluetooth bathroom audio (custom SSID + password)",
+      "SHK · Ultima — Oolaa bathroom TV with built-in Mirroring",
+      "SHK · Wings II — Oolaa 11.6\" kitchen TV",
+      "Henderson · Double Cove — JSA 10\" kitchen TV"
+    ],
+    projectLessonTitle: "🩸 We learned this the hard way — so we stay proactive at every step.",
+    projectLesson: "Installation done? That's 70%. We know because we've bled through the other 30. That's why we push for joint inspection before you even ask, protect finished work like it's our own, and have the handoff to facilities management buttoned up in advance. Nobody's gonna remind you. Nobody's gonna wait. Handover day, the mirror's scratched? You eat it. We make sure you don't. 🫠",
+    designPainImage: "pain-design.jpg",
     designPain: [
-      "Not beautiful enough → Need weird ideas",
-      "Can't land → Looks good but how to maintain?",
-      "How to justify → PM questions why use Smart Mirror"
+      "🎨 Dear Design Team, we've been there.",
+      "✨ You're trying to nail every last detail — and the supplier just can't hang.",
+      "⏳ You spec something cutting-edge. Three years go by between design and handover. Most suppliers don't think past next quarter."
     ],
     designSolutions: [
-      "We're not just a smart mirror factory, we also customize molds for designers",
-      "Extensive Case Studies, not afraid of client questions",
-      "Maintenance plans pre-prepared for you",
-      "Strong Fit Out background, we know what questions to ask designers"
+      "\"Design is not just what it looks like and feels like. Design is how it works.\" — Steve Jobs",
+      "🏨 Kerry Hotel, Hong Kong & Niseko Park Hyatt — Designer wanted the Mirror TV to vanish. Screen off, it's gotta read as a mirror 🪞. Go-to fix is a one-way mirror. Catch is, the tint is brutal for makeup 💄. We didn't want to let them down. So we flipped it: traditional silver mirror for natural color, then layered a one-way panel over just the screen cutout. Power down, that zone reads as mirror. No compromise.",
+      "💡 Five-star designers keep hitting us with the same question: what's next for Mirror TV? Old playbook was a set-top box 📡. Nobody wants that anymore. Sure, newer smart mirrors ship with YouTube and Spotify 🎵. But no guest is logging into a hotel screen to manage a playlist. That's the problem we're solving in 2026 🚀 — a Mirror TV that's actually tuned to the guest, not the spec sheet."
     ],
+    purchasingPainImage: "pain-buying.jpg",
     purchasingPain: [
-      "Bought too expensive → Boss scolds you",
-      "Bought too cheap → Quality problems, or bought unsuitable products"
+      "📋 Dear Procurement Team, Trust us. We know.",
+      "🌍 You respect the consultant's spec — then the supplier's product doesn't work in the real world.",
+      "💰 Budget's tight. You still gotta deliver something that fits."
     ],
     purchasingSolutions: [
-      "Factory direct, no need to worry about after-sales service",
-      "Clear quotation, what's included and what's not",
-      "Years of Job References, we don't give up easily"
+      "\"Price is what you pay. Value is what you get.\" — Warren Buffett",
+      "🚨 August 2026. Emergency. A Central residential job — another vendor's smart mirrors failed spec. They asked us to step in. Three weeks. Every unit. Done.",
+      "🏢 SHK · Cullinan Harbour — Heated bathroom mirror. No independent switch. The sub's solution? Some generic RF switch with more limitations than features. We built a smart switch. With voice 🔊. From scratch.",
+      "🏠 Kowloon Development · Manor on the Hill — Construction phase. 1,556 units. Nobody specced a doorbell 🔔. Retrofitting meant threading through a dozen other trades. We dropped in the class's largest-screen electronic doorbell. Solved ✅."
     ],
+    consultantPainImage: "pain-consultant.jpg",
     consultantPain: [
-      "Not familiar with Smart Mirror → Afraid of recommending wrong",
-      "Client asks questions → Don't know how to answer",
-      "Going rogue → Affects your professional image"
+      "📋 Consultants, we've been there.",
+      "🔬 Tech moves fast. The details? Hard to nail every single one.",
+      "🔄 Markets move faster. A spec locked in 12 months ago might already be the wrong call."
     ],
     consultantSolutions: [
-      "We're not a trader, we're a real factory, we know specs inside out",
-      "Our factory has its own Software Team, can solve many problems you can't imagine",
-      "Even in Hong Kong, we have AR/VR team"
+      "\"The best way to predict the future is to create it.\" — Peter Drucker",
+      "🏗 HSITP · HK Gov — The tender was simple: smart mirror connects to a Bluetooth speaker 🔊 for audio. Then, right before handover, we discover the speaker runs Google Assistant. It needs two-way comms. Standard smart mirror Bluetooth is one-way output only — no mic loopback. On top of that, the project's cybersecurity requirements were extreme 🔐. Whitelist. Blacklist. Strict enforcement. None of it in the original spec. Good thing the motherboard was ours 🛠, and the dev team was in-house. We pulled it back from the edge and delivered ✅.",
+      "🏋️ Same project — HSITP also needed 20 fitness mirrors. Back in 2022, Hong Kong still had a homegrown unicorn: KaraMirror. Then it folded 💀. The consultant asked us to step in. We flew to the mainland to audit the only remaining fitness mirror supplier. Assessment came back: unreliable ❌. So our Hong Kong team took the reins 🇭🇰, folded our in-house AR/VR concept into the smart mirror, and built what's now the Play Mirror 🪞."
     ],
     aboutTitle: "About Us",
     aboutIntro: "<strong>Viewdex Limited</strong> is Hong Kong's professional smart mirror and display solutions provider.",
@@ -1648,44 +1669,64 @@ const i18n = {
     guestExperience: "客户体验",
     painPoints: "痛点：",
     howWeHelp: "我们如何帮助您：",
+    projectPainImage: "pain-project.jpg",
     projectPain: [
-      "太保守 → 主席说'你没有创新？'",
-      "太冒进 → 出事你背锅"
+      "😭 我们怎么会不明白项目经理的苦恼？",
+      "🏗 楼市旺的时候，主席要项目有创新、要 Wow",
+      "💣 项目一出事，供应商和相关人士就互相推卸责任，个个都说「这家不是我负责的」"
     ],
     projectSolutions: [
-      "30,000+安装经验，知道什么可以做、什么太冒险",
+      "马云：「复杂的事情简单做，就是专家；重复的事情用心做，就是赢家。」",
+      "30,000+安装经验，知道什么可以做到、什么太冒险",
       "我们大胆创新，设计了很多你想象不到的附加产品",
       "早年客户要求不清晰，所以我们不断与客户共同解决问题"
     ],
+    projectProductsTitle: "🤝 与项目经理并肩合作，我们为香港发展商做了以下产品：",
+    projectProducts: [
+      "新鸿基 · 天玺海：自己创作的浴室智能开关",
+      "港深创科园 · 落马洲：我们香港团队自己创作的 Play Mirror",
+      "九龙建业 · 海茵庄园：全港首创 KaraMirror 运动镜（由我们代工生产）",
+      "恒基 · 天泷：Oolaa 浴室专用 UI 智能镜",
+      "新鸿基 · 云海：Oolaa 联乘 B&W 的浴室蓝牙装置（可自定义用户名和密码）",
+      "新鸿基 · 天铸：Oolaa 内置 Mirroring 的浴室电视",
+      "新鸿基 · 天晋 II：Oolaa 11.6 寸厨房电视",
+      "恒基 · 迎海：JSA 10 寸厨房电视"
+    ],
+    projectLessonTitle: "🩸 血泪教训",
+    projectLesson: "工程项目一定要主动跟进工地进度，不然随时出问题。装好之后只代表工程合约完成了 70% — 还要主动提出一起验收、做好产品保护；等到物管同事进场，更要提前做好交接收尾。这 30% 才是最头疼的部分，没人提醒你、没人等你，等到交房那天才发现镜子花了，你就自己承受 🫠。",
+    designPainImage: "pain-design.jpg",
     designPain: [
-      "不够漂亮 → 需要很多奇怪的想法",
-      "不接地气 → 看起来很美，维修怎么办？",
-      "如何交代 → 项目经理质疑为什么用Smart Mirror"
+      "😭 我们怎么会不明白总设计师的苦恼？",
+      "🎨 项目设计上，想做到最完美 ✨，可惜供应商根本帮不上忙。",
+      "⏳ 想用最先进的产品，可惜从设计到落成往往有三年时间差，大部分供应商根本没有远见。"
     ],
     designSolutions: [
-      "我们不只是智能镜厂，我们还愿意为设计师定制模具",
-      "大量案例研究，不怕客户问",
-      "维修方案预先帮您想好",
-      "有深厚的装修背景，已经思考好怎么样问设计师问题"
+      "马云：「复杂的事情简单做，就是专家；重复的事情用心做，就是赢家。」",
+      "🏨 香港 Kerry Hotel 与 Niseko Park Hyatt：设计师要求 Mirror TV 关机后屏幕位置也是镜子 🪞。一般用单向透视玻璃（One-Way Mirror）但颜色偏暗，女士化妆 💄 体验极差。我们不想设计师失望：主体用传统银镜（颜色自然），再在屏幕位加一片单向透视镜，关机时自然变成镜子。",
+      "💡 五星级酒店设计师常问：Mirror TV 有什么新玩法？以往只是接机顶盒 📡，就算新一代装了 YouTube 和 Spotify 🎵，客人都不会登入公共设备管理 playlist。🚀 2026 年我们要解决这个痛点，将 Mirror TV 变得更聪明、更体贴住客。"
     ],
+    purchasingPainImage: "pain-buying.jpg",
     purchasingPain: [
-      "买贵了 → 被老板骂",
-      "买便宜了 → 质量问题，或者买了不合适的产品"
+      "😭 我们当然明白采购经理的痛点：",
+      "🌍 要尊重海外顾问的选择，但供应商的产品根本不适合。",
+      "💰 预算有限，但都要找到合适的替代方案。"
     ],
     purchasingSolutions: [
-      "工厂直销，不用担心售后服务",
-      "清楚报价单，什么包、什么不包",
-      "多年Job Reference，不会轻易放弃"
+      "马云：「复杂的事情简单做，就是专家；重复的事情用心做，就是赢家。」",
+      "🚨 2026 年 8 月接到急单：中环住宅项目的智能镜（由另一家供应商提供）不合规格，对方要求我们立刻顶上，三星期内完成所有单位。",
+      "🏢 新鸿基天玺海：浴室镜后面装了发热膜，但没有独立开关；承包商提供的普通射频装置，天生限制不少。我们特意研发了智能开关发声装置 🔊。",
+      "🏠 九龙建业海茵庄园：建楼初期，1556 个单位原来没装门铃 🔔，要补装的话会牵涉很多工序。最后我们提供了同类产品中屏幕最亮的电子门铃 📺。"
     ],
+    consultantPainImage: "pain-consultant.jpg",
     consultantPain: [
-      "对Smart Mirror不熟悉 → 怕推荐错",
-      "客户问起来 → 不知道怎么回答",
-      "乱来 → 影响你的专业形象"
+      "😭 我们当然明白顾问的痛点：",
+      "🔬 科技日新月异，很多细节未必完全掌握。",
+      "🔄 市场环境瞬息万变，12 个月前的方案，今天可能已经不适合。"
     ],
     consultantSolutions: [
-      "我们不是贸易商，是真正的厂家，我们对规格非常清楚",
-      "我们自己的厂有软件团队，可以解决很多你想不到的问题",
-      "就算在香港，我们也有AR/VR团队"
+      "马云：「复杂的事情简单做，就是专家；重复的事情用心做，就是赢家。」",
+      "🏗 落马洲创科园：标书只是简单写——智能镜连接蓝牙喇叭发声 🔊。谁知临近交货才发现那只喇叭启动了 Google Assistant，需要双向通讯。一般智能镜主板的蓝牙只是单向输出，对接不上。还有网络安全规格要求极高 🔐，要严格执行白名单和黑名单（标书根本没写明）。好在主板是我们自己研发 🛠，又有自己的开发团队，最终力挽狂澜，顺利交货 ✅。",
+      "🏋️ 落马洲创科园还要 20 块运动镜。2022 年香港还有港产独角兽 KaraMirror，可惜后来倒闭了 💀。顾问请我们帮忙，我们特意去国内实地考察唯一的运动镜供应商，评估报告显示明显不可靠 ❌。最后由我们香港本土团队出手 🇭🇰，将自家的 AR / VR 概念加入智能镜，变成最新的 Play Mirror 🪞。"
     ],
     aboutTitle: "关于我们",
     aboutIntro: "<strong>Viewdex Limited</strong> 是香港专业智能镜及智能显示屏供应商。",
@@ -1736,44 +1777,64 @@ const i18n = {
     guestExperience: "客戶體驗",
     painPoints: "痛點：",
     howWeHelp: "我哋點幫你：",
+    projectPainImage: "pain-project.jpg",
     projectPain: [
-      "太保守 → 被主席話「你冇創新？」",
-      "太進取 → 出事孭晒個鑊"
+      "😭 我哋點會唔明項目經理嘅苦惱？",
+      "🏗 樓市旺嗰陣，主席要項目有創新、要 Wow",
+      "💣 項目一出事，供應商同相關人士就互相卸膊，個個都話「呢間嘢唔係我跟開」"
     ],
     projectSolutions: [
+      "馬雲：「複雜嘅嘢簡單做，就係專家；重複嘅嘢用心做，就係贏家。」",
       "30000套經驗，知道乜嘢可做到、乜嘢太冒險",
       "我哋大膽創新，設計咗好多你想像唔到嘅附加產品",
       "早年客戶要求不清晰，所以不斷要同客戶共同解決問題"
     ],
+    projectProductsTitle: "🤝 同項目經理一齊拍住上，我哋為香港發展商整咗以下呢啲產品：",
+    projectProducts: [
+      "新鴻基 ‧ 天璽海：自己創作嘅浴室智能開關掣",
+      "港深創科園 ‧ 落馬洲：我哋香港團隊自己創作嘅 Play Mirror",
+      "九龍建業 ‧ 海茵莊園：全港首創 KaraMirror 運動鏡（由我哋代工生產）",
+      "恆基 ‧ 天瀧：Oolaa 浴室專用 UI 智能鏡",
+      "新鴻基 ‧ 雲海：Oolaa 聯乘 B&W 嘅浴室藍牙裝置（可自訂用戶名同密碼）",
+      "新鴻基 ‧ 天鑄：Oolaa 內置 Mirroring 嘅浴室電視",
+      "新鴻基 ‧ 天晉 II：Oolaa 11.6 吋廚房電視",
+      "恆基 ‧ 迎海：JSA 10 吋廚房電視"
+    ],
+    projectLessonTitle: "🩸 血淚教訓",
+    projectLesson: "工程項目一定要主動睇實地盤進度，唔係嘅話隨時撞板。裝好之後只係代表工程合約做咗 70% — 仲要主動提出一齊驗收、做好產品保護；等到物管同事入場，更加要預早做好交接收尾。呢 30% 先係最嘔血嘅位，冇人提你、冇人等你，等到交樓嗰日先發現塊鏡花咗，你就硬食 🫠。",
+    designPainImage: "pain-design.jpg",
     designPain: [
-      "唔夠靚 → 要好多奇怪嘅想法",
-      "落唔到地 → 得個靚字，維修點算？",
-      "點收口 → PM質疑你點解要用 Smart Mirror"
+      "😭 我哋點會唔明總設計師嘅苦惱？",
+      "🎨 項目設計上，想整到最完美 ✨，可惜供應商根本幫唔到手。",
+      "⏳ 想用最先進嘅產品，可惜由設計到落成往往有三年時間差，大部分供應商根本冇遠見。"
     ],
     designSolutions: [
-      "我哋唔單只係智能鏡廠，我哋也願意為設計師特製模具",
-      "大量 Case Studies，唔怕客人問",
-      "維修方案預先幫你想好",
-      "有浓厚嘅 Fit Out 背景，已經思考好點樣去問設計師問題"
+      "馬雲：「複雜嘅嘢簡單做，就係專家；重複嘅嘢用心做，就係贏家。」",
+      "🏨 香港 Kerry Hotel 同 Niseko Park Hyatt：設計師要求 Mirror TV 熄機後屏幕位都係鏡 🪞。一般用單向透視玻璃（One-Way Mirror）但顏色偏暗，女士化妝 💄 體驗極差。我哋唔想設計師失望：主體用傳統銀鏡（顏色自然），再喺屏幕位加一片單向透視鏡，熄機嗰陣自然變鏡。",
+      "💡 五星級酒店設計師成日問：Mirror TV 有咩新玩法？以往只係駁機頂盒 📡，就算新一代裝咗 YouTube 同 Spotify 🎵，客人都唔會登入公共設備搞 playlist。🚀 2026 年我哋要解決呢個痛點，將 Mirror TV 變得更聰明、更體貼住客。"
     ],
+    purchasingPainImage: "pain-buying.jpg",
     purchasingPain: [
-      "買貴咗 → 被老闆鬧",
-      "買平咗 → 質素出事，又或者買咗唔適合嘅產品"
+      "😭 我哋當然明白採購經理嘅痛點：",
+      "🌍 要尊重海外顧問嘅選擇，但供應商嘅產品根本唔啱用。",
+      "💰 預算有限，但都要搵到啱用嘅替代方案。"
     ],
     purchasingSolutions: [
-      "工廠直營，唔使擔心售後服務",
-      "清楚報價單，乜嘢包、乜嘢唔包",
-      "累積咗咁多年嘅 Job Reference，唔會輕易放棄"
+      "馬雲：「複雜嘅嘢簡單做，就係專家；重複嘅嘢用心做，就係贏家。」",
+      "🚨 2026 年 8 月接到急單：中環住宅項目嘅智能鏡（由另一間供應商提供）唔合規格，對方要求我哋即刻頂上，三星期內搞掂所有單位。",
+      "🏢 新鴻基天璽海：浴室鏡後面裝咗發熱膜，但冇獨立開關掣；判頭提供嘅淘寶射頻裝置，天生限制都唔少。我哋特登研發咗智能開關發聲裝置 🔊。",
+      "🏠 九龍建業海茵莊園：起樓初期，1556 個單位原來冇裝門鐘 🔔，要補返嘅話會牽涉好多工序。最後我哋提供咗同類產品入面屏幕最光亮嘅電子門鐘 📺。"
     ],
+    consultantPainImage: "pain-consultant.jpg",
     consultantPain: [
-      "對 Smart Mirror 唔熟悉 → 驚推薦錯",
-      "客人問起 → 唔知點答",
-      "亂嚟 → 影響你專業形象"
+      "😭 我哋當然明白顧問嘅痛點：",
+      "🔬 科技日新月異，好多細節位未必完全掌握。",
+      "🔄 市場環境瞬息萬變，12 個月前嘅定案，今日可能已經唔啱用。"
     ],
     consultantSolutions: [
-      "我哋唔係 trading，而真係一個廠家，我哋對於規格係非常清楚",
-      "我哋自己廠有 Software Team，可以解決好多你想像唔到嘅問題",
-      "就算香港，我哋都有 AR/VR 團隊"
+      "馬雲：「複雜嘅嘢簡單做，就係專家；重複嘅嘢用心做，就係贏家。」",
+      "🏗 落馬洲創科園：標書只係簡單寫——智能鏡接駁藍牙喇叭嚟發聲 🔊。點知臨近交貨先發現嗰隻喇叭啟動咗 Google Assistant，需要雙向通訊。一般智能鏡底板嘅藍牙只係單向輸出，對接唔到。仲有網絡安全規格要求極高 🔐，要嚴格執行白名單同黑名單（標書根本冇寫明）。好在底板係我哋自己研發 🛠，又有自己嘅開發團隊，最終力挽狂瀾，順利交貨 ✅。",
+      "🏋️ 落馬洲創科園仲要 20 塊運動鏡。2022 年香港仲有港產獨角獸 KaraMirror，可惜後來倒閉咗 💀。顧問請我哋幫手，我哋特登去國內實地考察唯一嘅運動鏡供應商，評估報告顯示明顯唔可靠 ❌。最後由我哋香港本土團隊出手 🇭🇰，將自家嘅 AR / VR 概念加入智能鏡，變成最新嘅 Play Mirror 🪞。"
     ],
     aboutTitle: "關於我哋",
     aboutIntro: "<strong>Viewdex Limited</strong> 係香港專業智能鏡及智能顯示屏供應商。",
@@ -1845,30 +1906,43 @@ function setLanguage(lang) {
 function showRoleModal(role) {
   const data = i18n[currentLang];
   const body = document.getElementById('modalBody');
-  let pain, solutions, title;
+  let pain, solutions, title, painImage;
 
   switch(role) {
     case 'project':
       title = `${data.ifYouAre} ${data.projectTeam}`;
-      pain = data.projectPain; solutions = data.projectSolutions; break;
+      pain = data.projectPain; solutions = data.projectSolutions;
+      painImage = data.projectPainImage; break;
     case 'design':
       title = `${data.ifYouAre} ${data.designTeam}`;
-      pain = data.designPain; solutions = data.designSolutions; break;
+      pain = data.designPain; solutions = data.designSolutions;
+      painImage = data.designPainImage; break;
     case 'purchasing':
       title = `${data.ifYouAre} ${data.purchasingTeam}`;
-      pain = data.purchasingPain; solutions = data.purchasingSolutions; break;
+      pain = data.purchasingPain; solutions = data.purchasingSolutions;
+      painImage = data.purchasingPainImage; break;
     case 'consultant':
       title = `${data.ifYouAre} ${data.consultant}`;
-      pain = data.consultantPain; solutions = data.consultantSolutions; break;
+      pain = data.consultantPain; solutions = data.consultantSolutions;
+      painImage = data.consultantPainImage; break;
   }
 
   body.innerHTML = `
     <div class="modal-role-content">
       <h2>${title}</h2>
+      ${painImage ? `<img src="${painImage}" alt="${title}" class="pain-image" loading="lazy">` : ''}
       <h3>${data.painPoints}</h3>
       <ul class="pain-points">${pain.map(p => `<li>${p}</li>`).join('')}</ul>
       <h3>${data.howWeHelp}</h3>
       <ul class="solutions">${solutions.map(s => `<li>${s}</li>`).join('')}</ul>
+      ${role === 'project' && data.projectProducts ? `
+        <h3>${data.projectProductsTitle || ''}</h3>
+        <ul class="project-products">${data.projectProducts.map(p => `<li>${p}</li>`).join('')}</ul>
+      ` : ''}
+      ${role === 'project' && data.projectLesson ? `
+        <h3>${data.projectLessonTitle || ''}</h3>
+        <p class="project-lesson">${data.projectLesson}</p>
+      ` : ''}
     </div>`;
 
   document.getElementById('mainModal').classList.add('show');
