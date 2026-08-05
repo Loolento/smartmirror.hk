@@ -911,12 +911,12 @@ footer {
   background: var(--card-bg);
   border: 1px solid var(--divider);
   border-radius: 16px;
-  max-width: 920px;
+  max-width: 1040px;
   width: 100%;
   max-height: 85vh;
   overflow-y: auto;
   position: relative;
-  padding: 48px 44px;
+  padding: 52px 48px;
 }
 
 @media (max-width: 860px) {
@@ -1060,18 +1060,18 @@ footer {
 /* ===== ABOUT CANTO (zh-HK) ===== */
 .about-canto { text-align: left; }
 .about-canto-hero {
-  font-size: 32px; font-weight: 300; color: var(--gold);
+  font-size: 36px; font-weight: 300; color: var(--gold);
   line-height: 1.2; margin-bottom: 6px;
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
 }
 .about-canto-sub {
-  font-size: 18px; font-weight: 300; color: var(--sub);
+  font-size: 19px; font-weight: 300; color: var(--sub);
   margin-bottom: 24px;
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
 }
 .about-canto-sub strong, .about-canto-section strong { font-weight: 600; }
 .about-canto-section {
-  font-size: 16px; font-weight: 400; color: var(--gold);
+  font-size: 17px; font-weight: 400; color: var(--gold);
   margin-top: 20px; margin-bottom: 8px;
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
 }
@@ -1089,10 +1089,11 @@ footer {
   margin-bottom: 48px;
 }
 .about-row-img {
-  flex: 0 0 48%;
-  max-width: 48%;
+  flex: 0 0 55%;
+  max-width: 55%;
   border-radius: 8px;
   object-fit: cover;
+  aspect-ratio: 4/3;
 }
 .about-row-text {
   flex: 1;
@@ -1511,7 +1512,7 @@ function onPlayerStateChange(event) {
 
       <!-- P1: Hero -->
       <div class="about-row">
-        <img src="assets/about/p1-hero.jpg" alt="They sell parts. We make art." class="about-row-img" style="object-position: 65% center">
+        <img src="assets/about/p1-hero.jpg" alt="They sell parts. We make art." class="about-row-img" style="object-position: 72% center">
         <div class="about-row-text">
           <div class="about-canto-hero">They sell parts.<br><span style="color:#8B5CF6">We make art.</span></div>
           <div class="about-canto-sub">The difference you can't unsee.</div>
@@ -1521,11 +1522,10 @@ function onPlayerStateChange(event) {
           </ul>
         </div>
       </div>
-      <div class="about-canto-footnote">¹ Under Hong Kong's Residential Properties (First-hand Sales) Ordinance (Cap. 621), Schedule 1, Part 2, Section 22 — sales brochures must list fittings and finishes by brand and model. Every project we claim is independently verifiable in the developer's official sales brochure. Go look. We'll wait.</div>
 
       <!-- P2: Factory -->
       <div class="about-row">
-        <img src="assets/about/p2-factory.jpg" alt="Factory-backed. Not factory-brained." class="about-row-img" style="object-position: 35% center">
+        <img src="assets/about/p2-factory.jpg" alt="Factory-backed. Not factory-brained." class="about-row-img" style="object-position: 28% center">
         <div class="about-row-text">
           <div class="about-canto-hero" style="font-size:22px">🏭 Factory-backed<br>· Not factory-brained</div>
           <div class="about-canto-sub">Hong Kong smart mirror manufacturer. Factory-direct.</div>
@@ -1536,10 +1536,11 @@ function onPlayerStateChange(event) {
           <div class="about-canto-section" style="text-align:left;margin-top:12px">🏗 Factory tours welcome · We'll make coffee.</div>
         </div>
       </div>
+      <div class="about-canto-footnote" style="color:#9A9588;font-size:12px;margin-top:0;padding-top:0;border-top:none">¹ Under Hong Kong's Residential Properties (First-hand Sales) Ordinance (Cap. 621), Schedule 1, Part 2, Section 22 — sales brochures must list fittings and finishes by brand and model. Every project we claim is independently verifiable in the developer's official sales brochure. Go look. We'll wait.</div>
 
       <!-- P3: We build -->
       <div class="about-row">
-        <img src="assets/about/p3-build.jpg" alt="They sell what's built. We build." class="about-row-img" style="object-position: 60% center">
+        <img src="assets/about/p3-build.jpg" alt="They sell what's built. We build." class="about-row-img" style="object-position: 65% center">
         <div class="about-row-text">
           <div class="about-canto-hero" style="font-size:22px">They sell what's built.<br>We build</div>
           <ul class="about-canto-list">
