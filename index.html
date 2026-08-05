@@ -1084,18 +1084,23 @@ footer {
 /* About Us — two-column layout (desktop: image left, text right) */
 .about-row {
   display: flex;
-  gap: 32px;
+  gap: 28px;
   align-items: flex-start;
-  margin-bottom: 36px;
+  margin-bottom: 48px;
+  min-height: 340px;
 }
 .about-row-img {
-  flex: 0 0 40%;
-  max-width: 40%;
+  flex: 0 0 48%;
+  max-width: 48%;
   border-radius: 8px;
+  object-fit: cover;
 }
 .about-row-text {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 @media (max-width: 860px) {
@@ -1103,6 +1108,7 @@ footer {
     flex-direction: column;
     gap: 16px;
     margin-bottom: 32px;
+    min-height: auto;
   }
   .about-row-img {
     flex: none;
