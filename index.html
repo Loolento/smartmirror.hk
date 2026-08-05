@@ -911,12 +911,21 @@ footer {
   background: var(--card-bg);
   border: 1px solid var(--divider);
   border-radius: 16px;
-  max-width: 520px;
+  max-width: 780px;
   width: 100%;
-  max-height: 80vh;
+  max-height: 85vh;
   overflow-y: auto;
   position: relative;
-  padding: 36px 28px;
+  padding: 44px 40px;
+}
+
+@media (max-width: 860px) {
+  .modal-content {
+    max-width: 100%;
+    border-radius: 12px;
+    padding: 32px 20px;
+    max-height: 90vh;
+  }
 }
 
 .modal-close {
@@ -940,8 +949,12 @@ footer {
 
 .modal-role-content h2 {
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
-  font-size: 28px; font-weight: 300; color: var(--gold);
-  margin-bottom: 24px;
+  font-size: 32px; font-weight: 300; color: var(--gold);
+  margin-bottom: 28px;
+}
+
+@media (max-width: 860px) {
+  .modal-role-content h2 { font-size: 24px; margin-bottom: 20px; }
 }
 
 .modal-role-content h3 {
@@ -971,7 +984,11 @@ footer {
 .modal-role-content .pain-points li::before { content: "•"; position: absolute; left: 0; color: var(--gold); }
 .modal-role-content .solutions li { padding-left: 22px; position: relative; }
 .modal-role-content .solutions li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); }
-.pain-image { width: 100%; max-width: 400px; border-radius: 8px; margin-bottom: 16px; display: block; }
+.pain-image { width: 100%; max-width: 560px; border-radius: 8px; margin-bottom: 20px; display: block; }
+
+@media (max-width: 860px) {
+  .pain-image { max-width: 100%; }
+}
 
 .project-lesson {
   font-size: 17px; font-weight: 400; line-height: 1.7;
