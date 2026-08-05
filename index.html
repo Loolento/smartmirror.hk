@@ -1080,6 +1080,36 @@ footer {
   margin: 12px 0 16px;
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
 }
+
+/* About Us — two-column layout (desktop: image left, text right) */
+.about-row {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 36px;
+}
+.about-row-img {
+  flex: 0 0 40%;
+  max-width: 40%;
+  border-radius: 8px;
+}
+.about-row-text {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 860px) {
+  .about-row {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .about-row-img {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+  }
+}
 .about-canto-list {
   list-style: none; margin: 0; padding: 0;
 }
@@ -1475,32 +1505,44 @@ function onPlayerStateChange(event) {
     <div class="modal-page-content about-canto">
 
       <!-- P1: Hero -->
-      <img src="assets/about/p1-hero.jpg" alt="They sell parts. We make art." style="width:100%;max-width:600px;border-radius:8px;margin-bottom:16px">
-      <div class="about-canto-hero">They sell parts.<br><span style="color:#8B5CF6">We make art.</span></div>
-      <div class="about-canto-sub">The difference you can't unsee.</div>
-      <ul class="about-canto-list">
-        <li>📦 20+ years. 31,000+ Mirror TV, Kitchen TV, embedded AV installations across Hong Kong and Macau developers. Oolaa + JSA. Every unit warrantied — up to 39 months. Verifiable numbers.¹</li>
-        <li>⚡️ Licensed Hong Kong electricians on staff. WR1 sign-off authority. Not outsourced. Not "we'll find someone." Our team. Our cert.</li>
-      </ul>
+      <div class="about-row">
+        <img src="assets/about/p1-hero.jpg" alt="They sell parts. We make art." class="about-row-img">
+        <div class="about-row-text">
+          <div class="about-canto-hero">They sell parts.<br><span style="color:#8B5CF6">We make art.</span></div>
+          <div class="about-canto-sub">The difference you can't unsee.</div>
+          <ul class="about-canto-list">
+            <li>📦 20+ years. 31,000+ Mirror TV, Kitchen TV, embedded AV installations across Hong Kong and Macau developers. Oolaa + JSA. Every unit warrantied — up to 39 months. Verifiable numbers.¹</li>
+            <li>⚡️ Licensed Hong Kong electricians on staff. WR1 sign-off authority. Not outsourced. Not "we'll find someone." Our team. Our cert.</li>
+          </ul>
+        </div>
+      </div>
 
       <!-- P2: Factory -->
-      <img src="assets/about/p2-factory.jpg" alt="Factory-backed. Not factory-brained." style="width:100%;max-width:600px;border-radius:8px;margin-bottom:16px">
-      <div class="about-canto-hero" style="font-size:22px;margin-top:28px">🏭 Factory-backed<br>· Not factory-brained</div>
-      <div class="about-canto-sub">Hong Kong smart mirror manufacturer. Factory-direct.</div>
-      <ul class="about-canto-list">
-        <li>🛡 Custom circuit boards. Proprietary source code. Reads like a spec sheet. Feels like insurance when things go wrong on site.</li>
-        <li>🔧 Shenzhen factory engineers + Hong Kong software team. When the job site gets complicated, someone who actually built the product picks up the phone.</li>
-      </ul>
-      <div class="about-canto-section" style="text-align:center">🏗 Factory tours welcome · We'll make coffee.</div>
+      <div class="about-row">
+        <img src="assets/about/p2-factory.jpg" alt="Factory-backed. Not factory-brained." class="about-row-img">
+        <div class="about-row-text">
+          <div class="about-canto-hero" style="font-size:22px">🏭 Factory-backed<br>· Not factory-brained</div>
+          <div class="about-canto-sub">Hong Kong smart mirror manufacturer. Factory-direct.</div>
+          <ul class="about-canto-list">
+            <li>🛡 Custom circuit boards. Proprietary source code. Reads like a spec sheet. Feels like insurance when things go wrong on site.</li>
+            <li>🔧 Shenzhen factory engineers + Hong Kong software team. When the job site gets complicated, someone who actually built the product picks up the phone.</li>
+          </ul>
+          <div class="about-canto-section" style="text-align:left;margin-top:12px">🏗 Factory tours welcome · We'll make coffee.</div>
+        </div>
+      </div>
 
       <!-- P3: We build -->
-      <img src="assets/about/p3-build.jpg" alt="They sell what's built. We build." style="width:100%;max-width:600px;border-radius:8px;margin-bottom:16px">
-      <div class="about-canto-hero" style="font-size:22px;margin-top:28px">They sell what's built.<br>We build</div>
-      <ul class="about-canto-list">
-        <li>🎨 In-house AR/VR team. All Hong Kong. All young. All creative to a fault. Side projects in AI and creative IT. Because one R&D pipeline isn't enough.</li>
-        <li>🌏 Japan. Bangkok. Myanmar. Overseas deployments with after-sales pre-planned. We don't dump product across borders. We design the maintenance strategy before the container ships.</li>
-      </ul>
-      <div class="about-canto-motto">🎯 Hard things, simple.<br>Boring things, obsessed.</div>
+      <div class="about-row">
+        <img src="assets/about/p3-build.jpg" alt="They sell what's built. We build." class="about-row-img">
+        <div class="about-row-text">
+          <div class="about-canto-hero" style="font-size:22px">They sell what's built.<br>We build</div>
+          <ul class="about-canto-list">
+            <li>🎨 In-house AR/VR team. All Hong Kong. All young. All creative to a fault. Side projects in AI and creative IT. Because one R&D pipeline isn't enough.</li>
+            <li>🌏 Japan. Bangkok. Myanmar. Overseas deployments with after-sales pre-planned. We don't dump product across borders. We design the maintenance strategy before the container ships.</li>
+          </ul>
+          <div class="about-canto-motto">🎯 Hard things, simple.<br>Boring things, obsessed.</div>
+        </div>
+      </div>
 
       <!-- CTA -->
       <div class="about-canto-cta-row">
