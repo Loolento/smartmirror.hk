@@ -389,8 +389,8 @@ header {
 }
 
 .hero .sub {
-  display: block;
-  font-size: 18px; color: var(--sub); margin-top: 6px;
+  display: inline;
+  font-size: 18px; color: var(--sub);
   font-family: 'Noto Sans TC', 'Inter', sans-serif;
   font-weight: 400;
 }
@@ -1482,8 +1482,7 @@ footer {
 
   <!-- LEFT COLUMN: Hero + Role Buttons -->
   <section class="hero">
-    <h1 data-i18n="heroTitle">Empathetic Questions</h1>
-    <span class="sub" data-i18n="heroSub">asked by.</span>
+    <h1><span data-i18n="heroTitle">Pain Points</span> <span class="sub" data-i18n="heroSub">from</span></h1>
   </section>
 
   <div class="role-row">
@@ -1878,7 +1877,7 @@ function onPlayerStateChange(event) {
 const i18n = {
   en: {
     heroTitle: "Pain Points",
-    heroSub: "solved.",
+    heroSub: "from",
     brandTagline: "<span class=\"i-bold\">i</span>nteractive Mirror Systems",
     heroDesc: "Smart Mirror for Hotels & Developers — Hong Kong Factory Direct",
     ifYouAre: "asked by...",
@@ -1987,7 +1986,7 @@ const i18n = {
   },
   zh: {
     heroTitle: "痛点",
-    heroSub: "如果您是...",
+    heroSub: "如果您是",
     brandTagline: "互动镜面系统",
     ifYouAre: "如果您是...",
     projectTeam: "项目经理团队",
@@ -2097,7 +2096,7 @@ const i18n = {
   },
   "zh-HK": {
     heroTitle: "痛點",
-    heroSub: "如果你係...",
+    heroSub: "如果你係",
     brandTagline: "互動鏡面系統",
     ifYouAre: "如果你係...",
     projectTeam: "項目經理團隊",
