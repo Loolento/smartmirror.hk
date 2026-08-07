@@ -789,9 +789,8 @@ header {
 .about-below-video {
   width: 100%;
   box-sizing: border-box;
-  margin-top: 4px;
-  background: var(--article-bg);
-  border: 1px solid var(--article-border);
+  background: linear-gradient(to bottom, #e2c48a 0%, #c0965a 35%, #8f6840 68%, #5b4028 100%);
+  border: 1px solid rgba(110, 75, 38, 0.60);
   border-radius: 10px;
   padding: 18px 20px;
   min-height: 72px;
@@ -802,39 +801,40 @@ header {
   position: relative;
   overflow: hidden;
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.04),
-    inset 0 -1px 0 rgba(0,0,0,0.5),
-    0 2px 3px rgba(0,0,0,0.6),
-    0 6px 10px rgba(0,0,0,0.35);
+    inset 0 1px 0 rgba(255, 235, 185, 0.55),
+    inset 0 -1px 0 rgba(45, 25, 10, 0.65),
+    inset 0 -7px 10px rgba(70, 35, 10, 0.35),
+    0 2px 3px rgba(0, 0, 0, 0.75),
+    0 6px 10px rgba(0, 0, 0, 0.40);
   transition: all 0.12s;
   margin-top: 8px;
 }
 
 .about-below-video::after {
   content: ''; position: absolute;
-  top: 3px; left: 6px; right: 40%; height: 38%;
+  top: 1px; left: 2px; right: 55%; height: 42%;
   background: linear-gradient(135deg,
-    rgba(255,255,255,0.06) 0%,
-    rgba(255,255,255,0.02) 25%,
-    transparent 50%);
-  border-radius: 6px 0 0 0;
+    rgba(255,255,255,0.55) 0%,
+    rgba(255,255,255,0.42) 20%,
+    rgba(255,255,255,0.10) 50%,
+    transparent 75%);
+  border-radius: 5px 0 3px 0;
   pointer-events: none;
 }
 
 .about-below-video:hover {
-  background: var(--card-bg);
-  border-color: var(--divider);
+  background: linear-gradient(to bottom, #f0d498 0%, #cfa460 35%, #9d7648 68%, #6b4e30 100%);
+  border-color: rgba(130, 95, 48, 0.70);
 }
 
 .about-below-video h3 {
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
-  font-size: 24px; font-weight: 300; color: var(--gold); line-height: 1.15;
-  opacity: 1;
+  font-size: 24px; font-weight: 500; color: #2B1E10; line-height: 1.15;
 }
 
 .about-below-sub {
-  font-size: 14px; color: var(--sub); margin-top: 4px; display: block;
-  font-weight: 400; opacity: 1;
+  font-size: 14px; color: #2B1E10; margin-top: 4px; display: block;
+  font-weight: 400; opacity: 0.85;
 }
 footer {
   flex-shrink: 0;
