@@ -787,11 +787,9 @@ header {
 
 /* ===== ABOUT US BELOW VIDEO ===== */
 .about-below-video {
-  grid-column: 2;
   width: 100%;
-  max-width: 420px;
-  justify-self: center;
   box-sizing: border-box;
+  margin-top: 4px;
   background: var(--article-bg);
   border: 1px solid var(--article-border);
   border-radius: 10px;
@@ -1697,6 +1695,10 @@ footer {
     <div class="video-wrapper video-portrait-slot">
       <div class="video-card" id="yt-player"></div>
     </div>
+    <div class="about-below-video" onclick="showPageModal('about')" style="cursor:pointer">
+      <h3 data-i18n="proven">About Us</h3>
+      <span class="about-below-sub" data-i18n="jobReference">+ job reference (download)</span>
+    </div>
   </div>
 
 <script>
@@ -1761,12 +1763,6 @@ function onPlayerStateChange(event) {
       </div>
     </div>
   </section>
-
-  <!-- About Us card — below video, full center width -->
-  <div class="about-below-video" onclick="showPageModal('about')" style="cursor:pointer">
-    <h3 data-i18n="proven">About Us</h3>
-    <span class="about-below-sub" data-i18n="jobReference">+ job reference (download)</span>
-  </div>
 
 </div>
 
