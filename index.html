@@ -980,8 +980,28 @@ footer {
 }
 
 .modal-role-content li:last-child { border-bottom: none; }
-.modal-role-content .pain-points li { padding-left: 18px; position: relative; }
+.modal-role-content .pain-points li { padding-left: 18px; position: relative; border-bottom: none; }
 .modal-role-content .pain-points li::before { content: "•"; position: absolute; left: 0; color: var(--gold); }
+/* Consultant: quote next to image */
+.consultant-image-row {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  margin: 16px 0 24px;
+}
+.consultant-image-row .pain-image {
+  flex: 0 0 48%;
+  max-width: 48%;
+  margin: 0;
+}
+.consultant-quote {
+  flex: 1;
+  font-size: 19px;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1.6;
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+}
 .modal-role-content .solutions li { padding-left: 22px; position: relative; }
 .modal-role-content .solutions li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); }
 
@@ -1765,13 +1785,14 @@ const i18n = {
       "🏠 Kowloon Development · Manor on the Hill — Construction phase. 1,556 units. Nobody specced a doorbell 🔔. Retrofitting meant threading through a dozen other trades. We dropped in the class's largest-screen electronic doorbell. Solved ✅."
     ],
     consultantPainImage: "pain-consultant.jpg",
+    consultantTitle: "Consultants, we've been there.",
+    consultantQuote: "\"The best way to predict the future is to create it.\" — Peter Drucker",
     consultantPain: [
       "📋 Consultants, we've been there.",
       "🔬 Tech moves fast. The details? Hard to nail every single one.",
       "🔄 Markets move faster. A spec locked in 12 months ago might already be the wrong call."
     ],
     consultantSolutions: [
-      "\"The best way to predict the future is to create it.\" — Peter Drucker",
       "🏗 HSITP · HK Gov — The tender was simple: smart mirror connects to a Bluetooth speaker 🔊 for audio. Then, right before handover, we discover the speaker runs Google Assistant. It needs two-way comms. Standard smart mirror Bluetooth is one-way output only — no mic loopback. On top of that, the project's cybersecurity requirements were extreme 🔐. Whitelist. Blacklist. Strict enforcement. None of it in the original spec. Good thing the motherboard was ours 🛠, and the dev team was in-house. We pulled it back from the edge and delivered ✅.",
       "🏋️ Same project — HSITP also needed 20 fitness mirrors. Back in 2022, Hong Kong still had a homegrown unicorn: KaraMirror. Then it folded 💀. The consultant asked us to step in. We flew to the mainland to audit the only remaining fitness mirror supplier. Assessment came back: unreliable ❌. So our Hong Kong team took the reins 🇭🇰, folded our in-house AR/VR concept into the smart mirror, and built what's now the Play Mirror 🪞."
     ],
@@ -1873,13 +1894,14 @@ const i18n = {
       "🏠 九龙建业 · 海茵庄园——施工阶段，1,556 户。没人规划门铃 🔔。补装要穿过十几个工种。我们装了同级屏幕最大的电子门铃。搞定 ✅。"
     ],
     consultantPainImage: "pain-consultant.jpg",
+    consultantTitle: "顾问朋友，这个角色我们当过。",
+    consultantQuote: "「预测未来最好的方法，是创造它。」—— Peter Drucker",
     consultantPain: [
       "📋 顾问朋友，这个角色我们当过。",
       "🔬 科技跑太快。每个细节都抓准？真的不容易。",
       "🔄 市场跑更快。12 个月前定下的规格，今天可能已经错了。"
     ],
     consultantSolutions: [
-      "「预测未来最好的方法，是创造它。」—— Peter Drucker",
       "🏗 港深创科园——标书写得很简单：智能镜接蓝牙喇叭发声 🔊。交货前才发现，那支喇叭跑 Google Assistant，需要双向通讯。普通智能镜主板蓝牙只能单向输出，根本对不上。更要命的是网络安全要求极高 🔐——白名单、黑名单、严格管控——标书完全没提。幸好，主板是我们自家的 🛠，开发团队也是自家的。从悬崖边拉回来，交货 ✅。",
       "🏋️ 同一个项目——还差 20 块健身镜。2022 年，香港还有本地独角兽 KaraMirror，后来倒了 💀。顾问找我们帮忙。我们飞到现场考察仅存的那家健身镜供应商。评估结果：不可靠 ❌。于是我们香港团队接手 🇭🇰——把自家 AR/VR 概念融进智能镜，做出了今天的 Play Mirror 🪞。"
     ],
@@ -1981,13 +2003,13 @@ const i18n = {
       "🏠 九龍建業海茵莊園：起樓初期，1556 個單位原來冇裝門鐘 🔔，要補返嘅話會牽涉好多工序。最後我哋提供咗同類產品入面屏幕最光亮嘅電子門鐘 📺。"
     ],
     consultantPainImage: "pain-consultant.jpg",
+    consultantTitle: "顧問們, 我哋當然明白您痛點啦。",
+    consultantQuote: "馬雲：「複雜嘅嘢簡單做，就係專家；重複嘅嘢用心做，就係贏家。」",
     consultantPain: [
-      "😭 我哋當然明白顧問嘅痛點：",
       "🔬 科技日新月異，好多細節位未必完全掌握。",
       "🔄 市場環境瞬息萬變，12 個月前嘅定案，今日可能已經唔啱用。"
     ],
     consultantSolutions: [
-      "馬雲：「複雜嘅嘢簡單做，就係專家；重複嘅嘢用心做，就係贏家。」",
       "🏗 落馬洲創科園：標書只係簡單寫——智能鏡接駁藍牙喇叭嚟發聲 🔊。點知臨近交貨先發現嗰隻喇叭啟動咗 Google Assistant，需要雙向通訊。一般智能鏡底板嘅藍牙只係單向輸出，對接唔到。仲有網絡安全規格要求極高 🔐，要嚴格執行白名單同黑名單（標書根本冇寫明）。好在底板係我哋自己研發 🛠，又有自己嘅開發團隊，最終力挽狂瀾，順利交貨 ✅。",
       "🏋️ 落馬洲創科園仲要 20 塊運動鏡。2022 年香港仲有港產獨角獸 KaraMirror，可惜後來倒閉咗 💀。顧問請我哋幫手，我哋特登去國內實地考察唯一嘅運動鏡供應商，評估報告顯示明顯唔可靠 ❌。最後由我哋香港本土團隊出手 🇭🇰，將自家嘅 AR / VR 概念加入智能鏡，變成最新嘅 Play Mirror 🪞。"
     ],
@@ -2061,7 +2083,7 @@ function setLanguage(lang) {
 function showRoleModal(role) {
   const data = i18n[currentLang];
   const body = document.getElementById('modalBody');
-  let pain, solutions, title, painImage;
+  let pain, solutions, title, painImage, consultantQuote;
 
   switch(role) {
     case 'project':
@@ -2077,15 +2099,22 @@ function showRoleModal(role) {
       pain = data.purchasingPain; solutions = data.purchasingSolutions;
       painImage = data.purchasingPainImage; break;
     case 'consultant':
-      title = `${data.ifYouAre} ${data.consultant}`;
+      title = data.consultantTitle || `${data.ifYouAre} ${data.consultant}`;
       pain = data.consultantPain; solutions = data.consultantSolutions;
-      painImage = data.consultantPainImage; break;
+      painImage = data.consultantPainImage;
+      consultantQuote = data.consultantQuote || '';
+      break;
   }
 
   body.innerHTML = `
     <div class="modal-role-content">
       <h2>${title}</h2>
-      ${painImage ? `<img src="${painImage}" alt="${title}" class="pain-image" loading="lazy">` : ''}
+      ${role === 'consultant' && consultantQuote ? `
+        <div class="consultant-image-row">
+          ${painImage ? `<img src="${painImage}" alt="${title}" class="pain-image" loading="lazy">` : ''}
+          <div class="consultant-quote">${consultantQuote}</div>
+        </div>
+      ` : (painImage ? `<img src="${painImage}" alt="${title}" class="pain-image" loading="lazy">` : '')}
       <h3>${data.painPoints}</h3>
       <ul class="pain-points">${pain.map(p => `<li>${p}</li>`).join('')}</ul>
       <h3>${data.howWeHelp}</h3>
