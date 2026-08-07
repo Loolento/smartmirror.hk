@@ -1163,15 +1163,14 @@ footer {
 .product-card {
   display: flex;
   align-items: center;
-  gap: 12px;
   padding: 18px 24px;
   border-radius: 8px;
   background: linear-gradient(180deg,
-    #e8ecf0 0%,
-    #c8ccd4 15%,
-    #a8aeb6 50%,
-    #90969e 85%,
-    #7e848c 100%);
+    #f0e6cc 0%,
+    #d4c89e 15%,
+    #c4b88e 50%,
+    #b4a87e 85%,
+    #a4986e 100%);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,0.5),
     inset 0 -1px 0 rgba(0,0,0,0.2),
@@ -1182,11 +1181,11 @@ footer {
 
 .product-card:hover {
   background: linear-gradient(180deg,
-    #f0f4f8 0%,
-    #d4d8e0 15%,
-    #b4bac2 50%,
-    #9ca2aa 85%,
-    #888e96 100%);
+    #faf4dc 0%,
+    #e4d4a8 15%,
+    #d4c498 50%,
+    #c4b488 85%,
+    #b4a478 100%);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,0.6),
     inset 0 -1px 0 rgba(0,0,0,0.15),
@@ -1194,6 +1193,9 @@ footer {
 }
 
 .product-name {
+  flex: 0 0 54%;
+  text-align: right;
+  padding-right: 18px;
   font-family: 'Inter', sans-serif;
   font-size: 17px;
   font-weight: 600;
@@ -1202,16 +1204,19 @@ footer {
 }
 
 .product-sep {
-  color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.3);
   font-size: 17px;
   font-weight: 300;
 }
 
 .product-tag {
+  flex: 1;
+  text-align: left;
+  padding-left: 18px;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.7);
   text-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
 
