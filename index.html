@@ -1745,18 +1745,15 @@ const i18n = {
     painPoints: "Pain Points:",
     howWeHelp: "How We Help:",
     projectPainImage: "pain-project.jpg",
+    projectTitle: "Project Team, in us you trust.",
+    projectQuote: "",
+    projectPainPoints: "",
     projectPain: [
-      "😤 Mr. & Mrs Project Manager, We've been there.",
-      "🔥 Market's hot — the chairman wants something fresh. Wants wow.",
-      "💣 The second something goes wrong, subs and suppliers all point fingers. \"Wasn't my scope.\""
+      "1️⃣ Market's hot🔥 — the chairman wants something fresh. Wants wow.",
+      "2️⃣ The second something goes wrong💣, subs and suppliers all point fingers. \"Wasn't my scope.\""
     ],
-    projectSolutions: [
-      "\"Simplicity is the ultimate sophistication.\" — Leonardo da Vinci",
-      "31,000+ installations, know what can be done and what's too risky",
-      "We dare to innovate, designed many add-on products you can't imagine",
-      "Early customers had unclear requirements, we learned to solve problems together"
-    ],
-    projectProductsTitle: "🤝 Shoulder to shoulder with PMs. Here's what we've delivered for Hong Kong developers:",
+    projectSolutions: [],
+    projectProductsTitle: "🤝 Trusted by project managers — what we've delivered for Hong Kong developers:",
     projectProducts: [
       "SHK · Cullinan Harbour — Custom smart bathroom switch",
       "HSITP · HK Gov — Play Mirror, built in-house by our Hong Kong team",
@@ -1767,8 +1764,8 @@ const i18n = {
       "SHK · Wings II — Oolaa 11.6\" kitchen TV",
       "Henderson · Double Cove — JSA 10\" kitchen TV"
     ],
-    projectLessonTitle: "🩸 We learned this the hard way — so we stay proactive at every step.",
-    projectLesson: "Installation done? That's 70%. We know because we've bled through the other 30. That's why we push for joint inspection before you even ask, protect finished work like it's our own, and have the handoff to facilities management buttoned up in advance. Nobody's gonna remind you. Nobody's gonna wait. Handover day, the mirror's scratched? You eat it. We make sure you don't. 🫠",
+    projectLessonTitle: "🩸 Lessons paid for in blood:",
+    projectLesson: "Installation done? That's 70%. We know because we've bled through the other 30. That's why we push for joint inspection before you even ask, protect finished work like it's our own, and coordinate handoff with facilities management in advance. Nobody's gonna remind you. Nobody's gonna wait. Handover day, the mirror's scratched? You eat it. We make sure you don't. 🫠",
     designPainImage: "pain-design.jpg",
     designPain: [
       "🎨 Dear Design Team, we've been there.",
@@ -2143,8 +2140,10 @@ function showRoleModal(role) {
       ` : (painImage ? `<img src="${painImage}" alt="${title}" class="pain-image" loading="lazy">` : '')}
       ${rolePainPoints !== undefined ? (rolePainPoints ? `<h3>${rolePainPoints}</h3>` : '') : `<h3>${data.painPoints}</h3>`}
       <ul class="pain-points">${pain.map(p => `<li>${p}</li>`).join('')}</ul>
+      ${(roleHowWeHelp || solutions.length > 0) ? `
       <h3${roleHowWeHelp ? ' class="consultant-how-help" style="color:#D4C89E;font-size:32px;font-weight:300;text-transform:none;letter-spacing:normal"' : ''}>${roleHowWeHelp || data.howWeHelp}</h3>
       <ul class="solutions">${solutions.map(s => `<li>${s}</li>`).join('')}</ul>
+      ` : ''}
       ${role === 'project' && data.projectProducts ? `
         <h3 style="color:#D4C89E;font-size:26px;font-weight:300">${data.projectProductsTitle || ''}</h3>
         <ul class="project-products">${data.projectProducts.map(p => `<li>${p}</li>`).join('')}</ul>
