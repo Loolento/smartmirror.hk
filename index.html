@@ -255,28 +255,38 @@ header {
 .brand-info {
   display: flex;
   flex-direction: column;
-  gap: 2px;
 }
 
-.brand-split {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-}
-
-.brand-col {
+/* Row-based two-line layout: each row has left | right */
+.brand-table {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
 
+.brand-row {
+  display: flex;
+  align-items: baseline;
+}
+
+.brand-left {
+  flex: 1;
+  text-align: right;
+}
+
+.brand-right {
+  flex: 1;
+  text-align: left;
+}
+
 .brand-divider {
+  flex-shrink: 0;
+  margin: 0 14px;
   font-family: 'Inter', sans-serif;
   font-size: 24px;
   font-weight: 200;
   color: var(--muted);
   line-height: 1;
-  padding-top: 2px;
 }
 
 .brand-sub {
@@ -302,10 +312,6 @@ header {
   letter-spacing: 0.02em;
 }
 
-.i-bold {
-  font-size: 1.3em;
-  font-weight: 600;
-}
 
 .lang-switcher { display: flex; gap: 6px; }
 
@@ -1470,15 +1476,16 @@ footer {
 
 <header>
   <div class="brand-info">
-    <div class="brand-split">
-      <div class="brand-col">
-        <span class="brand">Oolaa</span>
-        <span class="brand-tagline">built AV system<span class="brand-sub"> (Residential)</span></span>
+    <div class="brand-table">
+      <div class="brand-row">
+        <span class="brand-left brand">Oolaa</span>
+        <span class="brand-divider">|</span>
+        <span class="brand-right brand">Oola</span>
       </div>
-      <span class="brand-divider">|</span>
-      <div class="brand-col">
-        <span class="brand">Oola</span>
-        <span class="brand-tagline"><span class="i-bold">i</span>nteractive Mirror System<span class="brand-sub"> (Commercial)</span></span>
+      <div class="brand-row">
+        <span class="brand-left brand-tagline">built-in AV system<span class="brand-sub"> (Residential)</span></span>
+        <span class="brand-divider">|</span>
+        <span class="brand-right brand-tagline">interactive Mirror System<span class="brand-sub"> (Commercial)</span></span>
       </div>
     </div>
   </div>
@@ -1890,7 +1897,7 @@ const i18n = {
   en: {
     heroTitle: "Pain Points",
     heroSub: "from",
-    brandTagline: "<span class=\"i-bold\">i</span>nteractive Mirror Systems",
+    brandTagline: "interactive Mirror Systems",
     heroDesc: "Smart Mirror for Hotels & Developers — Hong Kong Factory Direct",
     ifYouAre: "asked by...",
     projectTeam: "Project Team",
