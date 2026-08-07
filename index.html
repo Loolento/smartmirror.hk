@@ -309,6 +309,19 @@ header {
 
 .lang-switcher { display: flex; gap: 6px; }
 
+/* Hide header lang-switcher on desktop (journal-section one is used) */
+@media (min-width: 861px) {
+  header .lang-switcher { display: none; }
+}
+
+/* Journal lang-switcher — centered above blog */
+.journal-lang-switcher {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
 .lang-btn {
   width: 48px; height: 40px;
   border-radius: 7px;
@@ -1536,6 +1549,11 @@ function onPlayerStateChange(event) {
 
   <!-- RIGHT COLUMN: Blog -->
   <section class="journal-section">
+    <div class="journal-lang-switcher">
+      <button class="lang-btn" data-lang="zh-HK">繁</button>
+      <button class="lang-btn active" data-lang="en">Eng</button>
+      <button class="lang-btn" data-lang="zh">簡</button>
+    </div>
     <div class="journal-header" onclick="location.href='blog/'" style="cursor:pointer">
         <h2 data-i18n="journal">Blog</h2>
         <span class="journal-sub" data-i18n="latestNews">or Our Latest News</span>
