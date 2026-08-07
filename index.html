@@ -1324,6 +1324,27 @@ footer {
   gap: 28px;
   margin-top: 16px;
 }
+
+/* Product CTA inside About Us CTA row */
+.about-product-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.about-product-sub {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--sub);
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.about-product-sub:hover {
+  color: var(--gold);
+}
 .about-cta-full {
   flex: 1;
   text-align: center;
@@ -1783,7 +1804,10 @@ function onPlayerStateChange(event) {
 
       <!-- CTA -->
       <div class="about-cta-split">
-        <a href="https://www.dropbox.com/scl/fi/yjat7fs5b5cjq76zj3lra/Job-reference-of-Oolaa-JSA-200426.pdf?rlkey=gzqff6j8nakmxkh1xuln9gx6x&dl=0" target="_blank" class="modal-download-btn about-cta-full">📥 Job Reference — 31,000+ installations ↓</a>
+        <div class="about-product-cta">
+          <div class="about-canto-section">Product</div>
+          <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-product-sub">+ Intro & Download</a>
+        </div>
         <a href="javascript:void(0)" class="about-canto-cta about-pain-cta about-cta-full">🔍 Your pain points, dissected →</a>
       </div>
 
@@ -1850,7 +1874,10 @@ function onPlayerStateChange(event) {
 
       <!-- CTA -->
       <div class="about-cta-split">
-        <a href="https://www.dropbox.com/scl/fi/yjat7fs5b5cjq76zj3lra/Job-reference-of-Oolaa-JSA-200426.pdf?rlkey=gzqff6j8nakmxkh1xuln9gx6x&dl=0" target="_blank" class="modal-download-btn about-cta-full">📥 下載工程案例 — 31,000+ 安裝實錄 ↓</a>
+        <div class="about-product-cta">
+          <div class="about-canto-section">產品</div>
+          <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-product-sub">+ 簡介及下載</a>
+        </div>
         <a href="javascript:void(0)" class="about-canto-cta about-pain-cta about-cta-full">🔍 你嘅痛點，逐一拆解 →</a>
       </div>
 
@@ -1951,7 +1978,10 @@ function onPlayerStateChange(event) {
 
       <!-- CTA -->
       <div class="about-cta-split">
-        <a href="https://www.dropbox.com/scl/fi/yjat7fs5b5cjq76zj3lra/Job-reference-of-Oolaa-JSA-200426.pdf?rlkey=gzqff6j8nakmxkh1xuln9gx6x&dl=0" target="_blank" class="modal-download-btn about-cta-full">📥 下载工程案例 — 31,000+ 安装实录 ↓</a>
+        <div class="about-product-cta">
+          <div class="about-canto-section">产品</div>
+          <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-product-sub">+ 简介及下载</a>
+        </div>
         <a href="javascript:void(0)" class="about-canto-cta about-pain-cta about-cta-full">🔍 你的痛点，逐一拆解 →</a>
       </div>
 
