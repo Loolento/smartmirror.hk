@@ -784,6 +784,55 @@ header {
   font-size: 14px; color: var(--sub); margin-top: 4px; display: block;
   font-weight: 400;
 }
+
+/* ===== ABOUT US BELOW VIDEO ===== */
+.about-below-video {
+  grid-column: 2;
+  background: var(--article-bg);
+  border: 1px solid var(--article-border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  min-height: 72px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.04),
+    inset 0 -1px 0 rgba(0,0,0,0.5),
+    0 2px 3px rgba(0,0,0,0.6),
+    0 6px 10px rgba(0,0,0,0.35);
+  transition: all 0.12s;
+  margin-top: 8px;
+}
+
+.about-below-video::after {
+  content: ''; position: absolute;
+  top: 3px; left: 6px; right: 40%; height: 38%;
+  background: linear-gradient(135deg,
+    rgba(255,255,255,0.06) 0%,
+    rgba(255,255,255,0.02) 25%,
+    transparent 50%);
+  border-radius: 6px 0 0 0;
+  pointer-events: none;
+}
+
+.about-below-video:hover {
+  background: var(--card-bg);
+  border-color: var(--divider);
+}
+
+.about-below-video h3 {
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+  font-size: 24px; font-weight: 300; color: var(--gold); line-height: 1.15;
+}
+
+.about-below-sub {
+  font-size: 14px; color: var(--sub); margin-top: 4px; display: block;
+  font-weight: 400;
+}
 footer {
   flex-shrink: 0;
   display: flex;
@@ -1552,8 +1601,9 @@ footer {
   .video-card { aspect-ratio: 16/9; max-height: 350px; border-radius: 7px; width: 100%; }
   .video-label-row { display: none; }
 
-  /* Hide desktop journal + footer + left-contact on mobile */
+  /* Hide desktop journal + footer + left-contact + about-below-video on mobile */
   .journal-section { display: none; }
+  .about-below-video { display: none; }
   .left-contact { display: none; }
   footer { display: none; }
   .social-circle { width: 52px; height: 52px; }
@@ -1697,18 +1747,20 @@ function onPlayerStateChange(event) {
         <div class="article-desc">5-star hotel deployment — smart mirrors meet luxury hospitality in Thailand.</div>
       </a>
     </div>
-    <!-- About Us + Products cards (desktop: right column) -->
+    <!-- Product card (desktop: right column) -->
     <div class="journal-extra">
-      <div class="journal-extra-card" onclick="showPageModal('about')" style="cursor:pointer">
-        <h3 data-i18n="proven">About Us</h3>
-        <span class="journal-extra-sub" data-i18n="jobReference">+ job reference (download)</span>
-      </div>
       <div class="journal-extra-card" onclick="showPageModal('product')" style="cursor:pointer">
         <h3 data-i18n="products">Product</h3>
         <span class="journal-extra-sub" data-i18n="factSheets">+ Intro & Download</span>
       </div>
     </div>
   </section>
+
+  <!-- About Us card — below video, full center width -->
+  <div class="about-below-video" onclick="showPageModal('about')" style="cursor:pointer">
+    <h3 data-i18n="proven">About Us</h3>
+    <span class="about-below-sub" data-i18n="jobReference">+ job reference (download)</span>
+  </div>
 
 </div>
 
@@ -1719,13 +1771,13 @@ function onPlayerStateChange(event) {
       <h3 data-i18n="journal">Blog</h3>
       <span class="bottom-card-sub" data-i18n="latestNews">or Our Latest News</span>
     </div>
-    <div class="bottom-card" onclick="showPageModal('about')" style="cursor:pointer">
-      <h3 data-i18n="proven">About Us</h3>
-      <span class="bottom-card-sub" data-i18n="jobReference">+ job reference (download)</span>
-    </div>
     <div class="bottom-card" onclick="showPageModal('product')" style="cursor:pointer">
       <h3 data-i18n="products">Product</h3>
       <span class="bottom-card-sub" data-i18n="factSheets">+ Intro & Download</span>
+    </div>
+    <div class="bottom-card" onclick="showPageModal('about')" style="cursor:pointer">
+      <h3 data-i18n="proven">About Us</h3>
+      <span class="bottom-card-sub" data-i18n="jobReference">+ job reference (download)</span>
     </div>
   </div>
   <div class="bottom-contact">
