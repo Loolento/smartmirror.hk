@@ -980,12 +980,12 @@ footer {
 }
 
 .modal-role-content li:last-child { border-bottom: none; }
-.modal-role-content .pain-points li { padding-left: 18px; position: relative; border-bottom: none; }
+.modal-role-content .pain-points li { padding-left: 18px; position: relative; border-bottom: none; font-size: 26px; padding-top: 6px; padding-bottom: 6px; }
 .modal-role-content .pain-points li::before { content: "•"; position: absolute; left: 0; color: var(--gold); }
 /* Consultant: quote next to image */
 .consultant-image-row {
   display: flex;
-  gap: 28px;
+  gap: 48px;
   align-items: center;
   margin: 16px 0 24px;
 }
@@ -996,13 +996,19 @@ footer {
 }
 .consultant-quote {
   flex: 1;
-  font-size: 19px;
+  font-size: 38px;
   font-weight: 300;
   color: var(--gold);
   line-height: 1.6;
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
 }
-.modal-role-content .solutions li { padding-left: 22px; position: relative; }
+.consultant-how-help {
+  font-size: 20px;
+  color: var(--gold);
+  text-transform: none;
+  letter-spacing: normal;
+}
+.modal-role-content .solutions li { padding-left: 22px; position: relative; font-size: 20px; }
 .modal-role-content .solutions li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); }
 
 /* Role selector inside modal */
@@ -2004,7 +2010,7 @@ const i18n = {
     ],
     consultantPainImage: "pain-consultant.jpg",
     consultantTitle: "顧問們, 完全明白您痛點‼️",
-    consultantQuote: "馬雲說：<br><span style=\"font-size:18px\">複雜嘅嘢簡單做... 就係專家</span><br><span style=\"font-size:22px\">重複嘅嘢用心做，就係贏家</span>",
+    consultantQuote: "馬雲說：<br><span style=\"font-size:36px\">複雜嘅嘢簡單做... 就係專家</span><br><span style=\"font-size:44px\">重複嘅嘢用心做，就係贏家</span>",
     consultantPainPoints: "",
     consultantHowWeHelp: "我哋為顧問處理過嘅難題",
     consultantPain: [
@@ -2012,8 +2018,8 @@ const i18n = {
       "2️⃣ 市場環境瞬息萬變🔄，12 個月前嘅定案，今日可能已經唔啱用。"
     ],
     consultantSolutions: [
-      "🏗 落馬洲創科園：標書只係簡單寫——智能鏡接駁藍牙喇叭嚟發聲 🔊。點知臨近交貨先發現嗰隻喇叭啟動咗 Google Assistant，需要雙向通訊。一般智能鏡底板嘅藍牙只係單向輸出，對接唔到。仲有網絡安全規格要求極高 🔐，要嚴格執行白名單同黑名單（標書根本冇寫明）。好在底板係我哋自己研發 🛠，又有自己嘅開發團隊，最終力挽狂瀾，順利交貨 ✅。",
-      "🏋️ 落馬洲創科園仲要 20 塊運動鏡。2022 年香港仲有港產獨角獸 KaraMirror，可惜後來倒閉咗 💀。顧問請我哋幫手，我哋特登去國內實地考察唯一嘅運動鏡供應商，評估報告顯示明顯唔可靠 ❌。最後由我哋香港本土團隊出手 🇭🇰，將自家嘅 AR / VR 概念加入智能鏡，變成最新嘅 Play Mirror 🪞。"
+      "🏗 落馬洲創科園：標書只寫——智能鏡接駁藍牙喇叭🔊。交貨前才發現藍牙喇叭Google Assistant按鈕（需要雙向通訊）。市場上所有智能鏡底板只有單向藍牙輸出。仲有網絡安全規格極嚴格🔐，要執行白名單同黑名單（標書根本冇寫明）。好在底板係我哋自己研發 🛠，又有自己嘅開發團隊，最後順利交貨 ✅。",
+      "🏋️ 落馬洲創科園 要 20 塊運動鏡。2022年 有港產獨角獸 KaraMirror可惜倒閉💀。顧問要求幫手：我哋特登去國內實地考察唯一嘅運動鏡供應商，評估報告顯示明顯唔可靠 ❌。最後由我哋香港🇭🇰本土團隊出手，將新研發的AR / VR 概念加入智能鏡，變成最新嘅 Ai-Play Mirror 🪞。"
     ],
     aboutTitle: "關於我哋",
     aboutIntro: "<strong>Viewdex Limited</strong> 係香港專業智能鏡及智能顯示屏供應商。",
@@ -2121,7 +2127,7 @@ function showRoleModal(role) {
       ` : (painImage ? `<img src="${painImage}" alt="${title}" class="pain-image" loading="lazy">` : '')}
       ${role === 'consultant' && consultantPainPoints !== undefined ? (consultantPainPoints ? `<h3>${consultantPainPoints}</h3>` : '') : `<h3>${data.painPoints}</h3>`}
       <ul class="pain-points">${pain.map(p => `<li>${p}</li>`).join('')}</ul>
-      <h3>${role === 'consultant' && consultantHowWeHelp ? consultantHowWeHelp : data.howWeHelp}</h3>
+      <h3 class="${role === 'consultant' && consultantHowWeHelp ? 'consultant-how-help' : ''}">${role === 'consultant' && consultantHowWeHelp ? consultantHowWeHelp : data.howWeHelp}</h3>
       <ul class="solutions">${solutions.map(s => `<li>${s}</li>`).join('')}</ul>
       ${role === 'project' && data.projectProducts ? `
         <h3>${data.projectProductsTitle || ''}</h3>
