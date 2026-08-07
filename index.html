@@ -2066,7 +2066,7 @@ const i18n = {
     downloadJobRef: "Download Job Reference ↓",
     productTitle: "Products",
     productTag: "Intro + fact sheet download",
-    products: [
+    productList: [
       "Oolaa Smart Mirror",
       "Oolaa Bath / Mirror TV",
       "Oolaa Kitchen / Smart TV",
@@ -2172,7 +2172,7 @@ const i18n = {
     downloadJobRef: "下载项目参考 ↓",
     productTitle: "产品",
     productTag: "简介 + 产品规格下载",
-    products: [
+    productList: [
       "Oolaa Smart Mirror",
       "Oolaa Bath / Mirror TV",
       "Oolaa Kitchen / Smart TV",
@@ -2280,7 +2280,7 @@ const i18n = {
     downloadJobRef: "下載 Job Reference ↓",
     productTitle: "產品",
     productTag: "簡介 + 產品規格下載",
-    products: [
+    productList: [
       "Oolaa Smart Mirror",
       "Oolaa Bath / Mirror TV",
       "Oolaa Kitchen / Smart TV",
@@ -2434,7 +2434,7 @@ function showPageModal(page) {
     html = `<div class="modal-page-content product-modal">
       <h2>${data.productTitle}</h2>
       <div class="product-grid">
-        ${data.products.map(p => `
+        ${data.productList.map(p => `
           <div class="product-card">
             <span class="product-name">${p}</span>
             <span class="product-sep">|</span>
