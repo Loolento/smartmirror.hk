@@ -314,14 +314,6 @@ header {
   header .lang-switcher { display: none; }
 }
 
-/* Journal lang-switcher — centered above blog */
-.journal-lang-switcher {
-  display: flex;
-  gap: 6px;
-  justify-content: center;
-  margin-bottom: 12px;
-}
-
 .lang-btn {
   width: 48px; height: 40px;
   border-radius: 7px;
@@ -368,11 +360,30 @@ header {
 
 /* ===== HERO ===== */
 .hero {
-  grid-column: 1 / -1;
+  grid-column: 1 / 3;
   grid-row: 1;
   text-align: left;
   padding: 0 0 8px;
 }
+
+/* Lang switcher aligned with hero (right column, row 1) */
+.hero-lang-switcher {
+  display: none;
+}
+@media (min-width: 861px) {
+  .hero-lang-switcher {
+    display: flex;
+    gap: 6px;
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: center;
+    align-self: start;
+    padding-top: 2px;
+  }
+}
+
+/* Hide old journal-lang-switcher (replaced by hero-lang-switcher) */
+.journal-lang-switcher { display: none; }
 
 .hero h1 {
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
@@ -1485,6 +1496,12 @@ footer {
     <h1><span data-i18n="heroTitle">Pain Points</span> <span class="sub" data-i18n="heroSub">from</span></h1>
   </section>
 
+  <div class="hero-lang-switcher">
+    <button class="lang-btn" data-lang="zh-HK">繁</button>
+    <button class="lang-btn active" data-lang="en">Eng</button>
+    <button class="lang-btn" data-lang="zh">簡</button>
+  </div>
+
   <div class="role-row">
     <a onclick="showRoleModal('project')" class="role-btn"><span data-i18n="projectTeam">Project Team</span></a>
     <a onclick="showRoleModal('purchasing')" class="role-btn"><span data-i18n="purchasingTeam">Buying Team</span></a>
@@ -1548,11 +1565,6 @@ function onPlayerStateChange(event) {
 
   <!-- RIGHT COLUMN: Blog -->
   <section class="journal-section">
-    <div class="journal-lang-switcher">
-      <button class="lang-btn" data-lang="zh-HK">繁</button>
-      <button class="lang-btn active" data-lang="en">Eng</button>
-      <button class="lang-btn" data-lang="zh">簡</button>
-    </div>
     <div class="journal-header" onclick="location.href='blog/'" style="cursor:pointer">
         <h2 data-i18n="journal">Blog</h2>
         <span class="journal-sub" data-i18n="latestNews">or Our Latest News</span>
