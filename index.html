@@ -2003,11 +2003,13 @@ const i18n = {
       "🏠 九龍建業海茵莊園：起樓初期，1556 個單位原來冇裝門鐘 🔔，要補返嘅話會牽涉好多工序。最後我哋提供咗同類產品入面屏幕最光亮嘅電子門鐘 📺。"
     ],
     consultantPainImage: "pain-consultant.jpg",
-    consultantTitle: "顧問們, 我哋當然明白您痛點啦。",
-    consultantQuote: "馬雲：「複雜嘅嘢簡單做，就係專家；重複嘅嘢用心做，就係贏家。」",
+    consultantTitle: "顧問們, 完全明白您痛點‼️",
+    consultantQuote: "馬雲說：<br><span style=\"font-size:18px\">複雜嘅嘢簡單做... 就係專家</span><br><span style=\"font-size:22px\">重複嘅嘢用心做，就係贏家</span>",
+    consultantPainPoints: "",
+    consultantHowWeHelp: "我哋為顧問處理過嘅難題",
     consultantPain: [
-      "🔬 科技日新月異，好多細節位未必完全掌握。",
-      "🔄 市場環境瞬息萬變，12 個月前嘅定案，今日可能已經唔啱用。"
+      "1️⃣ 科技 🔬日新月異，好多細微的地方未必完全掌握。",
+      "2️⃣ 市場環境瞬息萬變🔄，12 個月前嘅定案，今日可能已經唔啱用。"
     ],
     consultantSolutions: [
       "🏗 落馬洲創科園：標書只係簡單寫——智能鏡接駁藍牙喇叭嚟發聲 🔊。點知臨近交貨先發現嗰隻喇叭啟動咗 Google Assistant，需要雙向通訊。一般智能鏡底板嘅藍牙只係單向輸出，對接唔到。仲有網絡安全規格要求極高 🔐，要嚴格執行白名單同黑名單（標書根本冇寫明）。好在底板係我哋自己研發 🛠，又有自己嘅開發團隊，最終力挽狂瀾，順利交貨 ✅。",
@@ -2083,7 +2085,7 @@ function setLanguage(lang) {
 function showRoleModal(role) {
   const data = i18n[currentLang];
   const body = document.getElementById('modalBody');
-  let pain, solutions, title, painImage, consultantQuote;
+  let pain, solutions, title, painImage, consultantQuote, consultantPainPoints, consultantHowWeHelp;
 
   switch(role) {
     case 'project':
@@ -2103,6 +2105,8 @@ function showRoleModal(role) {
       pain = data.consultantPain; solutions = data.consultantSolutions;
       painImage = data.consultantPainImage;
       consultantQuote = data.consultantQuote || '';
+      consultantPainPoints = data.consultantPainPoints;
+      consultantHowWeHelp = data.consultantHowWeHelp;
       break;
   }
 
@@ -2115,9 +2119,9 @@ function showRoleModal(role) {
           <div class="consultant-quote">${consultantQuote}</div>
         </div>
       ` : (painImage ? `<img src="${painImage}" alt="${title}" class="pain-image" loading="lazy">` : '')}
-      <h3>${data.painPoints}</h3>
+      ${role === 'consultant' && consultantPainPoints !== undefined ? (consultantPainPoints ? `<h3>${consultantPainPoints}</h3>` : '') : `<h3>${data.painPoints}</h3>`}
       <ul class="pain-points">${pain.map(p => `<li>${p}</li>`).join('')}</ul>
-      <h3>${data.howWeHelp}</h3>
+      <h3>${role === 'consultant' && consultantHowWeHelp ? consultantHowWeHelp : data.howWeHelp}</h3>
       <ul class="solutions">${solutions.map(s => `<li>${s}</li>`).join('')}</ul>
       ${role === 'project' && data.projectProducts ? `
         <h3>${data.projectProductsTitle || ''}</h3>
