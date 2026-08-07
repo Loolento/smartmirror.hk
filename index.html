@@ -1146,6 +1146,83 @@ footer {
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.18), inset 0 -1px 0 rgba(0,0,0,0.3), 0 3px 12px rgba(0,0,0,0.35);
 }
 
+/* ===== PRODUCT MODAL ===== */
+.product-modal {
+  background: #0a1628;
+  border-radius: 12px;
+  padding: 48px 52px;
+}
+
+.product-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.product-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 24px;
+  border-radius: 8px;
+  background: linear-gradient(180deg,
+    #e8ecf0 0%,
+    #c8ccd4 15%,
+    #a8aeb6 50%,
+    #90969e 85%,
+    #7e848c 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.5),
+    inset 0 -1px 0 rgba(0,0,0,0.2),
+    0 3px 8px rgba(0,0,0,0.5);
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  background: linear-gradient(180deg,
+    #f0f4f8 0%,
+    #d4d8e0 15%,
+    #b4bac2 50%,
+    #9ca2aa 85%,
+    #888e96 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.6),
+    inset 0 -1px 0 rgba(0,0,0,0.15),
+    0 4px 12px rgba(0,0,0,0.55);
+}
+
+.product-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.product-sep {
+  color: rgba(255,255,255,0.25);
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.product-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.65);
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.product-modal h2 {
+  color: var(--gold);
+}
+
+.product-modal .modal-download-btn {
+  margin-top: 4px;
+}
+
 /* ===== ABOUT CANTO (zh-HK) ===== */
 .about-canto { text-align: left; }
 .about-canto-hero {
@@ -1987,22 +2064,18 @@ const i18n = {
     ],
     downloadJobRef: "Download Job Reference ↓",
     productTitle: "Products",
-    productIntro: "Our product range covers multiple categories:",
-    productRange: [
+    productTag: "Intro + fact sheet download",
+    products: [
       "Oolaa Smart Mirror",
-      "Oola Axis",
-      "Oolaa Mirror TV",
-      "Oola Ai-Play Mirror",
+      "Oolaa Bath / Mirror TV",
+      "Oolaa Kitchen / Smart TV",
       "Oolaa Outdoor TV",
-      "Oolaa Bathroom TV",
-      "Oolaa Kitchen TV",
-      "Oola Kiosk",
-      "Oola Ai-Soulmate",
-      "Oola Smart Bath Panel",
-      "Oola Smart Kitchen TV",
-      "Oolaa Smart Kitchen Linear"
+      "Oolaa Ai-Play Mirror",
+      "Oolaa Axis",
+      "Oolaa Smart Bath Panel",
+      "Oolaa Ai School Kiosk"
     ],
-    downloadFactSheet: "Download Fact Sheet ↓"
+    downloadFactSheet: "Download All Fact Sheets ↓"
   },
   zh: {
     heroTitle: "痛点",
@@ -2097,22 +2170,18 @@ const i18n = {
     ],
     downloadJobRef: "下载项目参考 ↓",
     productTitle: "产品",
-    productIntro: "我们的产品涵盖以下范畴：",
-    productRange: [
+    productTag: "简介 + 产品规格下载",
+    products: [
       "Oolaa Smart Mirror",
-      "Oola Axis",
-      "Oolaa Mirror TV",
-      "Oola Ai-Play Mirror",
+      "Oolaa Bath / Mirror TV",
+      "Oolaa Kitchen / Smart TV",
       "Oolaa Outdoor TV",
-      "Oolaa Bathroom TV",
-      "Oolaa Kitchen TV",
-      "Oola Kiosk",
-      "Oola Ai-Soulmate",
-      "Oola Smart Bath Panel",
-      "Oola Smart Kitchen TV",
-      "Oolaa Smart Kitchen Linear"
+      "Oolaa Ai-Play Mirror",
+      "Oolaa Axis",
+      "Oolaa Smart Bath Panel",
+      "Oolaa Ai School Kiosk"
     ],
-    downloadFactSheet: "下载产品规格 ↓"
+    downloadFactSheet: "下载所有产品规格 ↓"
   },
   "zh-HK": {
     heroTitle: "痛點",
@@ -2209,22 +2278,18 @@ const i18n = {
     ],
     downloadJobRef: "下載 Job Reference ↓",
     productTitle: "產品",
-    productIntro: "我哋嘅產品涵蓋多個範疇：",
-    productRange: [
+    productTag: "簡介 + 產品規格下載",
+    products: [
       "Oolaa Smart Mirror",
-      "Oola Axis",
-      "Oolaa Mirror TV",
-      "Oola Ai-Play Mirror",
+      "Oolaa Bath / Mirror TV",
+      "Oolaa Kitchen / Smart TV",
       "Oolaa Outdoor TV",
-      "Oolaa Bathroom TV",
-      "Oolaa Kitchen TV",
-      "Oola Kiosk",
-      "Oola Ai-Soulmate",
-      "Oola Smart Bath Panel",
-      "Oola Smart Kitchen TV",
-      "Oolaa Smart Kitchen Linear"
+      "Oolaa Ai-Play Mirror",
+      "Oolaa Axis",
+      "Oolaa Smart Bath Panel",
+      "Oolaa Ai School Kiosk"
     ],
-    downloadFactSheet: "下載產品規格 ↓"
+    downloadFactSheet: "下載所有產品規格 ↓"
   }
 };
 
@@ -2365,9 +2430,17 @@ function showPageModal(page) {
       <a href="https://www.dropbox.com/scl/fi/yjat7fs5b5cjq76zj3lra/Job-reference-of-Oolaa-JSA-200426.pdf?rlkey=gzqff6j8nakmxkh1xuln9gx6x&dl=0" target="_blank" class="modal-download-btn">${data.downloadJobRef}</a>
     </div>`;
   } else if (page === 'product') {
-    html = `<div class="modal-page-content">
-      <h2>${data.productTitle}</h2><p>${data.productIntro}</p>
-      <ul>${data.productRange.map(i => `<li>${i}</li>`).join('')}</ul>
+    html = `<div class="modal-page-content product-modal">
+      <h2>${data.productTitle}</h2>
+      <div class="product-grid">
+        ${data.products.map(p => `
+          <div class="product-card">
+            <span class="product-name">${p}</span>
+            <span class="product-sep">|</span>
+            <span class="product-tag">${data.productTag}</span>
+          </div>
+        `).join('')}
+      </div>
       <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="modal-download-btn">${data.downloadFactSheet}</a>
     </div>`;
   }
