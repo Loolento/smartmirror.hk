@@ -1968,16 +1968,11 @@ const i18n = {
     projectPainPoints: "",
     projectHowWeHelp: "我哋為項目經理解決過嘅難題",
     projectPain: [
-      "😭 我哋點會唔明項目經理嘅苦惱？",
-      "🏗 樓市旺嗰陣，主席要項目有創新、要 Wow",
-      "💣 項目一出事，供應商同相關人士就互相卸膊，個個都話「呢間嘢唔係我跟開」"
+      "1️⃣ 樓市🏗旺嗰陣，主席要項目有創新、要 Wow",
+      "2️⃣ 項目一出事💣，供應商同相關人士就互相卸膊，個個都話「呢單嘢唔係我跟開」"
     ],
-    projectSolutions: [
-      "31000套經驗，知道乜嘢可做到、乜嘢太冒險",
-      "我哋大膽創新，設計咗好多你想像唔到嘅附加產品",
-      "早年客戶要求不清晰，所以不斷要同客戶共同解決問題"
-    ],
-    projectProductsTitle: "🤝 同項目經理一齊拍住上，我哋為香港發展商整咗以下呢啲產品：",
+    projectSolutions: [],
+    projectProductsTitle: "1️⃣多謝 項目經理 信任🤝，我哋為香港發展商 全香港首創 呢啲產品：",
     projectProducts: [
       "新鴻基 ‧ 天璽海：自己創作嘅浴室智能開關掣",
       "港深創科園 ‧ 落馬洲：我哋香港團隊自己創作嘅 Play Mirror",
@@ -1988,8 +1983,8 @@ const i18n = {
       "新鴻基 ‧ 天晉 II：Oolaa 11.6 吋廚房電視",
       "恆基 ‧ 迎海：JSA 10 吋廚房電視"
     ],
-    projectLessonTitle: "🩸 血淚教訓",
-    projectLesson: "工程項目一定要主動睇實地盤進度，唔係嘅話隨時撞板。裝好之後只係代表工程合約做咗 70% — 仲要主動提出一齊驗收、做好產品保護；等到物管同事入場，更加要預早做好交接收尾。呢 30% 先係最嘔血嘅位，冇人提你、冇人等你，等到交樓嗰日先發現塊鏡花咗，你就硬食 🫠。",
+    projectLessonTitle: "工程累積經驗的血淚🩸教訓:",
+    projectLesson: "工程項目 要主動睇實地盤進度，安裝完成只係完成工程合約70%‼️明知大家趕緊工，各有各忙，更加要主動提出一齊驗收、自己做好產品保護；協調 物管同事，主動 和他們 做好交接工作。如果現今地盤仲倚靠 其他人提，注定自己為地盤製造一個新炸彈❌",
     designPainImage: "pain-design.jpg",
     designTitle: "設計團隊, 完全明白您執著‼️",
     designQuote: "馬雲：<br><span style=\"font-size:24px\">複雜嘅嘢簡單做... 就係專家</span><br><span style=\"font-size:26px\">重複嘅嘢用心做，就係贏家</span>",
@@ -2151,11 +2146,11 @@ function showRoleModal(role) {
       <h3${roleHowWeHelp ? ' class="consultant-how-help" style="color:#D4C89E;font-size:32px;font-weight:300;text-transform:none;letter-spacing:normal"' : ''}>${roleHowWeHelp || data.howWeHelp}</h3>
       <ul class="solutions">${solutions.map(s => `<li>${s}</li>`).join('')}</ul>
       ${role === 'project' && data.projectProducts ? `
-        <h3>${data.projectProductsTitle || ''}</h3>
+        <h3 style="color:#D4C89E;font-size:26px;font-weight:300">${data.projectProductsTitle || ''}</h3>
         <ul class="project-products">${data.projectProducts.map(p => `<li>${p}</li>`).join('')}</ul>
       ` : ''}
       ${role === 'project' && data.projectLesson ? `
-        <h3>${data.projectLessonTitle || ''}</h3>
+        <h3 style="color:#D4C89E;font-size:26px;font-weight:300">${data.projectLessonTitle || ''}</h3>
         <p class="project-lesson">${data.projectLesson}</p>
       ` : ''}
     </div>`;
