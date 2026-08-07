@@ -258,6 +258,34 @@ header {
   gap: 2px;
 }
 
+.brand-split {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brand-divider {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  color: var(--muted);
+  line-height: 1;
+  padding-top: 2px;
+}
+
+.brand-sub {
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+}
+
 .brand {
   font-family: 'Inter', sans-serif;
   font-size: 24px;
@@ -1418,8 +1446,17 @@ footer {
 
 <header>
   <div class="brand-info">
-    <span class="brand">Oolaa</span>
-    <span class="brand-tagline" data-i18n="brandTagline"><span class="i-bold">i</span>nteractive Mirror Systems</span>
+    <div class="brand-split">
+      <div class="brand-col">
+        <span class="brand">Oolaa</span>
+        <span class="brand-tagline">built AV system<span class="brand-sub"> (Residential)</span></span>
+      </div>
+      <span class="brand-divider">|</span>
+      <div class="brand-col">
+        <span class="brand">Oola</span>
+        <span class="brand-tagline"><span class="i-bold">i</span>nteractive Mirror System<span class="brand-sub"> (Commercial)</span></span>
+      </div>
+    </div>
   </div>
   <div class="lang-switcher">
     <button class="lang-btn active" data-lang="en">EN</button>
