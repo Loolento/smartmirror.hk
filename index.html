@@ -2129,7 +2129,7 @@ function showRoleModal(role) {
       ` : (painImage ? `<img src="${painImage}" alt="${title}" class="pain-image" loading="lazy">` : '')}
       ${role === 'consultant' && consultantPainPoints !== undefined ? (consultantPainPoints ? `<h3>${consultantPainPoints}</h3>` : '') : `<h3>${data.painPoints}</h3>`}
       <ul class="pain-points">${pain.map(p => `<li>${p}</li>`).join('')}</ul>
-      <h3 class="${role === 'consultant' && consultantHowWeHelp ? 'consultant-how-help' : ''}">${role === 'consultant' && consultantHowWeHelp ? consultantHowWeHelp : data.howWeHelp}</h3>
+      <h3${role === 'consultant' && consultantHowWeHelp ? ' class="consultant-how-help" style="color:#D4C89E;font-size:32px;font-weight:300;text-transform:none;letter-spacing:normal"' : ''}>${role === 'consultant' && consultantHowWeHelp ? consultantHowWeHelp : data.howWeHelp}</h3>
       <ul class="solutions">${solutions.map(s => `<li>${s}</li>`).join('')}</ul>
       ${role === 'project' && data.projectProducts ? `
         <h3>${data.projectProductsTitle || ''}</h3>
