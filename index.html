@@ -1341,6 +1341,7 @@ footer {
     width: 100%;
   }
   .about-product-cta { display: none; }
+  .about-job-ref-mobile { display: flex; }
 }
 .about-canto-list {
   list-style: none; margin: 0; padding: 0;
@@ -1392,6 +1393,25 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
+}
+
+/* Mobile-only Job Reference (replaces Product CTA on mobile) */
+.about-job-ref-mobile {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+.about-job-ref-link {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--sub);
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.about-job-ref-link:hover {
+  color: var(--gold);
 }
 
 .about-product-sub {
@@ -1912,6 +1932,10 @@ function onPlayerStateChange(event) {
 
       <!-- CTA -->
       <div class="about-cta-split">
+        <div class="about-job-ref-mobile">
+          <div class="about-canto-section">Job Reference</div>
+          <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-job-ref-link">+ View Projects</a>
+        </div>
         <div class="about-product-cta">
           <div class="about-canto-section">Product</div>
           <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-product-sub">+ Intro & Download</a>
@@ -1982,6 +2006,10 @@ function onPlayerStateChange(event) {
 
       <!-- CTA -->
       <div class="about-cta-split">
+        <div class="about-job-ref-mobile">
+          <div class="about-canto-section">工程參考</div>
+          <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-job-ref-link">+ 查看項目</a>
+        </div>
         <div class="about-product-cta">
           <div class="about-canto-section">產品</div>
           <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-product-sub">+ 簡介及下載</a>
@@ -2052,6 +2080,10 @@ function onPlayerStateChange(event) {
 
       <!-- CTA -->
       <div class="about-cta-split">
+        <div class="about-job-ref-mobile">
+          <div class="about-canto-section">工程参考</div>
+          <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-job-ref-link">+ 查看项目</a>
+        </div>
         <div class="about-product-cta">
           <div class="about-canto-section">产品</div>
           <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-product-sub">+ 简介及下载</a>
