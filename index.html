@@ -1609,7 +1609,13 @@ footer {
   header { padding: 20px 0 6px; border-bottom: none; grid-column: auto; justify-content: flex-start; }
   .brand { font-size: 18px; }
   .brand-tagline { font-size: 12px; }
+  .brand-sub { font-size: 10px; }
   .lang-btn { width: 42px; height: 34px; font-size: 14px; }
+
+  /* Fix brand | divider alignment: single grid across both rows */
+  .brand-table { display: grid; grid-template-columns: 1fr auto 1fr; }
+  .brand-row { display: contents; }
+  .brand-divider { margin: 0 10px; font-size: 18px; }
 
   /* Reset content to flex column */
   .content {
@@ -1621,6 +1627,25 @@ footer {
     padding-top: 4px;
     min-height: 0;
     gap: 0;
+  }
+
+  /* Hero + lang on same row */
+  .hero-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 6px;
+    flex-shrink: 0;
+  }
+  .hero-row .hero {
+    text-align: left;
+    padding: 0;
+    flex-shrink: 0;
+  }
+  .hero-row .mobile-lang-row {
+    padding-bottom: 0;
+    flex-shrink: 0;
   }
 
   .hero {
@@ -1719,15 +1744,16 @@ footer {
 
 <div class="content">
 
-  <!-- LEFT COLUMN: Hero + Role Buttons -->
-  <section class="hero">
-    <h1><span data-i18n="heroTitle">Pain Points</span> <span class="sub" data-i18n="heroSub">from</span></h1>
-  </section>
-
-  <div class="mobile-lang-row">
-    <button class="lang-btn" data-lang="zh-HK">繁</button>
-    <button class="lang-btn active" data-lang="en">Eng</button>
-    <button class="lang-btn" data-lang="zh">簡</button>
+  <!-- LEFT COLUMN: Hero + Lang (single row on mobile) -->
+  <div class="hero-row">
+    <section class="hero">
+      <h1><span data-i18n="heroTitle">Pain Points</span> <span class="sub" data-i18n="heroSub">from</span></h1>
+    </section>
+    <div class="mobile-lang-row">
+      <button class="lang-btn" data-lang="zh-HK">繁</button>
+      <button class="lang-btn active" data-lang="en">Eng</button>
+      <button class="lang-btn" data-lang="zh">簡</button>
+    </div>
   </div>
 
   <div class="hero-lang-switcher">
