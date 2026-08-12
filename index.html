@@ -1063,7 +1063,7 @@ footer {
 
 .modal-role-content h2 {
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
-  font-size: 32px; font-weight: 300; color: var(--gold);
+  font-size: 32px; font-weight: 400; color: var(--gold);
   margin-bottom: 28px;
 }
 
@@ -1111,7 +1111,7 @@ footer {
 .consultant-quote {
   flex: 1;
   font-size: 22px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--gold);
   line-height: 1.6;
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
@@ -1174,7 +1174,7 @@ footer {
 
 .modal-page-content h2 {
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
-  font-size: 28px; font-weight: 300; color: var(--gold);
+  font-size: 28px; font-weight: 400; color: var(--gold);
   margin-bottom: 20px;
 }
 
@@ -1519,7 +1519,7 @@ footer {
 
 .qr-modal-content h2 {
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
-  font-size: 28px; font-weight: 300; color: var(--gold);
+  font-size: 28px; font-weight: 400; color: var(--gold);
   margin-bottom: 4px;
   letter-spacing: 0.02em;
 }
@@ -2319,7 +2319,7 @@ const i18n = {
     projectTitle: "项目经理，我们最懂你‼️",
     projectQuote: "马云：<br><span style=\"font-size:24px\">复杂嘅嘢简单做... 就系专家</span><br><span style=\"font-size:26px\">重复嘅嘢用心做，就系赢家</span>",
     projectPainPoints: "痛点：",
-    projectHowWeHelp: "<span style=\"color:#D4C89E;font-size:32px;font-weight:300\">我们为项目经理解决过的难题</span>",
+    projectHowWeHelp: "<span style=\"color:#D4C89E;font-size:32px;font-weight:400\">我们为项目经理解决过的难题</span>",
     projectPain: [
       "1️⃣ 市场🔥正热——主席要新东西，要惊喜，要 Wow",
       "2️⃣ 一出状况💣，分包商和供应商立刻甩锅：「这不归我管。」"
@@ -2426,7 +2426,7 @@ const i18n = {
     projectTitle: "項目經理, 我哋最明白‼️",
     projectQuote: "馬雲：<br><span style=\"font-size:24px\">複雜嘅嘢簡單做... 就係專家</span><br><span style=\"font-size:26px\">重複嘅嘢用心做，就係贏家</span>",
     projectPainPoints: "痛點：",
-    projectHowWeHelp: "<span style=\"color:#D4C89E;font-size:32px;font-weight:300\">我哋為項目經理解決過嘅難題</span>",
+    projectHowWeHelp: "<span style=\"color:#D4C89E;font-size:32px;font-weight:400\">我哋為項目經理解決過嘅難題</span>",
     projectPain: [
       "1️⃣ 樓市🏗旺嗰陣，主席要項目有創新、要 Wow",
       "2️⃣ 項目一出事💣，供應商同相關人士就互相卸膊，個個都話「呢單嘢唔係我跟開」"
@@ -2600,15 +2600,15 @@ function showRoleModal(role) {
       ${rolePainPoints !== undefined ? (rolePainPoints ? `<h3>${rolePainPoints}</h3>` : '') : `<h3>${data.painPoints}</h3>`}
       <ul class="pain-points">${pain.map(p => `<li>${p}</li>`).join('')}</ul>
       ${(roleHowWeHelp || solutions.length > 0) ? `
-      <h3${roleHowWeHelp && role !== 'project' ? ' class="consultant-how-help" style="color:#D4C89E;font-size:32px;font-weight:300;text-transform:none;letter-spacing:normal"' : ''}>${roleHowWeHelp || data.howWeHelp}</h3>
+      <h3${roleHowWeHelp && role !== 'project' ? ' class="consultant-how-help" style="color:#D4C89E;font-size:32px;font-weight:400;text-transform:none;letter-spacing:normal"' : ''}>${roleHowWeHelp || data.howWeHelp}</h3>
       <ul class="solutions">${solutions.map(s => `<li>${s}</li>`).join('')}</ul>
       ` : ''}
       ${role === 'project' && data.projectProducts ? `
-        <h3 style="color:#D4C89E;font-size:26px;font-weight:300">${data.projectProductsTitle || ''}</h3>
+        <h3 style="color:#D4C89E;font-size:26px;font-weight:400">${data.projectProductsTitle || ''}</h3>
         <ul class="project-products">${data.projectProducts.map(p => `<li>${p}</li>`).join('')}</ul>
       ` : ''}
       ${role === 'project' && data.projectLesson ? `
-        <h3 style="color:#D4C89E;font-size:26px;font-weight:300">${data.projectLessonTitle || ''}</h3>
+        <h3 style="color:#D4C89E;font-size:26px;font-weight:400">${data.projectLessonTitle || ''}</h3>
         <p class="project-lesson">${data.projectLesson}</p>
       ` : ''}
     </div>`;
@@ -2782,7 +2782,7 @@ function openWeChat() {
 <!-- NOSCRIPT: Static fallback for AI crawlers (Google, ChatGPT, Perplexity) — zero visual impact for users -->
 <noscript>
   <div style="padding:40px;max-width:800px;margin:0 auto;font-family:Inter,sans-serif;color:#8A8070;background:#1A1A18;line-height:1.6">
-    <h1 style="color:#B8A882;font-size:28px;font-weight:300">Oolaa — Smart Mirror for Hotels &amp; Developers</h1>
+    <h1 style="color:#B8A882;font-size:28px;font-weight:400">Oolaa — Smart Mirror for Hotels &amp; Developers</h1>
     <p>They sell parts. We make art. Hong Kong smart mirror manufacturer. Shenzhen factory-direct. In-house software engineering.</p>
 
     <h2 style="color:#B8A882;font-size:20px;margin-top:30px">Factory-backed. Not factory-brained.</h2>
