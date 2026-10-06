@@ -83,15 +83,16 @@ project-team.html / design-team.html / buying-team.html / consultant.html   同�
 pain-project.jpg / pain-design.jpg / pain-buying.jpg / pain-consultant.jpg  4 張 role 圖
 qr-wechat.png / qr-wechat-joe.jpg / qr-wechat-real.png|jpg / qr-whatsapp.png  聯絡 QR
 assets/about/p1-hero.jpg / p2-factory.jpg / p3-build.jpg                     About Us 三張圖
-blog/               57 個檔（58 篇舊文章頁 + index.html）
+blog/               57 個檔（56 篇文章 + index.html）
 robots.txt          允許全站索引 + 指向 sitemap
 sitemap.xml         只列 / 同 /blog/
 llms.txt            給 AI 引擎讀嘅站點摘要
 .nojekyll           0 byte —— 存在 = 關閉 Jekyll，Pages 直接原樣出檔
-scripts/            驗證儀器（本版新補回，舊工作目錄消失時一齊唔見咗）
+scripts/            驗證儀器（舊工作目錄消失時一齊唔見咗，已補回並入 repo）
   ├─ verify-comprehensive.sh   推之前跑：i18n／CSS／結構
   ├─ verify_comprehensive.js   上面個 .sh 叫嘅檢查器（node）
-  └─ verify-live.sh            推之後跑：部署對數
+  ├─ verify-live.sh            推之後跑：部署對數
+  └─ verify-doc-claims.sh      核對本文件每一條事實聲稱（可隨時重跑）
 ```
 
 ---
@@ -127,7 +128,7 @@ scripts/            驗證儀器（本版新補回，舊工作目錄消失時一
 | `<role>HowWeHelp` | string | 「我哋點幫你」小標 |
 
 - **通用 key**（非 role）：`heroTitle` / `heroSub` / `brandTagline` / `ifYouAre` / `projectTeam` / `designTeam` / `purchasingTeam` / `consultant` / `journal` / `latestNews` / `proven` / `products` / `productList` / `productTitle` / `productTag` / `jobReference` / `factSheets` / `downloadFactSheet` / `downloadJobRef` / `talkToUs` / `smartMirrorDemo` / `guestExperience` / `painPoints` / `howWeHelp` / `about*` / `companyBackground` / `background` 等（全部 3 語齊）
-- **渲染規則（重要）**：`rolePainPoints === undefined` 時會**靜靜跌落通用** `painPoints`（`index.html` 第 2650 行）。所以漏 key **唔會爆頁**，只會令該角色標題同其他角色唔一致 → 呢種「睇落冇事」嘅缺漏最易走甩，一定要靠 §7 閘① 捉。
+- **渲染規則（重要）**：`rolePainPoints === undefined` 時會**靜靜跌落通用** `painPoints`（`index.html` 第 2652 行）。所以漏 key **唔會爆頁**，只會令該角色標題同其他角色唔一致 → 呢種「睇落冇事」嘅缺漏最易走甩，一定要靠 §7 閘① 捉。
 - **已知實例**：`consultantPainPoints` 曾只有 `zh-HK`，EN／ZH 跌落通用標題；已於 commit `41ddd13` 補齊（en `PAIN POINTS` / zh `痛点：`）。
 - **`heroDesc`**：只有 `en`、而且冇任何地方 render（死 key）。可以不理，但唔算「已同步」。
 - **禁止**：同一個 key 一時做 string 一時做 array（會撞爛 i18n）。
@@ -150,6 +151,7 @@ scripts/            驗證儀器（本版新補回，舊工作目錄消失時一
 10. 結構守衛：`mainModal` + `modalBody` 存在、單一 `<html>`、`const i18n` 存在
 
 判讀：尾行 `-- N PASS / M NOTE / K FAIL --`，**K 必須 = 0**。
+**已用 mutation test 驗證閘真係咬得中**（唔係得個講字）：改 `max-width: 1340px` → `1300px`、注入 `font-weight:300`、複製一個 HTML `id` —— 三樣都即刻 FAIL。
 
 ### 閘② `bash scripts/verify-live.sh [sha]`（推之後）
 1. `raw.githubusercontent.com/<repo>/<sha>/index.html` 同本地 `index.html` **md5 完全一致**（用 commit-SHA URL，唔用 `/main/`，因為 `/main/` 有 1–5 分鐘 CDN 滯後）
@@ -253,20 +255,26 @@ scripts/            驗證儀器（本版新補回，舊工作目錄消失時一
 - [ ] `git ls-remote origin main` 回 SHA（= 有 push 權）
 - [ ] `bash scripts/verify-comprehensive.sh` → **0 FAIL**
 - [ ] `bash scripts/verify-live.sh` → **4 項 PASS**
+- [ ] `bash scripts/verify-doc-claims.sh` → **0 FAIL**（核對本文件每條事實；改咗 repo 內容或文件之後要重跑）
 - [ ] 瀏覽器開本地 `index.html`，切 3 語、開 4 個 role modal，內容正常、console 冇 error
 - [ ] 明白 §0 表格：Pages（push 改得）vs Wix 正式站（push 改唔到）
 - [ ] 明白 §7 兩個閘做乜、§8 部署判定、§11 全部 pitfalls
 
 ---
 
-## 14. 現況（2026-10-05 19:45 UTC，實測）
+## 14. 現況（2026-10-06 04:45 UTC，實測）
 
 | 項目 | 值 |
 |---|---|
-| repo HEAD | `41ddd13`（fix: sync consultantPainPoints across en/zh + chore: 補回 scripts/） |
-| 本地／raw@SHA md5 | `8bf7284ca90d4f1c7ed3e65bdf123fb5` |
-| Pages live md5 | `558e494e3c41d97da777cd8b4ed59728`（**舊版，未追上**） |
-| Pages build | run `37364153832` = `queued` 自 19:33:19 UTC 冇動過。原因已查實：**GitHub 官方 incident**（2026-10-05 19:11:58Z 開，「delays when assigning GitHub-hosted runners to Actions jobs」），`Actions` 元件 = `degraded_performance` |
-| 未完成事項 | 等 build `built` → 補跑 `bash scripts/verify-live.sh` 對 byte 一致，才算收尾 |
+| repo HEAD | `0b6b2cd`（`docs: add SMARTMIRROR_OPERATIONS.md …`，前一個係 `41ddd13` i18n 修復）。註：之後若只係改本文件而再 commit，HEAD 會前移 —— `verify-doc-claims.sh` 容許「§14 記錄嘅 SHA 係 HEAD 嘅祖先」，唔會當 FAIL |
+| 本地／raw@SHA md5 | `8bf7284ca90d4f1c7ed3e65bdf123fb5`（index.html） |
+| Pages live md5 | `8bf7284ca90d4f1c7ed3e65bdf123fb5` → **同本地逐 byte 一致，部署已收尾 ✅** |
+| 收尾用嘅 run | `37414637615`（2026-10-06 04:38:06Z 觸發）：`build` ✅ / `deploy` ✅ / `report-build-status` ✅，28 秒完成 |
+| 事故記錄 | 前一晚 GitHub 官方 incident（「delays when assigning GitHub-hosted runners」）令 `deploy` job **0 steps 被 cancel**（runner 從未派到）；Actions 一恢復 `operational`，重新觸發 build 即成功 |
+| 遺留物 | 一條舊 run `37365512186` 長期 `queued`（同一個 commit，內容一樣，無害；`cancel` API 回 409 表示已不可取消） |
 
-**接手第一件事**：跑 `bash scripts/verify-live.sh`，如果 live md5 已經等於 `8bf7284c…`，§14 呢單就自動完成。
+**如果同類情況再發生**（live 落後）：查 `https://www.githubstatus.com/api/v2/summary.json` 嘅 `Actions` 元件 → 等佢回 `operational` → 跑
+`curl -s -X POST -H "Authorization: Bearer $GITHUB_PAT" https://api.github.com/repos/Loolento/smartmirror.hk/pages/builds`
+→ 通常 30 秒內完成，再跑 `bash scripts/verify-live.sh` 確認。**唔需要 push 空 commit。**
+
+**接手第一件事**：跑 `bash scripts/verify-doc-claims.sh`（0 FAIL = 本文件仍然同現實一致）＋ `bash scripts/verify-live.sh`（4 項 PASS = 部署仍同步）。
