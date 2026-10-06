@@ -1300,6 +1300,37 @@ footer {
   margin-top: 4px;
 }
 
+/* ===== P5 五格制產品 TEMPLATE（user-approved 設計稿） ===== */
+.p5-title { text-align:center; font-size:26px; color:#EDE6D6; margin-bottom:26px; font-family:Georgia,'Times New Roman',serif; text-decoration:underline; text-underline-offset:6px; text-decoration-color:#8a6f4d; }
+.p5-back { background:none; border:1px solid #5a5348; color:#B8A882; border-radius:999px; padding:8px 20px; cursor:pointer; font-size:13px; margin-bottom:18px; font-family:'Inter','PingFang TC','PingFang SC','Noto Sans TC',sans-serif; }
+.p5-back:hover { border-color:#B8A882; }
+.p5-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
+.p5-boxbtn { border:none; cursor:pointer; border-radius:14px; padding:30px 22px; min-height:150px; display:flex; align-items:center; justify-content:space-between; color:#fff; width:100%; text-align:left; font-family:'Inter','PingFang TC','PingFang SC','Noto Sans TC',sans-serif; transition:filter .2s, transform .2s; }
+.p5-boxbtn:hover { filter:brightness(1.1); transform:translateY(-2px); }
+.p5-left { display:flex; align-items:center; gap:16px; }
+.p5-num { width:40px; height:40px; border-radius:50%; flex:none; background:rgba(0,0,0,.28); color:#fff; font-size:17px; font-weight:700; display:flex; align-items:center; justify-content:center; }
+.p5-lbl { font-size:20px; font-weight:600; letter-spacing:.02em; }
+.p5-sub { display:block; font-size:13px; font-weight:400; opacity:.85; margin-top:6px; letter-spacing:.08em; }
+.p5-plus { font-size:30px; font-weight:400; line-height:1; transition:transform .25s; flex:none; }
+.p5-boxbtn.open .p5-plus { transform:rotate(45deg); }
+.p5-b1 { background:linear-gradient(135deg,#D8C49C,#C9B588); }
+.p5-b2 { background:linear-gradient(135deg,#C9B588,#BCA171); }
+.p5-b3 { background:linear-gradient(135deg,#BCA171,#AE8F5F); }
+.p5-b4 { background:linear-gradient(135deg,#AE8F5F,#9E7F52); }
+.p5-panel { max-height:0; overflow:hidden; transition:max-height .35s ease; background:rgba(255,255,255,.045); border-radius:0 0 14px 14px; }
+.p5-panel-inner { padding:20px 22px 24px; font-size:14.5px; line-height:1.9; color:#CFC8B8; border-top:3px solid; font-weight:400; }
+.p5-p1 .p5-panel-inner { border-color:#D8C49C; }
+.p5-p2 .p5-panel-inner { border-color:#C9B588; }
+.p5-p3 .p5-panel-inner { border-color:#BCA171; }
+.p5-p4 .p5-panel-inner { border-color:#AE8F5F; }
+.p5-panel-inner strong { color:#EAD9A8; }
+.p5-dl { width:100%; border:2px solid #B8A882; background:transparent; border-radius:14px; padding:20px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:12px; color:#D6C39A; font-size:16px; font-weight:600; font-family:'Inter','PingFang TC','PingFang SC','Noto Sans TC',sans-serif; transition:background .2s; text-decoration:none; }
+.p5-dl:hover { background:rgba(184,168,130,.12); }
+@media (max-width: 860px) {
+  .p5-grid { grid-template-columns:1fr; }
+  .p5-boxbtn { min-height:120px; padding:24px 20px; }
+}
+
 /* ===== ABOUT CANTO (zh-HK) ===== */
 .about-canto { text-align: left; }
 .about-canto-hero {
@@ -2345,7 +2376,29 @@ const i18n = {
       "Oolaa Smart Bath Panel",
       "Oolaa Ai School Kiosk"
     ],
-    downloadFactSheet: "Download All Fact Sheets ↓"
+    downloadFactSheet: "Download All Fact Sheets ↓",
+    boxWhat: "What",
+    boxUseCase: "Use Case",
+    boxUseCaseSub: "Where • Who • When",
+    boxWhy: "Why",
+    boxHow: "How",
+    boxFactSheet: "Fact Sheet Download",
+    boxBack: "← All products",
+    comingSoon: "Content coming soon.",
+    productDetails: [
+      { what: "<strong>What is a smart mirror?</strong><br>A two-way mirror with a display behind the glass — a mirror when off, a screen when on.",
+        useCase: "<strong>Where? Who? When?</strong><br>Bathrooms, kitchens, entryways. A home cook finds recipes on the mirror while cooking — no greasy phone needed.",
+        why: "<strong>Why Oolaa?</strong><br>Factory-direct from our own Shenzhen factory, 31,000+ installations across Hong Kong and Macau, market leader in bathroom and kitchen TV.",
+        how: "<strong>How to get started?</strong><br>Measure your space, pick a model, our team handles installation. Every order is managed as an engineering project.",
+        factSheetUrl: "" },
+      { what: "Content coming soon.", useCase: "Content coming soon.", why: "Content coming soon.", how: "Content coming soon.", factSheetUrl: "" },
+      { what: "Content coming soon.", useCase: "Content coming soon.", why: "Content coming soon.", how: "Content coming soon.", factSheetUrl: "" },
+      { what: "Content coming soon.", useCase: "Content coming soon.", why: "Content coming soon.", how: "Content coming soon.", factSheetUrl: "" },
+      { what: "Content coming soon.", useCase: "Content coming soon.", why: "Content coming soon.", how: "Content coming soon.", factSheetUrl: "" },
+      { what: "Content coming soon.", useCase: "Content coming soon.", why: "Content coming soon.", how: "Content coming soon.", factSheetUrl: "" },
+      { what: "Content coming soon.", useCase: "Content coming soon.", why: "Content coming soon.", how: "Content coming soon.", factSheetUrl: "" },
+      { what: "Content coming soon.", useCase: "Content coming soon.", why: "Content coming soon.", how: "Content coming soon.", factSheetUrl: "" }
+    ]
   },
   zh: {
     heroTitle: "痛点",
@@ -2454,7 +2507,25 @@ const i18n = {
       "Oolaa Smart Bath Panel",
       "Oolaa Ai School Kiosk"
     ],
-    downloadFactSheet: "下载所有产品规格 ↓"
+    downloadFactSheet: "下载所有产品规格 ↓",
+    boxWhat: "是什么",
+    boxUseCase: "场景",
+    boxUseCaseSub: "哪里 • 谁 • 何时",
+    boxWhy: "为什么我们",
+    boxHow: "如何落地",
+    boxFactSheet: "下载产品规格",
+    boxBack: "← 返回产品列表",
+    comingSoon: "内容准备中，敬请期待。",
+    productDetails: [
+      { what: "内容准备中，敬请期待。", useCase: "内容准备中，敬请期待。", why: "内容准备中，敬请期待。", how: "内容准备中，敬请期待。", factSheetUrl: "" },
+      { what: "内容准备中，敬请期待。", useCase: "内容准备中，敬请期待。", why: "内容准备中，敬请期待。", how: "内容准备中，敬请期待。", factSheetUrl: "" },
+      { what: "内容准备中，敬请期待。", useCase: "内容准备中，敬请期待。", why: "内容准备中，敬请期待。", how: "内容准备中，敬请期待。", factSheetUrl: "" },
+      { what: "内容准备中，敬请期待。", useCase: "内容准备中，敬请期待。", why: "内容准备中，敬请期待。", how: "内容准备中，敬请期待。", factSheetUrl: "" },
+      { what: "内容准备中，敬请期待。", useCase: "内容准备中，敬请期待。", why: "内容准备中，敬请期待。", how: "内容准备中，敬请期待。", factSheetUrl: "" },
+      { what: "内容准备中，敬请期待。", useCase: "内容准备中，敬请期待。", why: "内容准备中，敬请期待。", how: "内容准备中，敬请期待。", factSheetUrl: "" },
+      { what: "内容准备中，敬请期待。", useCase: "内容准备中，敬请期待。", why: "内容准备中，敬请期待。", how: "内容准备中，敬请期待。", factSheetUrl: "" },
+      { what: "内容准备中，敬请期待。", useCase: "内容准备中，敬请期待。", why: "内容准备中，敬请期待。", how: "内容准备中，敬请期待。", factSheetUrl: "" }
+    ]
   },
   "zh-HK": {
     heroTitle: "痛點",
@@ -2563,7 +2634,25 @@ const i18n = {
       "Oolaa Smart Bath Panel",
       "Oolaa Ai School Kiosk"
     ],
-    downloadFactSheet: "下載所有產品規格 ↓"
+    downloadFactSheet: "下載所有產品規格 ↓",
+    boxWhat: "係乜",
+    boxUseCase: "場景",
+    boxUseCaseSub: "邊度 • 邊個 • 幾時",
+    boxWhy: "點解我哋",
+    boxHow: "點樣落地",
+    boxFactSheet: "下載產品規格",
+    boxBack: "← 返產品列表",
+    comingSoon: "內容準備中，敬請期待。",
+    productDetails: [
+      { what: "內容準備中，敬請期待。", useCase: "內容準備中，敬請期待。", why: "內容準備中，敬請期待。", how: "內容準備中，敬請期待。", factSheetUrl: "" },
+      { what: "內容準備中，敬請期待。", useCase: "內容準備中，敬請期待。", why: "內容準備中，敬請期待。", how: "內容準備中，敬請期待。", factSheetUrl: "" },
+      { what: "內容準備中，敬請期待。", useCase: "內容準備中，敬請期待。", why: "內容準備中，敬請期待。", how: "內容準備中，敬請期待。", factSheetUrl: "" },
+      { what: "內容準備中，敬請期待。", useCase: "內容準備中，敬請期待。", why: "內容準備中，敬請期待。", how: "內容準備中，敬請期待。", factSheetUrl: "" },
+      { what: "內容準備中，敬請期待。", useCase: "內容準備中，敬請期待。", why: "內容準備中，敬請期待。", how: "內容準備中，敬請期待。", factSheetUrl: "" },
+      { what: "內容準備中，敬請期待。", useCase: "內容準備中，敬請期待。", why: "內容準備中，敬請期待。", how: "內容準備中，敬請期待。", factSheetUrl: "" },
+      { what: "內容準備中，敬請期待。", useCase: "內容準備中，敬請期待。", why: "內容準備中，敬請期待。", how: "內容準備中，敬請期待。", factSheetUrl: "" },
+      { what: "內容準備中，敬請期待。", useCase: "內容準備中，敬請期待。", why: "內容準備中，敬請期待。", how: "內容準備中，敬請期待。", factSheetUrl: "" }
+    ]
   }
 };
 
@@ -2710,8 +2799,8 @@ function showPageModal(page) {
     html = `<div class="modal-page-content product-modal">
       <h2>${data.productTitle}</h2>
       <div class="product-grid">
-        ${data.productList.map(p => `
-          <div class="product-card">
+        ${data.productList.map((p, i) => `
+          <div class="product-card" onclick="showProductDetail(${i})">
             <span class="product-name">${p}</span>
             <span class="product-sep">|</span>
             <span class="product-tag">${data.productTag}</span>
@@ -2725,6 +2814,48 @@ function showPageModal(page) {
   body.innerHTML = html;
   document.getElementById('mainModal').classList.add('show');
   document.body.style.overflow = 'hidden';
+}
+
+function showProductDetail(i) {
+  const data = i18n[currentLang];
+  const body = document.getElementById('modalBody');
+  const p = data.productDetails[i];
+  const name = data.productList[i];
+  const boxes = [
+    { n: '1', g: 'p5-b1', w: 'p5-p1', t: data.boxWhat, s: '', c: p.what },
+    { n: '2', g: 'p5-b2', w: 'p5-p2', t: data.boxUseCase, s: data.boxUseCaseSub, c: p.useCase },
+    { n: '3', g: 'p5-b3', w: 'p5-p3', t: data.boxWhy, s: '', c: p.why },
+    { n: '4', g: 'p5-b4', w: 'p5-p4', t: data.boxHow, s: '', c: p.how }
+  ];
+  let html = `<div class="modal-page-content product-modal">
+    <button class="p5-back" onclick="showPageModal('product')">${data.boxBack}</button>
+    <div class="p5-title">${name}</div>
+    <div class="p5-grid">`;
+  boxes.forEach((b, bi) => {
+    const cta = (bi === 3 && data.whatsappCta)
+      ? `<br><a href="https://wa.me/85294304292" target="_blank" rel="noopener" class="modal-download-btn">${data.whatsappCta}</a>` : '';
+    html += `
+      <div class="${b.w}">
+        <button class="p5-boxbtn ${b.g}" onclick="p5Toggle(this)">
+          <span class="p5-left"><span class="p5-num">${b.n}</span><span><span class="p5-lbl">${b.t}</span>${b.s ? `<span class="p5-sub">${b.s}</span>` : ''}</span></span><span class="p5-plus">＋</span>
+        </button>
+        <div class="p5-panel"><div class="p5-panel-inner">${b.c}${cta}</div></div>
+      </div>`;
+  });
+  html += `</div>`;
+  if (p.factSheetUrl) {
+    html += `<a href="${p.factSheetUrl}" target="_blank" rel="noopener" class="p5-dl"><span>↓</span><span>${data.boxFactSheet}</span></a>`;
+  }
+  html += `</div>`;
+  body.innerHTML = html;
+  document.getElementById('mainModal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function p5Toggle(btn) {
+  btn.classList.toggle('open');
+  const panel = btn.parentElement.querySelector('.p5-panel');
+  panel.style.maxHeight = (panel.style.maxHeight && panel.style.maxHeight !== '0px') ? '0px' : panel.scrollHeight + 'px';
 }
 
 function showRoleSelector() {
