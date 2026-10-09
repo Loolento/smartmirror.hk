@@ -1218,6 +1218,10 @@ footer {
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.18), inset 0 -1px 0 rgba(0,0,0,0.3), 0 3px 12px rgba(0,0,0,0.35);
 }
 
+/* product 5-box: How CTA row (WhatsApp / WeChat / Email) */
+.p5-cta-row { display:flex; gap:8px; justify-content:center; margin:20px 0 4px; }
+.p5-cta-row .modal-download-btn { margin-top:0; padding:12px 8px; font-size:14px; flex:1 1 0; text-align:center; white-space:nowrap; }
+
 /* ===== PRODUCT MODAL ===== */
 .product-modal {
   background: #0a1628;
@@ -2285,7 +2289,9 @@ const i18n = {
     jobReference: "+ job reference (download)",
     factSheets: "+ Intro & Download",
     talkToUs: "Talk to us",
-    whatsappCta: "Chat on WhatsApp",
+    whatsappCta: "WhatsApp",
+    wechatCta: "WeChat",
+    emailCta: "Email",
     smartMirrorDemo: "Smart Mirror Demo",
     guestExperience: "Guest Experience",
     painPoints: "Pain Points:",
@@ -2386,10 +2392,10 @@ const i18n = {
     boxBack: "← All products",
     comingSoon: "Content coming soon.",
     productDetails: [
-      { what: "<strong>What is a smart mirror?</strong><br>A two-way mirror with a display behind the glass — a mirror when off, a screen when on.",
-        useCase: "<strong>Where? Who? When?</strong><br>Bathrooms, kitchens, entryways. A home cook finds recipes on the mirror while cooking — no greasy phone needed.",
-        why: "<strong>Why Oolaa?</strong><br>Factory-direct from our own Shenzhen factory, 31,000+ installations across Hong Kong and Macau, market leader in bathroom and kitchen TV.",
-        how: "<strong>How to get started?</strong><br>Measure your space, pick a model, our team handles installation. Every order is managed as an engineering project.",
+      { what: "Think of it as an iPad embedded behind a mirror: off, it's just a mirror; on, content shows through the glass. A smart mirror lets you look at yourself and see content at the same time. If you do not need both at once, you do not need a smart mirror. Oolaa smart mirrors run on Android or Windows and come in any shape and size. Touch is the feature everyone asks for, but it is not always the right call — in a steamy bathroom, or a hotel mirror mounted out of reach, touch makes things worse, not better. We spec it based on where your mirror actually goes. Options include a built-in defogger and integrated lighting.",
+        useCase: "Example: work out facing the mirror — follow the instructor on screen while checking your own posture in the reflection. That is the classic smart-mirror moment. • Where: residential and hotel developments — bathroom, foyer, kitchen, main lobby, clubhouse; plus schools, shopping arcades, public areas, public restrooms • Who + When: parents want to work out, but no one is watching the kids — so the clubhouse gym sits empty. Install a smart mirror: mom works out with peace of mind while the kids play motion games in view — no more choosing between childcare and fitness. Walk into a public restroom and the mirror is showing messages; as you step closer, the ads smartly shrink and move aside (<a href='https://youtu.be/cHmEZ9CcKX4' target='_blank' rel='noopener' style='color:#D8C49C;text-decoration:underline'>see our video</a>).",
+        why: "Others sell what's already built. We build what you actually need. Yes, we're a manufacturer — but one with 31,000+ installations behind it, and a team that's always developing something new. We even have our own software team in Hong Kong: when hardware alone isn't enough, we write the software too. Others sell parts. We make art.",
+        how: "Tell us where it is going and what shape you need. We build the mirror to spec — size, shape, Android or Windows, touch or no touch, defogger, lighting — then handle installation and setup. And beyond hardware: tell us the scenario, and our team designs the software around it. We're currently in discussion with a hospital rehab center that wants a smart mirror whose camera checks whether patients' physio movements are correct — that's a software problem, and we have the software team to solve it.",
         factSheetUrl: "" },
       { what: "Content coming soon.", useCase: "Content coming soon.", why: "Content coming soon.", how: "Content coming soon.", factSheetUrl: "" },
       { what: "Content coming soon.", useCase: "Content coming soon.", why: "Content coming soon.", how: "Content coming soon.", factSheetUrl: "" },
@@ -2416,7 +2422,9 @@ const i18n = {
     jobReference: "+ 项目实例（下载）",
     factSheets: "+ 简介及下载",
     talkToUs: "联系我们",
-    whatsappCta: "WhatsApp 聊聊",
+    whatsappCta: "WhatsApp",
+    wechatCta: "WeChat",
+    emailCta: "邮件",
     smartMirrorDemo: "智能镜演示",
     guestExperience: "客户体验",
     painPoints: "痛点：",
@@ -2544,6 +2552,8 @@ const i18n = {
     factSheets: "+ 簡介及下載",
     talkToUs: "搵我哋",
     whatsappCta: "WhatsApp 傾偈",
+    wechatCta: "WeChat",
+    emailCta: "電郵",
     smartMirrorDemo: "智能鏡演示",
     guestExperience: "客戶體驗",
     painPoints: "痛點：",
@@ -2833,7 +2843,7 @@ function showProductDetail(i) {
     <div class="p5-grid">`;
   boxes.forEach((b, bi) => {
     const cta = (bi === 3 && data.whatsappCta)
-      ? `<br><a href="https://wa.me/85294304292" target="_blank" rel="noopener" class="modal-download-btn">${data.whatsappCta}</a>` : '';
+      ? `<br><div class="p5-cta-row"><a href="https://wa.me/85294304292" target="_blank" rel="noopener" class="modal-download-btn">${data.whatsappCta}</a><a href="javascript:void(0)" onclick="openWeChat()" class="modal-download-btn">${data.wechatCta}</a><a href="mailto:info@newleader-hk.com" class="modal-download-btn">${data.emailCta}</a></div>` : '';
     html += `
       <div class="${b.w}">
         <button class="p5-boxbtn ${b.g}" onclick="p5Toggle(this)">
