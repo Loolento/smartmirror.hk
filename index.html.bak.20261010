@@ -1839,12 +1839,6 @@ footer {
   .bottom-card-sub { font-size: 10px; }
 }
 
-
-/* Where thumbnail strip (2026-10-10) */
-.where-thumb-strip{display:flex;gap:10px;overflow-x:auto;padding:12px 4px;margin-top:10px;-webkit-overflow-scrolling:touch}
-.where-thumb-strip a{flex:0 0 auto;display:block;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.15);transition:transform .2s}
-.where-thumb-strip a:hover{transform:scale(1.05)}
-.where-thumb-strip img{width:120px;height:120px;object-fit:cover;display:block}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
 </head>
@@ -2389,17 +2383,6 @@ const i18n = {
       "Oolaa Ai School Kiosk"
     ],
     downloadFactSheet: "Download All Fact Sheets ↓",
-    whereThumbs: [
-      { src: "images/where/OolaaBathroomSmartMirror1.1.jpg", alt: "Oolaa bathroom smart mirror – hotel installation" },
-      { src: "images/where/OolaaBathroomSmartMirror1.2.jpg", alt: "Oolaa bathroom smart mirror – weather display" },
-      { src: "images/where/OolaaBathroomSmartMirror1.3.jpg", alt: "Oolaa bathroom smart mirror – double vanity" },
-      { src: "images/where/OolaaBathroomSmartMirror2.jpg",   alt: "Oolaa bathroom smart mirror – vanity in use" },
-      { src: "images/where/OolaaBathroomSmartTV1.JPG",       alt: "Oolaa bathroom smart TV – bathtub viewing" },
-      { src: "images/where/OolaaBathroomSmartTV2.JPG",       alt: "Oolaa bathroom smart TV – marble bathroom" },
-      { src: "images/where/OolaaFitnessMirror1.JPG",         alt: "Oolaa fitness mirror – gym training" },
-      { src: "images/where/OolaaFitnessMirror2.JPG",         alt: "Oolaa fitness mirror – treadmill workout" },
-      { src: "images/where/OolaaMakeUpMirror.JPG",           alt: "Oolaa makeup mirror – 75 degree stand" }
-    ],
     boxWhat: "What",
     boxUseCase: "Use Case",
     boxUseCaseSub: "Where • Who • When",
@@ -2533,17 +2516,6 @@ const i18n = {
       "Oolaa Ai School Kiosk"
     ],
     downloadFactSheet: "下载所有产品规格 ↓",
-    whereThumbs: [
-      { src: "images/where/OolaaBathroomSmartMirror1.1.jpg", alt: "Oolaa 浴室智能镜 – 酒店安装" },
-      { src: "images/where/OolaaBathroomSmartMirror1.2.jpg", alt: "Oolaa 浴室智能镜 – 天气显示" },
-      { src: "images/where/OolaaBathroomSmartMirror1.3.jpg", alt: "Oolaa 浴室智能镜 – 双盆洗手台" },
-      { src: "images/where/OolaaBathroomSmartMirror2.jpg",   alt: "Oolaa 浴室智能镜 – 化妆使用中" },
-      { src: "images/where/OolaaBathroomSmartTV1.JPG",       alt: "Oolaa 浴室智能电视 – 浴缸观看" },
-      { src: "images/where/OolaaBathroomSmartTV2.JPG",       alt: "Oolaa 浴室智能电视 – 大理石浴室" },
-      { src: "images/where/OolaaFitnessMirror1.JPG",         alt: "Oolaa 健身镜 – 健身房训练" },
-      { src: "images/where/OolaaFitnessMirror2.JPG",         alt: "Oolaa 健身镜 – 跑步机训练" },
-      { src: "images/where/OolaaMakeUpMirror.JPG",           alt: "Oolaa 化妆镜 – 75 度支架" }
-    ],
     boxWhat: "What",
     boxUseCase: "Use Case",
     boxUseCaseSub: "Where • Who • When",
@@ -2673,17 +2645,6 @@ const i18n = {
       "Oolaa Ai School Kiosk"
     ],
     downloadFactSheet: "下載所有產品規格 ↓",
-    whereThumbs: [
-      { src: "images/where/OolaaBathroomSmartMirror1.1.jpg", alt: "Oolaa 浴室智能鏡 – 酒店安裝" },
-      { src: "images/where/OolaaBathroomSmartMirror1.2.jpg", alt: "Oolaa 浴室智能鏡 – 天氣顯示" },
-      { src: "images/where/OolaaBathroomSmartMirror1.3.jpg", alt: "Oolaa 浴室智能鏡 – 雙盆洗手台" },
-      { src: "images/where/OolaaBathroomSmartMirror2.jpg",   alt: "Oolaa 浴室智能鏡 – 化妝使用中" },
-      { src: "images/where/OolaaBathroomSmartTV1.JPG",       alt: "Oolaa 浴室智能電視 – 浴缸觀看" },
-      { src: "images/where/OolaaBathroomSmartTV2.JPG",       alt: "Oolaa 浴室智能電視 – 大理石浴室" },
-      { src: "images/where/OolaaFitnessMirror1.JPG",         alt: "Oolaa 健身鏡 – 健身房訓練" },
-      { src: "images/where/OolaaFitnessMirror2.JPG",         alt: "Oolaa 健身鏡 – 跑步機訓練" },
-      { src: "images/where/OolaaMakeUpMirror.JPG",           alt: "Oolaa 化妝鏡 – 75 度支架" }
-    ],
     boxWhat: "What",
     boxUseCase: "Use Case",
     boxUseCaseSub: "Where • Who • When",
@@ -2883,18 +2844,12 @@ function showProductDetail(i) {
   boxes.forEach((b, bi) => {
     const cta = (bi === 3 && data.whatsappCta)
       ? `<br><div class="p5-cta-row"><a href="https://wa.me/85294304292" target="_blank" rel="noopener" class="modal-download-btn">${data.whatsappCta}</a><a href="javascript:void(0)" onclick="openWeChat()" class="modal-download-btn">${data.wechatCta}</a><a href="mailto:info@newleader-hk.com" class="modal-download-btn">${data.emailCta}</a></div>` : '';
-    let extra = '';
-    if (i === 0 && bi === 1 && data.whereThumbs && data.whereThumbs.length) {
-      extra = `<div class="where-thumb-strip">${data.whereThumbs.map(t =>
-        `<a href="${t.src}" target="_blank" rel="noopener"><img src="${t.src}" alt="${t.alt}" loading="lazy"></a>`
-      ).join('')}</div>`;
-    }
     html += `
       <div class="${b.w}">
         <button class="p5-boxbtn ${b.g}" onclick="p5Toggle(this)">
           <span class="p5-left"><span class="p5-num">${b.n}</span><span><span class="p5-lbl">${b.t}</span>${b.s ? `<span class="p5-sub">${b.s}</span>` : ''}</span></span><span class="p5-plus">＋</span>
         </button>
-        <div class="p5-panel"><div class="p5-panel-inner">${b.c}${extra}${cta}</div></div>
+        <div class="p5-panel"><div class="p5-panel-inner">${b.c}${cta}</div></div>
       </div>`;
   });
   html += `</div>`;
