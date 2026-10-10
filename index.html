@@ -1308,7 +1308,7 @@ footer {
 .p5-title { text-align:center; font-size:26px; color:#EDE6D6; margin-bottom:26px; font-family:Georgia,'Times New Roman',serif; text-decoration:underline; text-underline-offset:6px; text-decoration-color:#8a6f4d; }
 .p5-back { background:none; border:1px solid #5a5348; color:#B8A882; border-radius:999px; padding:8px 20px; cursor:pointer; font-size:13px; margin-bottom:18px; font-family:'Inter','PingFang TC','PingFang SC','Noto Sans TC',sans-serif; }
 .p5-back:hover { border-color:#B8A882; }
-.p5-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
+.p5-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:16px; margin-bottom:16px; }
 .p5-grid > div { min-width:0; }
 .p5-boxbtn { border:1px solid rgba(0,0,0,.18); box-shadow:inset 0 1px 0 rgba(255,255,255,.35), 0 3px 8px rgba(0,0,0,.35); cursor:pointer; border-radius:14px; padding:30px 22px; min-height:150px; display:flex; align-items:center; justify-content:space-between; color:#fff; width:100%; text-align:left; font-family:'Inter','PingFang TC','PingFang SC','Noto Sans TC',sans-serif; transition:filter .2s, transform .2s; }
 .p5-boxbtn:hover { filter:brightness(1.1); transform:translateY(-2px); }
@@ -1842,10 +1842,10 @@ footer {
 
 
 /* Where thumbnail strip (2026-10-10) */
-.where-thumb-strip{display:flex;gap:10px;overflow-x:auto;overflow-y:hidden;padding:12px 4px;margin-top:10px;max-width:100%;min-width:0;-webkit-overflow-scrolling:touch}
+.where-thumb-strip{display:flex;gap:10px;overflow-x:auto;overflow-y:hidden;padding:12px 4px;margin-top:10px;width:100%;max-width:100%;min-width:0;box-sizing:border-box;-webkit-overflow-scrolling:touch}
 .where-thumb-strip a{flex:0 0 auto;display:block;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.15);transition:transform .2s}
 .where-thumb-strip a:hover{transform:scale(1.05)}
-.where-thumb-strip img{width:120px;height:120px;object-fit:cover;display:block}
+.where-thumb-strip img{width:120px;height:120px;object-fit:cover;display:block;flex:0 0 120px;max-width:120px}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
 </head>
