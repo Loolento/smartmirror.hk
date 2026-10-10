@@ -1329,6 +1329,9 @@ footer {
 .p5-p3 .p5-panel-inner { border-color:#A78A5C; }
 .p5-p4 .p5-panel-inner { border-color:#96794E; }
 .p5-panel-inner strong { color:#EAD9A8; }
+.what-media { margin:14px 0 18px; border-radius:10px; overflow:hidden; background:rgba(0,0,0,.18); border:1px solid rgba(184,168,130,.18); }
+.what-media video, .what-media img { display:block; width:100%; height:auto; border-radius:10px; }
+.what-media video { aspect-ratio:16/9; object-fit:cover; background:#000; }
 .p5-dl { width:100%; border:2px solid #B8A882; background:transparent; border-radius:14px; padding:20px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:12px; color:#D6C39A; font-size:16px; font-weight:600; font-family:'Inter','PingFang TC','PingFang SC','Noto Sans TC',sans-serif; transition:background .2s; text-decoration:none; }
 .p5-dl:hover { background:rgba(184,168,130,.12); }
 @media (max-width: 860px) {
@@ -2866,13 +2869,37 @@ function showPageModal(page) {
   document.body.style.overflow = 'hidden';
 }
 
+function injectWhatMedia(text) {
+  // Smart Mirror "What" panel — insert A/B/C video + D photo at specified anchors (top-to-bottom order).
+  const A = `<div class="what-media"><video controls preload="none" playsinline><source src="videos/what/oolaa-smart-mirror-what-a.mov" type="video/quicktime"></video></div>`;
+  const B = `<div class="what-media"><video controls preload="none" playsinline><source src="videos/what/oolaa-smart-mirror-what-b.mp4" type="video/mp4"></video></div>`;
+  const C = `<div class="what-media"><video controls preload="none" playsinline><source src="videos/what/oolaa-smart-mirror-what-c.mp4" type="video/mp4"></video></div>`;
+  const D = `<div class="what-media"><img src="images/what/oolaa-smart-mirror-what-d.jpg" alt="Oolaa smart mirrors — Android, Windows, any shape and size" loading="lazy"></div>`;
+  const anchors = [
+    { after: "Think of it as an iPad embedded behind a mirror:", media: A },
+    { after: "off, it's just a mirror; on, content shows through the glass.", media: B },
+    { after: "A smart mirror lets you look at yourself and see content at the same time.", media: C },
+    { after: "Oolaa smart mirrors run on Android or Windows and come in any shape and size.", media: D }
+  ];
+  let out = text;
+  anchors.forEach(a => {
+    const i = out.indexOf(a.after);
+    if (i === -1) return;
+    const cut = i + a.after.length;
+    out = out.slice(0, cut) + a.media + out.slice(cut);
+  });
+  return out;
+}
+
 function showProductDetail(i) {
   const data = i18n[currentLang];
   const body = document.getElementById('modalBody');
   const p = data.productDetails[i];
   const name = data.productList[i];
+  let whatContent = p.what;
+  if (i === 0) whatContent = injectWhatMedia(p.what);
   const boxes = [
-    { n: '1', g: 'p5-b1', w: 'p5-p1', t: data.boxWhat, s: '', c: p.what },
+    { n: '1', g: 'p5-b1', w: 'p5-p1', t: data.boxWhat, s: '', c: whatContent },
     { n: '2', g: 'p5-b2', w: 'p5-p2', t: data.boxUseCase, s: data.boxUseCaseSub, c: p.useCase },
     { n: '3', g: 'p5-b3', w: 'p5-p3', t: data.boxWhy, s: '', c: p.why },
     { n: '4', g: 'p5-b4', w: 'p5-p4', t: data.boxHow, s: '', c: p.how }
