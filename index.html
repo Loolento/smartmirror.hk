@@ -1305,7 +1305,7 @@ footer {
 }
 
 /* ===== P5 五格制產品 TEMPLATE（user-approved 設計稿） ===== */
-.p5-title { text-align:center; font-size:26px; color:#EDE6D6; margin-bottom:26px; font-family:Georgia,'Times New Roman',serif; text-decoration:underline; text-underline-offset:6px; text-decoration-color:#8a6f4d; }
+.p5-title { text-align:center; font-size:38px; color:#EDE6D6; margin-bottom:26px; font-family:Georgia,'Times New Roman',serif; text-decoration:underline; text-underline-offset:6px; text-decoration-color:#8a6f4d; }
 .p5-back { background:none; border:1px solid #5a5348; color:#B8A882; border-radius:999px; padding:8px 20px; cursor:pointer; font-size:13px; margin-bottom:18px; font-family:'Inter','PingFang TC','PingFang SC','Noto Sans TC',sans-serif; }
 .p5-back:hover { border-color:#B8A882; }
 .p5-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:16px; margin-bottom:16px; }
@@ -1346,7 +1346,7 @@ footer {
 .p5-fullview .p5-fv-back { background:none; border:1px solid #5a5348; color:#B8A882; border-radius:999px; padding:10px 24px; cursor:pointer; font-size:15px; margin-bottom:24px; font-family:'Inter','PingFang TC','PingFang SC','Noto Sans TC',sans-serif; }
 .p5-fullview .p5-fv-back:hover { border-color:#B8A882; }
 .p5-fullview .p5-fv-title { font-size:34px; color:#EDE6D6; margin-bottom:28px; font-family:Georgia,'Times New Roman',serif; text-align:center; }
-.p5-fullview .p5-fv-body { font-size:19px; line-height:2.1; color:#D8D0BE; max-width:900px; margin:0 auto; }
+.p5-fullview .p5-fv-body { font-size:23px; line-height:2.1; color:#D8D0BE; max-width:900px; margin:0 auto; }
 .p5-fullview .p5-fv-body strong { color:#EAD9A8; }
 .p5-fullview .what-media { margin:24px 0 28px; }
 .p5-fullview .what-media video { aspect-ratio:16/9; }
@@ -2969,13 +2969,15 @@ function p5OpenFull(bi) {
   const grid = document.getElementById('p5Grid');
   const fv = document.getElementById('p5Fullview');
   if (!grid || !fv) return;
-  // 視頻加 autoplay＋muted（瀏覽器要求 muted 先准 autoplay）
+  // 視頻加 autoplay＋muted＋loop（瀏覽器要求 muted 先准 autoplay；loop 除非客人手動撳停）
   let content = (b.c || '') + (b.extra || '') + (b.cta || '');
-  content = content.replace(/<video /g, '<video autoplay muted playsinline ');
+  content = content.replace(/<video /g, '<video autoplay muted loop playsinline ');
   content = content.replace(/preload="none"/g, 'preload="auto"');
+  // 全屏標題：What 用完整問句，其他照舊
+  const fvTitle = (bi === 0) ? `${b.n}. What is a Smart Mirror` : `${b.n}. ${b.t}`;
   fv.innerHTML = `
     <button class="p5-fv-back" onclick="p5CloseFull()">← ${data.boxBack}</button>
-    <div class="p5-fv-title">${b.n}. ${b.t}</div>
+    <div class="p5-fv-title">${fvTitle}</div>
     <div class="p5-fv-body">${content}</div>`;
   grid.style.display = 'none';
   fv.classList.add('active');
