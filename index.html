@@ -2918,9 +2918,17 @@ function showProductDetail(i) {
   const name = data.productList[i];
   let whatContent = p.what;
   if (i === 0) whatContent = injectWhatMedia(p.what);
+  // Smart Mirror Use Case 開頭加平面圖（2026-10-11）：3D 綠色 Bathroom／Foyer／Kitchen 掣
+  let useCaseContent = p.useCase;
+  if (i === 0) {
+    const fpAlt = currentLang === 'zh-HK' ? '新樓盤單位智能鏡位置圖 — 浴室、玄關、廚房'
+      : currentLang === 'zh' ? '新楼盘单位智能镜位置图 — 浴室、玄关、厨房'
+      : 'Smart mirror locations in a new residential flat — bathroom, foyer, kitchen';
+    useCaseContent = `<div class="what-media"><img src="images/usecase/oolaa-smart-mirror-floorplan-bathroom-foyer-kitchen.jpg" alt="${fpAlt}" loading="lazy"></div>` + p.useCase;
+  }
   const boxes = [
     { n: '1', g: 'p5-b1', w: 'p5-p1', t: data.boxWhat, s: '', c: whatContent },
-    { n: '2', g: 'p5-b2', w: 'p5-p2', t: data.boxUseCase, s: data.boxUseCaseSub, c: p.useCase },
+    { n: '2', g: 'p5-b2', w: 'p5-p2', t: data.boxUseCase, s: data.boxUseCaseSub, c: useCaseContent },
     { n: '3', g: 'p5-b3', w: 'p5-p3', t: data.boxWhy, s: '', c: p.why },
     { n: '4', g: 'p5-b4', w: 'p5-p4', t: data.boxHow, s: '', c: p.how }
   ];
