@@ -1028,9 +1028,9 @@ footer {
   background: var(--card-bg);
   border: 1px solid var(--divider);
   border-radius: 16px;
-  max-width: 1120px;
+  max-width: 1400px;
   width: 100%;
-  max-height: 85vh;
+  max-height: 88vh;
   overflow-y: auto;
   position: relative;
   padding: 56px 52px;
@@ -1337,6 +1337,26 @@ footer {
 @media (max-width: 860px) {
   .p5-grid { grid-template-columns:1fr; }
   .p5-boxbtn { min-height:120px; padding:24px 20px; }
+}
+
+/* ===== P5 全屏內容視圖（撳入格仔後全屏 takeover） ===== */
+.p5-fullview { display:none; }
+.p5-fullview.active { display:block; animation:p5FadeIn .3s ease; }
+@keyframes p5FadeIn { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:none; } }
+.p5-fullview .p5-fv-back { background:none; border:1px solid #5a5348; color:#B8A882; border-radius:999px; padding:10px 24px; cursor:pointer; font-size:15px; margin-bottom:24px; font-family:'Inter','PingFang TC','PingFang SC','Noto Sans TC',sans-serif; }
+.p5-fullview .p5-fv-back:hover { border-color:#B8A882; }
+.p5-fullview .p5-fv-title { font-size:34px; color:#EDE6D6; margin-bottom:28px; font-family:Georgia,'Times New Roman',serif; text-align:center; }
+.p5-fullview .p5-fv-body { font-size:19px; line-height:2.1; color:#D8D0BE; max-width:900px; margin:0 auto; }
+.p5-fullview .p5-fv-body strong { color:#EAD9A8; }
+.p5-fullview .what-media { margin:24px 0 28px; }
+.p5-fullview .what-media video { aspect-ratio:16/9; }
+.p5-fullview .where-thumb-strip img { width:160px; height:160px; }
+.p5-fullview .p5-cta-row { margin-top:32px; }
+.p5-fullview .p5-cta-row .modal-download-btn { font-size:18px; padding:16px 32px; }
+@media (max-width: 860px) {
+  .p5-fullview .p5-fv-title { font-size:26px; }
+  .p5-fullview .p5-fv-body { font-size:17px; }
+  .p5-fullview .where-thumb-strip img { width:120px; height:120px; }
 }
 
 /* ===== ABOUT CANTO (zh-HK) ===== */
@@ -2907,7 +2927,10 @@ function showProductDetail(i) {
   let html = `<div class="modal-page-content product-modal">
     <button class="p5-back" onclick="showPageModal('product')">${data.boxBack}</button>
     <div class="p5-title">${name}</div>
-    <div class="p5-grid">`;
+    <div class="p5-grid" id="p5Grid">`;
+  // 存起俾全屏視圖用
+  window._p5boxes = boxes;
+  window._p5data = data;
   boxes.forEach((b, bi) => {
     const cta = (bi === 3 && data.whatsappCta)
       ? `<br><div class="p5-cta-row"><a href="https://wa.me/85294304292" target="_blank" rel="noopener" class="modal-download-btn">${data.whatsappCta}</a><a href="javascript:void(0)" onclick="openWeChat()" class="modal-download-btn">${data.wechatCta}</a><a href="mailto:info@newleader-hk.com" class="modal-download-btn">${data.emailCta}</a></div>` : '';
@@ -2917,15 +2940,17 @@ function showProductDetail(i) {
         `<a href="${t.src}" target="_blank" rel="noopener"><img src="${t.src}" alt="${t.alt}" loading="lazy"></a>`
       ).join('')}</div>`;
     }
+    // 存起俾全屏視圖用
+    b.cta = cta; b.extra = extra;
     html += `
       <div class="${b.w}">
-        <button class="p5-boxbtn ${b.g}" onclick="p5Toggle(this)">
+        <button class="p5-boxbtn ${b.g}" onclick="p5OpenFull(${bi})">
           <span class="p5-left"><span class="p5-num">${b.n}</span><span><span class="p5-lbl">${b.t}</span>${b.s ? `<span class="p5-sub">${b.s}</span>` : ''}</span></span><span class="p5-plus">＋</span>
         </button>
-        <div class="p5-panel"><div class="p5-panel-inner">${b.c}${extra}${cta}</div></div>
       </div>`;
   });
-  html += `</div>`;
+  html += `</div>
+    <div class="p5-fullview" id="p5Fullview"></div>`;
   if (p.factSheetUrl) {
     html += `<a href="${p.factSheetUrl}" target="_blank" rel="noopener" class="p5-dl"><span>↓</span><span>${data.boxFactSheet}</span></a>`;
   }
@@ -2935,10 +2960,43 @@ function showProductDetail(i) {
   document.body.style.overflow = 'hidden';
 }
 
+// 全屏視圖：撳入格仔後取代 grid，全屏顯示內容（大字大片，視頻 autoplay）
+function p5OpenFull(bi) {
+  const boxes = window._p5boxes;
+  const data = window._p5data;
+  if (!boxes || !boxes[bi]) return;
+  const b = boxes[bi];
+  const grid = document.getElementById('p5Grid');
+  const fv = document.getElementById('p5Fullview');
+  if (!grid || !fv) return;
+  // 視頻加 autoplay＋muted（瀏覽器要求 muted 先准 autoplay）
+  let content = (b.c || '') + (b.extra || '') + (b.cta || '');
+  content = content.replace(/<video /g, '<video autoplay muted playsinline ');
+  content = content.replace(/preload="none"/g, 'preload="auto"');
+  fv.innerHTML = `
+    <button class="p5-fv-back" onclick="p5CloseFull()">← ${data.boxBack}</button>
+    <div class="p5-fv-title">${b.n}. ${b.t}</div>
+    <div class="p5-fv-body">${content}</div>`;
+  grid.style.display = 'none';
+  fv.classList.add('active');
+  document.querySelector('.modal-content').scrollTop = 0;
+}
+
+function p5CloseFull() {
+  const grid = document.getElementById('p5Grid');
+  const fv = document.getElementById('p5Fullview');
+  if (!grid || !fv) return;
+  fv.querySelectorAll('video').forEach(v => { v.pause(); });
+  fv.classList.remove('active');
+  fv.innerHTML = '';
+  grid.style.display = '';
+}
+
+// 舊 inline 展開已停用（轉咗全屏視圖）
 function p5Toggle(btn) {
-  btn.classList.toggle('open');
-  const panel = btn.parentElement.querySelector('.p5-panel');
-  panel.style.maxHeight = (panel.style.maxHeight && panel.style.maxHeight !== '0px') ? '0px' : panel.scrollHeight + 'px';
+  const btns = btn.closest('.p5-grid').querySelectorAll('.p5-boxbtn');
+  const bi = Array.from(btns).indexOf(btn);
+  if (bi >= 0) p5OpenFull(bi);
 }
 
 function showRoleSelector() {
