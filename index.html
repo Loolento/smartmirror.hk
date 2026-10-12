@@ -1346,6 +1346,13 @@ footer {
 .p5-fullview .p5-fv-back { background:none; border:1px solid #5a5348; color:#B8A882; border-radius:999px; padding:10px 24px; cursor:pointer; font-size:15px; margin-bottom:24px; font-family:'Inter','PingFang TC','PingFang SC','Noto Sans TC',sans-serif; }
 .p5-fullview .p5-fv-back:hover { border-color:#B8A882; }
 .p5-fullview .p5-fv-title { font-size:34px; color:#EDE6D6; margin-bottom:28px; font-family:Georgia,'Times New Roman',serif; text-align:center; }
+.p5-fullview .p5-fv-sub { text-align:center; color:#D8C49C; font-size:16px; letter-spacing:.14em; margin:-18px 0 26px; }
+/* 平面圖可撳房間掣（2026-10-12）：掣直接冚住圖入面嘅 3D 綠掣 */
+.fp-wrap { position:relative; container-type:inline-size; }
+.fp-wrap > img { display:block; width:100%; height:auto; }
+.fp-btn { position:absolute; transform:translate(-50%,-50%); font-size:3.3cqw; font-weight:700; color:#fff; background:linear-gradient(180deg,#55cf55 0%,#22a522 55%,#177f17 100%); border:.35cqw solid rgba(255,255,255,.55); border-radius:999px; padding:.5em 1.15em; cursor:pointer; white-space:nowrap; font-family:'Inter','PingFang TC','PingFang SC','Noto Sans TC',sans-serif; box-shadow:0 .2em .6em rgba(0,0,0,.45), inset 0 .1em .2em rgba(255,255,255,.55); text-shadow:0 .06em .12em rgba(0,0,0,.45); }
+.fp-btn:hover { filter:brightness(1.12); }
+.fp-btn:active { transform:translate(-50%,-50%) scale(.96); }
 .p5-fullview .p5-fv-body { font-size:23px; line-height:2.1; color:#D8D0BE; max-width:900px; margin:0 auto; }
 .p5-fullview .p5-fv-body strong { color:#EAD9A8; }
 .p5-fullview .what-media { margin:24px 0 28px; }
@@ -2424,6 +2431,11 @@ const i18n = {
       { src: "images/where/OolaaFitnessMirror2.JPG",         alt: "Oolaa fitness mirror – treadmill workout" },
       { src: "images/where/OolaaMakeUpMirror.JPG",           alt: "Oolaa makeup mirror – 75 degree stand" }
     ],
+    fpRooms: {
+      bathroom: { label: "Bathroom", title: "Bathroom", back: "← Floorplan", text: "The bathroom is the smart mirror's home ground. Off, it's a mirror; on, the morning news and weather show through the glass while you get ready. A built-in defogger keeps it clear in steam — and skip touch here: wet hands make it worse, not better. In new developments, developers spec it in the master bathroom as standard: it costs little more than a quality mirror, but it's the feature buyers remember." },
+      foyer: { label: "Foyer", title: "Foyer", back: "← Floorplan", text: "The last mirror you see before you leave home. Check your outfit on the way out; building notices and parcel alerts appear on the glass as you walk past. Pair it with a video doorbell and the foyer mirror doubles as the front-door screen." },
+      kitchen: { label: "Kitchen", title: "Kitchen", back: "← Floorplan", text: "Follow the recipe on screen while your hands stay on the food — no more touching your phone with wet hands. Family calendar, shopping list, morning news: everything lives where the old backsplash mirror used to go." }
+    },
     boxWhat: "What",
     boxUseCase: "Use Case",
     boxUseCaseSub: "Where • Who • When",
@@ -2568,6 +2580,11 @@ const i18n = {
       { src: "images/where/OolaaFitnessMirror2.JPG",         alt: "Oolaa 健身镜 – 跑步机训练" },
       { src: "images/where/OolaaMakeUpMirror.JPG",           alt: "Oolaa 化妆镜 – 75 度支架" }
     ],
+    fpRooms: {
+      bathroom: { label: "浴室", title: "浴室", back: "← 平面图", text: "浴室是智能镜的主场。关闭时是镜子，开启后可以一边洗漱一边看新闻天气。内置除雾功能，洗完澡镜面依然清晰；这里不建议用触控——湿手操作只会更麻烦。新楼盘开发商通常将其列为主卧浴室的标准配置：成本和优质镜子差不多，但买家记住的就是它。" },
+      foyer: { label: "玄关", title: "玄关", back: "← 平面图", text: "出门前最后照到的镜子。出门顺手检查仪容；走过时大厦通知、收件提醒会在镜面弹出。接上可视门铃，玄关镜立刻变成门口大屏幕。" },
+      kitchen: { label: "厨房", title: "厨房", back: "← 平面图", text: "跟着屏幕食谱做菜，手不用碰电话——湿着手按手机的日子结束了。家庭日历、购物清单、早间新闻，全部在以前装镜子的位置搞定。" }
+    },
     boxWhat: "What",
     boxUseCase: "Use Case",
     boxUseCaseSub: "Where • Who • When",
@@ -2708,6 +2725,11 @@ const i18n = {
       { src: "images/where/OolaaFitnessMirror2.JPG",         alt: "Oolaa 健身鏡 – 跑步機訓練" },
       { src: "images/where/OolaaMakeUpMirror.JPG",           alt: "Oolaa 化妝鏡 – 75 度支架" }
     ],
+    fpRooms: {
+      bathroom: { label: "浴室", title: "浴室", back: "← 平面圖", text: "浴室係智能鏡嘅主場。熄咗係塊鏡，著咗就可以一邊梳洗一邊睇新聞天氣。內置除霧功能，沖完涼塊鏡依然清；呢度唔建議用觸控——濕手掂嚟掂去只會更麻煩。新樓盤發展商通常將佢列做主人房浴室標準配置：成本同靚鏡差唔多，但買家記得嘅就係呢樣。" },
+      foyer: { label: "玄關", title: "玄關", back: "← 平面圖", text: "出門口前最後照到嘅塊鏡。出門順手 check 下個 look；行過嗰陣大廈通告、收件提示會喺鏡面彈出嚟。駁埋 video doorbell，玄關鏡即刻變埋門口大屏幕。" },
+      kitchen: { label: "廚房", title: "廚房", back: "← 平面圖", text: "跟住屏幕食譜煮餸，隻手唔使掂電話——濕住手撳手機嘅日子完結。家庭日曆、購物清單、晨早新聞，全部喺以前裝鏡嗰個位搞掂。" }
+    },
     boxWhat: "What",
     boxUseCase: "Use Case",
     boxUseCaseSub: "Where • Who • When",
@@ -2924,7 +2946,12 @@ function showProductDetail(i) {
     const fpAlt = currentLang === 'zh-HK' ? '新樓盤單位智能鏡位置圖 — 浴室、玄關、廚房'
       : currentLang === 'zh' ? '新楼盘单位智能镜位置图 — 浴室、玄关、厨房'
       : 'Smart mirror locations in a new residential flat — bathroom, foyer, kitchen';
-    useCaseContent = `<div class="what-media"><img src="images/usecase/oolaa-smart-mirror-floorplan-bathroom-foyer-kitchen.jpg?v=4" alt="${fpAlt}" loading="lazy"></div>` + p.useCase;
+    useCaseContent = (() => {
+      const rooms = ['bathroom','foyer','kitchen'];
+      const pos = { bathroom: 'left:15%;top:65.3%', foyer: 'left:56%;top:71%', kitchen: 'left:84.3%;top:65.7%' };
+      const fpBtns = rooms.map(r => `<button class="fp-btn" style="${pos[r]}" onclick="p5OpenRoom('${r}')">${data.fpRooms[r].label}</button>`).join('');
+      return `<div class="what-media"><div class="fp-wrap"><img src="images/usecase/oolaa-smart-mirror-floorplan-bathroom-foyer-kitchen.jpg?v=4" alt="${fpAlt}" loading="lazy">${fpBtns}</div></div>` + p.useCase;
+    })();
   }
   const boxes = [
     { n: '1', g: 'p5-b1', w: 'p5-p1', t: data.boxWhat, s: '', c: whatContent },
@@ -2983,9 +3010,11 @@ function p5OpenFull(bi) {
   content = content.replace(/preload="none"/g, 'preload="auto"');
   // 全屏標題：What 用完整問句，其他照舊
   const fvTitle = (bi === 0) ? `${b.n}. What is a Smart Mirror` : `${b.n}. ${b.t}`;
+  const fvSub = b.s ? `<div class="p5-fv-sub">${b.s}</div>` : '';
   fv.innerHTML = `
     <button class="p5-fv-back" onclick="p5CloseFull()">← ${data.boxBack}</button>
     <div class="p5-fv-title">${fvTitle}</div>
+    ${fvSub}
     <div class="p5-fv-body">${content}</div>`;
   grid.style.display = 'none';
   fv.classList.add('active');
@@ -3000,6 +3029,26 @@ function p5CloseFull() {
   fv.classList.remove('active');
   fv.innerHTML = '';
   grid.style.display = '';
+}
+
+// 平面圖房間掣 → 房間放大頁（2026-10-12）：顯示該房間喺新樓盤嘅智能鏡應用
+function p5OpenRoom(room) {
+  const data = window._p5data;
+  const r = data && data.fpRooms && data.fpRooms[room];
+  if (!r) return;
+  const grid = document.getElementById('p5Grid');
+  const fv = document.getElementById('p5Fullview');
+  if (!grid || !fv) return;
+  const photos = (room === 'bathroom' ? (data.whereThumbs || []).slice(0, 6) : []).map(t =>
+    `<a href="${t.src}" target="_blank" rel="noopener"><img src="${t.src}" alt="${t.alt}" loading="lazy"></a>`
+  ).join('');
+  fv.innerHTML = `
+    <button class="p5-fv-back" onclick="p5OpenFull(1)">${r.back}</button>
+    <div class="p5-fv-title">${r.title}</div>
+    <div class="p5-fv-body"><p>${r.text}</p>${photos ? `<div class="where-thumb-strip">${photos}</div>` : ''}</div>`;
+  grid.style.display = 'none';
+  fv.classList.add('active');
+  document.querySelector('.modal-content').scrollTop = 0;
 }
 
 // 舊 inline 展開已停用（轉咗全屏視圖）
