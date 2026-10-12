@@ -1350,7 +1350,7 @@ footer {
 /* 平面圖可撳房間掣（2026-10-12）：掣直接冚住圖入面嘅 3D 綠掣 */
 .fp-wrap { position:relative; container-type:inline-size; }
 .fp-wrap > img { display:block; width:100%; height:auto; }
-.fp-btn { position:absolute; transform:translate(-50%,-50%); font-size:3.3cqw; font-weight:700; color:#fff; background:linear-gradient(180deg,#55cf55 0%,#22a522 55%,#177f17 100%); border:.35cqw solid rgba(255,255,255,.55); border-radius:999px; padding:.5em 1.15em; cursor:pointer; white-space:nowrap; font-family:'Inter','PingFang TC','PingFang SC','Noto Sans TC',sans-serif; box-shadow:0 .2em .6em rgba(0,0,0,.45), inset 0 .1em .2em rgba(255,255,255,.55); text-shadow:0 .06em .12em rgba(0,0,0,.45); }
+.fp-btn { position:absolute; transform:translate(-50%,-50%); font-size:3.6cqw; font-weight:700; color:#fff; background:linear-gradient(180deg,#55cf55 0%,#22a522 55%,#177f17 100%); border:.35cqw solid rgba(255,255,255,.55); border-radius:999px; padding:.55em 1.25em; cursor:pointer; white-space:nowrap; font-family:'Inter','PingFang TC','PingFang SC','Noto Sans TC',sans-serif; box-shadow:0 .2em .6em rgba(0,0,0,.45), inset 0 .1em .2em rgba(255,255,255,.55); text-shadow:0 .06em .12em rgba(0,0,0,.45); }
 .fp-btn:hover { filter:brightness(1.12); }
 .fp-btn:active { transform:translate(-50%,-50%) scale(.96); }
 .p5-fullview .p5-fv-body { font-size:23px; line-height:2.1; color:#D8D0BE; max-width:900px; margin:0 auto; }
@@ -2948,7 +2948,7 @@ function showProductDetail(i) {
       : 'Smart mirror locations in a new residential flat — bathroom, foyer, kitchen';
     useCaseContent = (() => {
       const rooms = ['bathroom','foyer','kitchen'];
-      const pos = { bathroom: 'left:15%;top:65.3%', foyer: 'left:56%;top:71%', kitchen: 'left:84.3%;top:65.7%' };
+      const pos = { bathroom: 'left:15%;top:64.7%', foyer: 'left:56%;top:71%', kitchen: 'left:84.3%;top:65.1%' };
       const fpBtns = rooms.map(r => `<button class="fp-btn" style="${pos[r]}" onclick="p5OpenRoom('${r}')">${data.fpRooms[r].label}</button>`).join('');
       return `<div class="what-media"><div class="fp-wrap"><img src="images/usecase/oolaa-smart-mirror-floorplan-bathroom-foyer-kitchen.jpg?v=4" alt="${fpAlt}" loading="lazy">${fpBtns}</div></div>` + p.useCase;
     })();
