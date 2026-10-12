@@ -2977,9 +2977,11 @@ function showProductDetail(i) {
     }
     // 存起俾全屏視圖用
     b.cta = cta; b.extra = extra;
+    // 3. Why 撳入直接去 About Us 內文（2026-10-12 用戶要求：舊 Why 全屏頁停用）
+    const goFn = (bi === 2) ? `showPageModal('about')` : `p5OpenFull(${bi})`;
     html += `
       <div class="${b.w}">
-        <button class="p5-boxbtn ${b.g}" onclick="p5OpenFull(${bi})">
+        <button class="p5-boxbtn ${b.g}" onclick="${goFn}">
           <span class="p5-left"><span class="p5-num">${b.n}</span><span><span class="p5-lbl">${b.t}</span>${b.s ? `<span class="p5-sub">${b.s}</span>` : ''}</span></span><span class="p5-plus">＋</span>
         </button>
       </div>`;
