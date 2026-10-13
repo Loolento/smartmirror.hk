@@ -2901,7 +2901,7 @@ function showRoleModal(role) {
         <h3 style="color:#D4C89E;font-size:26px;font-weight:400">${data.projectLessonTitle || ''}</h3>
         <p class="project-lesson">${data.projectLesson}</p>
       ` : ''}
-      ${data.whatsappCta ? `<div style="text-align:center;margin:24px 0 8px"><a href="https://wa.me/85294304292" target="_blank" rel="noopener" class="modal-download-btn">${data.whatsappCta}</a></div>` : ''}
+      ${data.whatsappCta ? `<div class="p5-cta-row" style="margin:24px 0 8px"><a href="https://wa.me/85294304292" target="_blank" rel="noopener" class="modal-download-btn">${data.whatsappCta}</a><a href="javascript:void(0)" onclick="openWeChat()" class="modal-download-btn">${data.wechatCta}</a><a href="mailto:info@newleader-hk.com" class="modal-download-btn">${data.emailCta}</a></div>` : ''}
     </div>`;
 
   document.getElementById('mainModal').classList.add('show');
