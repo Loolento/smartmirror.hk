@@ -3,30 +3,32 @@
 
 ## Oolaa by Viewdex
 > Hong Kong factory-direct smart mirror and display solutions for hotels, developers, and design professionals.
+> Market leader in Hong Kong for bathroom TV and kitchen TV.
 
 ## Key Pages
-- Home: https://smartmirror.hk/ — Landing page with role-based navigation
+- Home: https://smartmirror.hk/ — Landing page with role-based navigation (Project / Design / Buying / Consultant teams)
+- Products: https://smartmirror.hk/products.html — 8 product lines
+- About: https://smartmirror.hk/about.html — Company profile
 - Blog: https://smartmirror.hk/blog/ — Journal / Latest News
 
 ## Core Offerings
-- Oolaa Smart Mirror
-- Oolaa Mirror TV
-- Oolaa Bathroom TV
-- Oolaa Outdoor TV
-- Oolaa Kitchen TV
+- Oolaa Smart Mirror — "No Login. Just Cast." zero-login smart mirror TV
+- Oolaa Mirror TV / Bathroom TV / Kitchen TV / Outdoor TV
 - Oola Axis | Oola Kiosk | Oola Ai-Soulmate | Oola Ai-Play Mirror
-- Oola Smart Bath Panel | Oola Smart Kitchen TV | Oolaa Smart Kitchen Linear
+- Oola Smart Bath Panel
 
 ## Who We Serve
-- Project Teams — 30,000+ installations, know what can be done
+- Project Teams — 31,000+ installations, know what can be done
 - Design Teams — Custom mold fabrication, extensive case studies
 - Buying Teams — Factory direct, clear quotations, after-sales included
-- Consultants — Real factory with in-house Software + AR/VR teams
+- Consultants — Real factory with in-house software + AR/VR teams
 
 ## Company
 - Name: Viewdex Limited (brand: Oolaa)
-- Location: Hong Kong | Factory: Shenzhen
-- Contact: +852 9430 4292 (WhatsApp) | WeChat: Joeklee
+- Location: Hong Kong | Factory: Shenzhen (factory-direct, not a trading company)
+- Track record: 20+ years, 31,000+ embedded AV installations across Hong Kong and Macau
+- Warranty: every unit warrantied, up to 39 months
+- Contact: WhatsApp +852 9430 4292 | WeChat: Joeklee | Email: info@newleader-hk.com
 
 ## Downloads
 - Job Reference: https://www.dropbox.com/scl/fi/yjat7fs5b5cjq76zj3lra/Job-reference-of-Oolaa-JSA-200426.pdf?rlkey=gzqff6j8nakmxkh1xuln9gx6x&dl=0
