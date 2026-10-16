@@ -2757,14 +2757,14 @@ const i18n = {
     whereThumbs: [
       { src: "images/where/oolaa-bathroom-smart-mirror-oval-illuminated.jpg", alt: "Oolaa oval illuminated smart mirror – time and weather display", room: "bathroom" },
       { src: "images/where/oolaa-bathroom-smart-mirror-double-vanity.jpg", alt: "Oolaa bathroom smart mirrors – double marble vanity", room: "bathroom" },
-      { src: "images/where/oolaa-bathroom-smart-mirror-starfront-royale.jpg", alt: "Oolaa smart mirror cabinet – Starfront Royale https://www.starfrontroyale.com.hk/html/index_en.html", room: "bathroom" },
-      { src: "images/where/oolaa-bathroom-smart-mirror-knightbridge-1.jpg", alt: "Oolaa bathroom smart mirror – a master bathroom at The Knightbridge, https://www.theknightsbridge.com.hk/en/", room: "bathroom", vid: "x6lVh7e5SA8" },
+      { src: "images/where/oolaa-bathroom-smart-mirror-starfront-royale.jpg", alt: "Oolaa smart mirror cabinet – Starfront Royale https://www.starfrontroyale.com.hk/html/index_en.html", room: "bathroom", plink: "https://www.starfrontroyale.com.hk/html/index_en.html" },
+      { src: "images/where/oolaa-bathroom-smart-mirror-knightbridge-1.jpg", alt: "Oolaa bathroom smart mirror – a master bathroom at The Knightbridge, https://www.theknightsbridge.com.hk/en/", room: "bathroom", vid: "x6lVh7e5SA8", plink: "https://www.theknightsbridge.com.hk/en/" },
       { src: "images/where/oolaa-bathroom-smart-mirror-knightbridge-2.jpg", alt: "Oolaa smart mirror vanity – The Knightbridge shower room", room: "bathroom" },
       { src: "images/where/oolaa-foyer-smart-mirror-lepoint-dashboard.jpg", alt: "Oolaa foyer smart mirror – Le Point, home dashboard display", room: "foyer" },
       { src: "images/where/oolaa-foyer-smart-mirror-lepoint-2.jpg", alt: "Oolaa foyer mirror – Le Point, beside kitchen", room: "foyer" },
-      { src: "images/where/oolaa-foyer-smart-mirror-eight-star-street-1.jpg", alt: "Oolaa full-length mirror – in living room of Eight Star Street by Swire Properties https://www.eightstarstreet.hk/", room: "foyer" },
+      { src: "images/where/oolaa-foyer-smart-mirror-eight-star-street-1.jpg", alt: "Oolaa full-length mirror – in living room of Eight Star Street by Swire Properties https://www.eightstarstreet.hk/", room: "foyer", plink: "https://www.eightstarstreet.hk/" },
       { src: "images/where/oolaa-foyer-smart-mirror-eight-star-street-4.jpg", alt: "Oolaa full-length wall mirror – Eight Star Street", room: "foyer" },
-      { src: "images/where/oolaa-foyer-smart-mirror-eight-star-street-6.jpg", alt: "Oolaa full-length mirror – in foyer of Eight Star Street by Swire Properties https://www.eightstarstreet.hk/", room: "foyer" },
+      { src: "images/where/oolaa-foyer-smart-mirror-eight-star-street-6.jpg", alt: "Oolaa full-length mirror – in foyer of Eight Star Street by Swire Properties https://www.eightstarstreet.hk/", room: "foyer", plink: "https://www.eightstarstreet.hk/" },
       { src: "images/where/oolaa-kitchen-smart-device-ui.jpg", alt: "Oolaa smart kitchen device – app interface with YouTube, Spotify and smart home", room: "kitchen" },
       { src: "images/where/oolaa-kitchen-smart-mirror-under-cabinet.jpg", alt: "Oolaa smart mirror – under-cabinet kitchen installation with time and weather display", room: "kitchen" },
       { src: "images/where/OolaaFitnessMirror1.JPG", alt: "Oolaa fitness mirror – gym training" },
@@ -3422,8 +3422,9 @@ function p5OpenRoom(room) {
   ).join('');
   const photos = ((data.whereThumbs || []).filter(t => t.room === room)).map(t => {
     const cap = t.cap || t.alt || '';
+    const capHtml = t.plink ? cap.split(t.plink).join('<a href="' + t.plink + '" target="_blank" rel="noopener" style="color:#D8C49C;text-decoration:underline">' + t.plink + '</a>') : cap;
     const vidAfter = t.vid ? `<div class=\"what-media\"><iframe src=\"https://www.youtube.com/embed/${t.vid}?rel=0\" loading=\"lazy\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>` : '';
-    return `${cap ? `<p>${cap}</p>` : ''}<div class="what-media"><a href="${t.src}" target="_blank" rel="noopener"><img src="${t.src}" alt="${t.alt}" loading="lazy"></a></div>${vidAfter}`;
+    return `${cap ? `<p>${capHtml}</p>` : ''}<div class="what-media"><a href="${t.src}" target="_blank" rel="noopener"><img src="${t.src}" alt="${t.alt}" loading="lazy"></a></div>${vidAfter}`;
   }).join('');
   fv.innerHTML = `
     <button class="p5-fv-back" onclick="p5OpenFull(1)">${r.back}</button>
