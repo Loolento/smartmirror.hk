@@ -1432,8 +1432,7 @@ footer {
     max-width: 100%;
     width: 100%;
   }
-  .about-product-cta { display: none !important; }
-  .about-job-ref-mobile { display: flex !important; }
+  .about-job-ref-mobile { display: none !important; }
   .about-cta-split > * {
     flex: 1 1 0%;
     min-width: 0;
@@ -1604,28 +1603,43 @@ footer {
   margin-top: 0 !important;
   display: flex; align-items: center; justify-content: center;
 }
+/* About Us 掣加強 3D（2026-10-16 用戶要求：顏色再立體） */
 .about-product-cta,
 .about-cta-split .about-canto-cta,
-.about-job-ref-mobile {
+.about-job-ref-mobile,
+.about-jobref-topbar {
   border-radius: 12px;
-  border: 1px solid rgba(215, 180, 125, 0.55);
-  border-bottom: 4px solid #1c1814;
-  background: linear-gradient(to bottom, #8d7860 0%, #5e4f3d 55%, #39322a 100%);
-  box-shadow: inset 0 2px 0 rgba(255, 242, 214, 0.30), inset 0 -1px 0 rgba(0,0,0,0.35), 0 6px 18px rgba(0,0,0,0.45);
+  border: 1px solid rgba(228, 192, 138, 0.70);
+  border-bottom: 5px solid #0f0c09;
+  background: linear-gradient(to bottom, #b69d78 0%, #7a674c 48%, #322b23 100%);
+  box-shadow: inset 0 2px 0 rgba(255, 247, 226, 0.55), inset 0 -2px 5px rgba(0,0,0,0.40), 0 9px 24px rgba(0,0,0,0.55);
 }
 .about-product-cta:hover,
 .about-cta-split .about-canto-cta:hover,
-.about-job-ref-mobile:hover {
-  background: linear-gradient(to bottom, #9d8870 0%, #6b5a44 55%, #443b2f 100%);
-  box-shadow: inset 0 2px 0 rgba(255, 242, 214, 0.38), inset 0 -1px 0 rgba(0,0,0,0.35), 0 8px 22px rgba(0,0,0,0.50);
+.about-job-ref-mobile:hover,
+.about-jobref-topbar:hover {
+  background: linear-gradient(to bottom, #c6ab85 0%, #887355 48%, #3c332a 100%);
+  box-shadow: inset 0 2px 0 rgba(255, 250, 232, 0.65), inset 0 -2px 5px rgba(0,0,0,0.40), 0 11px 28px rgba(0,0,0,0.60);
 }
 .about-product-cta:active,
 .about-cta-split .about-canto-cta:active,
-.about-job-ref-mobile:active {
-  transform: translateY(3px);
+.about-job-ref-mobile:active,
+.about-jobref-topbar:active {
+  transform: translateY(4px);
   border-bottom-width: 1px;
-  box-shadow: inset 0 2px 0 rgba(255, 242, 214, 0.20), 0 2px 8px rgba(0,0,0,0.40);
+  box-shadow: inset 0 2px 0 rgba(255, 247, 226, 0.30), inset 0 -1px 3px rgba(0,0,0,0.40), 0 2px 8px rgba(0,0,0,0.45);
 }
+/* 頂部 Job Reference 長條掣 */
+.about-jobref-topbar {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  width: 100%; box-sizing: border-box;
+  padding: 17px 20px; margin: 0 0 22px;
+  text-decoration: none; cursor: pointer;
+}
+.about-jobref-topbar .about-canto-section { margin: 0; font-size: 17px; color: var(--gold); }
+.about-jobref-dl { font-size: 14px; color: #EFE3CC; }
+/* Our Products 掣變咗連結：去底線 */
+a.about-product-cta { text-decoration: none; cursor: pointer; }
 
 .role-contact .social-circle { width: 56px; height: 56px; }
 .role-contact .social-circle svg { width: 28px; height: 28px; }
@@ -2103,7 +2117,10 @@ function onPlayerStateChange(event) {
   <div id="about-pre-en">
     <div class="modal-page-content about-canto">
 
-      <!-- P1: Hero -->
+      <!-- P1: Hero --><!-- Job Reference 長條掣（2026-10-16 用戶要求：放 About Us 開頭） -->
+      <a href="https://www.dropbox.com/scl/fi/mwrxg7bord9a2e5ozb558/Job-reference-of-Oolaa-JSA-180926.pdf?rlkey=jfrqj4x08balkwsckayqp7wex&st=59phr0em&dl=0" target="_blank" rel="noopener" class="about-jobref-topbar"><span class="about-canto-section">Job Reference</span><span class="about-jobref-dl">+ Download</span></a>
+
+      <div class="about-row">
       <div class="about-row">
         <img loading="lazy" src="assets/about/p1-hero.jpg" alt="They sell parts. We make art." class="about-row-img">
         <div class="about-row-text">
@@ -2161,18 +2178,9 @@ function onPlayerStateChange(event) {
 
       <!-- CTA -->
       <div class="about-cta-split">
-        <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-job-ref-mobile">
-          <div class="about-canto-section">Job Reference</div>
-          <span class="about-job-ref-link">+ View Projects</span>
+        <a href="products.html" class="about-product-cta">
+          <div class="about-canto-section">Our Products</div>
         </a>
-        <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-job-ref-desktop">
-          <div class="about-canto-section">Job Reference</div>
-          <span class="about-job-ref-link">+ Download</span>
-        </a>
-        <div class="about-product-cta">
-          <div class="about-canto-section">Product</div>
-          <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-product-sub">+ Intro & Download</a>
-        </div>
         <a href="javascript:void(0)" class="about-canto-cta about-pain-cta about-cta-full">🔍 Your pain points, dissected →</a>
       </div>
 
@@ -2181,7 +2189,10 @@ function onPlayerStateChange(event) {
     <div id="about-pre-zh-HK">
     <div class="modal-page-content about-canto">
 
-      <!-- P1: Hero -->
+      <!-- P1: Hero --><!-- Job Reference 長條掣（2026-10-16 用戶要求：放 About Us 開頭） -->
+      <a href="https://www.dropbox.com/scl/fi/mwrxg7bord9a2e5ozb558/Job-reference-of-Oolaa-JSA-180926.pdf?rlkey=jfrqj4x08balkwsckayqp7wex&st=59phr0em&dl=0" target="_blank" rel="noopener" class="about-jobref-topbar"><span class="about-canto-section">Job Reference</span><span class="about-jobref-dl">+ 下載</span></a>
+
+      <div class="about-row">
       <div class="about-row">
         <img loading="lazy" src="assets/about/p1-hero.jpg" alt="廠賣咋。我哋造。" class="about-row-img">
         <div class="about-row-text">
@@ -2239,18 +2250,9 @@ function onPlayerStateChange(event) {
 
       <!-- CTA -->
       <div class="about-cta-split">
-        <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-job-ref-mobile">
-          <div class="about-canto-section">工程參考</div>
-          <span class="about-job-ref-link">+ 查看項目</span>
+        <a href="products.html" class="about-product-cta">
+          <div class="about-canto-section">我哋嘅產品</div>
         </a>
-        <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-job-ref-desktop">
-          <div class="about-canto-section">工程參考</div>
-          <span class="about-job-ref-link">+ 下載</span>
-        </a>
-        <div class="about-product-cta">
-          <div class="about-canto-section">產品</div>
-          <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-product-sub">+ 簡介及下載</a>
-        </div>
         <a href="javascript:void(0)" class="about-canto-cta about-pain-cta about-cta-full">🔍 你嘅痛點，逐一拆解 →</a>
       </div>
 
@@ -2259,7 +2261,10 @@ function onPlayerStateChange(event) {
     <div id="about-pre-zh">
     <div class="modal-page-content about-canto">
 
-      <!-- P1: Hero -->
+      <!-- P1: Hero --><!-- Job Reference 長條掣（2026-10-16 用戶要求：放 About Us 開頭） -->
+      <a href="https://www.dropbox.com/scl/fi/mwrxg7bord9a2e5ozb558/Job-reference-of-Oolaa-JSA-180926.pdf?rlkey=jfrqj4x08balkwsckayqp7wex&st=59phr0em&dl=0" target="_blank" rel="noopener" class="about-jobref-topbar"><span class="about-canto-section">Job Reference</span><span class="about-jobref-dl">+ 下载</span></a>
+
+      <div class="about-row">
       <div class="about-row">
         <img loading="lazy" src="assets/about/p1-hero.jpg" alt="厂卖货。我们造。" class="about-row-img">
         <div class="about-row-text">
@@ -2317,18 +2322,9 @@ function onPlayerStateChange(event) {
 
       <!-- CTA -->
       <div class="about-cta-split">
-        <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-job-ref-mobile">
-          <div class="about-canto-section">工程参考</div>
-          <span class="about-job-ref-link">+ 查看项目</span>
+        <a href="products.html" class="about-product-cta">
+          <div class="about-canto-section">我们的产品</div>
         </a>
-        <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-job-ref-desktop">
-          <div class="about-canto-section">工程参考</div>
-          <span class="about-job-ref-link">+ 下载</span>
-        </a>
-        <div class="about-product-cta">
-          <div class="about-canto-section">产品</div>
-          <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="about-product-sub">+ 简介及下载</a>
-        </div>
         <a href="javascript:void(0)" class="about-canto-cta about-pain-cta about-cta-full">🔍 你的痛点，逐一拆解 →</a>
       </div>
 
