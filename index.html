@@ -1364,6 +1364,8 @@ footer {
 .fp-intro { font-size:23px; line-height:2; color:#D8D0BE; max-width:900px; margin:0 auto 6px; }
 .p5-fullview .p5-fv-body { font-size:23px; line-height:2.1; color:#D8D0BE; max-width:900px; margin:0 auto; }
 .p5-fullview .p5-fv-body strong { color:#EAD9A8; }
+.p5-fullview .scenario-block { margin:26px 0 8px; padding:20px 24px; border-left:3px solid #C9A96A; background:rgba(201,169,106,.07); border-radius:0 10px 10px 0; font-size:21px; line-height:1.9; color:#EDE6D6; }
+.www-tag { display:inline-block; font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#0E1526; background:linear-gradient(180deg,#EAD9A8,#C9A96A); border-radius:4px; padding:2px 7px; margin:0 3px; vertical-align:2px; white-space:nowrap; font-family:Inter,sans-serif; }
 .p5-fullview .what-media { margin:24px 0 28px; }
 .p5-fullview .what-media video { aspect-ratio:16/9; }
 .p5-fullview .where-thumb-strip img { width:160px; height:160px; }
@@ -2771,9 +2773,9 @@ const i18n = {
     ],
     roomVideos: { bathroom: [{ yt: 'nZfBybgK5PQ', cap: '' }, { yt: 'x6lVh7e5SA8', cap: '' }], foyer: [{ yt: 'mT0Io__bCeM', cap: '' }], kitchen: [{ yt: '6wHN9GHMjXs', cap: '' }] },
     fpRooms: {
-      bathroom: { label: "Bathroom", title: "Bathroom", back: "← Floorplan", text: "The bathroom is the smart mirror's home ground. Off, it's a mirror; on, the morning news and weather show through the glass while you get ready. A built-in defogger keeps it clear in steam — and skip touch here: wet hands make it worse, not better. In new developments, developers spec it in the master bathroom as standard: it costs little more than a quality mirror, but it's the feature buyers remember." },
-      foyer: { label: "Foyer", title: "Foyer", back: "← Floorplan", text: "The last mirror you see before you leave home. Check your outfit on the way out; building notices and parcel alerts appear on the glass as you walk past. Pair it with a video doorbell and the foyer mirror doubles as the front-door screen." },
-      kitchen: { label: "Kitchen", title: "Kitchen", back: "← Floorplan", text: "Follow the recipe on screen while your hands stay on the food — no more touching your phone with wet hands. Family calendar, shopping list, morning news: everything lives where the old backsplash mirror used to go." }
+      bathroom: { label: "Bathroom", title: "Bathroom", back: "← Floorplan", text: "The bathroom is the smart mirror's home ground. Off, it's a mirror; on, the morning news and weather show through the glass while you get ready. A built-in defogger keeps it clear in steam — and skip touch here: wet hands make it worse, not better. In new developments, developers spec it in the master bathroom as standard: it costs little more than a quality mirror, but it's the feature buyers remember." , scenario: 'The father <span class="www-tag">who</span>, brushing his teeth in the morning <span class="www-tag">when</span>, tells the <span class="www-tag">where</span> bathroom mirror to switch to the finance channel.' },
+      foyer: { label: "Foyer", title: "Foyer", back: "← Floorplan", text: "The last mirror you see before you leave home. Check your outfit on the way out; building notices and parcel alerts appear on the glass as you walk past. Pair it with a video doorbell and the foyer mirror doubles as the front-door screen." , scenario: 'Their daughter <span class="www-tag">who</span> steps into the <span class="www-tag">where</span> foyer — pitch black <span class="www-tag">when</span> — and tells the smart mirror to turn on every light in the house.' },
+      kitchen: { label: "Kitchen", title: "Kitchen", back: "← Floorplan", text: "Follow the recipe on screen while your hands stay on the food — no more touching your phone with wet hands. Family calendar, shopping list, morning news: everything lives where the old backsplash mirror used to go." , scenario: 'His wife <span class="www-tag">who</span> has wet hands, about to make tiramisu <span class="www-tag">when</span> — so she just tells the <span class="www-tag">where</span> kitchen smart mirror to pull up the YouTube recipe.' }
     },
     fpIntro: "In Hong Kong's new residential developments, Oolaa smart mirrors are typically installed in three locations:",
     boxWhat: "What",
@@ -3080,9 +3082,9 @@ const i18n = {
     ],
     roomVideos: { bathroom: [{ yt: 'nZfBybgK5PQ', cap: '' }, { yt: 'x6lVh7e5SA8', cap: '' }], foyer: [{ yt: 'mT0Io__bCeM', cap: '' }], kitchen: [{ yt: '6wHN9GHMjXs', cap: '' }] },
     fpRooms: {
-      bathroom: { label: "浴室", title: "浴室", back: "← 平面圖", text: "浴室係智能鏡嘅主場。熄咗係塊鏡，著咗就可以一邊梳洗一邊睇新聞天氣。內置除霧功能，沖完涼塊鏡依然清；呢度唔建議用觸控——濕手掂嚟掂去只會更麻煩。新樓盤發展商通常將佢列做主人房浴室標準配置：成本同靚鏡差唔多，但買家記得嘅就係呢樣。" },
-      foyer: { label: "玄關", title: "玄關", back: "← 平面圖", text: "出門口前最後照到嘅塊鏡。出門順手 check 下個 look；行過嗰陣大廈通告、收件提示會喺鏡面彈出嚟。駁埋 video doorbell，玄關鏡即刻變埋門口大屏幕。" },
-      kitchen: { label: "廚房", title: "廚房", back: "← 平面圖", text: "跟住屏幕食譜煮餸，隻手唔使掂電話——濕住手撳手機嘅日子完結。家庭日曆、購物清單、晨早新聞，全部喺以前裝鏡嗰個位搞掂。" }
+      bathroom: { label: "浴室", title: "浴室", back: "← 平面圖", text: "浴室係智能鏡嘅主場。熄咗係塊鏡，著咗就可以一邊梳洗一邊睇新聞天氣。內置除霧功能，沖完涼塊鏡依然清；呢度唔建議用觸控——濕手掂嚟掂去只會更麻煩。新樓盤發展商通常將佢列做主人房浴室標準配置：成本同靚鏡差唔多，但買家記得嘅就係呢樣。" , scenario: '戶主 <span class="www-tag">who</span> 朝早 <span class="www-tag">when</span> 喺廁所 <span class="www-tag">where</span>，一邊刷緊牙，一面用語音叫智能鏡轉台睇財經頻道。' },
+      foyer: { label: "玄關", title: "玄關", back: "← 平面圖", text: "出門口前最後照到嘅塊鏡。出門順手 check 下個 look；行過嗰陣大廈通告、收件提示會喺鏡面彈出嚟。駁埋 video doorbell，玄關鏡即刻變埋門口大屏幕。" , scenario: '屋主 <span class="www-tag">who</span> 返到屋企入 Foyer <span class="www-tag">where</span> 嗰陣 <span class="www-tag">when</span>，因為漆黑一片，透過廣東話語音叫智能鏡開全屋嘅燈。' },
+      kitchen: { label: "廚房", title: "廚房", back: "← 平面圖", text: "跟住屏幕食譜煮餸，隻手唔使掂電話——濕住手撳手機嘅日子完結。家庭日曆、購物清單、晨早新聞，全部喺以前裝鏡嗰個位搞掂。" , scenario: '家庭主婦 <span class="www-tag">who</span> 準備整 Tiramisu 嗰陣 <span class="www-tag">when</span>，喺廚房 <span class="www-tag">where</span> 因為手濕，用廣東話語音叫智能鏡開 YouTube 食譜做。' }
     },
     boxWhat: "What",
     boxUseCase: "Use Case",
@@ -3424,7 +3426,7 @@ function p5OpenRoom(room) {
   fv.innerHTML = `
     <button class="p5-fv-back" onclick="p5OpenFull(1)">${r.back}</button>
     <div class="p5-fv-title">${r.title}</div>
-    <div class="p5-fv-body"><p>${r.text}</p>${photos}${videos}</div>`;
+    <div class="p5-fv-body"><p>${r.text}</p>${r.scenario ? `<div class="scenario-block">${r.scenario}</div>` : ``}${photos}${videos}</div>`;
   grid.style.display = 'none';
   fv.classList.add('active');
   document.querySelector('.modal-content').scrollTop = 0;
