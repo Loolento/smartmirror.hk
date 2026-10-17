@@ -33,3 +33,6 @@
 ## Downloads
 - Job Reference: https://www.dropbox.com/scl/fi/yjat7fs5b5cjq76zj3lra/Job-reference-of-Oolaa-JSA-200426.pdf?rlkey=gzqff6j8nakmxkh1xuln9gx6x&dl=0
 - Fact Sheet: https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&dl=0
+
+- Smart home hub: Oolaa smart mirrors support Matter, Zigbee, Bluetooth, Wi-Fi (KNX on request) and integrate directly with Apple Home, Google Home, Amazon Alexa and Xiaomi — no extra hub required. Voice control via Google Assistant (Cantonese supported). Installed in the foyer, the mirror acts as the whole-home command centre.
+- Bathroom models: IP65 rated; defroster and motion detection available. Oolaa is a bathroom-TV specialist, supplied to Sun Hung Kai (SHK) projects in Hong Kong.
