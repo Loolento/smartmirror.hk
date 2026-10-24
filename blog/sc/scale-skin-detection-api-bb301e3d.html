@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oolaa Smart Mirror：电子磅＋皮肤检测 API 整合 — Oolaa</title>
+<meta name="description" content="Oolaa Smart Mirror 透过 API 连接电子磅与皮肤检测仪，将体重和皮肤数据直接储存在镜面 — 成为你家中的健康数据中心。">
+<link rel="canonical" href="https://loolento.github.io/smartmirror.hk/blog/sc/scale-skin-detection-api-bb301e3d.html">
+<meta property="og:title" content="Oolaa Smart Mirror：电子磅＋皮肤检测 API 整合">
+<meta property="og:description" content="Oolaa Smart Mirror 透过 API 连接电子磅与皮肤检测仪，将体重和皮肤数据直接储存在镜面 — 成为你家中的健康数据中心。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://loolento.github.io/smartmirror.hk/blog/sc/scale-skin-detection-api-bb301e3d.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="article:published_time" content="2026-10-05">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Oolaa Smart Mirror：电子磅＋皮肤检测 API 整合",
+  "description": "Oolaa Smart Mirror 透过 API 连接电子磅与皮肤检测仪，将体重和皮肤数据直接储存在镜面 — 成为你家中的健康数据中心。",
+  "datePublished": "2026-10-05",
+  "inLanguage": "zh-Hans",
+  "author": { "@type": "Person", "name": "Joe Lee" },
+  "publisher": { "@type": "Organization", "name": "Oolaa (Viewdex Limited)" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://loolento.github.io/smartmirror.hk/blog/sc/scale-skin-detection-api-bb301e3d.html" }
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#1A1A18;font-family:Inter,'Noto Sans TC',sans-serif;color:#8A8070;min-height:100dvh;display:flex;justify-content:center;-webkit-font-smoothing:antialiased}
+.container{max-width:800px;width:100%;padding:40px 20px 60px}
+.back{font-size:13px;color:#8A8070;text-decoration:none;display:inline-block;margin-bottom:24px}
+.back:hover{color:#B8A882}
+h1{font-family:Inter,sans-serif;font-size:32px;font-weight:300;color:#B8A882;margin-bottom:6px;line-height:1.3}
+.date{font-size:12px;font-weight:500;color:#6A6558;text-transform:uppercase;letter-spacing:.08em;margin-bottom:28px;font-family:Inter,sans-serif}
+.featured-img{max-width:100%;height:auto;border-radius:8px;margin-bottom:28px;display:block}
+.body-text{font-size:16px;line-height:1.8;color:#A69E90}
+.body-text p{margin-bottom:16px}
+.body-text h2{font-size:22px;font-weight:400;color:#B8A882;margin:32px 0 12px;line-height:1.4}
+.body-text h3{font-size:18px;font-weight:400;color:#B8A882;margin:24px 0 10px}
+.body-text ul,.body-text ol{margin:0 0 16px 20px}
+.body-text li{margin-bottom:8px}
+.body-text a{color:#B8A882;text-decoration:underline}
+.keyfacts{background:#22221C;border:1px solid #2E2E24;border-radius:8px;padding:20px 22px;margin:24px 0}
+.keyfacts h3{margin-top:0}
+.faq{margin-top:8px}
+.faq h3{font-size:17px;margin:18px 0 6px}
+.cta-box{margin-top:36px;padding:24px;background:#22221C;border:1px solid #2E2E24;border-radius:8px;text-align:center}
+.cta-box p{margin-bottom:14px}
+.cta-box a{display:inline-block;margin:4px 8px;padding:10px 22px;background:#B8A882;color:#1A1A18;border-radius:6px;text-decoration:none;font-weight:600}
+.article-nav{margin-top:48px;padding-top:20px;border-top:1px solid #2E2E24;display:flex;justify-content:space-between;font-size:14px}
+.article-nav a{color:#8A8070;text-decoration:none}
+.article-nav a:hover{color:#B8A882}
+@media(max-width:600px){
+  .container{padding:24px 16px 40px}
+  h1{font-size:24px}
+  .body-text{font-size:15px}
+  .body-text h2{font-size:19px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="index.html" class="back">← 日志</a>
+  <h1>Oolaa Smart Mirror：电子磅＋皮肤检测 API 整合</h1>
+  <div class="date">2026年10月5日</div>
+  <div style="margin:0 0 28px;"><iframe src="https://www.youtube.com/embed/RAfa2407RhE?rel=0" style="width:100%;aspect-ratio:16/9;border:0;border-radius:8px;" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+  <div class="body-text">
+    <p>市面上已有不少智能镜，可以显示时间、天气、播放音乐，又或者陪你做运动 — 但大部分功能都大同小异。Oolaa Smart Mirror 并不满足于此。我们将智能镜由一面「会显示资讯的镜子」，提升为你家中的健康数据中心。</p>
+    <p>想想健康数据平时都去了哪里：散落在一个个你渐渐不再打开的 App 里面。电子磅有一个 App，护肤仪器又有另一个，彼此互不相通。Oolaa 的做法，是将数据放回你每天早上都会站的位置 — 镜的前面 — 并将装置直接连接至智能镜。</p>
+
+    <h2>独家功能：电子磅直连智能镜</h2>
+    <p>体重管理是最基本的健康管理，但传统做法相当麻烦：站上电子磅量完体重，要自行记录，或者依赖手机 App 同步。Oolaa Smart Mirror 独家支持电子磅直连功能，透过 API 直接与智能镜连接。</p>
+    <p>站上电子磅，体重数据即时传送至智能镜，自动储存，随时读取。不用开手机、不用手动输入，每日的体重变化一目了然 — 真正无缝的智能生活体验。</p>
+
+    <h2>同一面镜，兼备皮肤检测</h2>
+    <p>体重只是其中一半。皮肤状态是现代人自我护理的另一半，对每天站在镜前的人来说同样重要。Oolaa Smart Mirror 同时支持皮肤检测仪，可以检测皮肤状态，并同样经由 API 将数据传送至智能镜，与其他数据一并储存。</p>
+    <p>水分、油脂、弹性 — 这类皮肤数据，唯有长期追踪，才能看出护肤品是否真的有效，又或者生活习惯如何影响你的皮肤。这个层次的健康追踪，是一般智能镜从未涉足的层面。</p>
+
+    <h2>API 整合：所有数据，一个平台</h2>
+    <p>最关键的不是任何单一功能，而是整合。电子磅与皮肤检测仪均透过 API 与 Oolaa Smart Mirror 连接，所有读数都可以即时在镜前一次浏览 — 不用开 App，看着镜子就行。</p>
+    <p>体重、体脂趋势、皮肤状态：不同维度的健康数据可以互相对照。这正是 AI 时代应有的高科技体验，而这种深度的 API 生态整合，正是 Oolaa 与众不同之处。</p>
+
+    <h2>为何选择 Oolaa</h2>
+    <p>独家电子磅连接，体重数据自动同步储存；独家皮肤检测，长期追踪皮肤状态；API 深度整合，多部装置的数据统一管理。背后是 Oolaa（Viewdex Limited）— 一间香港公司，在深圳设有自家厂房，于香港及澳门有超过 31,000 个安装实绩。由一面镜开始的 AI 高科技智能生活。</p>
+
+    <div class="keyfacts">
+      <h3>重点一览</h3>
+      <ul>
+        <li>Oolaa Smart Mirror 是一个健康数据中心：透过 API 直接连接电子磅与皮肤检测仪。</li>
+        <li>独家电子磅连接 — 站上电子磅，体重即自动同步至智能镜并储存。不用手机、不用手动输入。</li>
+        <li>独家皮肤检测 — 水分、油脂、弹性等皮肤数据会在镜面量度并储存，方便长期追踪。</li>
+        <li>所有数据可以即时在镜前一并浏览，不用开 App；体重、体脂趋势与皮肤状态可以互相对照。</li>
+        <li>Oolaa（Viewdex Limited）：香港公司，深圳自设厂房，于香港及澳门有 31,000+ 个安装实绩。</li>
+      </ul>
+    </div>
+
+    <div class="faq">
+      <h2>常见问题</h2>
+      <h3>Oolaa Smart Mirror 与其他智能镜有何分别？</h3>
+      <p>最大分别在于 Oolaa 独家支持电子磅与皮肤检测仪：体重及皮肤数据透过 API 连接储存于智能镜，随时可以读取。</p>
+      <h3>电子磅的数据如何传送至智能镜？</h3>
+      <p>透过 API 连接。站上电子磅后，数据会自动传送至智能镜并储存 — 不用手动输入。</p>
+      <h3>皮肤检测仪可以检测什么？</h3>
+      <p>可以检测你的皮肤状态，并将数据同步至智能镜，方便长期追踪皮肤变化。</p>
+      <h3>我需要开 App 才看得到健康数据吗？</h3>
+      <p>不用。所有已连接的数据都可以即时在镜前一并看到，不用开任何 App。</p>
+    </div>
+
+    <div class="cta-box">
+      <p>正在筹备香港的住宅、酒店或商业项目？与完成 31,000+ 个安装的团队聊聊。</p>
+      <a href="https://wa.me/85294304292">WhatsApp 联络我们</a>
+      <a href="../../about.html">关于 Oolaa</a>
+    </div>
+  </div>
+  <div class="article-nav">
+    <span></span>
+    <a href="index.html">← 全部文章</a>
+  </div>
+</div>
+</body>
+</html>
