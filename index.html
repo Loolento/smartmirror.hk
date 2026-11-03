@@ -1510,6 +1510,40 @@ footer {
 .p5-fullview .p5-fv-back:hover { border-color:#B8A882; }
 .p5-fullview .p5-fv-title { font-size:34px; color:#EDE6D6; margin-bottom:28px; font-family:Georgia,'Times New Roman',serif; text-align:center; }
 .p5-fullview .p5-fv-sub { text-align:center; color:#D8C49C; font-size:16px; letter-spacing:.14em; margin:-18px 0 26px; }
+
+/* ===== Pain Points 四掣走馬燈（由上而下循環）＋ Blog／Product Lines 掣立體景深 ===== */
+@keyframes roleMarquee {
+  0%, 100% { filter: brightness(1); transform: scale(1);
+    box-shadow: inset 0 1px 0 var(--rb-bevel), inset 0 -1px 0 var(--rb-lip), inset 0 -9px 14px var(--rb-inner), 0 2px 3px var(--rb-drop1), 0 7px 10px var(--rb-drop2), 0 0 0 0 rgba(255,216,130,0); }
+  9% { filter: brightness(1.55); transform: scale(1.025);
+    box-shadow: inset 0 1px 0 var(--rb-bevel), inset 0 -1px 0 var(--rb-lip), inset 0 -9px 14px var(--rb-inner), 0 3px 5px var(--rb-drop1), 0 12px 20px var(--rb-drop2), 0 0 34px 4px rgba(255,216,130,.85), 0 0 12px 2px rgba(255,216,130,.7); }
+  20% { filter: brightness(1); transform: scale(1);
+    box-shadow: inset 0 1px 0 var(--rb-bevel), inset 0 -1px 0 var(--rb-lip), inset 0 -9px 14px var(--rb-inner), 0 2px 3px var(--rb-drop1), 0 7px 10px var(--rb-drop2), 0 0 0 0 rgba(255,216,130,0); }
+}
+.role-row .role-btn { animation: roleMarquee 4.4s ease-in-out infinite; }
+.role-row .role-btn:nth-child(2) { animation-delay: 1.1s; }
+.role-row .role-btn:nth-child(3) { animation-delay: 2.2s; }
+.role-row .role-btn:nth-child(4) { animation-delay: 3.3s; }
+@media (prefers-reduced-motion: reduce) { .role-row .role-btn { animation: none; } }
+.journal-header, .journal-extra-card {
+  background: linear-gradient(180deg, #7d6c46 0%, #57492e 30%, #3d3320 62%, #2a2314 100%);
+  border: 1px solid #6d5a33;
+  box-shadow: inset 0 2px 0 rgba(255,240,200,.45), inset 0 -2px 0 rgba(0,0,0,.55), inset 0 -14px 22px rgba(0,0,0,.38), 0 3px 5px rgba(0,0,0,.55), 0 14px 26px rgba(0,0,0,.5);
+}
+.journal-header:hover, .journal-extra-card:hover {
+  transform: translateY(-2px); filter: brightness(1.09);
+  box-shadow: inset 0 2px 0 rgba(255,240,200,.5), inset 0 -2px 0 rgba(0,0,0,.55), inset 0 -14px 22px rgba(0,0,0,.36), 0 5px 8px rgba(0,0,0,.55), 0 20px 34px rgba(0,0,0,.55);
+}
+.journal-header:active, .journal-extra-card:active {
+  transform: translateY(1px); filter: brightness(.97);
+  box-shadow: inset 0 2px 0 rgba(255,240,200,.35), inset 0 -1px 0 rgba(0,0,0,.5), inset 0 -8px 14px rgba(0,0,0,.4), 0 1px 2px rgba(0,0,0,.55), 0 6px 12px rgba(0,0,0,.45);
+}
+/* ===== 桌面版視頻區放大（填滿中欄） ===== */
+@media (min-width: 1101px) {
+  .video-row { max-width: 600px; }
+  .video-card { max-height: 700px; }
+}
+
 /* 平面圖可撳房間掣（2026-10-12）：掣直接冚住圖入面嘅 3D 綠掣 */
 .fp-wrap { position:relative; container-type:inline-size; }
 .fp-wrap > img { display:block; width:100%; height:auto; }
