@@ -1256,14 +1256,39 @@ footer {
   gap: 10px;
 }
 .product-card-hero {
-  justify-content: center;
-  padding: 26px 24px;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 24px;
 }
 .product-card-hero .product-name {
-  flex: none;
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   padding-right: 0;
   font-size: 25px;
+  cursor: pointer;
+}
+.hero-fs-btn {
+  flex: none;
+  display: inline-block;
+  padding: 13px 20px;
+  background: linear-gradient(to bottom, var(--rb-g1) 0%, var(--rb-g3) 100%);
+  color: var(--rb-text);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid var(--rb-border);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.18), inset 0 -1px 0 rgba(0,0,0,0.3), 0 2px 8px rgba(0,0,0,0.35);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.hero-fs-btn:hover {
+  background: linear-gradient(to bottom, var(--rb-hg1) 0%, var(--rb-hg3) 100%);
 }
 .product-card-uc {
   flex-direction: column;
@@ -1286,6 +1311,8 @@ footer {
   text-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
 @media (max-width: 560px) {
+  .product-card-hero { flex-direction: column; align-items: stretch; gap: 12px; }
+  .hero-fs-btn { text-align: center; }
   .product-card-hero .product-name { font-size: 21px; }
   .product-card-uc .product-name { font-size: 14px; }
   .product-modal { padding: 28px 20px; }
@@ -2812,7 +2839,7 @@ const i18n = {
       "Oolaa Smart Bath Panel",
       "Oolaa Ai School Kiosk"
     ],
-    downloadFactSheet: "Download All Fact Sheets ↓",
+    downloadFactSheet: "Download the fact sheet ↓",
     whereThumbs: [
       { src: "images/where/oolaa-bathroom-smart-mirror-oval-illuminated.jpg", alt: "Oolaa oval illuminated smart mirror – time and weather display", room: "bathroom" },
       { src: "images/where/oolaa-bathroom-smart-mirror-double-vanity.jpg", alt: "Oolaa bathroom smart mirrors – double marble vanity", room: "bathroom" },
@@ -2968,7 +2995,7 @@ const i18n = {
       "Oolaa Smart Bath Panel",
       "Oolaa Ai School Kiosk"
     ],
-    downloadFactSheet: "下载所有产品规格 ↓",
+    downloadFactSheet: "下载 Fact Sheet ↓",
     whereThumbs: [
       { src: "images/where/oolaa-bathroom-smart-mirror-oval-illuminated.jpg", alt: "Oolaa 椭圆形灯光智能镜 – 时间天气显示", room: "bathroom" },
       { src: "images/where/oolaa-bathroom-smart-mirror-double-vanity.jpg", alt: "Oolaa 浴室智能镜 – 双盆大理石洗手台", room: "bathroom" },
@@ -3118,7 +3145,7 @@ const i18n = {
       "Oolaa Smart Bath Panel",
       "Oolaa Ai School Kiosk"
     ],
-    downloadFactSheet: "下載所有產品規格 ↓",
+    downloadFactSheet: "下載 Fact Sheet ↓",
     whereThumbs: [
       { src: "images/where/oolaa-bathroom-smart-mirror-oval-illuminated.jpg", alt: "Oolaa 橢圓形燈光智能鏡 – 時間天氣顯示", room: "bathroom" },
       { src: "images/where/oolaa-bathroom-smart-mirror-double-vanity.jpg", alt: "Oolaa 浴室智能鏡 – 雙盆大理石洗手台", room: "bathroom" },
@@ -3312,8 +3339,9 @@ function showPageModal(page) {
     html = `<div class="modal-page-content product-modal">
       <h2>${data.productTitle}</h2>
       <div class="product-grid">
-        <div class="product-card product-card-hero" onclick="showProductDetail(0)">
-          <span class="product-name">${data.productList[0]}</span>
+        <div class="product-card product-card-hero">
+          <span class="product-name" onclick="showProductDetail(0)">${data.productList[0]}</span>
+          <a class="hero-fs-btn" href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" rel="noopener">${data.downloadFactSheet}</a>
         </div>
         <div class="product-grid-2col">
         ${data.productList.map((p, i) => (i === 0 || i === 3) ? '' : `
@@ -3324,7 +3352,7 @@ function showPageModal(page) {
         `).join('')}
         </div>
       </div>
-      <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="modal-download-btn">${data.downloadFactSheet}</a>
+
     </div>`;
   }
 
