@@ -1276,7 +1276,7 @@ footer {
   flex: none;
   display: inline-block;
   padding: 16px 24px;
-  background: linear-gradient(to bottom, var(--rb-g1) 0%, var(--rb-g3) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0) 50%), linear-gradient(to bottom, var(--rb-g1) 0%, var(--rb-g3) 100%);
   color: var(--rb-text);
   text-decoration: none;
   border-radius: 6px;
@@ -1284,13 +1284,12 @@ footer {
   font-size: 16px;
   font-family: 'Inter', sans-serif;
   border: 1px solid var(--rb-border);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.18), inset 0 -1px 0 rgba(0,0,0,0.3), 0 2px 8px rgba(0,0,0,0.35);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), inset 0 -2px 0 rgba(0,0,0,0.45), 0 3px 6px rgba(0,0,0,0.45), 0 10px 20px rgba(0,0,0,0.4);
   transition: all 0.2s;
   white-space: nowrap;
 }
-.hero-fs-btn:hover {
-  background: linear-gradient(to bottom, var(--rb-hg1) 0%, var(--rb-hg3) 100%);
-}
+.hero-fs-btn:hover { background: linear-gradient(180deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0) 50%), linear-gradient(to bottom, var(--rb-hg1) 0%, var(--rb-hg3) 100%); transform: translateY(-1px); }
+.hero-fs-btn:active { transform: translateY(1px); box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), inset 0 2px 6px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.45); }
 
 /* Why 格（2026-11-03）：小標題＋底板規格卡＋UI 片框 */
 .p5-fv-body p { margin: 0 0 10px; }
@@ -1358,32 +1357,50 @@ footer {
   display: flex;
   align-items: center;
   padding: 18px 24px;
-  border-radius: 8px;
-  background: linear-gradient(180deg,
-    #f0e6cc 0%,
-    #d4c89e 15%,
-    #c4b88e 50%,
-    #b4a87e 85%,
-    #a4986e 100%);
+  border: 1px solid #77603a;
+  border-radius: 10px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.14) 46%, rgba(255,255,255,0) 54%),
+    linear-gradient(180deg,
+    #f8efda 0%,
+    #e6d5a8 28%,
+    #d0bc8c 58%,
+    #b3a075 100%);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.5),
-    inset 0 -1px 0 rgba(0,0,0,0.2),
-    0 3px 8px rgba(0,0,0,0.5);
+    inset 0 1px 0 rgba(255,255,255,0.95),
+    inset 0 -2px 0 rgba(94,72,30,0.45),
+    inset 1px 0 0 rgba(255,255,255,0.35),
+    inset -1px 0 0 rgba(94,72,30,0.28),
+    0 2px 4px rgba(0,0,0,0.4),
+    0 12px 24px rgba(0,0,0,0.5);
   transition: all 0.15s;
   cursor: pointer;
 }
 
 .product-card:hover {
-  background: linear-gradient(180deg,
-    #faf4dc 0%,
-    #e4d4a8 15%,
-    #d4c498 50%,
-    #c4b488 85%,
-    #b4a478 100%);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.18) 46%, rgba(255,255,255,0) 54%),
+    linear-gradient(180deg,
+    #fbf3e0 0%,
+    #ecdcae 28%,
+    #d8c491 58%,
+    #bda87c 100%);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.6),
-    inset 0 -1px 0 rgba(0,0,0,0.15),
-    0 4px 12px rgba(0,0,0,0.55);
+    inset 0 1px 0 rgba(255,255,255,1),
+    inset 0 -2px 0 rgba(94,72,30,0.4),
+    inset 1px 0 0 rgba(255,255,255,0.4),
+    inset -1px 0 0 rgba(94,72,30,0.25),
+    0 3px 5px rgba(0,0,0,0.4),
+    0 18px 32px rgba(0,0,0,0.55);
+  transform: translateY(-2px);
+}
+.product-card:active {
+  transform: translateY(1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.7),
+    inset 0 2px 7px rgba(94,72,30,0.45),
+    inset 0 -1px 0 rgba(255,255,255,0.25),
+    0 1px 2px rgba(0,0,0,0.45);
 }
 
 .product-name {
@@ -1429,10 +1446,11 @@ footer {
 .p5-back:hover { border-color:#B8A882; }
 .p5-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:16px; margin-bottom:16px; }
 .p5-grid > div { min-width:0; }
-.p5-boxbtn { border:1px solid rgba(0,0,0,.18); box-shadow:inset 0 1px 0 rgba(255,255,255,.35), 0 3px 8px rgba(0,0,0,.35); cursor:pointer; border-radius:14px; padding:30px 22px; min-height:150px; display:flex; align-items:center; justify-content:space-between; color:#fff; width:100%; text-align:left; font-family:'Inter','PingFang TC','PingFang SC','Noto Sans TC',sans-serif; transition:filter .2s, transform .2s; }
+.p5-boxbtn { border:1px solid #77603a; box-shadow:inset 0 1px 0 rgba(255,255,255,.9), inset 0 16px 22px -12px rgba(255,255,255,.5), inset 0 -14px 20px -10px rgba(60,42,10,.38), inset 0 -2px 0 rgba(94,72,30,.4), 0 2px 4px rgba(0,0,0,.4), 0 12px 24px rgba(0,0,0,.5); cursor:pointer; border-radius:14px; padding:30px 22px; min-height:150px; display:flex; align-items:center; justify-content:space-between; color:#2A1E0E; width:100%; text-align:left; font-family:'Inter','PingFang TC','PingFang SC','Noto Sans TC',sans-serif; transition:filter .2s, transform .2s, box-shadow .2s; }
+.p5-boxbtn:active { transform:translateY(1px); box-shadow:inset 0 1px 0 rgba(255,255,255,.65), inset 0 3px 9px rgba(60,42,10,.5), inset 0 -1px 0 rgba(255,255,255,.25), 0 1px 2px rgba(0,0,0,.45); }
 .p5-boxbtn:hover { filter:brightness(1.1); transform:translateY(-2px); }
 .p5-left { display:flex; align-items:center; gap:16px; }
-.p5-num { width:40px; height:40px; border-radius:50%; flex:none; background:rgba(0,0,0,.28); color:#fff; font-size:17px; font-weight:700; display:flex; align-items:center; justify-content:center; }
+.p5-num { width:40px; height:40px; border-radius:50%; flex:none; background:#3A2C17; color:#F3E9CF; font-size:17px; font-weight:700; display:flex; align-items:center; justify-content:center; box-shadow:inset 0 1px 0 rgba(255,255,255,.35), 0 2px 5px rgba(0,0,0,.35); }
 .p5-lbl { font-size:20px; font-weight:600; letter-spacing:.02em; }
 .p5-sub { display:block; font-size:13px; font-weight:400; opacity:.85; margin-top:6px; letter-spacing:.08em; }
 .p5-plus { font-size:30px; font-weight:400; line-height:1; transition:transform .25s; flex:none; }
@@ -2900,7 +2918,7 @@ const i18n = {
       { src: "images/where/OolaaFitnessMirror2.JPG", alt: "Oolaa fitness mirror – treadmill workout" },
       { src: "images/where/OolaaMakeUpMirror.JPG", alt: "Oolaa makeup mirror – 75 degree stand" }
     ],
-    roomVideos: { bathroom: [{ yt: 'nZfBybgK5PQ', cap: '' }], foyer: [{ yt: 'mT0Io__bCeM', cap: '' }], kitchen: [{ yt: 'TLn7nA5wEe0', cap: 'Scenario \u2014 Housewife uses the Oolaa Kitchen Device: watch recipes on YouTube, countdown timer by voice control, watch TV apps while cooking' }, { yt: 'mvBPkgbYZlA', cap: 'Oolaa Kitchen Device can be installed under Wall Unit' }, { yt: 'L6xXeZsf3Zc', cap: 'Oolaa Kitchen Device can be installed on Wall Unit or Tall Unit' }, { yt: 'd_Z4uCBREB0', cap: 'Oolaa Kitchen Device can be installed on the Midway Unit' }] },
+    roomVideos: { bathroom: [{ yt: 'nZfBybgK5PQ', cap: '' }], foyer: [{ yt: 'mT0Io__bCeM', cap: '' }], kitchen: [{ yt: 'mvBPkgbYZlA', cap: 'Oolaa Kitchen Device can be installed under Wall Unit' }, { yt: 'TLn7nA5wEe0', cap: 'Scenario \u2014 Housewife uses the Oolaa Kitchen Device: watch recipes on YouTube, countdown timer by voice control, watch TV apps while cooking' }, { yt: 'L6xXeZsf3Zc', cap: 'Oolaa Kitchen Device can be installed on Wall Unit or Tall Unit' }, { yt: 'd_Z4uCBREB0', cap: 'Oolaa Kitchen Device can be installed on the Midway Unit' }] },
     fpRooms: {
       bathroom: { label: "Bathroom", title: "Bathroom", back: "← Floorplan", text: "The bathroom is the smart mirror's home ground. Off, it's a mirror; on, the morning news and weather show through the glass while you get ready. A built-in defogger keeps it clear in steam — and skip touch here: wet hands make it worse, not better. In new developments, developers spec it in the master bathroom as standard: it costs little more than a quality mirror, but it's the feature buyers remember." , scenario: 'The father <span class="www-tag">who</span>, brushing his teeth in the morning <span class="www-tag">when</span>, tells the <span class="www-tag">where</span> bathroom mirror to switch to the finance channel.' },
       foyer: { label: "Foyer", title: "Foyer", back: "← Floorplan", text: "The last mirror you see before you leave home — and your whole-home command centre. Check your outfit on the way out; building notices and parcel alerts appear on the glass as you walk past. Tell it in Cantonese (via Google Assistant) to switch off every light and set the air-con as you head out. It speaks Matter, Zigbee, Bluetooth and Wi-Fi, so it connects straight to Apple Home, Google Home, Alexa or Xiaomi — no extra hub needed. Pair it with a video doorbell and the foyer mirror doubles as the front-door screen." , scenario: 'Their daughter <span class="www-tag">who</span> steps into the <span class="www-tag">where</span> foyer — pitch black <span class="www-tag">when</span> — and tells the smart mirror to turn on every light in the house.' },
@@ -3054,7 +3072,7 @@ const i18n = {
       { src: "images/where/OolaaFitnessMirror2.JPG", alt: "Oolaa 健身镜 – 跑步机训练" },
       { src: "images/where/OolaaMakeUpMirror.JPG", alt: "Oolaa 化妆镜 – 75 度支架" }
     ],
-    roomVideos: { bathroom: [{ yt: 'nZfBybgK5PQ', cap: '' }], foyer: [{ yt: 'mT0Io__bCeM', cap: '' }], kitchen: [{ yt: 'TLn7nA5wEe0', cap: 'Scenario \u2014 Housewife uses the Oolaa Kitchen Device: watch recipes on YouTube, countdown timer by voice control, watch TV apps while cooking' }, { yt: 'mvBPkgbYZlA', cap: 'Oolaa Kitchen Device can be installed under Wall Unit' }, { yt: 'L6xXeZsf3Zc', cap: 'Oolaa Kitchen Device can be installed on Wall Unit or Tall Unit' }, { yt: 'd_Z4uCBREB0', cap: 'Oolaa Kitchen Device can be installed on the Midway Unit' }] },
+    roomVideos: { bathroom: [{ yt: 'nZfBybgK5PQ', cap: '' }], foyer: [{ yt: 'mT0Io__bCeM', cap: '' }], kitchen: [{ yt: 'mvBPkgbYZlA', cap: 'Oolaa Kitchen Device can be installed under Wall Unit' }, { yt: 'TLn7nA5wEe0', cap: 'Scenario \u2014 Housewife uses the Oolaa Kitchen Device: watch recipes on YouTube, countdown timer by voice control, watch TV apps while cooking' }, { yt: 'L6xXeZsf3Zc', cap: 'Oolaa Kitchen Device can be installed on Wall Unit or Tall Unit' }, { yt: 'd_Z4uCBREB0', cap: 'Oolaa Kitchen Device can be installed on the Midway Unit' }] },
     fpRooms: {
       bathroom: { label: "浴室", title: "浴室", back: "← 平面图", text: "浴室是智能镜的主场。关闭时是镜子，开启后可以一边洗漱一边看新闻天气。内置除雾功能，洗完澡镜面依然清晰；这里不建议用触控——湿手操作只会更麻烦。新楼盘开发商通常将其列为主卧浴室的标准配置：成本和优质镜子差不多，但买家记住的就是它。" },
       foyer: { label: "玄关", title: "玄关", back: "← 平面图", text: "出门前最后照到的镜子。出门顺手检查仪容；走过时大厦通知、收件提醒会在镜面弹出。接上可视门铃，玄关镜立刻变成门口大屏幕。" },
@@ -3204,7 +3222,7 @@ const i18n = {
       { src: "images/where/OolaaFitnessMirror2.JPG", alt: "Oolaa 健身鏡 – 跑步機訓練" },
       { src: "images/where/OolaaMakeUpMirror.JPG", alt: "Oolaa 化妝鏡 – 75 度支架" }
     ],
-    roomVideos: { bathroom: [{ yt: 'nZfBybgK5PQ', cap: '' }], foyer: [{ yt: 'mT0Io__bCeM', cap: '' }], kitchen: [{ yt: 'TLn7nA5wEe0', cap: 'Scenario \u2014 Housewife uses the Oolaa Kitchen Device: watch recipes on YouTube, countdown timer by voice control, watch TV apps while cooking' }, { yt: 'mvBPkgbYZlA', cap: 'Oolaa Kitchen Device can be installed under Wall Unit' }, { yt: 'L6xXeZsf3Zc', cap: 'Oolaa Kitchen Device can be installed on Wall Unit or Tall Unit' }, { yt: 'd_Z4uCBREB0', cap: 'Oolaa Kitchen Device can be installed on the Midway Unit' }] },
+    roomVideos: { bathroom: [{ yt: 'nZfBybgK5PQ', cap: '' }], foyer: [{ yt: 'mT0Io__bCeM', cap: '' }], kitchen: [{ yt: 'mvBPkgbYZlA', cap: 'Oolaa Kitchen Device can be installed under Wall Unit' }, { yt: 'TLn7nA5wEe0', cap: 'Scenario \u2014 Housewife uses the Oolaa Kitchen Device: watch recipes on YouTube, countdown timer by voice control, watch TV apps while cooking' }, { yt: 'L6xXeZsf3Zc', cap: 'Oolaa Kitchen Device can be installed on Wall Unit or Tall Unit' }, { yt: 'd_Z4uCBREB0', cap: 'Oolaa Kitchen Device can be installed on the Midway Unit' }] },
     fpRooms: {
       bathroom: { label: "浴室", title: "浴室", back: "← 平面圖", text: "浴室係智能鏡嘅主場。熄咗係塊鏡，著咗就可以一邊梳洗一邊睇新聞天氣。內置除霧功能，沖完涼塊鏡依然清；呢度唔建議用觸控——濕手掂嚟掂去只會更麻煩。新樓盤發展商通常將佢列做主人房浴室標準配置：成本同靚鏡差唔多，但買家記得嘅就係呢樣。" , scenario: '戶主 <span class="www-tag">who</span> 朝早 <span class="www-tag">when</span> 喺廁所 <span class="www-tag">where</span>，一邊刷緊牙，一面用語音叫智能鏡轉台睇財經頻道。' },
       foyer: { label: "玄關", title: "玄關", back: "← 平面圖", text: "出門口前最後照到嘅塊鏡。出門順手 check 下個 look；行過嗰陣大廈通告、收件提示會喺鏡面彈出嚟。駁埋 video doorbell，玄關鏡即刻變埋門口大屏幕。" , scenario: '屋主 <span class="www-tag">who</span> 返到屋企入 Foyer <span class="www-tag">where</span> 嗰陣 <span class="www-tag">when</span>，因為漆黑一片，透過廣東話語音叫智能鏡開全屋嘅燈。' },
