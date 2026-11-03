@@ -3697,12 +3697,12 @@ function p5OpenRoom(room) {
   const fv = document.getElementById('p5Fullview');
   if (!grid || !fv) return;
   const videos = ((data.roomVideos && data.roomVideos[room]) || []).map(v =>
-    `${v.cap ? `<p>${v.cap}</p>` : ''}<div class="what-media"><iframe src="https://www.youtube.com/embed/${v.yt}?rel=0" title="${v.cap || r.title}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
+    `${v.cap ? `<p>${v.cap}</p>` : ''}<div class="what-media"><iframe src="https://www.youtube.com/embed/${v.yt}?rel=0&autoplay=1&mute=1&loop=1&playsinline=1&enablejsapi=1&playlist=${v.yt}" title="${v.cap || r.title}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
   ).join('');
   const photos = ((data.whereThumbs || []).filter(t => t.room === room)).map(t => {
     const cap = t.cap || t.alt || '';
     const capHtml = t.plink ? cap.split(t.plink).join('<a href="' + t.plink + '" target="_blank" rel="noopener" style="color:#D8C49C;text-decoration:underline">' + t.plink + '</a>') : cap;
-    const vidAfter = t.vid ? `<div class=\"what-media\"><iframe src=\"https://www.youtube.com/embed/${t.vid}?rel=0\" loading=\"lazy\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>` : '';
+    const vidAfter = t.vid ? `<div class=\"what-media\"><iframe src=\"https://www.youtube.com/embed/${t.vid}?rel=0&autoplay=1&mute=1&loop=1&playsinline=1&enablejsapi=1&playlist=${t.vid}\" loading=\"lazy\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>` : '';
     return `${cap ? `<p>${capHtml}</p>` : ''}<div class="what-media"><a href="${t.src}" target="_blank" rel="noopener"><img src="${t.src}" alt="${t.alt}" loading="lazy"></a></div>${vidAfter}`;
   }).join('');
   fv.innerHTML = `
