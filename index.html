@@ -1540,6 +1540,10 @@ footer {
 .p5-talk { text-align: center; }
 .p5-talk-label { font-size: 19px; font-weight: 600; letter-spacing: .14em; color: #d8c491; margin-bottom: 16px; }
 .p5-talk-btns { display: flex; gap: 24px; justify-content: center; }
+.social-circle { animation: talkPulse 1.9s ease-in-out infinite; }
+.social-circle::before { content: ''; position: absolute; inset: -6px; border-radius: 50%; background: conic-gradient(from 0deg, transparent 0deg, rgba(255,222,130,.95) 40deg, #ffffff 60deg, rgba(255,222,130,.95) 80deg, transparent 130deg, transparent 200deg, rgba(255,222,130,.85) 250deg, transparent 300deg); -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 5px)); mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 5px)); animation: talkSpin 3.4s linear infinite; pointer-events: none; }
+.social-btns .social-circle:nth-child(2), .role-contact .social-circle:nth-child(2) { animation-delay: .63s; }
+.social-btns .social-circle:nth-child(3), .role-contact .social-circle:nth-child(3) { animation-delay: 1.26s; }
 .p5-cta-row .social-circle { width: 68px; height: 68px; position: relative; animation: talkPulse 1.9s ease-in-out infinite; }
 .p5-cta-row .social-circle svg { width: 34px; height: 34px; position: relative; z-index: 1; }
 .p5-cta-row .social-circle:nth-child(2) { animation-delay: .63s; }
@@ -1547,7 +1551,7 @@ footer {
 .p5-cta-row .social-circle::before { content: ''; position: absolute; inset: -6px; border-radius: 50%; background: conic-gradient(from 0deg, transparent 0deg, rgba(255,222,130,.95) 40deg, #ffffff 60deg, rgba(255,222,130,.95) 80deg, transparent 130deg, transparent 200deg, rgba(255,222,130,.85) 250deg, transparent 300deg); -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 5px)); mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 5px)); animation: talkSpin 3.4s linear infinite; pointer-events: none; }
 @keyframes talkSpin { to { transform: rotate(360deg); } }
 @keyframes talkPulse { 0%, 100% { transform: scale(1); box-shadow: 0 5px 16px var(--sc-shadow1), 0 2px 5px var(--sc-shadow2), inset 0 1px 0 var(--sc-bevel), inset 0 -3px 5px var(--sc-inner), 0 0 0 0 rgba(255,210,110,0); } 50% { transform: scale(1.06); box-shadow: 0 8px 22px var(--sc-shadow1), 0 3px 8px var(--sc-shadow2), inset 0 1px 0 var(--sc-bevel), inset 0 -3px 5px var(--sc-inner), 0 0 26px 6px rgba(255,210,110,.55); } }
-@media (prefers-reduced-motion: reduce) { .p5-cta-row .social-circle, .p5-cta-row .social-circle::before { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .social-circle, .social-circle::before { animation: none; } }
 @media (max-width: 860px) {
   .p5-fullview .p5-fv-title { font-size:26px; }
   .p5-fullview .p5-fv-body { font-size:17px; }
