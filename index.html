@@ -1252,7 +1252,7 @@ footer {
 }
 .product-grid-2col {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 10px;
 }
 .product-card-hero {
@@ -1288,6 +1288,7 @@ footer {
 @media (max-width: 560px) {
   .product-card-hero .product-name { font-size: 21px; }
   .product-card-uc .product-name { font-size: 14px; }
+  .product-modal { padding: 28px 20px; }
 }
 
 .product-card {
