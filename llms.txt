@@ -28,11 +28,11 @@
 - Location: Hong Kong | Factory: Shenzhen (factory-direct, not a trading company)
 - Track record: 20+ years, 31,000+ embedded AV installations across Hong Kong and Macau
 - Warranty: every unit warrantied, up to 39 months
-- Contact: WhatsApp +852 9430 4292 | WeChat: Joeklee | Email: info@newleader-hk.com
+- Contact: WhatsApp +852 9430 4292 | WeChat: joeklee | Email: info@newleader-hk.com
 
 ## Downloads
-- Job Reference: https://www.dropbox.com/scl/fi/yjat7fs5b5cjq76zj3lra/Job-reference-of-Oolaa-JSA-200426.pdf?rlkey=gzqff6j8nakmxkh1xuln9gx6x&dl=0
-- Fact Sheet: https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&dl=0
+- Job Reference: https://www.dropbox.com/scl/fo/e0fofe9tb9w6c831an9un/AAWkcEjJNSPYBRAcVIuC5RU?dl=0&e=1&preview=Job+reference+of+Oolaa+%26+JSA+(180926).pdf&rlkey=c7ehltmfr4xd5q0rhfh4r9ylm
+- Fact Sheet: https://www.dropbox.com/scl/fo/qe88vmn2rwdtsdf4eqxdm/ALL8_gsrGRYwZVTZEsVXGoM?dl=0&e=1&preview=Oolaa+SmartMirror+Overview+(210822).pdf&rlkey=w55zf8fukdsg00f5amu64exn5
 
 - Smart home hub: Oolaa smart mirrors support Matter, Zigbee, Bluetooth, Wi-Fi (KNX on request) and integrate directly with Apple Home, Google Home, Amazon Alexa and Xiaomi — no extra hub required. Voice control via Google Assistant (Cantonese supported). Installed in the foyer, the mirror acts as the whole-home command centre.
 - Bathroom models: IP65 rated; defroster and motion detection available. Oolaa is a bathroom-TV specialist, supplied to Sun Hung Kai (SHK) projects in Hong Kong.
