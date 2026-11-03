@@ -1250,6 +1250,45 @@ footer {
   gap: 10px;
   margin: 24px 0;
 }
+.product-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.product-card-hero {
+  justify-content: center;
+  padding: 26px 24px;
+}
+.product-card-hero .product-name {
+  flex: none;
+  text-align: center;
+  padding-right: 0;
+  font-size: 25px;
+}
+.product-card-uc {
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  text-align: center;
+  padding: 16px 12px;
+}
+.product-card-uc .product-name {
+  flex: none;
+  text-align: center;
+  padding-right: 0;
+  font-size: 16px;
+}
+.product-uc {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.75);
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+@media (max-width: 560px) {
+  .product-card-hero .product-name { font-size: 21px; }
+  .product-card-uc .product-name { font-size: 14px; }
+}
 
 .product-card {
   display: flex;
@@ -3272,13 +3311,17 @@ function showPageModal(page) {
     html = `<div class="modal-page-content product-modal">
       <h2>${data.productTitle}</h2>
       <div class="product-grid">
-        ${data.productList.map((p, i) => `
-          <div class="product-card" onclick="showProductDetail(${i})">
+        <div class="product-card product-card-hero" onclick="showProductDetail(0)">
+          <span class="product-name">${data.productList[0]}</span>
+        </div>
+        <div class="product-grid-2col">
+        ${data.productList.map((p, i) => (i === 0 || i === 3) ? '' : `
+          <div class="product-card product-card-uc" onclick="showProductDetail(${i})">
             <span class="product-name">${p}</span>
-            <span class="product-sep">|</span>
-            <span class="product-tag">${data.productTag}</span>
+            <span class="product-uc">(under construction)</span>
           </div>
         `).join('')}
+        </div>
       </div>
       <a href="https://www.dropbox.com/scl/fi/enn0iflru4teaj5sq2xym/Oolaa-SmartMirror-Overview-210822.pdf?rlkey=vhevtjjm800wnan2ul5idg14n&e=1&dl=0" target="_blank" class="modal-download-btn">${data.downloadFactSheet}</a>
     </div>`;
