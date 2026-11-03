@@ -1560,6 +1560,12 @@ footer {
 .about-below-video h3 { font-size: 34px; margin: 0; }
 .about-below-sub { margin-top: 0; margin-left: auto; font-size: 15px; white-space: nowrap; text-align: right; }
 
+
+/* ===== 手機版 Scenario C 兩片改上下排（打直屏幕） ===== */
+@media (max-width: 700px) {
+  .scen-vids { grid-template-columns: 1fr; }
+}
+
 /* 平面圖可撳房間掣（2026-10-12）：掣直接冚住圖入面嘅 3D 綠掣 */
 .fp-wrap { position:relative; container-type:inline-size; }
 .fp-wrap > img { display:block; width:100%; height:auto; }
