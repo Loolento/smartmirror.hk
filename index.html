@@ -3907,6 +3907,8 @@ function openWeChat() {
   }).observe(document.documentElement, { childList: true, subtree: true });
   if (document.readyState !== 'loading') scan();
   else document.addEventListener('DOMContentLoaded', function () { scan(); });
+  var _n = 0;
+  var _iv = setInterval(function () { scan(); if (++_n >= 8) clearInterval(_iv); }, 2000);
 })();
 </script>
 </body>
