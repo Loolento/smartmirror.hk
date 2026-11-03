@@ -3925,5 +3925,9 @@ function openWeChat() {
   var _iv = setInterval(function () { scan(); if (++_n >= 8) clearInterval(_iv); }, 2000);
 })();
 </script>
+
+<script>
+(function(){function oah(){var h=location.hash;if(h.indexOf('#about')!==0)return;try{if(h==='#about-tc'&&typeof setLanguage==='function')setLanguage('en');else if(h==='#about-sc'&&typeof setLanguage==='function')setLanguage('zh-HK');if(typeof showPageModal==='function')showPageModal('about');}catch(e){}}window.addEventListener('hashchange',oah);if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',oah);else oah();})();
+</script>
 </body>
 </html>
