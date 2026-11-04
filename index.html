@@ -2187,6 +2187,38 @@ a.about-product-cta { text-decoration: none; cursor: pointer; }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>/* journal-gateway-fix: visual-first journal cards + gateway rebalance */
+.journal-section .article-card{display:flex;gap:12px;align-items:center;padding:10px 12px}
+.journal-section .jc-text{flex:1;min-width:0}
+.journal-section .article-title{font-size:15px;font-weight:500;margin-top:3px}
+.journal-section .article-desc{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:3px}
+.jc-media{position:relative;width:44%;flex:none;aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid var(--article-border);background:#1A1815}
+.jc-media img{width:100%;height:100%;object-fit:cover;display:block}
+.jc-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:30px;height:30px;border-radius:50%;background:rgba(0,0,0,.55);color:#C9A962;display:flex;align-items:center;justify-content:center;font-size:11px;padding-left:2px;pointer-events:none}
+.journal-header{padding:13px 16px;min-height:0}
+.journal-header h2{font-size:20px}
+.journal-header .journal-sub,.journal-sub{font-size:13px}
+.journal-extra-card{padding:13px 16px;min-height:0}
+.journal-extra-card h3{font-size:20px}
+.journal-extra-sub{font-size:13px}
+.about-below-video{padding:13px 20px;min-height:0}
+.about-below-video h3{font-size:20px}
+.about-below-sub{font-size:13px}
+.left-contact .social-circle{width:76px;height:76px}
+.left-contact .social-circle svg{width:38px;height:38px}
+@media (max-width: 860px) {
+  .bottom-section{gap:12px}
+  .bottom-cards{gap:12px}
+  .bottom-card{flex:1 1 0;min-height:68px;padding:12px 14px}
+  .bottom-card h3{font-size:20px}
+  .bottom-card-sub{font-size:12px;margin-top:2px}
+  .bottom-contact{gap:12px;padding-bottom:0;justify-content:flex-start}
+  .bottom-contact .talk-text{font-size:14px}
+  .bottom-contact .social-btns{gap:12px}
+  .bottom-contact .social-circle{width:64px;height:64px}
+  .bottom-contact .social-circle svg{width:32px;height:32px}
+}
+</style>
 <style>/* THEME-FINAL-LOCK */
 .hero h1.hero-theme { font-size: 11px !important; font-weight: 300 !important; }
 @media (max-width: 640px) {
@@ -2314,19 +2346,28 @@ function onPlayerStateChange(event) {
     </div>
     <div class="article-row">
       <a data-post="smart-kitchen-device-0d28ae3b.html" href="blog/smart-kitchen-device-0d28ae3b.html" class="article-card article-mobile-hide" style="text-decoration:none;">
+        <div class="jc-text">
         <div class="article-date" data-i18n="jc1date">Oct 2026</div>
         <div class="article-title" data-i18n="jc1title">Oolaa Smart Kitchen Device: Built for the Kitchen</div>
         <div class="article-desc" data-i18n="jc1desc">A smart device designed from day one for the kitchen, shaped around the real cooking flow.</div>
+      </div>
+        <div class="jc-media"><img src="https://i.ytimg.com/vi/Ozvil9YB8yU/hqdefault.jpg" alt="" loading="lazy"><span class="jc-play">&#9654;</span></div>
       </a>
       <a data-post="cantonese-voice-assistant-9ed03c17.html" href="blog/cantonese-voice-assistant-9ed03c17.html" class="article-card article-mobile-hide" style="text-decoration:none;">
+        <div class="jc-text">
         <div class="article-date" data-i18n="jc2date">Oct 2026</div>
         <div class="article-title" data-i18n="jc2title">Oolaa Smart Mirror with Cantonese Voice Assistant</div>
         <div class="article-desc" data-i18n="jc2desc">The smart mirror that truly understands Cantonese — weather, schedules and music in your mother tongue.</div>
+      </div>
+        <div class="jc-media"><img src="https://i.ytimg.com/vi/qqPPEKQvooY/hqdefault.jpg" alt="" loading="lazy"><span class="jc-play">&#9654;</span></div>
       </a>
       <a data-post="exclusive-ui-seamless-switch-d7dd9676.html" href="blog/exclusive-ui-seamless-switch-d7dd9676.html" class="article-card article-mobile-hide" style="text-decoration:none;">
+        <div class="jc-text">
         <div class="article-date" data-i18n="jc3date">Oct 2026</div>
         <div class="article-title" data-i18n="jc3title">Oolaa Smart Mirror UI: Seamless Display Switching</div>
         <div class="article-desc" data-i18n="jc3desc">Oolaa's in-house UI ends the mirror-versus-display dilemma — clean reflection, clear content.</div>
+      </div>
+        <div class="jc-media"><img src="https://i.ytimg.com/vi/-ps7M5PLJIo/hqdefault.jpg" alt="" loading="lazy"><span class="jc-play">&#9654;</span></div>
       </a>
     </div>
     <!-- Product card (desktop: right column) -->
