@@ -2300,25 +2300,25 @@ function onPlayerStateChange(event) {
 
   <!-- RIGHT COLUMN: Blog -->
   <section class="journal-section">
-    <div class="journal-header" onclick="location.href='blog/'" style="cursor:pointer">
+    <div class="journal-header" id="journalHeader" onclick="location.href='blog/'" style="cursor:pointer">
         <h2 data-i18n="journal">Blog</h2>
         <span class="journal-sub" data-i18n="latestNews">or Our Latest News</span>
     </div>
     <div class="article-row">
-      <a href="blog/smart-kitchen-device-0d28ae3b.html" class="article-card article-mobile-hide" style="text-decoration:none;">
-        <div class="article-date">Oct 2026</div>
-        <div class="article-title">Oolaa Smart Kitchen Device: Built for the Kitchen</div>
-        <div class="article-desc">A smart device designed from day one for the kitchen, shaped around the real cooking flow.</div>
+      <a data-post="smart-kitchen-device-0d28ae3b.html" href="blog/smart-kitchen-device-0d28ae3b.html" class="article-card article-mobile-hide" style="text-decoration:none;">
+        <div class="article-date" data-i18n="jc1date">Oct 2026</div>
+        <div class="article-title" data-i18n="jc1title">Oolaa Smart Kitchen Device: Built for the Kitchen</div>
+        <div class="article-desc" data-i18n="jc1desc">A smart device designed from day one for the kitchen, shaped around the real cooking flow.</div>
       </a>
-      <a href="blog/cantonese-voice-assistant-9ed03c17.html" class="article-card article-mobile-hide" style="text-decoration:none;">
-        <div class="article-date">Oct 2026</div>
-        <div class="article-title">Oolaa Smart Mirror with Cantonese Voice Assistant</div>
-        <div class="article-desc">The smart mirror that truly understands Cantonese — weather, schedules and music in your mother tongue.</div>
+      <a data-post="cantonese-voice-assistant-9ed03c17.html" href="blog/cantonese-voice-assistant-9ed03c17.html" class="article-card article-mobile-hide" style="text-decoration:none;">
+        <div class="article-date" data-i18n="jc2date">Oct 2026</div>
+        <div class="article-title" data-i18n="jc2title">Oolaa Smart Mirror with Cantonese Voice Assistant</div>
+        <div class="article-desc" data-i18n="jc2desc">The smart mirror that truly understands Cantonese — weather, schedules and music in your mother tongue.</div>
       </a>
-      <a href="blog/exclusive-ui-seamless-switch-d7dd9676.html" class="article-card article-mobile-hide" style="text-decoration:none;">
-        <div class="article-date">Oct 2026</div>
-        <div class="article-title">Oolaa Smart Mirror UI: Seamless Display Switching</div>
-        <div class="article-desc">Oolaa's in-house UI ends the mirror-versus-display dilemma — clean reflection, clear content.</div>
+      <a data-post="exclusive-ui-seamless-switch-d7dd9676.html" href="blog/exclusive-ui-seamless-switch-d7dd9676.html" class="article-card article-mobile-hide" style="text-decoration:none;">
+        <div class="article-date" data-i18n="jc3date">Oct 2026</div>
+        <div class="article-title" data-i18n="jc3title">Oolaa Smart Mirror UI: Seamless Display Switching</div>
+        <div class="article-desc" data-i18n="jc3desc">Oolaa's in-house UI ends the mirror-versus-display dilemma — clean reflection, clear content.</div>
       </a>
     </div>
     <!-- Product card (desktop: right column) -->
@@ -2335,7 +2335,7 @@ function onPlayerStateChange(event) {
 <!-- BOTTOM SECTION — Mobile: 3 cards left + Talk to us right -->
 <div class="bottom-section">
   <div class="bottom-cards">
-    <div class="bottom-card" onclick="location.href='blog/'" style="cursor:pointer">
+    <div class="bottom-card" id="journalBottomCard" onclick="location.href='blog/'" style="cursor:pointer">
       <h3 data-i18n="journal">Blog</h3>
       <span class="bottom-card-sub" data-i18n="latestNews">or Our Latest News</span>
     </div>
@@ -3941,6 +3941,22 @@ function openWeChat() {
 
 <script>
 (function(){function oah(){var h=location.hash;if(h.indexOf('#about')!==0)return;try{if(h==='#about-tc'&&typeof setLanguage==='function')setLanguage('en');else if(h==='#about-sc'&&typeof setLanguage==='function')setLanguage('zh-CN');if(typeof showPageModal==='function')showPageModal('about');}catch(e){}}window.addEventListener('hashchange',oah);if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',oah);else oah();})();
+</script>
+<script>
+// Journal (blog) cards follow the selected language: text keys + links
+Object.assign(i18n.en, { jc1date: "Oct 2026", jc1title: "Oolaa Smart Kitchen Device: Built for the Kitchen", jc1desc: "A smart device designed from day one for the kitchen, shaped around the real cooking flow.", jc2date: "Oct 2026", jc2title: "Oolaa Smart Mirror with Cantonese Voice Assistant", jc2desc: "The smart mirror that truly understands Cantonese \u2014 weather, schedules and music in your mother tongue.", jc3date: "Oct 2026", jc3title: "Oolaa Smart Mirror UI: Seamless Display Switching", jc3desc: "Oolaa's in-house UI ends the mirror-versus-display dilemma \u2014 clean reflection, clear content." });
+Object.assign(i18n["zh-HK"], { jc1date: "2026\u5e7410\u6708", jc1title: "Oolaa Smart Kitchen Device\uff1a\u70ba\u5eda\u623f\u800c\u751f", jc1desc: "\u7531\u7b2c\u4e00\u65e5\u5c31\u70ba\u5eda\u623f\u800c\u8a2d\u8a08\u5605\u667a\u80fd\u88dd\u7f6e\uff0c\u570d\u7e5e\u771f\u6b63\u5605\u716e\u98df\u6d41\u7a0b\u3002", jc2date: "2026\u5e7410\u6708", jc2title: "Oolaa Smart Mirror \u914d\u5099\u5ee3\u6771\u8a71\u8a9e\u97f3\u52a9\u7406", jc2desc: "\u771f\u6b63\u807d\u5f97\u660e\u5ee3\u6771\u8a71\u5605\u667a\u80fd\u93e1 \u2014\u2014 \u5929\u6c23\u3001\u65e5\u7a0b\u540c\u97f3\u6a02\uff0c\u5168\u90e8\u7528\u4f60\u5605\u6bcd\u8a9e\u3002", jc3date: "2026\u5e7410\u6708", jc3title: "Oolaa \u667a\u80fd\u93e1 UI\uff1a\u93e1\u9762\u8207\u5167\u5bb9\u7121\u7e2b\u5207\u63db", jc3desc: "Oolaa \u81ea\u7814 UI \u7d42\u7d50\u93e1\u9762\u8207\u986f\u793a\u5605\u5169\u96e3 \u2014\u2014 \u93e1\u9762\u4e7e\u6de8\uff0c\u5167\u5bb9\u6e05\u6670\u3002" });
+Object.assign(i18n.zh, { jc1date: "2026\u5e7410\u6708", jc1title: "Oolaa Smart Kitchen Device\uff1a\u4e3a\u53a8\u623f\u800c\u751f", jc1desc: "\u7531\u7b2c\u4e00\u5929\u5c31\u4e3a\u53a8\u623f\u800c\u8bbe\u8ba1\u7684\u667a\u80fd\u88c5\u7f6e\uff0c\u56f4\u7ed5\u771f\u6b63\u7684\u716e\u98df\u6d41\u7a0b\u3002", jc2date: "2026\u5e7410\u6708", jc2title: "Oolaa Smart Mirror \u914d\u5907\u5e7f\u4e1c\u8bdd\u8bed\u97f3\u52a9\u7406", jc2desc: "\u771f\u6b63\u542c\u5f97\u61c2\u5e7f\u4e1c\u8bdd\u7684\u667a\u80fd\u955c \u2014\u2014 \u5929\u6c14\u3001\u65e5\u7a0b\u548c\u97f3\u4e50\uff0c\u5168\u90e8\u7528\u4f60\u7684\u6bcd\u8bed\u3002", jc3date: "2026\u5e7410\u6708", jc3title: "Oolaa \u667a\u80fd\u955c UI\uff1a\u955c\u9762\u4e0e\u5185\u5bb9\u65e0\u7f1d\u5207\u6362", jc3desc: "Oolaa \u81ea\u7814 UI \u7ec8\u7ed3\u955c\u9762\u4e0e\u663e\u793a\u7684\u4e24\u96be \u2014\u2014 \u955c\u9762\u5e72\u51c0\uff0c\u5185\u5bb9\u6e05\u6670\u3002" });
+function syncJournalLinks(lang) {
+  var base = lang === 'zh-HK' ? 'blog/tc/' : ((lang === 'zh' || lang === 'zh-CN') ? 'blog/sc/' : 'blog/');
+  document.querySelectorAll('a.article-card[data-post]').forEach(function(a){ a.href = base + a.getAttribute('data-post'); });
+  var go = function(){ location.href = base; };
+  var jh = document.getElementById('journalHeader'); if (jh) jh.onclick = go;
+  var jb = document.getElementById('journalBottomCard'); if (jb) jb.onclick = go;
+}
+var _setLanguageOrig = setLanguage;
+setLanguage = function(lang){ _setLanguageOrig(lang); syncJournalLinks(lang); };
+syncJournalLinks(currentLang);
 </script>
 </body>
 </html>
