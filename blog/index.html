@@ -15,14 +15,27 @@
   .back{font-size:13px;color:#8A8070;text-decoration:none;display:inline-block;margin-bottom:24px}
   .back:hover{color:#B8A882}
   .article-list{display:flex;flex-direction:column;gap:12px}
-  .article-card{background:#22221C;border:1px solid #2E2E24;border-radius:8px;padding:16px 18px;text-decoration:none;color:inherit;transition:all .2s}
-  .article-card:hover{background:#2A2A24;border-color:#3A3A34}
   .article-date{font-size:11px;font-weight:500;color:#6A6558;text-transform:uppercase;letter-spacing:.08em;font-family:Inter,sans-serif}
   .article-title{font-size:17px;font-weight:400;color:#B8A882;margin-top:6px}
   .article-desc{font-size:14px;color:#8A8070;margin-top:4px;line-height:1.5}
   @media (max-width: 600px) {
     .container{padding:24px 16px}
     h1{font-size:24px}
+  }
+
+  .container{max-width:980px}
+  .article-card{display:flex;gap:22px;align-items:stretch;background:#22221C;border:1px solid #2E2E24;border-radius:10px;padding:16px 18px;text-decoration:none;color:inherit;transition:border-color .2s,background .2s}
+  .article-card:hover{background:#2A2A24;border-color:#C9A962}
+  .article-text{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center}
+  .article-media{position:relative;width:300px;flex:none;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid #33302A;background:#1A1815}
+  .article-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+  .article-card:hover .article-media img{transform:scale(1.04)}
+  .play-badge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:rgba(0,0,0,.55);color:#C9A962;display:flex;align-items:center;justify-content:center;font-size:16px;padding-left:3px;pointer-events:none}
+  .article-media.fallback{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#24211C,#1A1815)}
+  .article-media.fallback span{font-family:Inter,sans-serif;font-size:26px;font-weight:300;letter-spacing:.25em;color:#C9A962}
+  @media (max-width: 700px) {
+    .article-card{flex-direction:column;gap:14px}
+    .article-media{width:100%;order:-1}
   }
 </style>
 <link rel="alternate" hreflang="en" href="https://smartmirror.hk/blog/"><link rel="alternate" hreflang="zh-HK" href="https://smartmirror.hk/blog/tc/"><link rel="alternate" hreflang="zh-CN" href="https://smartmirror.hk/blog/sc/"><link rel="alternate" hreflang="x-default" href="https://smartmirror.hk/blog/"></head>
@@ -33,309 +46,492 @@
   <p class="sub">or Our Latest News</p>
   <div class="article-list">
     <a href="smart-kitchen-device-0d28ae3b.html" class="article-card">
-      <div class="article-date">Oct 2026</div>
-      <div class="article-title">Oolaa Smart Kitchen Device: Built for the Kitchen</div>
-      <div class="article-desc">Oolaa's Smart Kitchen Device is a kitchen-focused smart device designed around real cooking flows, backed by 31,000+ installations and a smart home ecosystem.</div>
+      <div class="article-text">
+        <div class="article-date">Oct 2026</div>
+        <div class="article-title">Oolaa Smart Kitchen Device: Built for the Kitchen</div>
+        <div class="article-desc">Oolaa's Smart Kitchen Device is a kitchen-focused smart device designed around real cooking flows, backed by 31,000+ installations and a smart home ecosystem.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/Ozvil9YB8yU/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="cantonese-voice-assistant-9ed03c17.html" class="article-card">
-      <div class="article-date">Oct 2026</div>
-      <div class="article-title">Oolaa Smart Mirror with Cantonese Voice Assistant</div>
-      <div class="article-desc">The Oolaa smart mirror understands Cantonese. Ask about weather, schedules, health data or music in your mother tongue: an assistant that keeps learning.</div>
+      <div class="article-text">
+        <div class="article-date">Oct 2026</div>
+        <div class="article-title">Oolaa Smart Mirror with Cantonese Voice Assistant</div>
+        <div class="article-desc">The Oolaa smart mirror understands Cantonese. Ask about weather, schedules, health data or music in your mother tongue: an assistant that keeps learning.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/qqPPEKQvooY/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="exclusive-ui-seamless-switch-d7dd9676.html" class="article-card">
-      <div class="article-date">Oct 2026</div>
-      <div class="article-title">Oolaa Smart Mirror UI: Seamless Display Switching</div>
-      <div class="article-desc">Oolaa's in-house smart mirror UI ends the display-versus-mirror dilemma: clean reflection for grooming, clear display for content, seamless switching.</div>
+      <div class="article-text">
+        <div class="article-date">Oct 2026</div>
+        <div class="article-title">Oolaa Smart Mirror UI: Seamless Display Switching</div>
+        <div class="article-desc">Oolaa's in-house smart mirror UI ends the display-versus-mirror dilemma: clean reflection for grooming, clear display for content, seamless switching.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/-ps7M5PLJIo/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="scale-skin-detection-api-bb301e3d.html" class="article-card">
-      <div class="article-date">Oct 2026</div>
-      <div class="article-title">Oolaa Smart Mirror: Scale + Skin Detection API</div>
-      <div class="article-desc">Oolaa's smart mirror connects a body scale and skin analyzer via API: weight and skin data sync automatically, display at a glance, need no phone app.</div>
+      <div class="article-text">
+        <div class="article-date">Oct 2026</div>
+        <div class="article-title">Oolaa Smart Mirror: Scale + Skin Detection API</div>
+        <div class="article-desc">Oolaa's smart mirror connects a body scale and skin analyzer via API: weight and skin data sync automatically, display at a glance, need no phone app.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/RAfa2407RhE/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="one-chancery-luxury-service-apartment-c9b7adfc.html" class="article-card">
-      <div class="article-date">Sep 2026</div>
-      <div class="article-title">One Chancery: Oolaa Smart Mirrors in Luxury Suites</div>
-      <div class="article-desc">One Chancery at 1 Chancery Lane, Central by China Resources Land fits every bathroom with Oolaa backlit smart mirrors displaying time, weather and info.</div>
+      <div class="article-text">
+        <div class="article-date">Sep 2026</div>
+        <div class="article-title">One Chancery: Oolaa Smart Mirrors in Luxury Suites</div>
+        <div class="article-desc">One Chancery at 1 Chancery Lane, Central by China Resources Land fits every bathroom with Oolaa backlit smart mirrors displaying time, weather and info.</div>
+      </div>
+      <div class="article-media"><img src="images/24-30937a_ea0fc15cee614477a3a4eae88c6ffa86.jpg" alt="" loading="lazy"></div>
     </a>
     <a href="starfront-royale-bathroom-cabinet-e5fe2893.html" class="article-card">
-      <div class="article-date">Sep 2026</div>
-      <div class="article-title">Starfront Royale: Luxury Smart Mirror Bathroom</div>
-      <div class="article-desc">Oolaa smart mirror brings a luxury smart bathroom to Starfront Royale: matte gold frame, marble vanity, Dyson mount, and iOS plus Google smart home control.</div>
+      <div class="article-text">
+        <div class="article-date">Sep 2026</div>
+        <div class="article-title">Starfront Royale: Luxury Smart Mirror Bathroom</div>
+        <div class="article-desc">Oolaa smart mirror brings a luxury smart bathroom to Starfront Royale: matte gold frame, marble vanity, Dyson mount, and iOS plus Google smart home control.</div>
+      </div>
+      <div class="article-media"><img src="images/11-30937a_90d00f522f6240bcae5d06a5e4485978.jpg" alt="" loading="lazy"></div>
     </a>
     <a href="starfront-royale-bathroom-zh-a1dce432.html" class="article-card">
-      <div class="article-date">Sep 2026</div>
-      <div class="article-title">Starfront Royale Bathrooms Get Oolaa Smart Mirrors</div>
-      <div class="article-desc">Oolaa Smart Mirrors bring integrated bathroom design to Hong Kong's Starfront Royale — matte gold frames, AI features, and iOS plus Google smart home control.</div>
+      <div class="article-text">
+        <div class="article-date">Sep 2026</div>
+        <div class="article-title">Starfront Royale Bathrooms Get Oolaa Smart Mirrors</div>
+        <div class="article-desc">Oolaa Smart Mirrors bring integrated bathroom design to Hong Kong's Starfront Royale — matte gold frames, AI features, and iOS plus Google smart home control.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/DrxAlstZl9k/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="no-login-just-cast-dcf4a5d8.html" class="article-card">
-      <div class="article-date">Jun 2026</div>
-      <div class="article-title">No Login. Just Cast.: Oolaa Zero-Login Mirror</div>
-      <div class="article-desc">No Login. Just Cast. is Oolaa's flagship idea: cast to the smart mirror TV with no accounts, no passwords, and zero personal data left behind. Here is why.</div>
+      <div class="article-text">
+        <div class="article-date">Jun 2026</div>
+        <div class="article-title">No Login. Just Cast.: Oolaa Zero-Login Mirror</div>
+        <div class="article-desc">No Login. Just Cast. is Oolaa's flagship idea: cast to the smart mirror TV with no accounts, no passwords, and zero personal data left behind. Here is why.</div>
+      </div>
+      <div class="article-media"><img src="images/04-30937a_416eb8a7a54e45a383095ac1ea412093.jpg" alt="" loading="lazy"></div>
     </a>
     <a href="oolaa-way-vs-old-way-mirror-tv-hotel-b8b8fe1b.html" class="article-card">
-      <div class="article-date">Jun 2026</div>
-      <div class="article-title">Hotel Mirror TV: The Oolaa Way vs the Old Way</div>
-      <div class="article-desc">Hotel mirror TV, two ways: old retrofit versus the Oolaa way - purpose-built, no-login guest casting and factory-direct support. A hotel operator's guide.</div>
+      <div class="article-text">
+        <div class="article-date">Jun 2026</div>
+        <div class="article-title">Hotel Mirror TV: The Oolaa Way vs the Old Way</div>
+        <div class="article-desc">Hotel mirror TV, two ways: old retrofit versus the Oolaa way - purpose-built, no-login guest casting and factory-direct support. A hotel operator's guide.</div>
+      </div>
+      <div class="article-media"><img src="images/10-30937a_7e761a2b0a7248a3939624993655c8fb.jpg" alt="" loading="lazy"></div>
     </a>
     <a href="oolaa-at-bangkok-5-star-hotel-the-waldo-9c223e69.html" class="article-card">
-      <div class="article-date">Mar 2026</div>
-      <div class="article-title">Waldorf Astoria Bangkok: Oolaa Pivot Bathroom TV</div>
-      <div class="article-desc">The five-star Waldorf Astoria Bangkok installs Oolaa's Pivot Bathroom TV. Its unique screen rotates left and right so guests enjoy television from any angle.</div>
+      <div class="article-text">
+        <div class="article-date">Mar 2026</div>
+        <div class="article-title">Waldorf Astoria Bangkok: Oolaa Pivot Bathroom TV</div>
+        <div class="article-desc">The five-star Waldorf Astoria Bangkok installs Oolaa's Pivot Bathroom TV. Its unique screen rotates left and right so guests enjoy television from any angle.</div>
+      </div>
+      <div class="article-media"><img src="images/15-30937a_c4655ef1b705455cb70233350543f594.jpg" alt="" loading="lazy"></div>
     </a>
     <a href="oolaa-首個公營房屋工程項目-洪水橋-樂翹軒-eminence-terra-275aada9.html" class="article-card">
-      <div class="article-date">Jan 2026</div>
-      <div class="article-title">Eminence Terrace: Oolaa Mirror in Hung Shui Kiu</div>
-      <div class="article-desc">Oolaa's first public housing project: smart mirrors in the lift lobbies of Eminence Terrace I, Hung Shui Kiu, bringing smart-city living to residents.</div>
+      <div class="article-text">
+        <div class="article-date">Jan 2026</div>
+        <div class="article-title">Eminence Terrace: Oolaa Mirror in Hung Shui Kiu</div>
+        <div class="article-desc">Oolaa's first public housing project: smart mirrors in the lift lobbies of Eminence Terrace I, Hung Shui Kiu, bringing smart-city living to residents.</div>
+      </div>
+      <div class="article-media"><img src="images/03-30937a_2c7ba730f3a04e68a51e4983a4b8fdef.jpeg" alt="" loading="lazy"></div>
     </a>
     <a href="cullinan harbour-天璽海-smart-voice-power-7c05e6d5.html" class="article-card">
-      <div class="article-date">Nov 2025</div>
-      <div class="article-title">Cullinan Harbour Gets Oolaa Voice Power Switch</div>
-      <div class="article-desc">Oolaa's Smart Voice Power Switch controls the defroster behind the master bathroom mirror at Cullinan Harbour, replacing the standard switch with voice control.</div>
+      <div class="article-text">
+        <div class="article-date">Nov 2025</div>
+        <div class="article-title">Cullinan Harbour Gets Oolaa Voice Power Switch</div>
+        <div class="article-desc">Oolaa's Smart Voice Power Switch controls the defroster behind the master bathroom mirror at Cullinan Harbour, replacing the standard switch with voice control.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/f3o1DjgNTSE/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="天璽海 cullinan harbour 的 智能創新方案-f674bdae.html" class="article-card">
-      <div class="article-date">Oct 2025</div>
-      <div class="article-title">Cullinan Harbour: Smart Switch with Voice Feedback</div>
-      <div class="article-desc">For SHK's Cullinan Harbour on the Kai Tak runway, Oolaa built a voice-chip smart switch: instant Power On/Off audio feedback for precise, reliable control.</div>
+      <div class="article-text">
+        <div class="article-date">Oct 2025</div>
+        <div class="article-title">Cullinan Harbour: Smart Switch with Voice Feedback</div>
+        <div class="article-desc">For SHK's Cullinan Harbour on the Kai Tak runway, Oolaa built a voice-chip smart switch: instant Power On/Off audio feedback for precise, reliable control.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/4iF8KMiNzn4/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="oolaa-ai-play-mirror-hong-kong-innovated-be1f6835.html" class="article-card">
-      <div class="article-date">Aug 2025</div>
-      <div class="article-title">Oola Ai-Play Mirror: AR Interactive Gaming Mirror</div>
-      <div class="article-desc">The Hong Kong-innovated Oola Ai-Play Mirror turns stress relief into play with AR/VR interactive gaming. Part 2 of the series spotlights the Kung Fung Game.</div>
+      <div class="article-text">
+        <div class="article-date">Aug 2025</div>
+        <div class="article-title">Oola Ai-Play Mirror: AR Interactive Gaming Mirror</div>
+        <div class="article-desc">The Hong Kong-innovated Oola Ai-Play Mirror turns stress relief into play with AR/VR interactive gaming. Part 2 of the series spotlights the Kung Fung Game.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/8qcJTYh8_oM/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="oolaa-ai-play-mirror-hong-kong-innovated-2a27f1ff.html" class="article-card">
-      <div class="article-date">Aug 2025</div>
-      <div class="article-title">Ai-Play Mirror: Hong Kong Interactive Fitness Gaming</div>
-      <div class="article-desc">Oola Ai-Play Mirror is a 100% Hong Kong-developed interactive smart mirror with AR/VR gaming. Part 1 of 6: Boxing — game-first exercise making workouts fun.</div>
+      <div class="article-text">
+        <div class="article-date">Aug 2025</div>
+        <div class="article-title">Ai-Play Mirror: Hong Kong Interactive Fitness Gaming</div>
+        <div class="article-desc">Oola Ai-Play Mirror is a 100% Hong Kong-developed interactive smart mirror with AR/VR gaming. Part 1 of 6: Boxing — game-first exercise making workouts fun.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/xO-vE3nSgPQ/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="澐璟-智能鏡-配件使用說明-視頻-108d2b50.html" class="article-card">
-      <div class="article-date">Jun 2025</div>
-      <div class="article-title">Pano Harbour Smart Mirror Health Accessories Guide</div>
-      <div class="article-desc">Pano Harbour pairs Oolaa smart mirrors with an AI skin detector and a body-fat scale. This guide explains how the accessories work and how residents use them.</div>
+      <div class="article-text">
+        <div class="article-date">Jun 2025</div>
+        <div class="article-title">Pano Harbour Smart Mirror Health Accessories Guide</div>
+        <div class="article-desc">Pano Harbour pairs Oolaa smart mirrors with an AI skin detector and a body-fat scale. This guide explains how the accessories work and how residents use them.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/5r5Z_jS3RmE/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="破天荒方案智能語音開關器革新香港豪宅浴室體驗-為發展商攻克痛點-229eb8f6.html" class="article-card">
-      <div class="article-date">Jun 2025</div>
-      <div class="article-title">Smart Voice Switch for Luxury Bathrooms in Hong Kong</div>
-      <div class="article-desc">Oolaa's smart voice switch solves a Hong Kong developer's bathroom pain point: built-in voice-chip tech controls the mirror defogger with no concealed wiring.</div>
+      <div class="article-text">
+        <div class="article-date">Jun 2025</div>
+        <div class="article-title">Smart Voice Switch for Luxury Bathrooms in Hong Kong</div>
+        <div class="article-desc">Oolaa's smart voice switch solves a Hong Kong developer's bathroom pain point: built-in voice-chip tech controls the mirror defogger with no concealed wiring.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/2xs6ji3qRt4/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="stay-tuned-to-the-new-era-of-smart-homes-16c18ed8.html" class="article-card">
-      <div class="article-date">Apr 2025</div>
-      <div class="article-title">New Era of Smart Homes: Matter &amp; Voice Control</div>
-      <div class="article-desc">Matter ushers in a smart home era: one phone button, hands-free Siri voice control, and mirrors that link Apple Home, Google Home, Alexa and Xiaomi together.</div>
+      <div class="article-text">
+        <div class="article-date">Apr 2025</div>
+        <div class="article-title">New Era of Smart Homes: Matter &amp; Voice Control</div>
+        <div class="article-desc">Matter ushers in a smart home era: one phone button, hands-free Siri voice control, and mirrors that link Apple Home, Google Home, Alexa and Xiaomi together.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/N9KsIhe7Ajw/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="oolaa-mirror-tv-in-heartland-residence-w-7cdd9d45.html" class="article-card">
-      <div class="article-date">Mar 2025</div>
-      <div class="article-title">Heartland Residence: 60 Oolaa Mirror TVs Installed</div>
-      <div class="article-desc">Heartland Residence in Wuhan installs 60 Oolaa luxury Mirror TVs across its master bathrooms — first-class entertainment, invisible as a mirror when off.</div>
+      <div class="article-text">
+        <div class="article-date">Mar 2025</div>
+        <div class="article-title">Heartland Residence: 60 Oolaa Mirror TVs Installed</div>
+        <div class="article-desc">Heartland Residence in Wuhan installs 60 Oolaa luxury Mirror TVs across its master bathrooms — first-class entertainment, invisible as a mirror when off.</div>
+      </div>
+      <div class="article-media"><img src="images/17-30937a_c7f2be75c197453b99279035e83d0b92.jpg" alt="" loading="lazy"></div>
     </a>
     <a href="oolaa-ai-play-mirror-unveils-its-first-p-d75246da.html" class="article-card">
-      <div class="article-date">Mar 2025</div>
-      <div class="article-title">Oola Ai-Play Mirror Debuts at HSITP Campus</div>
-      <div class="article-desc">Oolaa's Ai-Play Mirror launches its first project at Buildings 8 and 9 of the Hong Kong-Shenzhen Innovation and Technology Park, blending fitness and play.</div>
+      <div class="article-text">
+        <div class="article-date">Mar 2025</div>
+        <div class="article-title">Oola Ai-Play Mirror Debuts at HSITP Campus</div>
+        <div class="article-desc">Oolaa's Ai-Play Mirror launches its first project at Buildings 8 and 9 of the Hong Kong-Shenzhen Innovation and Technology Park, blending fitness and play.</div>
+      </div>
+      <div class="article-media"><img src="images/07-30937a_621aa574ffe34dd5bbd127d0c4103877.png" alt="" loading="lazy"></div>
     </a>
     <a href="catch-a-glimpse-of-innovation-spot-our-o-e9727745.html" class="article-card">
-      <div class="article-date">Mar 2025</div>
-      <div class="article-title">Oolaa Smart Mirror Spotted at HSITP Building 11</div>
-      <div class="article-desc">Spotted: an Oolaa Smart Mirror at Building 11 of the Hong Kong-Shenzhen Innovation and Technology Park. Discover why innovation parks showcase smart mirrors.</div>
+      <div class="article-text">
+        <div class="article-date">Mar 2025</div>
+        <div class="article-title">Oolaa Smart Mirror Spotted at HSITP Building 11</div>
+        <div class="article-desc">Spotted: an Oolaa Smart Mirror at Building 11 of the Hong Kong-Shenzhen Innovation and Technology Park. Discover why innovation parks showcase smart mirrors.</div>
+      </div>
+      <div class="article-media"><img src="images/16-30937a_c555e6708c764ee6ae3aec9f508d41f4.png" alt="" loading="lazy"></div>
     </a>
     <a href="oolaa-smart-mirror-brings-hi-tech-innova-cdf6c432.html" class="article-card">
-      <div class="article-date">Mar 2025</div>
-      <div class="article-title">Royal Garden Hotel Adds Oolaa Mirror TV</div>
-      <div class="article-desc">Oolaa installed its Mirror TV at Hong Kong's Royal Garden Hotel. See how mirror TVs merge entertainment with style in luxury hotel bathrooms every day.</div>
+      <div class="article-text">
+        <div class="article-date">Mar 2025</div>
+        <div class="article-title">Royal Garden Hotel Adds Oolaa Mirror TV</div>
+        <div class="article-desc">Oolaa installed its Mirror TV at Hong Kong's Royal Garden Hotel. See how mirror TVs merge entertainment with style in luxury hotel bathrooms every day.</div>
+      </div>
+      <div class="article-media"><img src="images/12-30937a_9ea229206e1f498da0caf735d62c8c0f.png" alt="" loading="lazy"></div>
     </a>
     <a href="luxury-living-at-villa-la-plage-瑧譽-b42960a1.html" class="article-card">
-      <div class="article-date">Mar 2025</div>
-      <div class="article-title">Villa La Plage Homes Feature Oolaa Bathrooms</div>
-      <div class="article-desc">Villa La Plage by Poly Property Group brings Oolaa smart mirrors to 22 luxury Hong Kong homes, with each master bathroom equipped for modern luxury living.</div>
+      <div class="article-text">
+        <div class="article-date">Mar 2025</div>
+        <div class="article-title">Villa La Plage Homes Feature Oolaa Bathrooms</div>
+        <div class="article-desc">Villa La Plage by Poly Property Group brings Oolaa smart mirrors to 22 luxury Hong Kong homes, with each master bathroom equipped for modern luxury living.</div>
+      </div>
+      <div class="article-media"><img src="images/23-30937a_e33980921b804de9b737920340e634ea.jpeg" alt="" loading="lazy"></div>
     </a>
     <a href="elevate-your-lifestyle-with-oolaa-smart-beb3eb1b.html" class="article-card">
-      <div class="article-date">Feb 2025</div>
-      <div class="article-title">Oolaa Smart Mirror in Luxury Serviced Apartments</div>
-      <div class="article-desc">Oolaa Smart Mirror brings 32-inch bathroom displays to a luxury serviced apartment in Central, near the Four Seasons. See how smart mirrors elevate stays.</div>
+      <div class="article-text">
+        <div class="article-date">Feb 2025</div>
+        <div class="article-title">Oolaa Smart Mirror in Luxury Serviced Apartments</div>
+        <div class="article-desc">Oolaa Smart Mirror brings 32-inch bathroom displays to a luxury serviced apartment in Central, near the Four Seasons. See how smart mirrors elevate stays.</div>
+      </div>
+      <div class="article-media"><img src="images/27-30937a_f78a66e4a4a14bd0981ef5004c2fc7ce.jpg" alt="" loading="lazy"></div>
     </a>
     <a href="experience-the-innovation-of-oolaa-mirro-a3bb2afe.html" class="article-card">
-      <div class="article-date">Feb 2025</div>
-      <div class="article-title">Oolaa Mirror TV at Park Hyatt Niseko Ski Resort</div>
-      <div class="article-desc">Park Hyatt Niseko installs Oolaa Mirror TV in every bathroom. A special mirror coating turns the mirror into a TV — invisible again when switched off.</div>
+      <div class="article-text">
+        <div class="article-date">Feb 2025</div>
+        <div class="article-title">Oolaa Mirror TV at Park Hyatt Niseko Ski Resort</div>
+        <div class="article-desc">Park Hyatt Niseko installs Oolaa Mirror TV in every bathroom. A special mirror coating turns the mirror into a TV — invisible again when switched off.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/A89yRwMmWlY/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="hsitp-oolaa-smart-mirror-get-ready-港深創新及-a92859b1.html" class="article-card">
-      <div class="article-date">Feb 2025</div>
-      <div class="article-title">HSITP Dorms Get Oolaa Smart Mirrors at the Foyer</div>
-      <div class="article-desc">Oolaa smart mirrors are coming to Hong Kong-Shenzhen Innovation and Technology Park dorms. Each foyer mirror lets residents manage smart home features easily.</div>
+      <div class="article-text">
+        <div class="article-date">Feb 2025</div>
+        <div class="article-title">HSITP Dorms Get Oolaa Smart Mirrors at the Foyer</div>
+        <div class="article-desc">Oolaa smart mirrors are coming to Hong Kong-Shenzhen Innovation and Technology Park dorms. Each foyer mirror lets residents manage smart home features easily.</div>
+      </div>
+      <div class="article-media"><img src="images/25-30937a_f432925b1db04af48ec6d798632c7f1c.jpg" alt="" loading="lazy"></div>
     </a>
     <a href="mont-verra-緹外-experience-luxury-living-3410cceb.html" class="article-card">
-      <div class="article-date">Feb 2025</div>
-      <div class="article-title">Smart Mirrors in Kerry's Mont Verra Luxury Mansions</div>
-      <div class="article-desc">Oolaa installed 64 smart mirrors in the master bathrooms of Kerry Properties' Mont Verra mansions in Hong Kong — mirror TV technology redefining luxury living.</div>
+      <div class="article-text">
+        <div class="article-date">Feb 2025</div>
+        <div class="article-title">Smart Mirrors in Kerry's Mont Verra Luxury Mansions</div>
+        <div class="article-desc">Oolaa installed 64 smart mirrors in the master bathrooms of Kerry Properties' Mont Verra mansions in Hong Kong — mirror TV technology redefining luxury living.</div>
+      </div>
+      <div class="article-media"><img src="images/01-30937a_12eef401522d4a239a22546ace380414.jpg" alt="" loading="lazy"></div>
     </a>
     <a href="skiing-in-niseko-with-oolaa-tv-a6814382.html" class="article-card">
-      <div class="article-date">Feb 2025</div>
-      <div class="article-title">Park Hyatt Niseko Bathrooms Feature Oolaa TV</div>
-      <div class="article-desc">Every bathroom at Park Hyatt Niseko features an Oolaa Mirror TV, giving ski guests premium smart entertainment after a day on the slopes of Niseko, Japan.</div>
+      <div class="article-text">
+        <div class="article-date">Feb 2025</div>
+        <div class="article-title">Park Hyatt Niseko Bathrooms Feature Oolaa TV</div>
+        <div class="article-desc">Every bathroom at Park Hyatt Niseko features an Oolaa Mirror TV, giving ski guests premium smart entertainment after a day on the slopes of Niseko, Japan.</div>
+      </div>
+      <div class="article-media"><img src="images/19-30937a_cbd0d974c592463b82c5c760381532e8.png" alt="" loading="lazy"></div>
     </a>
     <a href="mount-pokfulam-can-find-us-39c235fe.html" class="article-card">
-      <div class="article-date">Feb 2025</div>
-      <div class="article-title">Oolaa Smart Mirror Inside Mount PokFuLam Homes</div>
-      <div class="article-desc">Mount PokFuLam by Wang On Properties puts Oolaa Smart Mirrors in every master bathroom, bringing smart technology to Hong Kong homes priced from US$40 million.</div>
+      <div class="article-text">
+        <div class="article-date">Feb 2025</div>
+        <div class="article-title">Oolaa Smart Mirror Inside Mount PokFuLam Homes</div>
+        <div class="article-desc">Mount PokFuLam by Wang On Properties puts Oolaa Smart Mirrors in every master bathroom, bringing smart technology to Hong Kong homes priced from US$40 million.</div>
+      </div>
+      <div class="article-media"><img src="images/28-30937a_fe03a6da297441c08afb06a8c8556272.jpg" alt="" loading="lazy"></div>
     </a>
     <a href="oolaa-smart-mirror-protection-during-del-3fa53498.html" class="article-card">
-      <div class="article-date">May 2024</div>
-      <div class="article-title">How Oolaa Protects Mirrors During Bulk Delivery</div>
-      <div class="article-desc">Smart mirrors are fragile — so how do they survive bulk delivery? Each Oolaa mirror ships in its own box inside a protective wooden frame. Here's how.</div>
+      <div class="article-text">
+        <div class="article-date">May 2024</div>
+        <div class="article-title">How Oolaa Protects Mirrors During Bulk Delivery</div>
+        <div class="article-desc">Smart mirrors are fragile — so how do they survive bulk delivery? Each Oolaa mirror ships in its own box inside a protective wooden frame. Here's how.</div>
+      </div>
+      <div class="article-media"><img src="images/20-30937a_cc1f059c41b94d9d9feb5e93bd3f0c2f.png" alt="" loading="lazy"></div>
     </a>
     <a href="oolaa-special-made-smart-glass-connected-ac926045.html" class="article-card">
-      <div class="article-date">Apr 2024</div>
-      <div class="article-title">Oolaa Custom Smart Glass with External Board</div>
-      <div class="article-desc">Oolaa's special-made smart glass has three parts: mirror with touch film, LED panel with metal back cover, and an external motherboard for custom builds.</div>
+      <div class="article-text">
+        <div class="article-date">Apr 2024</div>
+        <div class="article-title">Oolaa Custom Smart Glass with External Board</div>
+        <div class="article-desc">Oolaa's special-made smart glass has three parts: mirror with touch film, LED panel with metal back cover, and an external motherboard for custom builds.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/YaCUNwGBfyI/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="structure-of-oolaa-smart-mirror-995999ac.html" class="article-card">
-      <div class="article-date">Apr 2024</div>
-      <div class="article-title">Inside an Oolaa Smart Mirror: 3-Part Structure</div>
-      <div class="article-desc">Every Oolaa Smart Mirror has three parts: the mirror surface with touch film, the LED panel, and the motherboard with metal back cover. Here is what each does.</div>
+      <div class="article-text">
+        <div class="article-date">Apr 2024</div>
+        <div class="article-title">Inside an Oolaa Smart Mirror: 3-Part Structure</div>
+        <div class="article-desc">Every Oolaa Smart Mirror has three parts: the mirror surface with touch film, the LED panel, and the motherboard with metal back cover. Here is what each does.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/AC7l8nsRERM/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="new-oolaa-project-in-hong-kong-eight-s-045024b0.html" class="article-card">
-      <div class="article-date">Mar 2024</div>
-      <div class="article-title">Oolaa Smart Mirrors at Eight Star Street, Hong Kong</div>
-      <div class="article-desc">Oolaa smart mirrors at Eight Star Street by Swire connect to the home network and serve as the smart home control center. Inside this Hong Kong project story.</div>
+      <div class="article-text">
+        <div class="article-date">Mar 2024</div>
+        <div class="article-title">Oolaa Smart Mirrors at Eight Star Street, Hong Kong</div>
+        <div class="article-desc">Oolaa smart mirrors at Eight Star Street by Swire connect to the home network and serve as the smart home control center. Inside this Hong Kong project story.</div>
+      </div>
+      <div class="article-media"><img src="images/06-30937a_55b3ad3606464acaa09c8fd9d0d1508b.jpeg" alt="" loading="lazy"></div>
     </a>
     <a href="smart-mirror-hk-shenzhen-innovation-te-2d3f7c29.html" class="article-card">
-      <div class="article-date">Jan 2024</div>
-      <div class="article-title">Smart Mirror at HK-Shenzhen Innovation Park (HSITP)</div>
-      <div class="article-desc">Oolaa smart mirror at the Hong Kong-Shenzhen Innovation and Technology Park: 87 hectares, two phases, and a showcase for R&amp;D-grade smart display technology.</div>
+      <div class="article-text">
+        <div class="article-date">Jan 2024</div>
+        <div class="article-title">Smart Mirror at HK-Shenzhen Innovation Park (HSITP)</div>
+        <div class="article-desc">Oolaa smart mirror at the Hong Kong-Shenzhen Innovation and Technology Park: 87 hectares, two phases, and a showcase for R&amp;D-grade smart display technology.</div>
+      </div>
+      <div class="article-media"><img src="images/08-30937a_6ba4cafdc57e432e97f9178bdc39f60f.jpeg" alt="" loading="lazy"></div>
     </a>
     <a href="港深創新及科技園-hsitp-的智能鏡-bf5765c8.html" class="article-card">
-      <div class="article-date">Jan 2024</div>
-      <div class="article-title">HSITP Smart Mirrors for Innovation Talent Living</div>
-      <div class="article-desc">Every talent apartment at the Hong Kong-Shenzhen Innovation and Technology Park gets a smart mirror. Inside the 87.7-hectare park's smart-living vision.</div>
+      <div class="article-text">
+        <div class="article-date">Jan 2024</div>
+        <div class="article-title">HSITP Smart Mirrors for Innovation Talent Living</div>
+        <div class="article-desc">Every talent apartment at the Hong Kong-Shenzhen Innovation and Technology Park gets a smart mirror. Inside the 87.7-hectare park's smart-living vision.</div>
+      </div>
+      <div class="article-media"><img src="images/26-30937a_f6c8f5678f3743329adbcaee1a72d3d1.jpg" alt="" loading="lazy"></div>
     </a>
     <a href="victoria-coast-pokfulam-薄扶林-oolaa-smar-00e959cd.html" class="article-card">
-      <div class="article-date">Sep 2023</div>
-      <div class="article-title">Victoria Coast: AI Smart Mirror Lobbies, Pok Fu Lam</div>
-      <div class="article-desc">Chinachem's Victoria Coast in Pok Fu Lam places Oolaa smart mirrors in every tower lobby, with Cantonese AI voice conversation and useful resident information.</div>
+      <div class="article-text">
+        <div class="article-date">Sep 2023</div>
+        <div class="article-title">Victoria Coast: AI Smart Mirror Lobbies, Pok Fu Lam</div>
+        <div class="article-desc">Chinachem's Victoria Coast in Pok Fu Lam places Oolaa smart mirrors in every tower lobby, with Cantonese AI voice conversation and useful resident information.</div>
+      </div>
+      <div class="article-media"><img src="images/00-30937a_00f89f22b4be4c02bba8edaf8650043c.png" alt="" loading="lazy"></div>
     </a>
     <a href="華懋安峯的oolaa智能鏡-26a84ca0.html" class="article-card">
-      <div class="article-date">Jun 2023</div>
-      <div class="article-title">Chinachem Anderson Rd Lobbies Get Smart Mirrors</div>
-      <div class="article-desc">A Chinachem development on Anderson Road put 43-inch Oolaa smart mirrors in every lift lobby — real-time info plus Cantonese voice control for residents.</div>
+      <div class="article-text">
+        <div class="article-date">Jun 2023</div>
+        <div class="article-title">Chinachem Anderson Rd Lobbies Get Smart Mirrors</div>
+        <div class="article-desc">A Chinachem development on Anderson Road put 43-inch Oolaa smart mirrors in every lift lobby — real-time info plus Cantonese voice control for residents.</div>
+      </div>
+      <div class="article-media"><img src="images/21-30937a_cfe199c424514723b4f752cdac24be5d.jpeg" alt="" loading="lazy"></div>
     </a>
     <a href="cantonese-voice-control-over-appliances-52cee531.html" class="article-card">
-      <div class="article-date">May 2023</div>
-      <div class="article-title">Cantonese Voice Control for Smart Home Appliances</div>
-      <div class="article-desc">Phone-app-only smart homes make you unlock, search and tap just to switch on a light. Oolaa answers with Cantonese voice control over home appliances.</div>
+      <div class="article-text">
+        <div class="article-date">May 2023</div>
+        <div class="article-title">Cantonese Voice Control for Smart Home Appliances</div>
+        <div class="article-desc">Phone-app-only smart homes make you unlock, search and tap just to switch on a light. Oolaa answers with Cantonese voice control over home appliances.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/N9KsIhe7Ajw/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="a-new-serie-of-smart-mirror-from-oolaa-624c9020.html" class="article-card">
-      <div class="article-date">May 2023</div>
-      <div class="article-title">Oolaa Round Smart Mirror with LED Ring Light</div>
-      <div class="article-desc">Oolaa's new round smart mirror series pairs a full-circumference LED ring light with smart display technology - a hi-tech centerpiece for luxury bathrooms.</div>
+      <div class="article-text">
+        <div class="article-date">May 2023</div>
+        <div class="article-title">Oolaa Round Smart Mirror with LED Ring Light</div>
+        <div class="article-desc">Oolaa's new round smart mirror series pairs a full-circumference LED ring light with smart display technology - a hi-tech centerpiece for luxury bathrooms.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/sk0h3iIUYoo/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="廣東話聲控家用電器-siri-6c980d17.html" class="article-card">
-      <div class="article-date">Apr 2023</div>
-      <div class="article-title">Cantonese Voice Control of Home Appliances with Siri</div>
-      <div class="article-desc">Hong Kong smart homes stalled because assistants didn't speak Cantonese. Now Siri and Cantonese voice control command appliances in your mother tongue.</div>
+      <div class="article-text">
+        <div class="article-date">Apr 2023</div>
+        <div class="article-title">Cantonese Voice Control of Home Appliances with Siri</div>
+        <div class="article-desc">Hong Kong smart homes stalled because assistants didn't speak Cantonese. Now Siri and Cantonese voice control command appliances in your mother tongue.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/N9KsIhe7Ajw/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="澐璟-pano-harbour的oolaa智能鏡讓您享受更好的健康管理-1dc0cdfb.html" class="article-card">
-      <div class="article-date">Apr 2023</div>
-      <div class="article-title">Pano Harbour Smart Mirror: Better Health Management</div>
-      <div class="article-desc">At Pano Harbour, the Oolaa smart mirror in the master bathroom tracks weight via Bluetooth scale, plays music and runs a connected, intelligent bathroom.</div>
+      <div class="article-text">
+        <div class="article-date">Apr 2023</div>
+        <div class="article-title">Pano Harbour Smart Mirror: Better Health Management</div>
+        <div class="article-desc">At Pano Harbour, the Oolaa smart mirror in the master bathroom tracks weight via Bluetooth scale, plays music and runs a connected, intelligent bathroom.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/nZfBybgK5PQ/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="恒地藝里坊2號的oolaa智能鏡-a06944f2.html" class="article-card">
-      <div class="article-date">Apr 2023</div>
-      <div class="article-title">Oolaa Smart Mirror Foyer at Henderson Artlane No.2</div>
-      <div class="article-desc">At Henderson's Artlane No.2, the Oolaa smart mirror sits in the foyer, working with the Yoswit smart home system and Google AI for whole-home control.</div>
+      <div class="article-text">
+        <div class="article-date">Apr 2023</div>
+        <div class="article-title">Oolaa Smart Mirror Foyer at Henderson Artlane No.2</div>
+        <div class="article-desc">At Henderson's Artlane No.2, the Oolaa smart mirror sits in the foyer, working with the Yoswit smart home system and Google AI for whole-home control.</div>
+      </div>
+      <div class="article-media"><img src="images/14-30937a_bc42b1121fec42b99742133e109b4522.jpeg" alt="" loading="lazy"></div>
     </a>
     <a href="the-new-luxury-residential-bathroom-with-81e74746.html" class="article-card">
-      <div class="article-date">Apr 2023</div>
-      <div class="article-title">Luxury Residential Bathroom with Smart Mirror</div>
-      <div class="article-desc">A new Oolaa job reference: a smart mirror in a luxury residential bathroom. How mirror TV tech, defoggers and IP65 design create the modern luxury bathroom.</div>
+      <div class="article-text">
+        <div class="article-date">Apr 2023</div>
+        <div class="article-title">Luxury Residential Bathroom with Smart Mirror</div>
+        <div class="article-desc">A new Oolaa job reference: a smart mirror in a luxury residential bathroom. How mirror TV tech, defoggers and IP65 design create the modern luxury bathroom.</div>
+      </div>
+      <div class="article-media"><img src="images/29-30937a_fedd1d42bd604e30ae79fe5ef37c9c79.jpeg" alt="" loading="lazy"></div>
     </a>
     <a href="啟德天瀧住宅項目-也使用了我們的智能鏡-oolaasmartmirror-2e8170f4.html" class="article-card">
-      <div class="article-date">Apr 2023</div>
-      <div class="article-title">Kai Tak Homes Add Oolaa Smart Mirrors to Bathrooms</div>
-      <div class="article-desc">Oolaa smart mirrors bring voice control, music, schedules, and beauty insights to master bathrooms in a Kai Tak luxury residential project in Hong Kong.</div>
+      <div class="article-text">
+        <div class="article-date">Apr 2023</div>
+        <div class="article-title">Kai Tak Homes Add Oolaa Smart Mirrors to Bathrooms</div>
+        <div class="article-desc">Oolaa smart mirrors bring voice control, music, schedules, and beauty insights to master bathrooms in a Kai Tak luxury residential project in Hong Kong.</div>
+      </div>
+      <div class="article-media"><img src="images/02-30937a_23cb32ab84c5453486650f2bb8c93372.jpeg" alt="" loading="lazy"></div>
     </a>
     <a href="get-ready-for-our-exciting-beautiful-sea-a10882dd.html" class="article-card">
-      <div class="article-date">Mar 2023</div>
-      <div class="article-title">Kai Tak Seaside Homes: Oolaa Smart Mirror Bathrooms</div>
-      <div class="article-desc">Oolaa supplies smart mirrors for the bathrooms of NKIL6552, a new Kai Tak seaside development. Discover why waterfront projects choose IP65-rated mirrors.</div>
+      <div class="article-text">
+        <div class="article-date">Mar 2023</div>
+        <div class="article-title">Kai Tak Seaside Homes: Oolaa Smart Mirror Bathrooms</div>
+        <div class="article-desc">Oolaa supplies smart mirrors for the bathrooms of NKIL6552, a new Kai Tak seaside development. Discover why waterfront projects choose IP65-rated mirrors.</div>
+      </div>
+      <div class="article-media"><img src="images/22-30937a_d091a13cd1514a8bb7b04a8fcc10b17a.jpg" alt="" loading="lazy"></div>
     </a>
     <a href="oolaa-bathroom-tv-for-shk-well-known-pr-596ccdb4.html" class="article-card">
-      <div class="article-date">Mar 2023</div>
-      <div class="article-title">Oolaa Bathroom TV in SHK's The Cullinan, Hong Kong</div>
-      <div class="article-desc">Sun Hung Kai featured the Oolaa waterproof bathroom TV with built-in DMB tuner prominently at The Cullinan, Kowloon Station. Why top developers choose it.</div>
+      <div class="article-text">
+        <div class="article-date">Mar 2023</div>
+        <div class="article-title">Oolaa Bathroom TV in SHK's The Cullinan, Hong Kong</div>
+        <div class="article-desc">Sun Hung Kai featured the Oolaa waterproof bathroom TV with built-in DMB tuner prominently at The Cullinan, Kowloon Station. Why top developers choose it.</div>
+      </div>
+      <div class="article-media"><img src="images/05-30937a_4664443adb1e4aaabd20f25026161bd2.png" alt="" loading="lazy"></div>
     </a>
     <a href="important-clarification-the-smart-door-b-435e1926.html" class="article-card">
-      <div class="article-date">Mar 2023</div>
-      <div class="article-title">Smart Doorbell Privacy Notice at Manor Hill, HK</div>
-      <div class="article-desc">A video at Kane Estate raised smart doorbell privacy questions. Oolaa clarifies: no video recording function, and the camera never switches on by itself.</div>
+      <div class="article-text">
+        <div class="article-date">Mar 2023</div>
+        <div class="article-title">Smart Doorbell Privacy Notice at Manor Hill, HK</div>
+        <div class="article-desc">A video at Kane Estate raised smart doorbell privacy questions. Oolaa clarifies: no video recording function, and the camera never switches on by itself.</div>
+      </div>
+      <div class="article-media"><img src="images/13-30937a_a36f3807b99046d4951a95e2e39b3e6e.jpg" alt="" loading="lazy"></div>
     </a>
     <a href="pano-harbour-澐璟-oolaa-smart-mirror-a0f214f3.html" class="article-card">
-      <div class="article-date">Mar 2023</div>
-      <div class="article-title">Pano Harbour: Oolaa Smart Mirrors in Bathrooms</div>
-      <div class="article-desc">Tour Pano Harbour's luxury bathrooms with Oolaa Smart Mirror built into the cabinetry. Voice control, seamless integration, and what luxury buyers expect.</div>
+      <div class="article-text">
+        <div class="article-date">Mar 2023</div>
+        <div class="article-title">Pano Harbour: Oolaa Smart Mirrors in Bathrooms</div>
+        <div class="article-desc">Tour Pano Harbour's luxury bathrooms with Oolaa Smart Mirror built into the cabinetry. Voice control, seamless integration, and what luxury buyers expect.</div>
+      </div>
+      <div class="article-media"><img src="images/09-30937a_6e88335a9b674d49ad7ec70051646739.jpg" alt="" loading="lazy"></div>
     </a>
     <a href="oolaa-smart-mirror-in-club-house-凱恩莊園-11eed492.html" class="article-card">
-      <div class="article-date">Mar 2023</div>
-      <div class="article-title">Oolaa Smart Mirror in Manor Hill Clubhouse</div>
-      <div class="article-desc">Oolaa supplied smart mirrors to the Manor Hill clubhouse in Tseung Kwan O. Discover the KaraMirror crossover bringing guided fitness programs to residents.</div>
+      <div class="article-text">
+        <div class="article-date">Mar 2023</div>
+        <div class="article-title">Oolaa Smart Mirror in Manor Hill Clubhouse</div>
+        <div class="article-desc">Oolaa supplied smart mirrors to the Manor Hill clubhouse in Tseung Kwan O. Discover the KaraMirror crossover bringing guided fitness programs to residents.</div>
+      </div>
+      <div class="article-media"><img src="images/18-30937a_ca2541e6f8d741b29788de28cb0100e4.png" alt="" loading="lazy"></div>
     </a>
     <a href="smart-beauty-mirror-never-too-late-to-be-eab27378.html" class="article-card">
-      <div class="article-date">Aug 2022</div>
-      <div class="article-title">Smart Beauty Mirror: Skin Analysis &amp; Makeup Guide</div>
-      <div class="article-desc">The Oolaa smart beauty mirror brings skin diagnosis and makeup tutorials home. Review your skin daily, get makeup advice, and stay connected with your world.</div>
+      <div class="article-text">
+        <div class="article-date">Aug 2022</div>
+        <div class="article-title">Smart Beauty Mirror: Skin Analysis &amp; Makeup Guide</div>
+        <div class="article-desc">The Oolaa smart beauty mirror brings skin diagnosis and makeup tutorials home. Review your skin daily, get makeup advice, and stay connected with your world.</div>
+      </div>
+      <div class="article-media"><img src="images/32-85c346_81a32fdcc41444a2bb17898d18ce86d5.jpeg" alt="" loading="lazy"></div>
     </a>
     <a href="time-to-make-a-coffee-with-kitchen-smart-722b67d7.html" class="article-card">
-      <div class="article-date">Aug 2022</div>
-      <div class="article-title">Make Coffee with a Kitchen Smart Mirror by Oolaa</div>
-      <div class="article-desc">Coffee time with the Kitchen Smart Mirror: an interactive cabinet door hiding a full computer. Explore the features, scenarios, and why cooks love it.</div>
+      <div class="article-text">
+        <div class="article-date">Aug 2022</div>
+        <div class="article-title">Make Coffee with a Kitchen Smart Mirror by Oolaa</div>
+        <div class="article-desc">Coffee time with the Kitchen Smart Mirror: an interactive cabinet door hiding a full computer. Explore the features, scenarios, and why cooks love it.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/KAnkAVadl6A/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="its-never-too-late-to-install-a-waterpro-27fcb3d2.html" class="article-card">
-      <div class="article-date">Aug 2022</div>
-      <div class="article-title">Waterproof Bathroom TV: It's Never Too Late</div>
-      <div class="article-desc">Never too late for a bathroom TV: what IP65 waterproofing means, how retrofits work, and the checklist every Hong Kong homeowner should run before buying.</div>
+      <div class="article-text">
+        <div class="article-date">Aug 2022</div>
+        <div class="article-title">Waterproof Bathroom TV: It's Never Too Late</div>
+        <div class="article-desc">Never too late for a bathroom TV: what IP65 waterproofing means, how retrofits work, and the checklist every Hong Kong homeowner should run before buying.</div>
+      </div>
+      <div class="article-media"><img src="images/waterproof-bathroom-tv-marble.jpg" alt="" loading="lazy"></div>
     </a>
     <a href="oolaas-video-doorbell-with-easy-installa-c1b017b6.html" class="article-card">
-      <div class="article-date">Aug 2022</div>
-      <div class="article-title">Oolaa Video Doorbell: Easy Installation Guide</div>
-      <div class="article-desc">Oolaa's video doorbell is designed for easy installation, making smart entry security simple for Hong Kong homes, from retrofit flats to new developments.</div>
+      <div class="article-text">
+        <div class="article-date">Aug 2022</div>
+        <div class="article-title">Oolaa Video Doorbell: Easy Installation Guide</div>
+        <div class="article-desc">Oolaa's video doorbell is designed for easy installation, making smart entry security simple for Hong Kong homes, from retrofit flats to new developments.</div>
+      </div>
+      <div class="article-media"><img src="images/30-85c346_071b205482ca42069929e64cb77a6418.png" alt="" loading="lazy"></div>
     </a>
     <a href="oolaa-mirroring-not-just-pairing-on-the-d96cb6de.html" class="article-card">
-      <div class="article-date">Aug 2022</div>
-      <div class="article-title">Smart Mirror Screen Mirroring: Cast Without Pairing</div>
-      <div class="article-desc">Oolaa put true screen mirroring on the smart mirror before phones paired with TVs. No Login. Just Cast. How it works, and why it matters at home daily.</div>
+      <div class="article-text">
+        <div class="article-date">Aug 2022</div>
+        <div class="article-title">Smart Mirror Screen Mirroring: Cast Without Pairing</div>
+        <div class="article-desc">Oolaa put true screen mirroring on the smart mirror before phones paired with TVs. No Login. Just Cast. How it works, and why it matters at home daily.</div>
+      </div>
+      <div class="article-media fallback"><span>Oolaa</span></div>
     </a>
     <a href="a-smart-kitchen-device-is-presenting-the-a6e10b3e.html" class="article-card">
-      <div class="article-date">Aug 2022</div>
-      <div class="article-title">Oolaa Smart Kitchen Display for Happy Cooking</div>
-      <div class="article-desc">Oolaa's in-house software team built a kitchen-first interface for its smart kitchen display: glanceable recipes, video, and bigger sizes for kitchen cabinets.</div>
+      <div class="article-text">
+        <div class="article-date">Aug 2022</div>
+        <div class="article-title">Oolaa Smart Kitchen Display for Happy Cooking</div>
+        <div class="article-desc">Oolaa's in-house software team built a kitchen-first interface for its smart kitchen display: glanceable recipes, video, and bigger sizes for kitchen cabinets.</div>
+      </div>
+      <div class="article-media fallback"><span>Oolaa</span></div>
     </a>
     <a href="we-are-more-than-just-a-smart-mirror-05507851.html" class="article-card">
-      <div class="article-date">Aug 2022</div>
-      <div class="article-title">Oolaa: More Than a Smart Mirror Maker</div>
-      <div class="article-desc">Oolaa designs total smart home solutions beyond the smart mirror — from wireless charging hidden under 20mm granite to 31,000+ Hong Kong &amp; Macau installations.</div>
+      <div class="article-text">
+        <div class="article-date">Aug 2022</div>
+        <div class="article-title">Oolaa: More Than a Smart Mirror Maker</div>
+        <div class="article-desc">Oolaa designs total smart home solutions beyond the smart mirror — from wireless charging hidden under 20mm granite to 31,000+ Hong Kong &amp; Macau installations.</div>
+      </div>
+      <div class="article-media fallback"><span>Oolaa</span></div>
     </a>
     <a href="smart-mirror-at-a-kitchen-panel-802a4987.html" class="article-card">
-      <div class="article-date">Aug 2022</div>
-      <div class="article-title">Kitchen TV for Tiny Hong Kong Apartments</div>
-      <div class="article-desc">Think a kitchen TV can't fit in a Hong Kong nano apartment? Oolaa's kitchen panel smart mirror brings recipes, news and entertainment to the smallest kitchens.</div>
+      <div class="article-text">
+        <div class="article-date">Aug 2022</div>
+        <div class="article-title">Kitchen TV for Tiny Hong Kong Apartments</div>
+        <div class="article-desc">Think a kitchen TV can't fit in a Hong Kong nano apartment? Oolaa's kitchen panel smart mirror brings recipes, news and entertainment to the smallest kitchens.</div>
+      </div>
+      <div class="article-media"><img src="https://i.ytimg.com/vi/gpUX3QWrStc/hqdefault.jpg" alt="" loading="lazy"><span class="play-badge">&#9654;</span></div>
     </a>
     <a href="the-application-of-smart-mirror-0740b458.html" class="article-card">
-      <div class="article-date">Aug 2022</div>
-      <div class="article-title">Smart Mirror Uses: Hallway, Bathroom and Beyond</div>
-      <div class="article-desc">A hallway smart mirror transforms your home's feel. Explore Oolaa smart mirror applications room by room — foyer, bathroom, kitchen — and how to choose.</div>
+      <div class="article-text">
+        <div class="article-date">Aug 2022</div>
+        <div class="article-title">Smart Mirror Uses: Hallway, Bathroom and Beyond</div>
+        <div class="article-desc">A hallway smart mirror transforms your home's feel. Explore Oolaa smart mirror applications room by room — foyer, bathroom, kitchen — and how to choose.</div>
+      </div>
+      <div class="article-media fallback"><span>Oolaa</span></div>
     </a>
     <a href="lets-discover-the-smart-mirror-96c45082.html" class="article-card">
-      <div class="article-date">May 2020</div>
-      <div class="article-title">Smart Mirror for Hotels: A Digital Butler for Guests</div>
-      <div class="article-desc">Discover the hotel smart mirror: motion-activated welcome messages, a digital personal butler, and smarter guest communication for hotels and restaurants.</div>
+      <div class="article-text">
+        <div class="article-date">May 2020</div>
+        <div class="article-title">Smart Mirror for Hotels: A Digital Butler for Guests</div>
+        <div class="article-desc">Discover the hotel smart mirror: motion-activated welcome messages, a digital personal butler, and smarter guest communication for hotels and restaurants.</div>
+      </div>
+      <div class="article-media"><img src="images/35-fe2e78_d68658072a0e4e4ba6526db19cb69bf9.jpg" alt="" loading="lazy"></div>
     </a>
     <a href="oolaa-we-are-innovative-a69c2658.html" class="article-card">
-      <div class="article-date">May 2020</div>
-      <div class="article-title">Oolaa Innovation: Cantonese Voice Smart Mirror</div>
-      <div class="article-desc">Oolaa has built smart mirrors in-house since 2017 with mature Cantonese voice commands, its own Shenzhen factory, and 20+ years in the business. Read the story.</div>
+      <div class="article-text">
+        <div class="article-date">May 2020</div>
+        <div class="article-title">Oolaa Innovation: Cantonese Voice Smart Mirror</div>
+        <div class="article-desc">Oolaa has built smart mirrors in-house since 2017 with mature Cantonese voice commands, its own Shenzhen factory, and 20+ years in the business. Read the story.</div>
+      </div>
+      <div class="article-media"><img src="images/34-fe2e78_0a8476afc9f74362828b5150ee054d72.jpg" alt="" loading="lazy"></div>
     </a>
     <a href="have-you-imagine-you-can-cook-with-your-249b27b3.html" class="article-card">
-      <div class="article-date">May 2020</div>
-      <div class="article-title">Cook with Your Kitchen Assistant: Cantonese Voice</div>
-      <div class="article-desc">Oolaa's tech team built Cantonese voice control for the smart kitchen. Discover hands-free cooking, how voice commands work, and why it suits Hong Kong homes.</div>
+      <div class="article-text">
+        <div class="article-date">May 2020</div>
+        <div class="article-title">Cook with Your Kitchen Assistant: Cantonese Voice</div>
+        <div class="article-desc">Oolaa's tech team built Cantonese voice control for the smart kitchen. Discover hands-free cooking, how voice commands work, and why it suits Hong Kong homes.</div>
+      </div>
+      <div class="article-media fallback"><span>Oolaa</span></div>
     </a>
   </div>
 </div>
