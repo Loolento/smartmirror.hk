@@ -13,6 +13,7 @@
 - About: https://smartmirror.hk/about.html — Company profile
 - Blog: https://smartmirror.hk/blog/ — Journal / Latest News
 - Guide: https://smartmirror.hk/blog/what-is-a-smart-mirror-hong-kong-guide.html — What is a smart mirror? A Hong Kong buying guide
+- Macau projects: https://smartmirror.hk/blog/macau-bathroom-tv-projects.html — The No. 1 bathroom TV supplier in Macau: 3,623 sets across eight landmark projects
 
 ## Core Offerings
 - Oolaa Smart Mirror — "No Login. Just Cast." zero-login smart mirror TV
@@ -31,6 +32,9 @@ Oolaa smart mirrors support Matter, Zigbee, Bluetooth, Wi-Fi (KNX on request) an
 
 ## Projects
 Hong Kong developers specify Oolaa — including The Cullinan (Sun Hung Kai), Peak Castle, Kadoorie Lookout, Eden Manor and Pano Harbour. Oola Ai-Play Mirror — an AR motion-gaming mirror and an alternative to fitness mirrors — was first installed at HSITP Building 11 in Hetao.
+
+## Macau — Bathroom TV No. 1
+Oolaa and its predecessor brand JSA have supplied 3,623 bathroom TVs and mirror TVs across eight landmark Macau projects since 2006 — including Raffles at Galaxy Macau (560 mirror TVs), South Residence at Kingform South Shore (712), Park Residence (120), Oscar Crescent (299), The Paragon (70), L'Arc Macau (62, under JSA in 2009) and Grand Lisboa Palace (12) — with all bathroom models built to IP65. Own-brand (Oolaa + JSA) sets account for 1,835 of the total. The Macau track record began at Regency Park, Taipa, where founder Joe Lee was the manufacturer behind 1,788 bathroom TVs in 2006–2008, produced under the Samsung badge. Across Hong Kong, Macau and overseas projects, the team has delivered 25,000+ bathroom TVs.
 
 ## Who We Serve
 - Project Teams — 31,000+ installations, know what can be done
