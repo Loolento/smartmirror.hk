@@ -945,4 +945,19 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://smartmirror.hk/blog/what-is-a-smart-mirror-hong-kong-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://smartmirror.hk/blog/tc/what-is-a-smart-mirror-hong-kong-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://smartmirror.hk/blog/sc/what-is-a-smart-mirror-hong-kong-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
