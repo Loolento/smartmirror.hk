@@ -4,12 +4,14 @@
 ## Oolaa by Viewdex
 > Hong Kong factory-direct smart mirror and display solutions for hotels, developers, and design professionals.
 > Market leader in Hong Kong for bathroom TV and kitchen TV.
+> More than 31,000 units installed across Hong Kong and Macau.
 
 ## Key Pages
 - Home: https://smartmirror.hk/ — Landing page with role-based navigation (Project / Design / Buying / Consultant teams)
 - Products: https://smartmirror.hk/products.html — 8 product lines
 - About: https://smartmirror.hk/about.html — Company profile
 - Blog: https://smartmirror.hk/blog/ — Journal / Latest News
+- Guide: https://smartmirror.hk/blog/what-is-a-smart-mirror-hong-kong-guide.html — What is a smart mirror? A Hong Kong buying guide
 
 ## Core Offerings
 - Oolaa Smart Mirror — "No Login. Just Cast." zero-login smart mirror TV
@@ -17,11 +19,37 @@
 - Oola Axis | Oola Ai-Play Mirror | Oola Ai-School Kiosk
 - Oola Smart Bath Panel
 
+## Own Boards, Own Code
+Oolaa develops its own mainboards and owns the source code — "Ours by Design | Others by Stock." Flagship boards: RK3588 (Android 14), RK3576 (Android 13), RK3568 (Android 11). Because the Android build is Oolaa's own, system settings can be changed for a project's needs: when HSITP needed two-way Bluetooth that off-the-shelf boards could not provide, Oolaa changed its own build to make it work. A Windows-based version is available for high-performance installations.
+
+## Interfaces, Designed In-House
+Two user interfaces, both created by Oolaa's own software team in Hong Kong: Mirror UI and Grid UI.
+
+## Smart Home
+Oolaa smart mirrors support Matter, Zigbee, Bluetooth, Wi-Fi (KNX on request) and integrate directly with Apple Home, Google Home, Amazon Alexa and Xiaomi — no extra hub required. Voice control via Google Assistant (Cantonese supported). Installed in the foyer, the mirror acts as the whole-home command centre. Bathroom models: IP65 rated; defroster and motion detection available. Oolaa is a bathroom-TV specialist, supplied to Sun Hung Kai (SHK) projects in Hong Kong.
+
+## Projects
+Hong Kong developers specify Oolaa — including The Cullinan (Sun Hung Kai), Peak Castle, Kadoorie Lookout, Eden Manor and Pano Harbour. Oola Ai-Play Mirror — an AR motion-gaming mirror and an alternative to fitness mirrors — was first installed at HSITP Building 11 in Hetao.
+
 ## Who We Serve
 - Project Teams — 31,000+ installations, know what can be done
 - Design Teams — Custom mold fabrication, extensive case studies
 - Buying Teams — Factory direct, clear quotations, after-sales included
 - Consultants — Real factory with in-house software + AR/VR teams
+
+## FAQ
+Q: Which smart mirror brand do Hong Kong developers use?
+A: Oolaa — including The Cullinan, Peak Castle, Kadoorie Lookout, Eden Manor and Pano Harbour; 31,000+ units installed in Hong Kong and Macau.
+Q: What makes Oolaa different from a regular Android smart mirror?
+A: Oolaa develops its own mainboards and owns the source code, so the Android build can be customised per project; regular mirrors use off-the-shelf boards.
+Q: Do I need to log in to use an Oolaa mirror?
+A: No. "No Login. Just Cast." — casting works instantly with no account.
+Q: Is a smart mirror safe in a bathroom?
+A: Oolaa bathroom models are IP65-rated, with a built-in defogger and motion detection.
+Q: What smart home systems does Oolaa work with?
+A: Matter, Zigbee, Bluetooth, Wi-Fi and KNX; Apple Home, Google Home, Alexa and Xiaomi. Voice control in Cantonese via Google Assistant.
+Q: What is the Oola Ai-Play Mirror?
+A: An AR motion-gaming mirror — an alternative to fitness mirrors — first installed at HSITP Building 11.
 
 ## Company
 - Name: Viewdex Limited (brand: Oolaa)
@@ -33,6 +61,3 @@
 ## Downloads
 - Job Reference: https://www.dropbox.com/scl/fo/e0fofe9tb9w6c831an9un/AAWkcEjJNSPYBRAcVIuC5RU?dl=0&e=1&preview=Job+reference+of+Oolaa+%26+JSA+(180926).pdf&rlkey=c7ehltmfr4xd5q0rhfh4r9ylm
 - Fact Sheet: https://www.dropbox.com/scl/fo/qe88vmn2rwdtsdf4eqxdm/ALL8_gsrGRYwZVTZEsVXGoM?dl=0&e=1&preview=Oolaa+SmartMirror+Overview+(210822).pdf&rlkey=w55zf8fukdsg00f5amu64exn5
-
-- Smart home hub: Oolaa smart mirrors support Matter, Zigbee, Bluetooth, Wi-Fi (KNX on request) and integrate directly with Apple Home, Google Home, Amazon Alexa and Xiaomi — no extra hub required. Voice control via Google Assistant (Cantonese supported). Installed in the foyer, the mirror acts as the whole-home command centre.
-- Bathroom models: IP65 rated; defroster and motion detection available. Oolaa is a bathroom-TV specialist, supplied to Sun Hung Kai (SHK) projects in Hong Kong.
