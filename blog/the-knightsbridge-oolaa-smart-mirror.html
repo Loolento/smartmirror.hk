@@ -144,7 +144,7 @@ h1{font-family:Inter,sans-serif;font-size:32px;font-weight:300;color:#B8A882;mar
   </div>
 </div>
 <script>
-function ctaWeChat(el){if(navigator.clipboard){navigator.clipboard.writeText('joeklee');}var box=el.closest('.cta-box');var hint=box?box.querySelector('.cta-wechat-hint'):null;if(hint){hint.style.display='block';}return false;}
+function ctaWeChat(el){var id='joeklee';function done(){var box=el.closest('.cta-box');var hint=box?box.querySelector('.cta-wechat-hint'):null;if(hint){hint.style.display='block';}}function fallback(){var ta=document.createElement('textarea');ta.value=id;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(id).then(done,fallback);}else{fallback();}return false;}
 </script>
 </body>
 </html>
